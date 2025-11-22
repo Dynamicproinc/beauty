@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+use Illuminate\Support\Facades\Artisan;
 
 Auth::routes();
 
@@ -23,3 +24,8 @@ Route::post('/admin/products/edit/product-info/edit/{id}/update', [App\Http\Cont
 // inventory
 Route::get('/admin/inventory/add-stock', [App\Http\Controllers\AdminController::class, 'addStock'])->name('admin.inventory.addstock');
 Route::get('/admin/inventory/stock-entries', [App\Http\Controllers\AdminController::class, 'stockEntries'])->name('admin.inventory.stockentries');
+
+Route::get('/abc123', function () {
+    Artisan::call('migrate', ['--force' => true]);
+    return response()->json(['status' => 'Migration completed']);
+});;
