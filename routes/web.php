@@ -26,6 +26,11 @@ Route::get('/admin/inventory/add-stock', [App\Http\Controllers\AdminController::
 Route::get('/admin/inventory/stock-entries', [App\Http\Controllers\AdminController::class, 'stockEntries'])->name('admin.inventory.stockentries');
 
 Route::get('/abc123', function () {
-    Artisan::call('migrate', ['--force' => true]);
-    return response()->json(['status' => 'Migration completed']);
+    // Artisan::call('migrate', ['--force' => true]);
+    // return response()->json(['status' => 'Migration completed']);
+
+    system('php artisan config:clear');
+system('php artisan cache:clear');
+system('php artisan optimize:clear');
+echo "Cleared!";
 });;
