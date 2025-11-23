@@ -267,7 +267,8 @@ i{
 
 }
 .prm-bar{
-    background-color: #232E20;
+    /* background-color: #232E20; */
+    background-color: #fff;
 }
 
 
@@ -921,10 +922,19 @@ transform: translateY(-50%) rotate(0.5turn);
     
     transition: background-color 0.3s ease;
     z-index: 1000;
+    background-color: #232E20
+
 }
 #header.scrolled {
-    background-color: #fff; /* Color after scroll */
+    /* background-color: #fff; Color after scroll */
     color: #000;
+      backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.5) !important; /* semi-transparent so effect is visible */
+  /* padding: 20px; */
+  
+     color:#fff !important;
+      backdrop-filter: blur(10px);
+
 }
 .btn-white-outline{
     background-color: transparent !important;
@@ -948,6 +958,7 @@ transform: translateY(-50%) rotate(0.5turn);
     align-items: center;
 
 }
+
 .title-xl{
     font-size: 64px;
     font-family: 'Momo Trust Display', sans-serif;
@@ -960,6 +971,21 @@ transform: translateY(-50%) rotate(0.5turn);
     font-size: 22px;
     font-family: 'Momo Trust Display', sans-serif;
 }
+
+/* Reduce sizes on small (sm) screens <= 768px */
+@media (max-width: 768px) {
+  .title-xl { font-size: 48px; }
+  .title-md { font-size: 36px; }
+  .title-sm { font-size: 18px; }
+}
+
+/* Further reduce on extra-small (xs) screens <= 576px */
+@media (max-width: 576px) {
+  .title-xl { font-size: 36px; }
+  .title-md { font-size: 28px; }
+  .title-sm { font-size: 16px; }
+}
+
 .hp-img{
     width: 350px;
     height: 100%;

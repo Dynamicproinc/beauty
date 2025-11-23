@@ -2,7 +2,7 @@
     <div class="sidenav-cont" id="navcont" wire:ignore.self>
         <div class="sidenav-header">
             <div class="d-flex justify-content-between align-items-center">
-                <h5 class="m-0 p-0  font-weight-light">{{ __('My Shopping Bag') }} (<span
+                <h5 class="m-0 p-0  font-weight-light">{{ __('My Cart') }} (<span
                         class="cart-count">{{ $total_quantity }}</span>)</h5>
                 <button class="btn-close" onclick="closeNav()"></button>
 
@@ -93,84 +93,6 @@
 
                 </div>
 
-                <div class="mt-3">
-                    <h6 class="mb-3">{{ __('Often bought together') }}</h6>
-                    <div class="thumb-area" wire:ignore>
-                        <div class="main-carousel-3">
-                            <div class="carousel-cell px-2">
-                                <div class="thumb-prevs mb-3">
-                                    <img src="https://the-m-brothers.com/wp-content/uploads/2022/08/t-bone.jpg">
-                                    <h5 class="mb-0">€ 6,0</h5>
-                                    <h6 class="sm-card-text">
-
-                                        Virginia Cure Streaky Bacon Sliced
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="carousel-cell px-2">
-                                <div class="thumb-prevs mb-3">
-                                    <img src="https://the-m-brothers.com/wp-content/uploads/2022/08/t-bone.jpg">
-                                    <h5 class="mb-0">€ 6,0</h5>
-                                    <h6 class="sm-card-text">
-
-                                        Virginia Cure Streaky Bacon Sliced
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="carousel-cell px-2">
-                                <div class="thumb-prevs mb-3">
-                                    <img src="https://the-m-brothers.com/wp-content/uploads/2022/08/t-bone.jpg">
-                                    <h5 class="mb-0">€ 6,0</h5>
-                                    <h6 class="sm-card-text">
-
-                                        Virginia Cure Streaky Bacon Sliced
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="carousel-cell px-2">
-                                <div class="thumb-prevs mb-3">
-                                    <img src="https://the-m-brothers.com/wp-content/uploads/2022/08/t-bone.jpg">
-                                    <h5 class="mb-0">€ 6,0</h5>
-                                    <h6 class="sm-card-text">
-
-                                        Virginia Cure Streaky Bacon Sliced
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="carousel-cell px-2">
-                                <div class="thumb-prevs mb-3">
-                                    <img src="https://the-m-brothers.com/wp-content/uploads/2022/08/t-bone.jpg">
-                                    <h5 class="mb-0">€ 6,0</h5>
-                                    <h6 class="sm-card-text">
-
-                                        Virginia Cure Streaky Bacon Sliced
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="carousel-cell px-2">
-                                <div class="thumb-prevs mb-3">
-                                    <img src="https://the-m-brothers.com/wp-content/uploads/2022/08/t-bone.jpg">
-                                    <h5 class="mb-0">€ 6,0</h5>
-                                    <h6 class="sm-card-text">
-
-                                        Virginia Cure Streaky Bacon Sliced
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="carousel-cell px-2">
-                                <div class="thumb-prevs mb-3">
-                                    <img src="https://the-m-brothers.com/wp-content/uploads/2022/08/t-bone.jpg">
-                                    <h5 class="mb-0">€ 6,0</h5>
-                                    <h6 class="sm-card-text">
-
-                                        Virginia Cure Streaky Bacon Sliced
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
             </div>
             <div class="sidenav-footer">
                 <div class="p-4">

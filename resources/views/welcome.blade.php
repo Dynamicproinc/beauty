@@ -32,7 +32,7 @@
         </div>
     </section>
     <section class="section-padding">
-        <div class="container p-5">
+        <div class="container p-3 p-sm-5">
             <div class="mb-5">
                 <h1 class="title-md text-center">
                     {{ __('The Benefits Tallow Skincare Products') }}
@@ -95,7 +95,7 @@
                     <div class="col-lg-4">
                         <div>
 
-                            <a href="http://127.0.0.1:8000/product/tallow-whipe-skin-care-cream-350ml" class="btn-1-xl">{{ __('ADD TO CART') }}</a>
+                            <a href="/product/tallow-whipe-skin-care-cream-350ml" class="btn-1-xl">{{ __('ADD TO CART') }}</a>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="mid-cont p-3">
+                    <div class="mid-cont p-3 mb-5">
                         <div>
                             <h1 class="title-md">
                                 Everything You Need to Know About Tallow Skin Care
@@ -121,7 +121,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div>
+                    <div class="p-3">
                         <div class="faq-item">
                             <input type="radio" id="fq1" name="faq" class="faq-radio" value="fq1">
                             <label for="fq1" class="faq-label">
