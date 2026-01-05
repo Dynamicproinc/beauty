@@ -1,5 +1,5 @@
 <nav class="position-0 fixed-top ">
-    <div class="prm-bar p-1 text-center"><small class="fw-bold">{{ __('We ship 1-3 days in Croatia for free over 100 ')}}</small></div>
+    {{-- <div class="prm-bar p-1 text-center"><small class="fw-bold">{{ __('We ship 1-3 days in Croatia for free over 100 ')}}</small></div> --}}
     
       <header class="lh-1 py-3 shadow" id="header">
                <div class="container">
