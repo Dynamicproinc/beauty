@@ -26,12 +26,18 @@ Route::post('/admin/products/edit/product-info/edit/{id}/update', [App\Http\Cont
 Route::get('/admin/inventory/add-stock', [App\Http\Controllers\AdminController::class, 'addStock'])->name('admin.inventory.addstock');
 Route::get('/admin/inventory/stock-entries', [App\Http\Controllers\AdminController::class, 'stockEntries'])->name('admin.inventory.stockentries');
 
+// Route::get('/abc123', function () {
+//     Artisan::call('migrate', ['--force' => true]);
+//     return response()->json(['status' => 'Migration completed']);
+
+
+// });;
+// use Illuminate\Support\Facades\Artisan;
+
 Route::get('/abc123', function () {
     Artisan::call('migrate', ['--force' => true]);
-    return response()->json(['status' => 'Migration completed']);
 
-//     system('php artisan config:clear');
-// system('php artisan cache:clear');
-// system('php artisan optimize:clear');
-// echo "Cleared!";
-});;
+    return response()->json([
+        'status' => 'Migration completed'
+    ]);
+});
