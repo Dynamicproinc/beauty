@@ -13,7 +13,16 @@ class ShopController extends Controller
     }
 
     public function checkout(){
+       if(session()->has('cart') == false || count(session('cart')) == 0){
+            return 'Cart is empty';
+       }
        
         return view('shop.checkout');
+    }
+
+    public function thankyou($slug){
+        
+        $order = \App\Models\SalesOrder::where('slug', $slug)->firstOrFail();
+        return view('shop.thankyou')->with('order', $order);
     }
 }

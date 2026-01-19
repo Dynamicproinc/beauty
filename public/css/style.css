@@ -1034,3 +1034,13 @@ transform: translateY(-50%) rotate(0.5turn);
 .faq-item .faq-radio:checked ~ .faq-label::after{
    transform: translateY(-50%) rotate(0.5turn);
 }
+
+.mid-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:16px;
+    /* width: 50px;
+    height: 50px;
+    border:1px solid #333; */
+}

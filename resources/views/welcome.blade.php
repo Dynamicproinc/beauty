@@ -95,7 +95,7 @@
                     <div class="col-lg-4">
                         <div>
 
-                            <a href="/product/tallow-whipe-skin-care-cream-350ml" class="btn-1-xl">{{ __('ADD TO CART') }}</a>
+                            <a href="/product/tallow-skin-care-cream-330g" class="btn-1-xl">{{ __('ADD TO CART') }}</a>
                         </div>
                     </div>
                 </div>

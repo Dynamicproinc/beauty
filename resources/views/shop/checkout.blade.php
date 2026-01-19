@@ -105,14 +105,14 @@
         }
 
         .accord-item input:checked~section.acd-section-h100 {
-            height: 550px !important;
+            height: 390px !important;
 
             padding: 16px;
             background: #F0F0F0;
         }
 
         .cart-items-list {
-            height: 360px !important;
+           max-height: 360px !important;
             overflow-x: hidden !important;
            
         }
@@ -147,10 +147,32 @@
     transition: .2s;
     
 }
+.btn-radio.active, .d-type-radio:checked + .btn-radio{
+    background: #333;
+    color: white !important;
+    border: 1px solid #333 !important;
+}
+
 .btn-radio:hover{
     background: #333;
     color: white !important;
     cursor: pointer;
+}
+.payment-area{
+    position: relative;
+}
+.sk-pl{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .125);
+    position: absolute;
+    z-index: 100;
+    top:0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
     </style>
     <script src="https://js.stripe.com/v3/"></script>

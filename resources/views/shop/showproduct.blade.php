@@ -92,7 +92,12 @@
                                     @if ($product->getHighlight()->count() > 0)
                                         @foreach ($product->getHighlight() as $highlight)
                                             <div class="col-lg-6 mb-1">
-                                                <span class="fw-normal"> ✔ {{ $highlight->highlight_text }}</span>
+                                                <div class="d-flex">
+                                                   <div class="mid-icon">
+                                                    <i class="bi bi-check2"></i>
+                                                   </div>
+                                                   <div> {{$highlight->highlight_text}}</div>
+                                                </div>
                                             </div>
                                         @endforeach
                                     @endif
