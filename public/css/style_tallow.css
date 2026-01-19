@@ -1,0 +1,179 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --p_color : #232e20;
+}
+/* font campton regular */
+@font-face {
+  font-family: 'Campton';
+  src: url('/fonts/CamptonBook.otf') format('opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+    font-family: Campton, Arial, sans-serif !important; 
+    letter-spacing: .0175rem;
+}
+h1, h2, h3, h4, h5, h6, p {
+    text-wrap: balance !important;
+}
+/*  */
+.hero-section{
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+    position:relative;
+   
+}
+.md-section{
+    background: #EAE6DD;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-wallpaper{
+    background-image: linear-gradient(#00000080, #00000080);
+    background-repeat: no-repeat;
+    position:absolute;
+    /* object-fit:scale-down; */
+    background-size: cover;
+
+    height: 100%;
+    width: 100%;
+    top:0%;
+    left: 0%;
+    right:0%;
+    bottom:0%;
+    background-image: url('https://www.tallows.de/cdn/shop/files/tallow-header-neu.webp?v=1758545609&width=1920');
+}
+.hero-text-wrapper{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width:100%;
+    height: 400px;
+    
+}
+.tt-text-xs{
+    font-weight: 600;
+    line-height: 10px;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+.tt-text-hero-md{
+     font-weight: 700 !important;
+     font-size: 22px;
+     letter-spacing: 3px !important;
+    
+
+}
+.sec_text_p_md{
+    font-family: "IBM Plex Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.text-bracket{
+    border-left:1px solid #fff;
+    
+}
+.tt_btn{
+    outline: 0;
+    border:none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    height: 3rem;
+    padding: 1rem 3.275rem;
+    box-shadow :.3s,color .3s,border-color .3s,background-color .3s;
+    display: flex;
+    background: #fff;;
+
+
+}
+.tt-text-xl{
+    font-size: 84px !important;
+    font-weight: 500;
+}
+.tb-p{
+    padding-top:50px !important;
+    padding-bottom: 50px !important;
+}
+.tt_title_sm{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.tt_title_md{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.tt_mid_c{
+width: 100%; /* full width */
+  height: 300px; 
+  display: flex;
+  
+  align-items: center;
+}
+.carousel-cell {
+  width: 25%; /* full width */
+  height: 300px; /* height of carousel */
+  margin-right: 10px !important;
+}
+.carousel-cell div img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.banner{
+   background: var(--p_color);
+   height: 100px;
+   display: flex;
+   /* justify-content: center; */
+   align-items: center;
+   color: #fff;
+  
+}
+.banner img{
+    height: 32px;
+}
+
+@media (max-width: 480px) {
+   .tt_mid_c{
+    
+    height: 100%;
+    display: block; 
+   }
+   .carousel-cell {
+  width: 50%; /* full width */
+  height: 300px; /* height of carousel */
+  margin-right: 10px !important;
+}
+   .carousel-cell div img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.hero-wallpaper{
+    background-image:url('https://www.tallows.de/cdn/shop/files/1080_x_1920_px_1.webp?v=1758806267&width=1000');
+}
+.tt-text-hero-md{
+     font-weight: 500 !important;
+     font-size: 18px;
+     letter-spacing: 2px !important;
+    
+
+}
+.tt-text-xl{
+    font-size: 56px !important;
+}
+
+}
+

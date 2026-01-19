@@ -16,6 +16,7 @@
     <!-- Scripts -->
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
     <link rel="stylesheet" href="{{asset('css/style.css?v='.uniqid())}}">
+    <link rel="stylesheet" href="{{asset('css/style_tallow.css?v='.uniqid())}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -25,14 +26,12 @@
 </head>
 <body>
     <div id="app">
-        @include('inc.navbar_detailed')
+       
         
         <main class="">
-           <div class="">
-            <div class="">
+           
                  @yield('content')
-            </div>
-           </div>
+            
         </main>
         {{--  --}}
         

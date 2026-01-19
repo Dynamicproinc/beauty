@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
     <div class="hero-banner"
         style="background-image:url('https://kushibeauty.com/cdn/shop/files/tallow-pdp-6.jpg?v=1760675752&width=1946');">
         <div class="container-sm">

@@ -22,6 +22,7 @@
 
 html{
      scroll-behavior: smooth;
+     -webkit-text-size-adjust: 100%;
 }
 a{
     color:var(--pri_color_text);
@@ -44,6 +45,10 @@ body{
     /* color: #393A3F; */
     color: #111827;
     background-color: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 .dark-nav{
@@ -331,15 +336,16 @@ ol{
     /* height: 400px; */
     overflow: hidden;
 }
-.thumb-prev img{
+/* .thumb-prev img{
     height: 150px;
     object-fit: cover;
     display: flex;
     transition: 1s;
+    width: 100%;
     
-}
+} */
 .thumb-prevs{
-   width: 200px;  
+   width: 300px;  
 }
 .thumb-prevs img{
     height: 200px;
