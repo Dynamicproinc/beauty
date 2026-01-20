@@ -56,7 +56,7 @@
                         <div class="thumb-areas">
                             <div class="main-carousel-2">
                                 <div class="carousel-cell">
-                                    <div class=" mb-3">
+                                    <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/ChatGPT_Image_24._Sept._2025_11_16_28.png?v=1758705428&width=600">
                                         
                                         <h6 class="sm-card-text">
@@ -70,7 +70,7 @@
 
                                 <div class="carousel-cell">
                                     
-                                    <div class=" mb-3">
+                                    <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/Dry_Skin.png?v=1758704976&width=600">
                                         
                                         <h6 class="sm-card-text">
@@ -80,7 +80,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-cell">
-                                    <div class=" mb-3">
+                                    <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
                                        
                                         <h6 class="sm-card-text">
@@ -90,7 +90,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-cell">
-                                    <div class=" mb-3">
+                                    <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
                                        
                                         <h6 class="sm-card-text">
@@ -100,7 +100,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-cell">
-                                    <div class=" mb-3">
+                                    <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
                                        
                                         <h6 class="sm-card-text">
@@ -110,7 +110,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-cell">
-                                    <div class=" mb-3">
+                                    <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
                                        
                                         <h6 class="sm-card-text">

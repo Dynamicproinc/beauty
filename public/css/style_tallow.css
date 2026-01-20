@@ -123,7 +123,7 @@ width: 100%; /* full width */
   align-items: center;
 }
 .carousel-cell {
-  width: 25%; /* full width */
+  width: 30%; /* full width */
   height: 300px; /* height of carousel */
   margin-right: 10px !important;
 }
@@ -144,7 +144,23 @@ width: 100%; /* full width */
 .banner img{
     height: 32px;
 }
+.cr-cont{
+    position: relative;
+}
+.cr-cont h6{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 3px;
+    font-size: 12px;
+    padding: 8px;
+}
 
+/* start media queries for the small devices */
 @media (max-width: 480px) {
    .tt_mid_c{
     
