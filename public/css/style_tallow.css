@@ -134,7 +134,7 @@ width: 100%; /* full width */
 }
 .banner{
    background: var(--p_color);
-   height: 100px;
+   height: 200px;
    display: flex;
    /* justify-content: center; */
    align-items: center;
@@ -144,7 +144,10 @@ width: 100%; /* full width */
   
 }
 .banner img{
-    height: 32px;
+    height: 60px;
+}
+.obj-mid{
+    height: 25px;
 }
 .cr-cont{
     position: relative;

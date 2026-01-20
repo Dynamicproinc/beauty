@@ -142,7 +142,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="text-center text-sm-end text-white text-uppercase">
                             <img src="{{asset('media/images/the-m-brothers.png')}}" alt="" class="img-fluid">
-                            The M Brothers 
+                            
                         </div>
                     </div>
                 </div>
