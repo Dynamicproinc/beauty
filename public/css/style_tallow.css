@@ -223,6 +223,11 @@ width: 100%; /* full width */
   height: 300px; /* height of carousel */
   margin-right: 10px !important;
 }
+.ca-cel-re{
+ /* width: 0% !important; */
+ width: 100% !important;
+  
+}
    .carousel-cell div img{
     height: 300px;
     width: 100%;
