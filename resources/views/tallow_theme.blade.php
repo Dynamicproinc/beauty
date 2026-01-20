@@ -133,12 +133,12 @@
                <div class="container">
                  <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <h1 class="tt-text-hero-md text-uppercase text-center d-sm-text-lrft">
+                        <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start">
                             Available at Rossmann in Germany
                         </h1>
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <div class="text-center d-sm-text-right">
+                        <div class="text-center text-sm-end">
                             <img src="https://www.tallows.de/cdn/shop/files/Rossmann_Logo.svg_1.png?v=1758195086&width=1000" alt="" class="img-fluid">
                         </div>
                     </div>

@@ -152,7 +152,7 @@ width: 100%; /* full width */
     display: block; 
    }
    .carousel-cell {
-  width: 50%; /* full width */
+  width: 100%; /* full width */
   height: 300px; /* height of carousel */
   margin-right: 10px !important;
 }
@@ -172,7 +172,7 @@ width: 100%; /* full width */
 
 }
 .tt-text-xl{
-    font-size: 56px !important;
+    font-size: 84px !important;
 }
 
 }
