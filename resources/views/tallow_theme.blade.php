@@ -59,10 +59,10 @@
                                     <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/ChatGPT_Image_24._Sept._2025_11_16_28.png?v=1758705428&width=600">
                                         
-                                        <h6 class="sm-card-text">
+                                        <div class="sm-card-text">
 
                                             DAMMAGED SKIN
-                                        </h6>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -73,50 +73,50 @@
                                     <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/Dry_Skin.png?v=1758704976&width=600">
                                         
-                                        <h6 class="sm-card-text">
+                                        <div class="sm-card-text">
 
                                            DRY SKIN
-                                        </h6>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
                                        
-                                        <h6 class="sm-card-text">
+                                        <div class="sm-card-text">
 
                                             SENSITIVE SKINS
-                                        </h6>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
                                        
-                                        <h6 class="sm-card-text">
+                                        <div class="sm-card-text">
 
                                             SENSITIVE SKINS
-                                        </h6>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
                                        
-                                        <h6 class="sm-card-text">
+                                        <div class="sm-card-text">
 
                                             SENSITIVE SKINS
-                                        </h6>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
                                         <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
                                        
-                                        <h6 class="sm-card-text">
+                                        <div class="sm-card-text">
 
                                             SENSITIVE SKINS
-                                        </h6>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -129,17 +129,20 @@
         </section>
         {{-- section 3 --}}
         <section>
-            <div class="banner tb-p">
+            <div class="banner">
                <div class="container">
                  <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start">
-                            Available at Rossmann in Germany
+                       <div class="obj-mid">
+                         <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start">
+                            {{__('Available at the m brothers in Croatia')}}
                         </h1>
+                       </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <div class="text-center text-sm-end">
-                            <img src="https://www.tallows.de/cdn/shop/files/Rossmann_Logo.svg_1.png?v=1758195086&width=1000" alt="" class="img-fluid">
+                        <div class="text-center text-sm-end text-white text-uppercase">
+                            <img src="{{asset('media/images/the-m-brothers.png')}}" alt="" class="img-fluid">
+                            The M Brothers 
                         </div>
                     </div>
                 </div>

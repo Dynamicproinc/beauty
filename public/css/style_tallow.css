@@ -139,6 +139,8 @@ width: 100%; /* full width */
    /* justify-content: center; */
    align-items: center;
    color: #fff;
+   padding-top: 32px;
+   padding-bottom: 32px;
   
 }
 .banner img{
@@ -147,7 +149,7 @@ width: 100%; /* full width */
 .cr-cont{
     position: relative;
 }
-.cr-cont h6{
+.cr-cont div{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -166,6 +168,10 @@ width: 100%; /* full width */
     
     height: 100%;
     display: block; 
+   }
+   .banner{
+    padding-top:50px;
+    padding-bottom:50px;
    }
    .carousel-cell {
   width: 100%; /* full width */
