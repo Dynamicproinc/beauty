@@ -57,8 +57,9 @@
                             <div class="main-carousel-2">
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="https://www.tallows.de/cdn/shop/collections/ChatGPT_Image_24._Sept._2025_11_16_28.png?v=1758705428&width=600">
-                                        
+                                        <img
+                                            src="https://www.tallows.de/cdn/shop/collections/ChatGPT_Image_24._Sept._2025_11_16_28.png?v=1758705428&width=600">
+
                                         <div class="sm-card-text">
 
                                             DAMMAGED SKIN
@@ -69,30 +70,22 @@
 
 
                                 <div class="carousel-cell">
-                                    
+
                                     <div class=" mb-3 cr-cont">
-                                        <img src="https://www.tallows.de/cdn/shop/collections/Dry_Skin.png?v=1758704976&width=600">
-                                        
+                                        <img
+                                            src="https://www.tallows.de/cdn/shop/collections/Dry_Skin.png?v=1758704976&width=600">
+
                                         <div class="sm-card-text">
 
-                                           DRY SKIN
+                                            DRY SKIN
                                         </div>
                                     </div>
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
-                                       
-                                        <div class="sm-card-text">
+                                        <img
+                                            src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
 
-                                            SENSITIVE SKINS
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-cell">
-                                    <div class=" mb-3 cr-cont">
-                                        <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
-                                       
                                         <div class="sm-card-text">
 
                                             SENSITIVE SKINS
@@ -101,8 +94,9 @@
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
-                                       
+                                        <img
+                                            src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
+
                                         <div class="sm-card-text">
 
                                             SENSITIVE SKINS
@@ -111,8 +105,20 @@
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
-                                       
+                                        <img
+                                            src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
+
+                                        <div class="sm-card-text">
+
+                                            SENSITIVE SKINS
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class=" mb-3 cr-cont">
+                                        <img
+                                            src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
+
                                         <div class="sm-card-text">
 
                                             SENSITIVE SKINS
@@ -130,70 +136,105 @@
         {{-- section 3 --}}
         <section>
             <div class="banner">
-               <div class="container">
-                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                       <div class="obj-mid">
-                         <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start">
-                            {{__('Available at the m brothers in Croatia')}}
-                        </h1>
-                       </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="text-center text-sm-end text-white text-uppercase">
-                            <img src="{{asset('media/images/the-m-brothers.png')}}" alt="" class="img-fluid">
-                            
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="obj-mid">
+                                <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start">
+                                    {{ __('Available at the m brothers in Velika gorica') }}
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="text-center text-sm-end text-white text-uppercase">
+                                <img src="{{ asset('media/images/the-m-brothers.png') }}" alt="" class="img-fluid">
+
+                            </div>
                         </div>
                     </div>
                 </div>
-               </div>
             </div>
         </section>
         <section>
             <div class="tb-p bg-white">
                 <div class="container">
                     <div class="d-flex justify-content-center mb-5">
-                    <h1 class="tt-text-hero-md text-uppercase">{{__('nature meets science')}}</h1>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="text-center p-3">
-                            <h1 class="tt-text-xl fw-bold">97 %</h1>
-                             <p class="sec_text_p_md fw-normal">
-                                   report significantly reduced dryness and tightness*.
+                        <h1 class="tt-text-hero-md text-uppercase">{{ __('nature meets science') }}</h1>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="text-center p-3">
+                                <h1 class="tt-text-xl fw-bold">97 %</h1>
+                                <p class="sec_text_p_md fw-normal">
+                                    report significantly reduced dryness and tightness*.
                                 </p>
-                        </div>
+                            </div>
 
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="text-center p-3">
-                            <h1 class="tt-text-xl fw-bold">80 %</h1>
-                             <p class="sec_text_p_md fw-normal">
-                                   report significantly reduced dryness and tightness*.
-                                </p>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="text-center p-3">
-                            <h1 class="tt-text-xl fw-bold">75 %</h1>
-                             <p class="sec_text_p_md fw-normal">
-                                   Skin flaking is reduced by up to 83%. (Instrumental measurement)*
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="text-center p-3">
+                                <h1 class="tt-text-xl fw-bold">80 %</h1>
+                                <p class="sec_text_p_md fw-normal">
+                                    report significantly reduced dryness and tightness*.
                                 </p>
+                            </div>
                         </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="text-center p-3">
+                                <h1 class="tt-text-xl fw-bold">75 %</h1>
+                                <p class="sec_text_p_md fw-normal">
+                                    Skin flaking is reduced by up to 83%. (Instrumental measurement)*
+                                </p>
+                            </div>
 
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="text-center p-3">
-                            <h1 class="tt-text-xl fw-bold">86 %</h1>
-                             <p class="sec_text_p_md fw-normal">
-                                   Reduktion des transepidermalen Wasserverlustes (Haut-Feuchtigkeitsverlust) um bis zu 63%*
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="text-center p-3">
+                                <h1 class="tt-text-xl fw-bold">86 %</h1>
+                                <p class="sec_text_p_md fw-normal">
+                                    Reduktion des transepidermalen Wasserverlustes (Haut-Feuchtigkeitsverlust) um bis zu
+                                    63%*
                                 </p>
+                            </div>
                         </div>
                     </div>
+                    <div class="d-flex justify-content-center text-center">
+                        <small class="text-muted text-uppercase tt-text-xs lh-1">* Independent clinical 4-week study with 31
+                            female participants (2025). Barrier Repair Pur applied once daily.</small>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-center text-center">
-                    <small class="text-muted text-uppercase tt-text-xs lh-1">* Independent clinical 4-week study with 31 female participants (2025). Barrier Repair Pur applied once daily.</small>
-                </div>
+            </div>
+        </section>
+        <section>
+            <div class="reviews-section">
+                <div class="reviews-section-content">
+                    <div class="main-carousel-3">
+                        <div class="carousel-cell ca-cel-re">
+                            <div class="review-content">
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="p-reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit.  dolor repellendus similique fugiat nisi.</p>
+                                <div class="text-muted"><p><small>Jane Doe - 2 Weeks ago</small></p></div>
+                            </div>
+                        </div>
+                        <div class="carousel-cell ca-cel-re">
+                            <div class="review-content">
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -201,6 +242,8 @@
     </div>
     <script>
         var el2 = document.querySelector('.main-carousel-2');
+        var el3 = document.querySelector('.main-carousel-3');
+
         var fl2 = new Flickity(el2, {
             // options
             cellAlign: 'left',
@@ -210,6 +253,14 @@
             // disable previous & next buttons and dots
 
             pageDots: false
+        });
+
+        var fl3 = new Flickity(el3, {
+            cellAlign: 'left',
+            contain: true,
+            freeScroll:true,
+
+            pageDots:false
         });
     </script>
 @endsection
