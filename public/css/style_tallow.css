@@ -170,6 +170,7 @@ width: 100%; /* full width */
     display: block; 
    }
    .banner{
+    height: 200px;
     padding-top:50px;
     padding-bottom:50px;
    }
