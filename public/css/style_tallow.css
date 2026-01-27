@@ -12,6 +12,10 @@
   font-weight: normal;
   font-style: normal;
 }
+html{
+    font-size: 16px;
+    
+}
 
 body{
     font-family: Campton, Arial, sans-serif !important; 
@@ -19,6 +23,9 @@ body{
 }
 h1, h2, h3, h4, h5, h6, p {
     text-wrap: balance !important;
+}
+h5{
+    font-size: 1.5rem;
 }
 /*  */
 .hero-section{
@@ -103,7 +110,7 @@ p{
 
 }
 .tt-text-xl{
-    font-size: 84px !important;
+    font-size: 4rem !important;
     font-weight: 500;
 }
 .tb-p{
@@ -203,11 +210,21 @@ width: 100%; /* full width */
     height: 250px;
     
 }
+.product-image-xl{
+height: 400px !important;
+overflow: hidden;
+}
+.medium-section{
+    padding: 2rem;
+}
 
 
 
 /* start media queries for the small devices */
 @media (max-width: 480px) {
+    .html{
+        font-size: 14px;
+    }
    .tt_mid_c{
     
     height: 100%;
@@ -225,7 +242,7 @@ width: 100%; /* full width */
 }
 .ca-cel-re{
  /* width: 0% !important; */
- width: 100% !important;
+ width: 75% !important;
   
 }
    .carousel-cell div img{
@@ -243,9 +260,7 @@ width: 100%; /* full width */
     
 
 }
-.tt-text-xl{
-    font-size: 84px !important;
-}
+
 
 }
 

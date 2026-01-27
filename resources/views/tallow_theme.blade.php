@@ -156,7 +156,7 @@
             </div>
         </section>
         <section>
-            <div class="tb-p bg-white">
+            {{-- <div class="tb-p bg-white">
                 <div class="container">
                     <div class="d-flex justify-content-center mb-5">
                         <h1 class="tt-text-hero-md text-uppercase">{{ __('nature meets science') }}</h1>
@@ -203,6 +203,23 @@
                             female participants (2025). Barrier Repair Pur applied once daily.</small>
                     </div>
                 </div>
+            </div> --}}
+
+            <div class="medium-section">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-md-6 col-lg-6">
+                        <div class="product-image-xl">
+                            <img src="https://fatcowskin.com/cdn/shop/files/benefits_img.png?v=1746543799" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <h5>Sometimes you just want to get to know a new skincare routine—step by step, without feeling overwhelmed.</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloribus unde nam excepturi maxime accusantium illo aut culpa distinctio vitae at, hic tempora deserunt, quasi, esse omnis ab. Neque, nobis.</p>
+                        <a href="#" class="btn-1-xl">{{__('ADD TO CART')}}</a>
+                    </div>
+                </div>
+                </div>
             </div>
         </section>
         <section>
@@ -220,6 +237,66 @@
                                 </div>
                                 <p class="p-reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit.  dolor repellendus similique fugiat nisi.</p>
                                 <div class="text-muted"><p><small>Jane Doe - 2 Weeks ago</small></p></div>
+                            </div>
+                        </div>
+                        <div class="carousel-cell ca-cel-re">
+                            <div class="review-content">
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-cell ca-cel-re">
+                            <div class="review-content">
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-cell ca-cel-re">
+                            <div class="review-content">
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-cell ca-cel-re">
+                            <div class="review-content">
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-cell ca-cel-re">
+                            <div class="review-content">
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re">
