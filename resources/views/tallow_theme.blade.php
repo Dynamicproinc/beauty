@@ -232,10 +232,11 @@
         <section class="section-type-1">
             <div class="reviews-section">
                 <div class="reviews-section-content">
-                    <div class="p-3">
+                    <div class="container mb-3">
                         <h1 class="tt-text-hero-md text-uppercase">
-                                Everything You Need to Know About Tallow Skin Care
+                               {{ __('Customer Reviews') }}
                             </h1>
+                            <p>{{ __('See what our customers are saying about our products') }}</p>
                     </div>
                     <div class="main-carousel-3">
                         <div class="carousel-cell ca-cel-re">
