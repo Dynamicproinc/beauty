@@ -106,8 +106,17 @@ p{
     box-shadow :.3s,color .3s,border-color .3s,background-color .3s;
     display: flex;
     background: #fff;;
+    text-align: center !important;
+    
 
 
+}
+button{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    height: 50px;
+    border-radius: 0 !important;
 }
 .tt-text-xl{
     font-size: 4rem !important;
@@ -191,6 +200,11 @@ width: 100%; /* full width */
     
     
 
+}
+
+.form-control{
+    height: 50px;
+    border-radius: 0;
 }
 .reviews-section-content{
     min-height: 250px !important;

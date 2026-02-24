@@ -232,7 +232,7 @@
         <section class="section-type-1">
             <div class="reviews-section">
                 <div class="reviews-section-content">
-                    <div class="container mb-3">
+                    <div class="container mb-3 text-center">
                         <h1 class="tt-text-hero-md text-uppercase">
                                {{ __('Customer Reviews') }}
                             </h1>
@@ -588,16 +588,16 @@
                     <h5 class="text-white">{{ __('Subscribe to our newsletter') }}</h5>
                     <p class="text-white">Get monthly updates and news.</p>
 
-                    <div class="d-flex flex-column gap-2">
+                    <div class="">
                         <label for="newsletterEmail" class="visually-hidden">
                             Email address
                         </label>
                         <input id="newsletterEmail"
                                type="email"
-                               class="form-control"
+                               class="form-control mb-3"
                                placeholder="Email address"
                                required>
-                        <button class="tt_btn" type="submit">
+                        <button class="btn btn-light w-100">
                             {{__('Subscribe')}}
                         </button>
                     </div>
@@ -614,12 +614,12 @@
 
             <ul class="list-unstyled d-flex mb-0">
                 <li class="ms-3">
-                    <a class="text-muted" href="#" aria-label="Instagram">
+                    <a class="text-white" href="#" aria-label="Instagram">
                         <i class="bi bi-instagram fs-5"></i>
                     </a>
                 </li>
                 <li class="ms-3">
-                    <a class="text-muted" href="#" aria-label="Facebook">
+                    <a class="text-white" href="#" aria-label="Facebook">
                         <i class="bi bi-facebook fs-5"></i>
                     </a>
                 </li>

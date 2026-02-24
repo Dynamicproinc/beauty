@@ -943,18 +943,18 @@ transform: translateY(-50%) rotate(0.5turn);
     
     transition: background-color 0.3s ease;
     z-index: 1000;
-    background-color: #232E20
+    /* background-color: #232E20 */
 
 }
 #header.scrolled {
     /* background-color: #fff; Color after scroll */
     color: #000;
-      backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.5) !important; /* semi-transparent so effect is visible */
-  /* padding: 20px; */
-  
-     color:#fff !important;
-      backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.5) !important; semi-transparent so effect is visible */
+    /* padding: 20px; */
+    background-color: #fff !important;
+    color:#fff !important;
+    backdrop-filter: blur(10px);
 
 }
 .btn-white-outline{

@@ -27,7 +27,7 @@
 <body>
     <div id="app">
        
-        
+        @include('inc.navbar_detailed')
         <main class="">
            
                  @yield('content')
@@ -60,14 +60,19 @@
 <script>
     const header = document.getElementById('header');
     const navLinks = document.querySelectorAll('.link-secondary');
+    const menuIcon = document.getElementById('menu_icon')
+    
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
         header.classList.add('scrolled');
+        menuIcon.style.color = "#000";
         navLinks.forEach(link => link.classList.add('scrolled'));
+        
         
     } else {
         header.classList.remove('scrolled');
+        menuIcon.style.color = "#fff";
         navLinks.forEach(link => link.classList.remove('scrolled'));
     }
 });
