@@ -229,9 +229,14 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="section-type-1">
             <div class="reviews-section">
                 <div class="reviews-section-content">
+                    <div class="p-3">
+                        <h1 class="tt-text-hero-md text-uppercase">
+                                Everything You Need to Know About Tallow Skin Care
+                            </h1>
+                    </div>
                     <div class="main-carousel-3">
                         <div class="carousel-cell ca-cel-re">
                             <div class="review-content">
