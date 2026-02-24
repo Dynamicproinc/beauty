@@ -140,8 +140,11 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="obj-mid">
+                                <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start mb-0">
+                                    {{ __('Available at ') }}
+                                </h1>
                                 <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start">
-                                    {{ __('Available at the m brothers in Velika gorica') }}
+                                    {{ __('the m brothers in Velika gorica') }}
                                 </h1>
                             </div>
                         </div>
@@ -334,6 +337,131 @@
                 </div>
             </div>
         </section>
+        {{-- faq --}}
+         <section class="section-padding section-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mid-cont p-3 mb-5">
+                        <div>
+                            <h1 class="tt-text-hero-md text-uppercase">
+                                Everything You Need to Know About Tallow Skin Care
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, nulla! Nulla natus enim eum,
+                                id voluptate porro similique non amet dolores libero maxime veniam aliquid ipsam? Vitae
+                                aspernatur inventore optio.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-3">
+                        <div class="faq-item">
+                            <input type="radio" id="fq1" name="faq" class="faq-radio" value="fq1">
+                            <label for="fq1" class="faq-label">
+                                <div class="d-flex justify-content-between">
+
+                                    <h5 class="fw-bold text-white text-uppercase text-sm">What is tallow and how is it made?</h5>
+                                    {{-- <span><i class="bi bi-plus"></i></span> --}}
+                                </div>
+                            </label>
+
+                            <p class="text-white faq-answer">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
+                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
+                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <input type="radio" id="fq2" name="faq" class="faq-radio" value="fq1">
+                            <label for="fq2" class="faq-label">
+                                <div class="d-flex justify-content-between">
+
+                                    <h5 class="fw-normal text-white text-uppercase text-sm text-uppercase">Is tallow safe to use on the skin?</h5>
+                                    {{-- <span><i class="bi bi-plus"></i></span> --}}
+                                </div>
+                            </label>
+
+                            <p class="text-white faq-answer">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
+                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
+                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <input type="radio" id="fq3" name="faq" class="faq-radio" value="fq1">
+                            <label for="fq3" class="faq-label">
+                                <div class="d-flex justify-content-between">
+
+                                    <h5 class="fw-normal text-white text-uppercase text-sm text-uppercase">Why use tallow instead of plant-based oils?</h5>
+                                    {{-- <span><i class="bi bi-plus"></i></span> --}}
+                                </div>
+                            </label>
+
+                            <p class="text-white faq-answer">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
+                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
+                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <input type="radio" id="fq4" name="faq" class="faq-radio" value="fq1">
+                            <label for="fq4" class="faq-label">
+                                <div class="d-flex justify-content-between">
+
+                                    <h5 class="fw-normal text-white text-uppercase text-sm text-uppercase">Does tallow smell bad?</h5>
+                                    {{-- <span><i class="bi bi-plus"></i></span> --}}
+                                </div>
+                            </label>
+
+                            <p class="text-white faq-answer">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
+                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
+                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <input type="radio" id="fq5" name="faq" class="faq-radio" value="fq1">
+                            <label for="fq5" class="faq-label">
+                                <div class="d-flex justify-content-between">
+
+                                    <h5 class="fw-normal text-white text-uppercase text-sm text-uppercase">What are the benefits of tallow for skincare?</h5>
+                                    {{-- <span><i class="bi bi-plus"></i></span> --}}
+                                </div>
+                            </label>
+
+                            <p class="text-white faq-answer">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
+                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
+                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <input type="radio" id="fq6" name="faq" class="faq-radio" value="fq1">
+                            <label for="fq6" class="faq-label">
+                                <div class="d-flex justify-content-between">
+
+                                    <h5 class="fw-normal text-white text-uppercase text-sm text-uppercase">Is tallow good for eczema, psoriasis, or dry skin?</h5>
+                                    {{-- <span><i class="bi bi-plus"></i></span> --}}
+                                </div>
+                            </label>
+
+                            <p class="text-white faq-answer">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
+                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
+                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                            </p>
+                        </div>
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        {{--  --}}
         {{-- a word from owner --}}
         <section class="br-1-bg medium-section">
             <div class="row justify-content-center">

@@ -125,7 +125,7 @@
                             <label for="fq1" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-normal text-white text-uppercase">What is tallow and how is it made?</h5>
+                                    <h5 class="fw-normal text-white text-uppercase text-sm">What is tallow and how is it made?</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>

@@ -273,6 +273,9 @@ footer{
     border: 1px solid #fff;
     background: transparent;
 }
+.text-sm{
+    font-size: 1rem !important;
+}
 
 @keyframes scroll-left {
     0% {
