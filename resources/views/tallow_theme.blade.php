@@ -220,7 +220,7 @@
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloribus unde nam
                                 excepturi maxime accusantium illo aut culpa distinctio vitae at, hic tempora deserunt,
                                 quasi, esse omnis ab. Neque, nobis.</p>
-                            <a href="#" class="btn-1-xl">{{ __('ADD TO CART') }}</a>
+                            <a href="/product/tallow-skin-care-cream-330g" class="btn-1-xl">{{ __('ADD TO CART') }}</a>
                         </div>
                     </div>
                 </div>
