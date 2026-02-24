@@ -59,20 +59,25 @@
 
 <script>
     const header = document.getElementById('header');
+    const headerMo = document.getElementById('header_mo');
     const navLinks = document.querySelectorAll('.link-secondary');
-    const menuIcon = document.getElementById('menu_icon')
+    const menuIcon = document.getElementById('menu_icon');
+
     
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
         header.classList.add('scrolled');
+        headerMo.classList.add('scrolled');
         menuIcon.style.color = "#000";
         navLinks.forEach(link => link.classList.add('scrolled'));
         
         
     } else {
         header.classList.remove('scrolled');
+         headerMo.classList.remove('scrolled');
         menuIcon.style.color = "#fff";
+
         navLinks.forEach(link => link.classList.remove('scrolled'));
     }
 });
