@@ -379,7 +379,7 @@
                             <label for="fq2" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-normal text-white text-uppercase text-sm text-uppercase">Is tallow safe to use on the skin?</h5>
+                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">Is tallow safe to use on the skin?</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>
@@ -395,7 +395,7 @@
                             <label for="fq3" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-normal text-white text-uppercase text-sm text-uppercase">Why use tallow instead of plant-based oils?</h5>
+                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">Why use tallow instead of plant-based oils?</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>
@@ -411,7 +411,7 @@
                             <label for="fq4" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-normal text-white text-uppercase text-sm text-uppercase">Does tallow smell bad?</h5>
+                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">Does tallow smell bad?</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>
@@ -427,7 +427,7 @@
                             <label for="fq5" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-normal text-white text-uppercase text-sm text-uppercase">What are the benefits of tallow for skincare?</h5>
+                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">What are the benefits of tallow for skincare?</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>
@@ -443,7 +443,7 @@
                             <label for="fq6" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-normal text-white text-uppercase text-sm text-uppercase">Is tallow good for eczema, psoriasis, or dry skin?</h5>
+                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">Is tallow good for eczema, psoriasis, or dry skin?</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>
