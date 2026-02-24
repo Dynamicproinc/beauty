@@ -342,7 +342,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="mid-cont p-3 mb-5">
+                    <div class="mid-cont p-3 mb-3">
                         <div>
                             <h1 class="tt-text-hero-md text-uppercase">
                                 Everything You Need to Know About Tallow Skin Care
