@@ -255,7 +255,27 @@ i{
 
 .btn-1-xl{
     width: 100%;
-    height: 80px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #606654; */
+    background-color: #232E20;
+
+    /* background-color: #084A0D; */
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: var(--br);
+    display: inline-flex !important;
+    /* align-items: center !important;
+    justify-content: center !important; */
+    color: #fff !important;
+
+}
+.btn-1-md{
+    width: 100%;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;

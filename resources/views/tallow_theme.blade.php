@@ -208,17 +208,21 @@
             <div class="medium-section">
                 <div class="container">
                     <div class="row">
-                    <div class="col-md-6 col-lg-6">
-                        <div class="product-image-xl">
-                            <img src="https://fatcowskin.com/cdn/shop/files/benefits_img.png?v=1746543799" alt="" class="img-fluid">
+                        <div class="col-md-6 col-lg-6">
+                            <div class="product-image-xl">
+                                <img src="https://fatcowskin.com/cdn/shop/files/benefits_img.png?v=1746543799"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <h5>Sometimes you just want to get to know a new skincare routine—step by step, without feeling
+                                overwhelmed.</h5>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloribus unde nam
+                                excepturi maxime accusantium illo aut culpa distinctio vitae at, hic tempora deserunt,
+                                quasi, esse omnis ab. Neque, nobis.</p>
+                            <a href="#" class="btn-1-xl">{{ __('ADD TO CART') }}</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6">
-                        <h5>Sometimes you just want to get to know a new skincare routine—step by step, without feeling overwhelmed.</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloribus unde nam excepturi maxime accusantium illo aut culpa distinctio vitae at, hic tempora deserunt, quasi, esse omnis ab. Neque, nobis.</p>
-                        <a href="#" class="btn-1-xl">{{__('ADD TO CART')}}</a>
-                    </div>
-                </div>
                 </div>
             </div>
         </section>
@@ -235,8 +239,11 @@
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                <p class="p-reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit.  dolor repellendus similique fugiat nisi.</p>
-                                <div class="text-muted"><p><small>Jane Doe - 2 Weeks ago</small></p></div>
+                                <p class="p-reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit. dolor
+                                    repellendus similique fugiat nisi.</p>
+                                <div class="text-muted">
+                                    <p><small>Jane Doe - 2 Weeks ago</small></p>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re">
@@ -248,7 +255,9 @@
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
+                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
+                                    fugiat nisi.</p>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re">
@@ -260,7 +269,9 @@
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
+                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
+                                    fugiat nisi.</p>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re">
@@ -272,7 +283,9 @@
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
+                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
+                                    fugiat nisi.</p>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re">
@@ -284,7 +297,9 @@
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
+                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
+                                    fugiat nisi.</p>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re">
@@ -296,7 +311,9 @@
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
+                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
+                                    fugiat nisi.</p>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re">
@@ -308,14 +325,174 @@
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique fugiat nisi.</p>
+                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
+                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
+                                    fugiat nisi.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        {{-- a word from owner --}}
+        <section class="br-1-bg medium-section">
+            <div class="row justify-content-center">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center justify-content-center mid-item">
+                            <div>
+                                <h1 class="tt-text-hero-md text-uppercase">
+                                    {{ __('a word from our founder') }}
+                                </h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolores illo
+                                    reprehenderit molestias voluptatem dignissimos possimus distinctio at dolor. Optio omnis
+                                    assumenda voluptatibus officiis magnam odio laboriosam quibusdam reiciendis voluptatem!
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, aperiam deleniti aliquid
+                                    ipsa itaque consectetur adipisci ducimus, architecto assumenda nemo, fugiat tempora sit
+                                    molestias libero delectus odio magni in fuga.
 
+                                </p>
+                                <div>
+                                    <h6>
+                                        John Doe
+                                        <small class="text-muted">Founder CEO</small>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="f-img-wr">
+                            <img src="https://www.tallows.de/cdn/shop/files/ece-tallow.webp?v=1758472868&width=1000"
+                                alt="tallow-skin-care" class="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="marquee">
+    <div class="marquee-content">
+       <div class="">
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nemo dignissimos ipsam ipsum excepturi, consequatur molestias adipisci? Voluptas distinctio voluptatem qui iure. Ipsa possimus odit quod ratione reprehenderit qui non?</span>
+       </div>
+    </div>
+</div>
+        </section>
+        {{-- end a word from founder --}}
+       <footer class="pt-5 text-white">
+    <div class="container">
+        <div class="row">
+
+            <!-- Company -->
+            <div class="col-6 col-md-3 mb-4">
+                <h5 class="text-white">Company</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/" class="nav-link p-0 text-white">Home</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/features" class="nav-link p-0 text-white">Features</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/pricing" class="nav-link p-0 text-white">Pricing</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/faq" class="nav-link p-0 text-white">FAQs</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/about" class="nav-link p-0 text-white">About</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="col-6 col-md-3 mb-4">
+                <h5 class="text-white">Resources</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/blog" class="nav-link p-0 text-white">Blog</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/support" class="nav-link p-0 text-white">Support</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/contact" class="nav-link p-0 text-white">Contact</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/privacy" class="nav-link p-0 text-white">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/terms" class="nav-link p-0 text-white">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-6 col-md-3 mb-4">
+                <h5 class="text-white">Services</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="/web-design" class="nav-link p-0 text-white">Web Design</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/development" class="nav-link p-0 text-white">Development</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/marketing" class="nav-link p-0 text-white">Marketing</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="/seo" class="nav-link p-0 text-white">SEO</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-3 mb-4">
+                <form onsubmit="event.preventDefault(); alert('Subscribed!');">
+                    <h5 class="text-white">{{ __('Subscribe to our newsletter') }}</h5>
+                    <p class="text-white">Get monthly updates and news.</p>
+
+                    <div class="d-flex flex-column gap-2">
+                        <label for="newsletterEmail" class="visually-hidden">
+                            Email address
+                        </label>
+                        <input id="newsletterEmail"
+                               type="email"
+                               class="form-control"
+                               placeholder="Email address"
+                               required>
+                        <button class="tt_btn" type="submit">
+                            {{__('Subscribe')}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
+            <p class="mb-2 mb-sm-0">
+                © {{ date('Y') }} YourCompany. All rights reserved.
+            </p>
+
+            <ul class="list-unstyled d-flex mb-0">
+                <li class="ms-3">
+                    <a class="text-muted" href="#" aria-label="Instagram">
+                        <i class="bi bi-instagram fs-5"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-muted" href="#" aria-label="Facebook">
+                        <i class="bi bi-facebook fs-5"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
     </div>
     <script>
         var el2 = document.querySelector('.main-carousel-2');
@@ -335,9 +512,9 @@
         var fl3 = new Flickity(el3, {
             cellAlign: 'left',
             contain: true,
-            freeScroll:true,
+            freeScroll: true,
 
-            pageDots:false
+            pageDots: false
         });
     </script>
 @endsection
