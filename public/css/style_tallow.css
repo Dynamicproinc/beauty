@@ -222,6 +222,7 @@ overflow: hidden;
 }
 .medium-section{
     padding: 4rem;
+    /* padding-bottom: 4rem; */
 }
 
 .br-1-bg{
@@ -323,6 +324,9 @@ footer{
      letter-spacing: 2px !important;
     
 
+}
+.medium-section{
+    padding: 2rem;
 }
 
 

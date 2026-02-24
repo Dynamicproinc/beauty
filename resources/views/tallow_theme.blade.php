@@ -338,7 +338,7 @@
         <section class="br-1-bg medium-section">
             <div class="row justify-content-center">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 mb-3">
                         <div class="d-flex align-items-center justify-content-center mid-item">
                             <div>
                                 <h1 class="tt-text-hero-md text-uppercase">
