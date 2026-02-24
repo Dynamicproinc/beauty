@@ -59,7 +59,7 @@
 
 <script>
     const header = document.getElementById('header');
-    const headerMo = document.getElementById('header_mo');
+     const headerMo = document.getElementById('mobile_header');
     const navLinks = document.querySelectorAll('.link-secondary');
     const menuIcon = document.getElementById('menu_icon');
 

@@ -1,7 +1,7 @@
 <nav class="position-0 fixed-top ">
     {{-- <div class="prm-bar p-1 text-center"><small class="fw-bold">{{ __('We ship 1-3 days in Croatia for free over 100 ')}}</small></div> --}}
     
-      <header class="lh-1 py-3 d-none d-sm-block" id="header">
+      <header class="lh-1 py-3 d-none d-lg-block" id="header">
                <div class="container">
                  <div class="row flex-nowrap justify-content-between align-items-center">
                     <div class="col-4 pt-1">
@@ -30,7 +30,7 @@
                 </div>
                </div>
             </header>
-            <header class="d-block d-sm-none" id="header_mo">
+            <header class="d-block d-lg-none" id="mobile_header">
                 <div class="container">
                     <div class="row flex-nowrap justify-content-between align-items-center">
                     <div class="col-4 pt-1">

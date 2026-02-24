@@ -957,6 +957,18 @@ transform: translateY(-50%) rotate(0.5turn);
     backdrop-filter: blur(10px);
 
 }
+#mobile_header.scrolled {
+    /* background-color: #fff; Color after scroll */
+    color: #000;
+    /* backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.5) !important; semi-transparent so effect is visible */
+    /* padding: 20px; */
+    background-color: #fff !important;
+    color:#fff !important;
+    backdrop-filter: blur(10px);
+
+}
+
 .btn-white-outline{
     background-color: transparent !important;
     color: #fff !important;
