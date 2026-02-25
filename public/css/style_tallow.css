@@ -360,7 +360,10 @@ footer{
     object-fit: cover;
 }
 
+header{
+    padding: 16px;
+   
 
-
+}
 }
 

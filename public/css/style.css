@@ -965,7 +965,7 @@ transform: translateY(-50%) rotate(0.5turn);
     /* padding: 20px; */
     background-color: #fff !important;
     color:#fff !important;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
 
 }
 
