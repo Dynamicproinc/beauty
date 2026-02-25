@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-5">
                         <div class="tt_mid_c">
-                            <div>
+                            <div class="p-3">
                                 <h1 class="tt-text-hero-md text-uppercase">
                                     {{__('Why Tallow Skincare Has Become a Beauty Essential')}}
                                 </h1>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-lg-8 col-md-7">
                         {{--  --}}
-                        <div class="thumb-areas">
+                        <div class="thumb-areas p-3">
                             <div class="main-carousel-2">
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
@@ -228,7 +228,7 @@
                             <p>{{ __('See what our customers are saying about our products') }}</p>
                     </div>
                     <div class="main-carousel-3">
-                        <div class="carousel-cell ca-cel-re">
+                        <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
