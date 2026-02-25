@@ -13,20 +13,20 @@
                             <div class="text-white text-bracket p-3">
 
                                 <div class="tt-text-xs text-uppercase mb-2">
-                                    <span>150,000+ satisfied customers</span>
+                                    <span>150,000+ {{__('satisfied customers')}}</span>
                                 </div>
 
                                 <div class="tt-text-hero-md text-uppercase">
-                                    <p class="mb-0">Skincare without compromise:</p>
-                                    <p>Natural. Minimalist. Effective.</p>
+                                    <p class="mb-0">{{__('Premium care, zero compromise')}}</p>
+                                    <p>{{__('Pure care. No compromises.')}}</p>
                                 </div>
 
                                 <p class="sec_text_p_md fw-bold">
-                                    Featured on "Dragon's Den"🦁: Natural skincare with powerful lipids, free from
-                                    artificial additives.
+                                    {{__('Discover the power of tallow for healthier, nourished skin')}}
                                 </p>
+                                {{-- add the product link --}}
 
-                                <button class="tt_btn">Secure the deal</button>
+                                <a href="/product/tallow-skin-care-cream-330g" class="tt_btn" title="{{__('Buy now tallow skincare product')}}">{{ __('Secure the deal') }}</a>
 
                             </div>
                         </div>
@@ -43,10 +43,10 @@
                         <div class="tt_mid_c">
                             <div>
                                 <h1 class="tt-text-hero-md text-uppercase">
-                                    Which skin type best describes your skin?
+                                    {{__('Why Tallow Skincare Has Become a Beauty Essential')}}
                                 </h1>
                                 <p class="sec_text_p_md">
-                                    Not sure which product is right for you?
+                                    {{__('Premium beef tallow has become a beauty essential because it works in harmony with the skin. Rich in vitamins A, D, E, and K, it deeply nourishes, strengthens the skin barrier, and enhances natural radiance. Pure, powerful, and time-honored, tallow delivers luxury your skin truly understands.')}}
                                 </p>
                             </div>
                         </div>
@@ -58,11 +58,11 @@
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
                                         <img
-                                            src="https://www.tallows.de/cdn/shop/collections/ChatGPT_Image_24._Sept._2025_11_16_28.png?v=1758705428&width=600">
+                                            src="{{asset('media/images/tllow_skin_care_fact_pure_black_angus01.png')}}" alt="tallow skin care">
 
                                         <div class="sm-card-text">
 
-                                            DAMMAGED SKIN
+                                        {{__('Pure Black Angus Tallow')}}
                                         </div>
                                     </div>
                                 </div>
@@ -73,58 +73,38 @@
 
                                     <div class=" mb-3 cr-cont">
                                         <img
-                                            src="https://www.tallows.de/cdn/shop/collections/Dry_Skin.png?v=1758704976&width=600">
+                                            src="{{asset('media/images/tllow_skin_care_fact_pure_black_angus02.png')}}">
 
                                         <div class="sm-card-text">
 
-                                            DRY SKIN
+                                            {{__('100% Pure, Clean, and Traditionally Rendered')}}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
                                         <img
-                                            src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
+                                            src="{{asset('media/images/tllow_skin_care_fact_pure_black_angus03.png')}}">
 
                                         <div class="sm-card-text">
 
-                                            SENSITIVE SKINS
+                                            {{__('Meticulously Crafted')}}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
                                         <img
-                                            src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
+                                            src="{{asset('media/images/tllow_skin_care_fact_pure_black_angus04.png')}}">
 
                                         <div class="sm-card-text">
 
-                                            SENSITIVE SKINS
+                                            {{__('Rich in vitamins A, D, E & K')}}
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-cell">
-                                    <div class=" mb-3 cr-cont">
-                                        <img
-                                            src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
-
-                                        <div class="sm-card-text">
-
-                                            SENSITIVE SKINS
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-cell">
-                                    <div class=" mb-3 cr-cont">
-                                        <img
-                                            src="https://www.tallows.de/cdn/shop/collections/Sensitive_Skin_2.png?v=1758705016&width=600">
-
-                                        <div class="sm-card-text">
-
-                                            SENSITIVE SKINS
-                                        </div>
-                                    </div>
-                                </div>
+                                
+                                
                             </div>
 
                         </div>
@@ -225,7 +205,7 @@
                             <p class="text-center text-sm-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloribus unde nam
                                 excepturi maxime accusantium illo aut culpa distinctio vitae at, hic tempora deserunt,
                                 quasi, esse omnis ab. Neque, nobis.</p>
-                            <a href="/product/tallow-skin-care-cream-330g" class="btn-1-xl">{{ __('ADD TO CART') }}</a>
+                            <a href="/product/tallow-skin-care-cream-330g" class="btn-1-xl rounded-0">{{ __('ADD TO CART') }}</a>
                         </div>
                     </div>
                 </div>
@@ -599,7 +579,7 @@
                                class="form-control mb-3"
                                placeholder="Email address"
                                required>
-                        <button class="btn btn-light w-100">
+                        <button class="btn btn-light w-100 rounded-0">
                             {{__('Subscribe')}}
                         </button>
                     </div>

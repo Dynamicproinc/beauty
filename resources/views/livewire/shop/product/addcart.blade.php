@@ -99,7 +99,7 @@
                             <div class="mid">
                                 <input type="number" wire:model.live="quantity"
                                     class="form-control text-center qty-input" value="1" min="1"
-                                    max="{{ $selected_variant_data?->quantity }}" style="width: 75px;">
+                                    max="{{ $selected_variant_data?->quantity }}" style="width: 75px; height: 40px;">
                             </div>
                             <div class="mid" style="width: 30%;" wire:click = "incrementQuantity"><i
                                     class="bi bi-plus"></i></div>
