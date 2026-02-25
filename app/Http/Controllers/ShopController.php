@@ -25,4 +25,11 @@ class ShopController extends Controller
         $order = \App\Models\SalesOrder::where('slug', $slug)->firstOrFail();
         return view('shop.thankyou')->with('order', $order);
     }
+
+    public function cart(){
+        if(session()->has('cart') == false || count(session('cart')) == 0){
+            return 'Cart is empty';
+       }
+        return view('shop.cart');
+    }
 }

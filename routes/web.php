@@ -11,6 +11,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('product/{id}',[App\Http\Controllers\ShopController::class, 'showProduct'])->name('shop.product.show');
+Route::get('cart',[App\Http\Controllers\ShopController::class, 'cart'])->name('shop.cart');
 Route::get('checkout',[App\Http\Controllers\ShopController::class, 'checkout'])->name('shop.checkout');
 Route::get('order-confirmation/{slug}',[App\Http\Controllers\ShopController::class, 'thankyou'])->name('shop.thankyou');
 // admin routes

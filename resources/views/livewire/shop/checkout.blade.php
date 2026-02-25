@@ -447,7 +447,7 @@
 
 
                                 </div>
-                                <div class="mt-3 p-3">
+                                {{-- <div class="mt-3 p-3">
                                     <div class="row">
                                         <div class="form-group col-8">
                                             <input type="text" class="form-control"
@@ -457,8 +457,8 @@
                                             <button class="btn btn-outline-dark form-control">Apply</button>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="p-3 payment-area">
+                                </div> --}}
+                                <div class="p-3 payment-area bg-white border mt-3 rounded">
                                     <div class="sk-pl" wire:loading.flex>
                                         <div class="spinner-border" role="status">
                                             <span class="visually-hidden">Loading...</span>

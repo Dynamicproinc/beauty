@@ -38,20 +38,20 @@
                         <a href="/support" class="nav-link p-0 text-white">Support</a>
                     </li> --}}
                     <li class="nav-item mb-2">
-                        <a href="/about" class="nav-link p-0 text-white">About</a>
+                        <a href="/about" class="nav-link p-0 text-white">{{__('Home')}}</a>
                     </li>
                     
                     <li class="nav-item mb-2">
-                        <a href="/privacy" class="nav-link p-0 text-white">Privacy Policy</a>
+                        <a href="/privacy" class="nav-link p-0 text-white">{{__('Privacy Policy')}}</a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="/terms" class="nav-link p-0 text-white">Terms & Conditions</a>
+                        <a href="/terms" class="nav-link p-0 text-white">{{__('Terms & Conditions')}}</a>
                     </li>
                      <li class="nav-item mb-2">
-                        <a href="/faq" class="nav-link p-0 text-white">FAQs</a>
+                        <a href="/faq" class="nav-link p-0 text-white">{{__('FAQs')}}</a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="/contact" class="nav-link p-0 text-white">Contact</a>
+                        <a href="/contact" class="nav-link p-0 text-white">{{__('Contact')}}</a>
                     </li>
                     
                 </ul>

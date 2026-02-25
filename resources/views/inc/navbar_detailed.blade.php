@@ -8,8 +8,8 @@
                         <div class="navbar-links">
                             {{-- <a class="link-secondary" href="#">{{__('Home')}}</a>
                         <a class="link-secondary" href="#">{{__('Products')}}</a> --}}
-                        <a class="link-secondary non-hover" href="#">{{__('About us')}}</a>
-                        <a class="link-secondary non-hover" href="#">{{__('All Products')}}</a>
+                        <a class="link-secondary non-hover" href="#">{{__('Home')}}</a>
+                        <a class="link-secondary non-hover" href="#">{{__('Tallow Skincare')}}</a>
                         <a class="link-secondary non-hover" href="#">{{__('contact')}}</a>
                         </div>
                     </div>
@@ -20,11 +20,12 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links">
-                             <a href="#"class="btn btn-default link-secondary">
-                               <i class="bi bi-cart"></i>
-                            </a>
-                            <a class="btn btn-default link-secondary">
+                            
+                            <a  href="#" class="btn btn-default link-secondary non-hover">
                                 <i class="bi bi-person"></i>
+                            </a>
+                             <a href="#"class="btn btn-default link-secondary non-hover">
+                               <i class="bi bi-cart"></i>
                             </a>
                             {{-- <a class="link-secondary" href="#">{{__('Cart')}}</a> --}}
                         </div>
