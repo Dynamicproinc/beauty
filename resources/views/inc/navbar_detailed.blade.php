@@ -24,7 +24,7 @@
                             <a  href="#" class="btn btn-default link-secondary non-hover">
                                 <i class="bi bi-person"></i>
                             </a>
-                             <a href="#"class="btn btn-default link-secondary non-hover">
+                             <a href="{{ route('shop.cart') }}"class="btn btn-default link-secondary non-hover">
                                <i class="bi bi-cart"></i>
                             </a>
                             {{-- <a class="link-secondary" href="#">{{__('Cart')}}</a> --}}
