@@ -27,9 +27,9 @@ class ShopController extends Controller
     }
 
     public function cart(){
-        if(session()->has('cart') == false || count(session('cart')) == 0){
-            return 'Cart is empty';
-       }
+    //     if(session()->has('cart') == false || count(session('cart')) == 0){
+    //         return 'Cart is empty';
+    //    }
         return view('shop.cart');
     }
 }
