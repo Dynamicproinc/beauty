@@ -244,7 +244,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-cell ca-cel-re">
+                        <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
@@ -258,7 +258,7 @@
                                     fugiat nisi.</p>
                             </div>
                         </div>
-                        <div class="carousel-cell ca-cel-re">
+                        <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
@@ -272,7 +272,7 @@
                                     fugiat nisi.</p>
                             </div>
                         </div>
-                        <div class="carousel-cell ca-cel-re">
+                        <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
@@ -286,7 +286,7 @@
                                     fugiat nisi.</p>
                             </div>
                         </div>
-                        <div class="carousel-cell ca-cel-re">
+                        <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
@@ -300,7 +300,7 @@
                                     fugiat nisi.</p>
                             </div>
                         </div>
-                        <div class="carousel-cell ca-cel-re">
+                        <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
@@ -314,7 +314,7 @@
                                     fugiat nisi.</p>
                             </div>
                         </div>
-                        <div class="carousel-cell ca-cel-re">
+                        <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
@@ -455,7 +455,7 @@
                                     {{ __('a word from our founder') }}
                                 </h1>
                                 <p>
-                                    {{ __('At Tallow Skincare, we believe in the power of nature to nurture and heal. Our founder, John Doe, has always been passionate about creating skincare products that are not only effective but also rooted in tradition. With a background in dermatology and a love for natural ingredients, John set out to craft a line of skincare that harnesses the nourishing properties of tallow. His vision was to create products that work in harmony with the skin, providing deep hydration and essential nutrients without any harsh chemicals. Today, Tallow Skincare is a testament to his commitment to quality and his belief in the transformative power of nature.') }}
+                                    {{ __('At Tallow Skincare, we believe that skincare should be simple, honest, and close to nature. Our products are carefully crafted using high-quality, natural tallow to nourish and protect your skin the way it was meant to be cared for. Inspired by traditional wisdom and supported by a commitment to purity, we focus on clean ingredients without unnecessary additives. Every jar represents our dedication to quality, sustainability, and your skin’s natural balance. Thank you for trusting us to be part of your daily self-care journey. We are proud to create products that bring nature back to skincare. 🌿') }}
 
                                 </p>
                                 <div>
