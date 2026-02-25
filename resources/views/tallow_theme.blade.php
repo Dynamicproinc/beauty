@@ -346,6 +346,9 @@
                                 {{__('Discover the benefits, uses, and myths about tallow skincare. From its rich nutrient profile to its suitability for sensitive skin, we answer all your burning questions about this traditional beauty secret. Learn how tallow can transform your skincare routine and why it’s becoming a must-have for radiant, healthy skin.')}}
                             </p>
 
+                            <p>{{ __('If you need more information, please contact us!') }}</p>
+                             <a href="/contact-us" class="tt_btn" title="{{__('Buy now tallow skincare product')}}">{{ __('Contact us') }}</a>
+
                         </div>
                     </div>
                 </div>
