@@ -141,7 +141,7 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="obj-mid">
                                 <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start mb-0">
-                                    {{ __('Available at ') }}
+                                    {{ __('Available at') }}
                                 </h1>
                                 <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start">
                                     {{ __('the m brothers in Velika gorica') }}
@@ -218,9 +218,11 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-6">
-                            <h5>Sometimes you just want to get to know a new skincare routine—step by step, without feeling
-                                overwhelmed.</h5>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloribus unde nam
+                            <h5 class="text-sm-start text-center">
+                                Sometimes you just want to get to know a new skincare routine—step by step, without feeling
+                                overwhelmed.
+                            </h5>
+                            <p class="text-center text-sm-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloribus unde nam
                                 excepturi maxime accusantium illo aut culpa distinctio vitae at, hic tempora deserunt,
                                 quasi, esse omnis ab. Neque, nobis.</p>
                             <a href="/product/tallow-skin-care-cream-330g" class="btn-1-xl">{{ __('ADD TO CART') }}</a>
