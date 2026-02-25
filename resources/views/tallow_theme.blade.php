@@ -198,16 +198,18 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-6">
-                            <h5 class="text-sm-start text-center">
+                           <div class="text-sm-start" style="text-align: justify; text-align-last: left; hyphens: auto;">
+                             <h5 class="">
                                 {{__('Buy our tallow skin care cream and experience the transformative power of nature for your skin')}}
                             </h5>
-                            <p class="text-center text-sm-start">
+                            <p class="">
                                 {{__('Our tallow skincare cream is specially formulated with pure, natural ingredients to deeply nourish, hydrate, and protect your skin. Rich in skin-loving nutrients, it helps restore softness and support a healthy, radiant glow.')}}
                             </p>
                             <p>
                                 {{__('Don’t wait — order yours today and give your skin the care it deserves.')}}
                             </p>
                             <a href="/product/tallow-skin-care-cream-330g" class="btn-1-xl rounded-0">{{ __('BUY NOW') }}</a>
+                           </div>
                         </div>
                     </div>
                 </div>
