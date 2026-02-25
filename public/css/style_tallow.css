@@ -263,7 +263,7 @@ overflow: hidden;
 .marquee {
     width: 100%;
     overflow: hidden;
-    /* background: #58644C; */
+    
     color: var(--p_color);
     padding: 10px 0;
 }

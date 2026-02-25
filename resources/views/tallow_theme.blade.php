@@ -199,13 +199,15 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <h5 class="text-sm-start text-center">
-                                Sometimes you just want to get to know a new skincare routine—step by step, without feeling
-                                overwhelmed.
+                                {{__('Buy our tallow skin care cream and experience the transformative power of nature for your skin')}}
                             </h5>
-                            <p class="text-center text-sm-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloribus unde nam
-                                excepturi maxime accusantium illo aut culpa distinctio vitae at, hic tempora deserunt,
-                                quasi, esse omnis ab. Neque, nobis.</p>
-                            <a href="/product/tallow-skin-care-cream-330g" class="btn-1-xl rounded-0">{{ __('ADD TO CART') }}</a>
+                            <p class="text-center text-sm-start">
+                                {{__('Our tallow skincare cream is specially formulated with pure, natural ingredients to deeply nourish, hydrate, and protect your skin. Rich in skin-loving nutrients, it helps restore softness and support a healthy, radiant glow.')}}
+                            </p>
+                            <p>
+                                {{__('Don’t wait — order yours today and give your skin the care it deserves.')}}
+                            </p>
+                            <a href="/product/tallow-skin-care-cream-330g" class="btn-1-xl rounded-0">{{ __('BUY NOW') }}</a>
                         </div>
                     </div>
                 </div>
@@ -333,12 +335,10 @@
                     <div class="mid-cont p-3 mb-3">
                         <div>
                             <h1 class="tt-text-hero-md text-uppercase">
-                                Everything You Need to Know About Tallow Skin Care
+                               {{__('Everything You Need to Know About Tallow Skin Care')}}
                             </h1>
                             <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, nulla! Nulla natus enim eum,
-                                id voluptate porro similique non amet dolores libero maxime veniam aliquid ipsam? Vitae
-                                aspernatur inventore optio.
+                                {{__('Discover the benefits, uses, and myths about tallow skincare. From its rich nutrient profile to its suitability for sensitive skin, we answer all your burning questions about this traditional beauty secret. Learn how tallow can transform your skincare routine and why it’s becoming a must-have for radiant, healthy skin.')}}
                             </p>
 
                         </div>
@@ -351,15 +351,13 @@
                             <label for="fq1" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-bold text-white text-uppercase text-sm">What is tallow and how is it made?</h5>
+                                    <h5 class="fw-bold text-white text-uppercase text-sm">{{__('What is tallow and how is it made?')}}</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>
 
                             <p class="text-white faq-answer">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
-                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
-                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                               {{__('Black Angus tallow is tallow made specifically from the fat of Aberdeen Angus (commonly known as Black Angus). preferred for making clean, nutrient-rich tallow. The rendering process typically involves slowly heating the fat to separate the pure tallow from impurities, resulting in a high-quality product ideal for skincare.')}}
                             </p>
                         </div>
                         <div class="faq-item">
@@ -367,15 +365,13 @@
                             <label for="fq2" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">Is tallow safe to use on the skin?</h5>
+                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">{{__('Is tallow safe to use on the skin?')}}</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>
 
                             <p class="text-white faq-answer">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
-                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
-                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                               {{__('Yes, tallow is generally safe to use on the skin, especially when it is pure and properly rendered. It closely resembles the natural oils produced by human skin, making it an excellent moisturizer. However, as with any skincare product, it’s important to patch test first to ensure you don’t have an allergic reaction or sensitivity.')}}
                             </p>
                         </div>
                         <div class="faq-item">
@@ -383,15 +379,14 @@
                             <label for="fq3" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">Why use tallow instead of plant-based oils?</h5>
+                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">{{__('Why use tallow instead of plant-based oils?')}}</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>
 
                             <p class="text-white faq-answer">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
-                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
-                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                               {{__('Tallow is a natural, animal-derived fat that is rich in vitamins A, D, E, and K. It is easily absorbed by the skin and provides deep hydration without clogging pores. Unlike many plant-based oils, tallow is more stable and has a longer shelf life. It also contains essential fatty acids that support skin health and can help reduce inflammation.')}}
+
                             </p>
                         </div>
                         <div class="faq-item">
@@ -399,15 +394,13 @@
                             <label for="fq4" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">Does tallow smell bad?</h5>
+                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">{{__('Does tallow smell bad?')}}</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>
 
                             <p class="text-white faq-answer">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
-                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
-                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                               {{__('Tallow is a natural fat that is generally odorless or has a mild, pleasant scent. If tallow smells strongly or unpleasantly, it may be a sign that it has gone rancid or was not properly rendered. Properly rendered tallow should have a clean, neutral smell.')}}
                             </p>
                         </div>
                         <div class="faq-item">
@@ -415,15 +408,13 @@
                             <label for="fq5" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">What are the benefits of tallow for skincare?</h5>
+                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">{{__('What are the benefits of tallow for skincare?')}}</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>
 
                             <p class="text-white faq-answer">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
-                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
-                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                               {{__('Tallow is rich in vitamins A, D, E, and K, which are essential for healthy skin. It is easily absorbed by the skin and provides deep hydration without clogging pores. Tallow also contains essential fatty acids that support skin health and can help reduce inflammation. It is particularly beneficial for dry or sensitive skin types.')}}
                             </p>
                         </div>
                         <div class="faq-item">
@@ -431,15 +422,13 @@
                             <label for="fq6" class="faq-label">
                                 <div class="d-flex justify-content-between">
 
-                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">Is tallow good for eczema, psoriasis, or dry skin?</h5>
+                                    <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">{{__('Is tallow good for eczema, psoriasis, or dry skin?')}}</h5>
                                     {{-- <span><i class="bi bi-plus"></i></span> --}}
                                 </div>
                             </label>
 
                             <p class="text-white faq-answer">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam,
-                                nulla! Nulla natus enim eum, id voluptate porro similique non amet dolores libero maxime
-                                veniam aliquid ipsam? Vitae aspernatur inventore optio.
+                               {{__('Tallow is a natural fat that is particularly beneficial for eczema, psoriasis, and dry skin. It is easily absorbed by the skin and provides deep hydration without clogging pores. Tallow contains essential fatty acids that support skin health and can help reduce inflammation. Its natural composition makes it a gentle and effective option for sensitive or irritated skin types.')}}
                             </p>
                         </div>
                        
@@ -461,17 +450,12 @@
                                     {{ __('a word from our founder') }}
                                 </h1>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolores illo
-                                    reprehenderit molestias voluptatem dignissimos possimus distinctio at dolor. Optio omnis
-                                    assumenda voluptatibus officiis magnam odio laboriosam quibusdam reiciendis voluptatem!
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, aperiam deleniti aliquid
-                                    ipsa itaque consectetur adipisci ducimus, architecto assumenda nemo, fugiat tempora sit
-                                    molestias libero delectus odio magni in fuga.
+                                    {{ __('At Tallow Skincare, we believe in the power of nature to nurture and heal. Our founder, John Doe, has always been passionate about creating skincare products that are not only effective but also rooted in tradition. With a background in dermatology and a love for natural ingredients, John set out to craft a line of skincare that harnesses the nourishing properties of tallow. His vision was to create products that work in harmony with the skin, providing deep hydration and essential nutrients without any harsh chemicals. Today, Tallow Skincare is a testament to his commitment to quality and his belief in the transformative power of nature.') }}
 
                                 </p>
                                 <div>
                                     <h6>
-                                        John Doe
+                                        Lorena Maturanec
                                         <small class="text-muted">Founder CEO</small>
                                     </h6>
                                 </div>
@@ -491,7 +475,7 @@
             <div class="marquee">
     <div class="marquee-content">
        <div class="">
-        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nemo dignissimos ipsam ipsum excepturi, consequatur molestias adipisci? Voluptas distinctio voluptatem qui iure. Ipsa possimus odit quod ratione reprehenderit qui non?</span>
+        <span>🌿 100% Pure Black Angus Tallow • Natural • Clean • Traditional • Premium Quality •</span>
        </div>
     </div>
 </div>
