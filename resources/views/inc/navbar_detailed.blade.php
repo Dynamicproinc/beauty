@@ -3,11 +3,10 @@
     
       <header class="lh-1 py-3 d-none d-lg-block" id="header">
                <div class="container">
-                 <div class="row flex-nowrap justify-content-between align-items-center">
+                 <div class="row  justify-content-between align-items-center">
                     <div class="col-4 pt-1">
                         <div class="navbar-links">
-                            {{-- <a class="link-secondary" href="#">{{__('Home')}}</a>
-                        <a class="link-secondary" href="#">{{__('Products')}}</a> --}}
+                           
                         <a class="link-secondary non-hover" href="#">{{__('Home')}}</a>
                         <a class="link-secondary non-hover" href="#">{{__('Tallow Skincare')}}</a>
                         <a class="link-secondary non-hover" href="#">{{__('contact')}}</a>

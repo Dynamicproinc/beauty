@@ -107,7 +107,7 @@
                                 <p style="color:#000;"><i class="bi bi-truck" style="font-size:14px"></i> {{__('Free shipping on orders over 50 €')}}</p>
                             </div>
                             <div>
-                                <a href="/product/tallow-skin-care-cream-330g" class="tt_btn_theme w-100" title="{{__('Buy now tallow skincare product')}}">{{ __('Secure the deal') }}</a>
+                                <a href="{{ route('shop.checkout') }}" class="tt_btn_theme w-100" title="{{__('Buy now tallow skincare product')}}">{{ __('Checkout') }}</a>
                             </div>
                         </div>
 
