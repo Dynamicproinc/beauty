@@ -33,6 +33,7 @@
                  @yield('content')
             
         </main>
+         @include('inc.footer')
         {{--  --}}
         
         {{--  --}}
