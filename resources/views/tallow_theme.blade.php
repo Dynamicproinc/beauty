@@ -36,7 +36,7 @@
         </section>
 
         {{-- section 01 --}}
-        <section class="md-section tb-p">
+        <section class="md-section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-5">
