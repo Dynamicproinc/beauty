@@ -336,7 +336,7 @@
          <section class="section-padding section-primary">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 mb-3">
                     <div class="mid-cont p-3 mb-3">
                         <div>
                             <h1 class="tt-text-hero-md text-uppercase">
@@ -347,7 +347,14 @@
                             </p>
 
                             <p>{{ __('If you need more information, please contact us!') }}</p>
-                             <a href="/contact-us" class="tt_btn" title="{{__('Buy now tallow skincare product')}}">{{ __('Contact us') }}</a>
+                            <div class="d-none d-lg-block">
+
+                                <a href="/contact-us" class="tt_btn" title="{{__('Buy now tallow skincare product')}}">{{ __('Contact us') }}</a>
+                            </div>
+                            <div class="d-block d-lg-none">
+
+                                <a href="/contact-us" class="tt_btn w-100" title="{{__('Buy now tallow skincare product')}}">{{ __('Contact us') }}</a>
+                            </div>
 
                         </div>
                     </div>
