@@ -54,7 +54,7 @@
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links">
                             <a class="link-secondary" href="#"><i class="bi bi-person"></i></a>
-                            <a class="link-secondary" href="#"><i class="bi bi-cart"></i></a>
+                            <a class="link-secondary" href="{{ route('shop.cart') }}"><i class="bi bi-cart"></i></a>
                            
                             {{-- <a class="link-secondary" href="#">{{__('Cart')}}</a> --}}
                         </div>
