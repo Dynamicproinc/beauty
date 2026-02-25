@@ -46,7 +46,7 @@
                                        
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <h6 class="mb-0">15.75 €</h6>
+                                                <h6 class="mb-0 tt-text-xs">15.75 €</h6>
                                             </div>
                                         </td>
                                     </tr>
@@ -78,7 +78,7 @@
                                        
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <h6 class="mb-0">15.75 €</h6>
+                                                <h6 class="mb-0 tt-text-xs">15.75 €</h6>
                                             </div>
                                         </td>
                                     </tr>
