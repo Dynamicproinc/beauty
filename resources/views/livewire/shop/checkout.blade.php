@@ -401,7 +401,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2">
+            <div class="col-lg-6 order-1 order-lg-2 mb-3">
                 <div class="">
 
                     <div class="row">

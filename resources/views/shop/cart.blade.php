@@ -5,7 +5,7 @@
 
 @section('content')
     <div>
-        <div style="height:150px"></div>
+        <div style="height:100px"></div>
         <div class="container">
             @if (session()->has('cart') == false || count(session('cart')) == 0)
                <div>
@@ -21,8 +21,16 @@
                 </div>
                </div>
             @else
+            <div>
+                <div class="h6 mb-5">
+                    <a class="btn btn-default" href="{{ route('welcome') }}">
+                        <i class="bi bi-arrow-left"></i> 
+                        {{__('Continue Shopping')}}
+                    </a>
+                </div>
+                @livewire('shop.cart')
 
-            @livewire('shop.cart')
+            </div>
             @endif
         </div>
 

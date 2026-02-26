@@ -456,7 +456,8 @@
         {{--  --}}
         {{-- a word from owner --}}
         <section class="br-1-bg medium-section">
-            <div class="row justify-content-center">
+            <div class="container">
+                <div class="row justify-content-center">
                 <div class="row">
                     <div class="col-lg-6 mb-3">
                         <div class="d-flex align-items-center justify-content-center mid-item">
@@ -484,6 +485,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
         <section>

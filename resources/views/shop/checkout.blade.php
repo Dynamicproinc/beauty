@@ -12,7 +12,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Checkout</title>
+    <title>{{__('Checkout') }}</title>
 
     <!-- Bootstrap 5.3 CDN CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -174,6 +174,11 @@
     align-items: center;
     
 }
+.logo-checkout{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
     </style>
     <script src="https://js.stripe.com/v3/"></script>
     
@@ -183,11 +188,17 @@
 
 <body>
 
-    <header class="d-flex justify-content-center align-items-center pb-3 mb-4 border-bottom container">
-        <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
-            <img src="{{ asset('media/images/logo_sm.png') }}" alt="Logo" class="mx-auto d-block"
+    <header class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom container">
+        <div>
+            <a  href="{{ route('shop.cart') }}" class="btn btn-default"><i class="bi bi-cart h4"></i></a>
+        </div>
+        <div>
+            <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+            <img src="{{ asset('media/images/logo.png') }}" alt="Logo" class="mx-auto d-block logo-checkout"
                 style="max-height: 80px;">
         </a>
+        </div>
+        <div></div>
     </header>
 
     <main class="container">
