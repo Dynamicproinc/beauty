@@ -891,10 +891,10 @@ transform: translateY(-50%) rotate(0.5turn);
 }
 
 .navbar-links{
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 16px;
+    align-items: center; */
+  
     
 }
 .navbar-links a{
@@ -903,6 +903,7 @@ transform: translateY(-50%) rotate(0.5turn);
     text-transform: uppercase;
     color: #fff !important;
     letter-spacing: 0.5px;
+    margin-right: 16px;
 }
 .hero-banner{
     
