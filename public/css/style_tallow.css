@@ -338,6 +338,10 @@ footer{
     color: #000 !important;
     background: transparent;
 }
+.empty-cart-img{
+    width: 100%;
+    height: 250px;
+}
 
 @keyframes scroll-left {
     0% {
@@ -435,6 +439,20 @@ i{
 .payment-summary{
     background: #EAE6DD;
     padding: 16px;
+    position: relative;;
+    
+}
+.sk-pl{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .125);
+    position: absolute;
+    z-index: 100;
+    top:0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 /* start media queries for the small devices */

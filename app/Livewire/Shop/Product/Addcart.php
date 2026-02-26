@@ -51,6 +51,7 @@ class Addcart extends Component
 
     public function addCart()
     {
+        
 
         //    validate quantity
         if ($this->quantity < 1) {
@@ -97,9 +98,10 @@ class Addcart extends Component
             }
             if ($found) {
                 session()->put('cart', $cart);
-                $this->dispatch('cartUpdated');
-                $this->dispatch('refreshCartNav');
-                $this->dispatch('open-nav');
+                // $this->dispatch('cartUpdated');
+                // $this->dispatch('refreshCartNav');
+                // $this->dispatch('open-nav');
+                 return redirect()->to(route('shop.cart'));
                 return;
             }
             session()->push('cart', [
@@ -110,9 +112,10 @@ class Addcart extends Component
                 'name' => $this->product->title,
             ]);
 
-            $this->dispatch('cartUpdated');
-            $this->dispatch('refreshCartNav');
-            $this->dispatch('open-nav');
+            // $this->dispatch('cartUpdated');
+            // $this->dispatch('refreshCartNav');
+            // $this->dispatch('open-nav');
+             return redirect()->to(route('shop.cart'));
         } else {
             // product does not have inventory management, just add to cart
             $cart = session('cart', []);
@@ -127,9 +130,10 @@ class Addcart extends Component
             }
             if ($found) {
                 session()->put('cart', $cart);
-                $this->dispatch('cartUpdated');
-                $this->dispatch('refreshCartNav');
-                $this->dispatch('open-nav');
+                // $this->dispatch('cartUpdated');
+                // $this->dispatch('refreshCartNav');
+                // $this->dispatch('open-nav');
+                 return redirect()->to(route('shop.cart'));
                 return;
             }
             session()->push('cart', [
@@ -141,14 +145,16 @@ class Addcart extends Component
             ]);
             // calculate totatl sum
 
-            $this->dispatch('cartUpdated');
-            $this->dispatch('refreshCartNav');
+            // $this->dispatch('cartUpdated');
+            // $this->dispatch('refreshCartNav');
 
-            $this->dispatch('open-nav');
+            
+            // $this->dispatch('open-nav');
+             return redirect()->to(route('shop.cart'));
         }
 
-        //
-
+        
+       
 
     }
 

@@ -1,76 +1,34 @@
 <?php
 
-namespace App\Livewire\Shop\Product;
+namespace App\Livewire\Shop;
 
 use Livewire\Component;
 use App\Models\Product;
 use App\Models\Variant;
 
-
-class Cartlist extends Component
+class Cart extends Component
 {
-   public $cart_items = [];
-   public $total_sum = 0;
-   public $total_quantity = 0;
-  public $success_message = '';
-   public $error_message = '';
-   public $listeners = ['cartUpdated' => 'refreshCart'];
 
+    public $cart_items = [];
 
-    public function mount()
-    {
-        $this->cart_items = session('cart', []);
-         $this->calculateAllItems();
-         $this->calculateTotalSum();
-    }
+    public $subtotal, $total, $discount = 0;
 
     public function render()
     {
-        return view('livewire.shop.product.cartlist', [
-            'cart_items' => $this->cart_items
+        return view('livewire.shop.cart',[
+             'cart_items' => $this->cart_items
         ]);
     }
 
-    public function refreshCart(){
+    public function mount(){
         $this->cart_items = session('cart', []);
-        $this->calculateTotalSum();
-        $this->calculateAllItems();
+        $this->refreshCart();
     }
 
-    public function calculateTotalSum(){
-        $this->total_sum = 0;
-        foreach($this->cart_items as $item){
-            $this->total_sum += $item['price'] * $item['quantity'];
-        }
-        return $this->total_sum;
-    }
-
-    public function calculateAllItems(){
-        $this->total_quantity = 0;
-        foreach($this->cart_items as $item){
-            $this->total_quantity += $item['quantity'];
-        }
-        return $this->total_quantity;
-       
-    }
-
-    public function removeItem($index){
+    public function addQuantity($index){
+     // if item exists in cart, increment quantity
         $cart = session('cart', []);
-        if(isset($cart[$index])){
-            unset($cart[$index]);
-            session()->put('cart', $cart);
-            $this->cart_items = $cart;
-            $this->dispatch('cartUpdated');
-            $this->dispatch('refreshCartNav');
-            $this->success_message = 'Item removed from cart.';
-            $this->dispatch('success-message'); 
-        }
-    }
-
-    public function incrementQuantity($index){
-        // if item exists in cart, increment quantity
-        $cart = session('cart', []);
-         if(!$cart || count($cart) < 0){
+        if(!$cart || count($cart) < 0){
             return null;
         }
         //check product maintain inventory
@@ -132,24 +90,61 @@ class Cartlist extends Component
             $this->dispatch('cartUpdated'); 
             $this->dispatch('refreshCartNav'); 
         }
-       
+        $this->refreshCart();
     }
+
     public function decrementQuantity($index){
         $cart = session('cart', []);
-        
-         if(!$cart || count($cart) < 0){
-            return null;
-        }
         if(isset($cart[$index]) && $cart[$index]['quantity'] > 1){
             $cart[$index]['quantity'] -= 1;
-
             session()->put('cart', $cart);
             $this->cart_items = $cart;
-            $this->dispatch('cartUpdated');
-            $this->dispatch('refreshCartNav');
+            $this->dispatch('cartUpdated'); 
+            $this->dispatch('refreshCartNav'); 
         }
+        $this->refreshCart();
     }
-     
 
-    
+    public function removeItem($index){
+        $cart = session('cart', []);
+        if(isset($cart[$index])){
+            unset($cart[$index]);
+            session()->put('cart', $cart);
+            $this->cart_items = $cart;
+            $this->dispatch('cartUpdated'); 
+            $this->dispatch('refreshCartNav'); 
+        }
+        if(count($cart) == 0){
+            $this->total = 0;
+            $this->subtotal = 0;
+        }
+        // dd(count($cart));
+        $this->refreshCart();
+    }
+
+    public function clearCart(){
+        session()->forget('cart');
+        $this->cart_items = [];
+        
+        $this->total = 0;
+        $this->subtotal =0; 
+       
+    }
+
+    public function refreshCart(){
+        // calcaulte total
+        if($cart = session('cart', [])){
+            $total = 0;
+            foreach($cart as $item){
+                $total = $total + $item['price'] * $item['quantity'];
+            }
+            
+            $this->total = $total;
+            $this->subtotal = $total - $this->discount ;
+
+            $this->dispatch('refresh_navbar');
+        }
+
+
+    }
 }

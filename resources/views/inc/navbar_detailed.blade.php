@@ -23,9 +23,10 @@
                             <a  href="#" class="btn btn-default link-secondary non-hover">
                                 <i class="bi bi-person"></i>
                             </a>
-                             <a href="{{ route('shop.cart') }}"class="btn btn-default link-secondary non-hover">
-                               <i class="bi bi-cart"></i>
-                            </a>
+                             <div>
+                               @livewire('shop.cartbutton')
+
+                            </div>
                             {{-- <a class="link-secondary" href="#">{{__('Cart')}}</a> --}}
                         </div>
                         
@@ -53,7 +54,10 @@
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links">
                             <a class="link-secondary" href="#"><i class="bi bi-person"></i></a>
-                            <a class="link-secondary" href="{{ route('shop.cart') }}"><i class="bi bi-cart"></i></a>
+                            <div>
+                               @livewire('shop.cartbutton')
+
+                            </div>
                            
                             {{-- <a class="link-secondary" href="#">{{__('Cart')}}</a> --}}
                         </div>

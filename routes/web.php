@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('tallow_theme');
-});
+})->name('welcome');
 use Illuminate\Support\Facades\Artisan;
 
 Auth::routes();

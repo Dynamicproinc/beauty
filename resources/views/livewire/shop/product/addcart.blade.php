@@ -124,7 +124,7 @@
 
                                     <span class="spinner-border spinner-border-sm" aria-hidden="true" wire:loading
                                         wire:target="addCart"></span>
-                                    {{ __('ADD TO BAG') }}
+                                    {{ __('ADD TO CART') }}
                                 </button>
                             @else
                                 <button class="btn-1-lg" disabled>{{ __('OUT OF STOCK') }}</button>

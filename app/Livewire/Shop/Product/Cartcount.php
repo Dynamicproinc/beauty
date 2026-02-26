@@ -9,7 +9,7 @@ class Cartcount extends Component
     public $cart_items;
     public $total_quantity;
     public $total_sum;
-     public $listeners = ['refreshCartNav' => 'refreshData'];
+    public $listeners = ['refreshCartNav' => 'refreshData'];
 
     public function render()
     {
