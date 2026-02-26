@@ -1,3 +1,6 @@
+
+@if(route('welcome') == url()->current())
+   
 <nav class="position-0 fixed-top ">
     {{-- <div class="prm-bar p-1 text-center"><small class="fw-bold">{{ __('We ship 1-3 days in Croatia for free over 100 ')}}</small></div> --}}
     
@@ -20,7 +23,7 @@
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links">
                             
-                            <a  href="#" class="btn btn-default link-secondary non-hover">
+                            <a  href="#" class="link-secondary non-hover">
                                 <i class="bi bi-person"></i>
                             </a>
                              <div>
@@ -69,3 +72,4 @@
     @include('inc.sidenav')
     {{--  --}}
 </nav>
+@endif
