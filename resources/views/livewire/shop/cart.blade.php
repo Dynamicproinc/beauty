@@ -21,8 +21,15 @@
                                             <div class="d-flex">
                                                 <div class="me-2">
                                                     <div class="sm-th-img">
-                                                        <img src="{{ \App\Models\Media::where('product_id', $item['product_id'])->first()?->file_path }}"
+                                                        @php
+                                                        // get product model for crate slug 
+                                                        $product = \App\Models\Product::find($item['product_id']);
+                                                        
+                                                        @endphp
+                                                       <a href="{{ route('shop.product.show', ['id' => $product->slug]) }}">
+                                                            <img src="{{ \App\Models\Media::where('product_id', $item['product_id'])->first()?->file_path }}"
                                                             alt="">
+                                                        </a>
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-center">

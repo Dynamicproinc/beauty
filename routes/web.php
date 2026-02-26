@@ -14,6 +14,9 @@ Route::get('product/{id}',[App\Http\Controllers\ShopController::class, 'showProd
 Route::get('cart',[App\Http\Controllers\ShopController::class, 'cart'])->name('shop.cart');
 Route::get('checkout',[App\Http\Controllers\ShopController::class, 'checkout'])->name('shop.checkout');
 Route::get('order-confirmation/{slug}',[App\Http\Controllers\ShopController::class, 'thankyou'])->name('shop.thankyou');
+Route::get('test',function(){
+    return view('document.invoice');
+});
 // admin routes
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
 Route::get('/admin/products', [App\Http\Controllers\AdminController::class, 'products'])->name('admin.products');
