@@ -66,9 +66,9 @@
 
         <!-- Bottom Bar -->
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
-            <p class="mb-2 tt-text-xs mb-sm-0">
+            <small class="mb-2 mb-sm-0">
                 © {{ date('Y') }} Tallow skincare j.d.o.o. All rights reserved.
-            </p>
+            </small>
 
             <ul class="list-unstyled d-flex mb-0">
                 <li class="ms-3">
