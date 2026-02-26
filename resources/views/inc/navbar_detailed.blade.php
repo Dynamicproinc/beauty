@@ -131,7 +131,7 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links d-flex">
-                            <a class="link-secondary" href="#"><i class="bi bi-person"></i></a>
+                            <a class="link-secondary scrolled" href="#"><i class="bi bi-person"></i></a>
                             <div>
                                @livewire('shop.cartbutton')
 
