@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\SalesOrder;
 
 class ShopController extends Controller
 {
@@ -31,5 +32,11 @@ class ShopController extends Controller
     //         return 'Cart is empty';
     //    }
         return view('shop.cart');
+    }
+
+    public function invoice($slug){
+        
+        $order = SalesOrder::where('slug', $slug)->firstOrFail();
+        return view('document.invoice')->with('order', $order);
     }
 }

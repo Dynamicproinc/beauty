@@ -38,5 +38,28 @@ class SalesOrder extends Model
        'message',
        'phone_other',
        'slug',
+       'stripe_session_id',
+       'stripe_currency',
+       'stripe_status'
     ];
+
+    protected $casts = [
+    'pickup_date' => 'datetime',
+];
+
+public function getItems(){
+    return SalesOrderItem::where('sales_order_id', $this->id)->get();
+}
+
+public function getShippingCountry(){
+    return ShippingLocation::where('id', $this->country)->first();
+    
+
+}
+public function getShippingCountryOther(){
+    return ShippingLocation::where('id', $this->country_other)->first();
+    
+
+}
+
 }

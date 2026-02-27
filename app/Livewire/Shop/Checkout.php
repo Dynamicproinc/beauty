@@ -8,6 +8,10 @@ use App\Models\ShippingLocation;
 use App\Models\SalesOrder;
 use App\Models\SalesOrderItem;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Stripe\Stripe;
+use Stripe\Checkout\Session;
+use App\Models\Order;
 
 class Checkout extends Component
 {
@@ -67,6 +71,7 @@ class Checkout extends Component
 
     function getCartValue()
     {
+        $coupone_discount = 0;
         $cart = session('cart', []);
 
         $total = 0;
@@ -74,6 +79,8 @@ class Checkout extends Component
             $total += $item['price'] * $item['quantity'];
         }
 
+        // deduct coupone discount if applied 
+        $total = $total - $coupone_discount;
         return $total;
     }
 
@@ -227,7 +234,10 @@ $slug = Str::random(25);
     'city_other' => $this->city_other ? $this->city_other : null,
     'message' => $this->message ? $this->message : null,
     'phone_other' => $this->phone_number_other ? $this->phone_number_other : null,
+    'stripe_status'=> 'pending',
     ]);
+
+
 
     // save order items
     foreach ($cart as $item) {
@@ -240,12 +250,46 @@ $slug = Str::random(25);
 
 
     }
+
+    if($this->payment_method == 'card'){
+        //stripe 
+        Stripe::setApiKey(config('services.stripe.secret'));
+
+        
+        $session = Session::create([
+            'payment_method_types' => ['card'],
+            'line_items' => [[
+                'price_data' => [
+                    'currency' => 'eur',
+                    'product_data' => [
+                        'name' => 'Tallow Skincare',
+                    ],
+                    'unit_amount' => 1000,
+                ],
+                'quantity' => 1,
+            ]],
+            'mode' => 'payment',
+            'success_url' => route('success'),
+            'cancel_url' => route('cancel'),
+            'metadata' => [
+                'order_id' => $sales_order->id,
+            ],
+        ]);
+
+        // Save session ID
+        $sales_order->update([
+            'stripe_session_id' => $session->id,
+        ]);
+
+        return redirect($session->url);
+        // end stripe 
+    }
+
+
     //clear the cart
     session()->forget('cart');
-    //send email to customer and admin about the new order
-    //redirect to thank you page with order id
-    // return redirect()->route('shop.thankyou', ['slug' => $sales_order->slug]);
-    return redirect()->to(route('shop.thankyou', ['slug' => $sales_order->slug]));
+    
+    return redirect()->to(route('shop.invoice', ['slug' => $sales_order->slug]));
 
 }
 }

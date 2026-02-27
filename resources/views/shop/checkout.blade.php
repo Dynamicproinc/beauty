@@ -27,6 +27,9 @@
         .pricing-header {
             max-width: 700px;
         }
+        header{
+            background: #F0F0F0;
+        }
 
         .card-pricing {
             border: 1px solid rgba(0, 0, 0, .125);
@@ -283,6 +286,11 @@
   opacity: 8%;
 }
 
+@media (max-width: 480px) {
+    .mob-padding{
+        padding-top: 80px;
+    }
+}
     </style>
     <script src="https://js.stripe.com/v3/"></script>
     
@@ -292,7 +300,7 @@
 
 <body>
 
-    <header class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom container">
+    <header class="fixed-top position-0 d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom container">
         <div>
             <a  href="{{ route('shop.cart') }}" class="btn btn-default"><i class="bi bi-cart h4"></i></a>
         </div>

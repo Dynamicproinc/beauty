@@ -12,4 +12,8 @@ class SalesOrderItem extends Model
         'price',
         'quantity',
     ];
+
+    public function getProduct(){
+        return Product::where('id', $this->product_id)->first();
+    }
 }

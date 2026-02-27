@@ -3,7 +3,7 @@
         <div class="col-lg-10">
             <div class="row">
                 <div class="col-lg-6 order-2 order-lg-1">
-                    <div class="container">
+                    <div class="container" style="margin-top: 80px;">
                         @guest
                             
                         
@@ -553,15 +553,15 @@
                                     </div>
                                 @endif
                                 <div class="form-group mt-3">
-                                    <button class="btn btn-lg btn-warning w-100">{{ __('PAY NOW') }}</button>
+                                    <button class="btn btn-lg btn-warning w-100">{{ __('PLACE ORDER') }}</button>
                                 </div>
 
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2 mb-3">
-                <div class="">
+            <div class="col-lg-6 order-1 order-lg-2 mob-padding">
+                <div class="sticky-top" style="top: 80px;">
 
                     <div class="row">
                         <div class="col-lg-10">

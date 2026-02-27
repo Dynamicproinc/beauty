@@ -11,7 +11,7 @@
                         <div class="navbar-links">
 
                             <a class="link-secondary non-hover" href="#">{{ __('Home') }}</a>
-                            <a class="link-secondary non-hover" href="#">{{ __('Tallow Skincare') }}</a>
+                            <a class="link-secondary non-hover" href="#">{{ __('Tallow Balm') }}</a>
                             <a class="link-secondary non-hover" href="#">{{ __('contact') }}</a>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                         <div class="navbar-links">
 
                             <a class="link-secondary non-hover scrolled" href="#">{{ __('Home') }}</a>
-                            <a class="link-secondary non-hover scrolled" href="#">{{ __('Tallow Skincare') }}</a>
+                            <a class="link-secondary non-hover scrolled" href="#">{{ __('Tallow Balm') }}</a>
                             <a class="link-secondary non-hover scrolled" href="#">{{ __('contact') }}</a>
                         </div>
                     </div>

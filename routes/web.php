@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StripeController;
+use App\Http\Controllers\StripeWebhookController;
 
 Route::get('/', function () {
     return view('tallow_theme');
@@ -13,10 +15,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('product/{id}',[App\Http\Controllers\ShopController::class, 'showProduct'])->name('shop.product.show');
 Route::get('cart',[App\Http\Controllers\ShopController::class, 'cart'])->name('shop.cart');
 Route::get('checkout',[App\Http\Controllers\ShopController::class, 'checkout'])->name('shop.checkout');
-Route::get('order-confirmation/{slug}',[App\Http\Controllers\ShopController::class, 'thankyou'])->name('shop.thankyou');
-Route::get('test',function(){
-    return view('document.invoice');
-});
+// Route::get('order-confirmation/{slug}',[App\Http\Controllers\ShopController::class, 'thankyou'])->name('shop.thankyou');
+route::get('order-confirmation/{slug}', [App\Http\Controllers\ShopController::class, 'invoice'])->name('shop.invoice');
 // admin routes
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
 Route::get('/admin/products', [App\Http\Controllers\AdminController::class, 'products'])->name('admin.products');
@@ -37,6 +37,14 @@ Route::get('/admin/inventory/stock-entries', [App\Http\Controllers\AdminControll
 
 // });;
 // use Illuminate\Support\Facades\Artisan;
+// payment routes
+
+
+Route::get('/checkout-stripe', [StripeController::class, 'checkout']);
+Route::get('/success', [StripeController::class, 'success'])->name('success');
+Route::get('/cancel', [StripeController::class, 'cancel'])->name('cancel');
+Route::post('/stripe/webhook', [StripeWebhookController::class, 'handle']);
+// 
 
 Route::get('/abc123', function () {
     Artisan::call('migrate', ['--force' => true]);

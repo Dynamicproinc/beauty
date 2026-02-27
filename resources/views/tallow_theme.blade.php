@@ -26,7 +26,7 @@
                                 </p>
                                 {{-- add the product link --}}
 
-                                <a href="/product/tallow-skin-care-cream-330g" class="tt_btn" title="{{__('Buy now tallow skincare product')}}">{{ __('Secure the deal') }}</a>
+                                <a href="/product/tallow-skin-care-cream-330g" class="tt_btn" title="{{__('Buy now tallow skincare product')}}">{{ __('Buy Tallow Balm') }}</a>
 
                             </div>
                         </div>
@@ -203,7 +203,7 @@
                         <div class="col-md-6 col-lg-6">
                            <div class="text-sm-start" style="text-align: justify; text-align-last: left; hyphens: auto;">
                              <h5 class="">
-                                {{__('Buy our tallow skin care cream and experience the transformative power of nature for your skin')}}
+                                {{__('Buy our tallow balm skin care cream and experience the transformative power of nature for your skin')}}
                             </h5>
                             <p class="">
                                 {{__('Our tallow skincare cream is specially formulated with pure, natural ingredients to deeply nourish, hydrate, and protect your skin. Rich in skin-loving nutrients, it helps restore softness and support a healthy, radiant glow.')}}

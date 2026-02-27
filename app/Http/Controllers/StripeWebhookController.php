@@ -1,0 +1,44 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Stripe\Webhook;
+use App\Models\SalesOrder;
+
+class StripeWebhookController extends Controller
+{
+    public function handle(Request $request)
+    {
+        $payload = $request->getContent();
+        $sig_header = $request->header('Stripe-Signature');
+        $endpoint_secret = config('services.stripe.webhook_secret');
+
+        try {
+            $event = Webhook::constructEvent(
+                $payload,
+                $sig_header,
+                $endpoint_secret
+            );
+        } catch (\Exception $e) {
+            return response('Invalid', 400);
+        }
+
+        // Payment Success Event
+        if ($event->type === 'checkout.session.completed') {
+
+            $session = $event->data->object;
+
+            $order = SalesOrder::where('stripe_session_id', $session->id)->first();
+
+            if ($order) {
+                $order->update([
+                    'stripe_status' => 'paid',
+                    'stripe_currency' => $session->currency,
+                ]);
+            }
+        }
+
+        return response('Success', 200);
+    }
+}
