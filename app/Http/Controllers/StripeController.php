@@ -36,7 +36,7 @@ class StripeController extends Controller
 
     public function success(Request $request)
     {
-        return "Payment Successful!";
+        return "Payment completed. Waiting for confirmation...";
     }
 
     public function cancel()
