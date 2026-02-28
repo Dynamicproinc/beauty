@@ -101,12 +101,12 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="tt_btn_theme w-100">
+                            <button type="submit" class="tt_btn_theme w-100 mb-3">
                                     {{ __('Login') }}
                                 </button>
                                  @if (Route::has('password.request'))
                                    <div class="text-center">
-                                     <a class="btn btn-link" href="{{ route('password.request') }}">
+                                     <a class="theme-text-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                    </div>
@@ -114,7 +114,7 @@
                         </div>
                         
                          <div class="text-center">
-                                        <p>{{__('Dont have an account?')}} <a href="{{route('register')}}">{{  __('Register') }}</a></p>
+                                        <p>{{__('Dont have an account?')}} <a class="theme-text-link" href="{{route('register')}}">{{  __('Register') }}</a></p>
                         </div>
                     </form>
                 </div>

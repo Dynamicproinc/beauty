@@ -481,7 +481,11 @@ i{
 }
 .modal-box-content div{
     width: 400px;
-    
+
+}
+.theme-text-link{
+    color: var(--p_color);
+    text-decoration: underline;
 }
 /* start media queries for the small devices */
 @media (max-width: 480px) {

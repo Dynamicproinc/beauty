@@ -171,12 +171,12 @@
                                 </button>
                                 <div class="mt-3">
                                     <div class="text-center">
-                                        <p>{{ __('Already have an account?') }} <a
+                                        <p>{{ __('Already have an account?') }} <a class="theme-text-link"
                                                 href="{{ route('login') }}">{{ __('Login') }}</a></p>
                                     </div>
                                     <div>
                                         <p class="text-muted">{{ __('By clicking, you agree to the') }} <a href="/terms"
-                                                target="_blank" rel="noopener">{{ __('Terms and Conditions') }}</a>.</p>
+                                                target="_blank" rel="noopener" class="theme-text-link">{{ __('Terms and Conditions') }}</a>.</p>
 
                                     </div>
                                 </div>
