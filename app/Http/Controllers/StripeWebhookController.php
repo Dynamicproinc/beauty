@@ -33,7 +33,7 @@ class StripeWebhookController extends Controller
 
             if ($order) {
                 $order->update([
-                    'stripe_status' => 'paid',
+                    'stripe_status' => $session->payment_status,
                     'stripe_currency' => $session->currency,
                 ]);
             }
