@@ -1086,8 +1086,8 @@ transform: translateY(-50%) rotate(0.5turn);
     border:1px solid #333; */
 }
 .google-avatar{
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     object-fit: cover;
 }
