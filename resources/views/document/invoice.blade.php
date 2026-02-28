@@ -7,6 +7,7 @@
     <title>{{ __('Order') }} - #ORD-{{ str_pad($order->id, 4, '0', STR_PAD_LEFT) }}</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <style>
         body {
@@ -43,8 +44,14 @@
 
 <body>
 
-    <div class="invoice-box">
-
+    <div>
+        <div class="container">
+            <a href="{{ route('welcome') }}" class="btn btn-outline-secondary mb-3">
+              <i class="bi bi-arrow-left"></i>  {{ __('Back to Home') }}
+            </a>
+        </div>
+        <div class="invoice-box">
+        
         <!-- Company Info -->
         <div class="row invoice-title">
             <div class="col-md-6">
@@ -214,6 +221,7 @@
             </p>
         </div>
 
+    </div>
     </div>
 
 </body>

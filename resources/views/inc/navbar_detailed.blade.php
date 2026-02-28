@@ -23,7 +23,7 @@
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links d-flex">
 
-                            <a href="#" class="link-secondary non-hover">
+                            <a href="{{ route('login') }}" class="link-secondary non-hover">
                                 <i class="bi bi-person"></i>
                             </a>
                             <div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links d-flex">
-                            <a class="link-secondary" href="#"><i class="bi bi-person"></i></a>
+                            <a class="link-secondary" href="{{ route('login') }}"><i class="bi bi-person"></i></a>
                             <div>
                                 <a class="link-secondary position-relative" href="{{ route('shop.cart') }}">
                                     <i class="bi bi-cart"></i>
@@ -125,7 +125,7 @@
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links d-flex">
 
-                            <a href="#" class="link-secondary non-hover scrolled">
+                            <a href="{{ route('login') }}" class="link-secondary non-hover scrolled">
                                 <i class="bi bi-person"></i>
                             </a>
                             <div>
@@ -159,7 +159,7 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links d-flex">
-                            <a class="link-secondary scrolled" href="#"><i class="bi bi-person"></i></a>
+                            <a class="link-secondary scrolled" href="{{ route('login') }}"><i class="bi bi-person"></i></a>
                             <div>
                                 @livewire('shop.cartbutton')
 
