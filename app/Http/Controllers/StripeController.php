@@ -46,10 +46,10 @@ class StripeController extends Controller
     }
 
     if ($order->payment_status === 'paid') {
-        return view('payment-success');
+        return view('stripe.payment-success');
     }
 
-    return view('payment-processing');
+    return view('stripe.payment-processing');
 }
 
     public function cancel()
