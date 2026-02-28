@@ -37,19 +37,24 @@ class StripeController extends Controller
 
     public function success(Request $request)
     {
+        // $sessionId = $request->get('session_id');
+
+        // $order = SalesOrder::where('stripe_session_id', $sessionId)->first();
+
+        // if (!$order) {
+        //     return "Order not found.";
+        // }
+
+        // if ($order->stripe_status === 'paid') {
+        //     return view('stripe.payment-success');
+        // }
+
+        // return view('stripe.payment-processing');
         $sessionId = $request->get('session_id');
 
-        $order = SalesOrder::where('stripe_session_id', $sessionId)->first();
-
-        if (!$order) {
-            return "Order not found.";
-        }
-
-        if ($order->stripe_status === 'paid') {
-            return view('stripe.payment-success');
-        }
-
-        return view('stripe.payment-processing');
+        return view('payment-waiting', [
+            'sessionId' => $sessionId
+        ]);
     }
 
     public function cancel()

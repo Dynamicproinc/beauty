@@ -44,6 +44,18 @@ Route::get('/checkout-stripe', [StripeController::class, 'checkout']);
 Route::get('/success', [StripeController::class, 'success'])->name('success');
 Route::get('/cancel', [StripeController::class, 'cancel'])->name('cancel');
 Route::post('/stripe/webhook', [StripeWebhookController::class, 'handle']);
+Route::get('/check-payment-status/{sessionId}', function ($sessionId) {
+
+    $order = \App\Models\SalesOrder::where('stripe_session_id', $sessionId)->first();
+
+    if (!$order) {
+        return response()->json(['status' => 'not_found']);
+    }
+
+    return response()->json([
+        'status' => $order->stripe_status,
+    ]);
+});
 // 
 
 Route::get('/abc123', function () {
