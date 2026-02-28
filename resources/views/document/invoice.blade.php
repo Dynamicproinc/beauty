@@ -72,6 +72,20 @@
                     <strong>{{ __('Payment Method') }}:</strong> <span
                         class="text-uppercase">{{ $order->payment_method }}</span>
                 </p>
+                 <div>
+            <small> 
+                @if ($order->stripe_session_id)
+                <div>
+                    {{ __('Online Payment') }}: 
+                <span class="text-muted-small @if ($order->stripe_status == 'paid') text-success @else text-danger @endif">
+                    {{ $order->stripe_status }}
+
+                </span>
+                </div>
+               
+            @endif
+        </small>
+        </div>
 
 
             </div>
@@ -186,27 +200,9 @@
             <h6 class="">{{ __('Message:') }}</h6>
             <p>{{ $order->message ?? '' }}</p>
         </div>
-        <hr />
+        {{-- <hr /> --}}
         <div>
-           <div>
-            <small> 
-                @if ($order->stripe_session_id)
-                <div>
-                    {{ __('Online Payment') }}: 
-                <span class="text-muted-small @if ($order->stripe_status == 'paid') text-success @else text-danger @endif">
-                    {{ $order->stripe_status }}
-
-                </span>
-                </div>
-                <div>
-                    {{ __('Payment ID') }}: 
-                    <span class="text-muted-small">
-                        {{ $order->payment_id ?? 'N/A' }}
-                    </span>
-                </div>
-            @endif
-        </small>
-        </div>
+          
         
 
         </div>
