@@ -53,13 +53,13 @@
                             <div class="row">
                                 <div class="col-lg-6 form-group mb-3">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control @error('first_name') is-invalid @enderror"
-                                            id="name" placeholder="{{ __('First Name') }}" name="first_name" required
-                                            value="{{ old('first_name') }}">
+                                        <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                            id="name" placeholder="{{ __('First Name') }}" name="name" required
+                                            value="{{ old('name') }}">
                                         <label for="name">{{ __('First Name') }}</label>
 
                                     </div>
-                                    @error('first_name')
+                                    @error('name')
                                         <span class="text-danger" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

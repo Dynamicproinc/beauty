@@ -47,7 +47,7 @@
                                     <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="google-avatar">
                                         
                                     @else
-                                        <div class="empry-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
+                                        <div class="empty-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
                                     @endif
                                     
                               @else
@@ -104,7 +104,7 @@
                                     <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="google-avatar">
                                         
                                     @else
-                                        <div class="empry-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
+                                        <div class="empty-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
                                     @endif
                                     
                               @else
@@ -157,7 +157,7 @@
                                     <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="google-avatar">
                                         
                                     @else
-                                        <div class="empry-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
+                                        <div class="empty-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
                                     @endif
                                     
                               @else
@@ -202,7 +202,7 @@
                                     <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="google-avatar">
                                         
                                     @else
-                                        <div class="empry-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
+                                        <div class="empty-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
                                     @endif
                                     
                               @else
