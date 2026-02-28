@@ -25,11 +25,9 @@
 
                             <a href="{{ route('login') }}" class="link-secondary non-hover">
                               @auth
-                                    @if (auth()->user()->avatar)
+                                    
                                         <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="google-avatar">
-                                    @else
-                                        <i class="bi bi-person"></i>
-                                    @endif 
+                                    
                               @else
                                   <i class="bi bi-person"></i>
                               @endauth
