@@ -258,6 +258,7 @@ $slug = Str::random(25);
         
         $session = Session::create([
             'payment_method_types' => ['card'],
+            'customer_email' => $this->email,
             'line_items' => [[
                 'price_data' => [
                     'currency' => 'eur',
