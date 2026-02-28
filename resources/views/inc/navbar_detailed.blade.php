@@ -24,7 +24,15 @@
                         <div class="navbar-links d-flex">
 
                             <a href="{{ route('login') }}" class="link-secondary non-hover">
-                                <i class="bi bi-person"></i>
+                              @auth
+                                    @if (auth()->user()->avatar)
+                                        <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="google-avatar">
+                                    @else
+                                        <i class="bi bi-person"></i>
+                                    @endif 
+                              @else
+                                  <i class="bi bi-person"></i>
+                              @endauth
                             </a>
                             <div>
                                 <a class="link-secondary position-relative" href="{{ route('shop.cart') }}">
