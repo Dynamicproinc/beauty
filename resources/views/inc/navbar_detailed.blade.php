@@ -22,21 +22,7 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links d-flex">
-
-                            <a href="{{ route('login') }}" class="link-secondary non-hover">
-                              @auth
-                                    @if (auth()->user()->avatar)
-                                    <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="google-avatar">
-                                        
-                                    @else
-                                        <div class="empry-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
-                                    @endif
-                                    
-                              @else
-                                  <i class="bi bi-person"></i>
-                              @endauth
-                            </a>
-                            <div>
+                             <div>
                                 <a class="link-secondary position-relative" href="{{ route('shop.cart') }}">
                                     <i class="bi bi-cart"></i>
                                     @if (session('cart', []))
@@ -55,6 +41,20 @@
                                 </a>
 
                             </div>
+                            <a href="{{ route('login') }}" class="link-secondary non-hover">
+                              @auth
+                                    @if (auth()->user()->avatar)
+                                    <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="google-avatar">
+                                        
+                                    @else
+                                        <div class="empry-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
+                                    @endif
+                                    
+                              @else
+                                  <i class="bi bi-person"></i>
+                              @endauth
+                            </a>
+                           
                             {{-- <a class="link-secondary" href="#">{{__('Cart')}}</a> --}}
                         </div>
 
@@ -81,19 +81,6 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links d-flex">
-                            <a class="link-secondary" href="{{ route('login') }}">
-                                @auth
-                                    @if (auth()->user()->avatar)
-                                    <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="google-avatar">
-                                        
-                                    @else
-                                        <div class="empry-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
-                                    @endif
-                                    
-                              @else
-                                  <i class="bi bi-person"></i>
-                              @endauth
-                            </a>
                             <div>
                                 <a class="link-secondary position-relative" href="{{ route('shop.cart') }}">
                                     <i class="bi bi-cart"></i>
@@ -111,6 +98,20 @@
                                 </a>
 
                             </div>
+                            <a class="link-secondary" href="{{ route('login') }}">
+                                @auth
+                                    @if (auth()->user()->avatar)
+                                    <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="google-avatar">
+                                        
+                                    @else
+                                        <div class="empry-avatar">{{ substr(auth()->user()->name, 0, 1) }}</div>
+                                    @endif
+                                    
+                              @else
+                                  <i class="bi bi-person"></i>
+                              @endauth
+                            </a>
+                            
 
                             {{-- <a class="link-secondary" href="#">{{__('Cart')}}</a> --}}
                         </div>
@@ -146,7 +147,10 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links d-flex">
+                            <div>
+                                @livewire('shop.cartbutton')
 
+                            </div>
                             <a href="{{ route('login') }}" class="link-secondary non-hover scrolled">
                                 @auth
                                     @if (auth()->user()->avatar)
@@ -160,10 +164,7 @@
                                   <i class="bi bi-person"></i>
                               @endauth
                             </a>
-                            <div>
-                                @livewire('shop.cartbutton')
-
-                            </div>
+                            
                             {{-- <a class="link-secondary" href="#">{{__('Cart')}}</a> --}}
                         </div>
 
@@ -191,6 +192,10 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <div class="navbar-links d-flex">
+                            <div>
+                                @livewire('shop.cartbutton')
+
+                            </div>
                             <a class="link-secondary scrolled" href="{{ route('login') }}">
                                 @auth
                                     @if (auth()->user()->avatar)
@@ -204,10 +209,7 @@
                                   <i class="bi bi-person"></i>
                               @endauth
                             </a>
-                            <div>
-                                @livewire('shop.cartbutton')
-
-                            </div>
+                            
 
                             {{-- <a class="link-secondary" href="#">{{__('Cart')}}</a> --}}
                         </div>
