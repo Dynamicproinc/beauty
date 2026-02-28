@@ -17,6 +17,7 @@ Route::get('cart',[App\Http\Controllers\ShopController::class, 'cart'])->name('s
 Route::get('checkout',[App\Http\Controllers\ShopController::class, 'checkout'])->name('shop.checkout');
 // Route::get('order-confirmation/{slug}',[App\Http\Controllers\ShopController::class, 'thankyou'])->name('shop.thankyou');
 route::get('order-confirmation/{slug}', [App\Http\Controllers\ShopController::class, 'invoice'])->name('shop.invoice');
+route::get('order-confirmation-card-payment/{stripe_session_id}', [App\Http\Controllers\ShopController::class, 'stripeSuccess'])->name('shop.stripe.success');
 // admin routes
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
 Route::get('/admin/products', [App\Http\Controllers\AdminController::class, 'products'])->name('admin.products');
@@ -56,6 +57,9 @@ Route::get('/check-payment-status/{sessionId}', function ($sessionId) {
         'status' => $order->stripe_status,
     ]);
 });
+
+// payment susccess card payment and show invoice
+
 // 
 
 Route::get('/abc123', function () {

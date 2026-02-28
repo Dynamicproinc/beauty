@@ -12,7 +12,7 @@
             .then(data => {
 
                 if (data.status === 'paid') {
-                    window.location.href = "/payment-success";
+                    window.location.href = "{{ route('shop.stripe.success', ['stripe_session_id' => $sessionId]) }}";
                 }
 
                 if (data.status === 'not_found') {

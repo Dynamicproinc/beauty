@@ -39,4 +39,9 @@ class ShopController extends Controller
         $order = SalesOrder::where('slug', $slug)->firstOrFail();
         return view('document.invoice')->with('order', $order);
     }
+    public function stripeSuccess($striped_session_id){
+        
+        $order = SalesOrder::where('stripe_session_id', $striped_session_id)->firstOrFail();
+        return view('document.invoice')->with('order', $order);
+    }
 }

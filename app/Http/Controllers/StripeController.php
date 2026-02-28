@@ -52,7 +52,7 @@ class StripeController extends Controller
         // return view('stripe.payment-processing');
         $sessionId = $request->get('session_id');
 
-        return view('payment-waiting', [
+        return view('stripe.payment-waiting', [
             'sessionId' => $sessionId
         ]);
     }
