@@ -69,14 +69,10 @@
                     {{ $order->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}
                 </p>
                 <p class="mb-0">
-                    <strong>{{ __('Payment Method') }}:</strong> <span class="text-uppercase">{{ $order->payment_method }}</span>
+                    <strong>{{ __('Payment Method') }}:</strong> <span
+                        class="text-uppercase">{{ $order->payment_method }}</span>
                 </p>
-                <div>
-                    @if ($order->stripe_session_id)
-                        {{__('Online Payment')}}: <span class="@if($order->stripe_status == 'paid') text-success @else text-danger @endif">{{$order->stripe_status}}</span>
-                    @endif
-                    
-                </div>
+
 
             </div>
         </div>
@@ -189,6 +185,30 @@
         <div class="mt-3">
             <h6 class="">{{ __('Message:') }}</h6>
             <p>{{ $order->message ?? '' }}</p>
+        </div>
+        <hr />
+        <div>
+           <div>
+            <small> 
+                @if ($order->stripe_session_id)
+                <div>
+                    {{ __('Online Payment') }}: 
+                <span class="text-muted-small @if ($order->stripe_status == 'paid') text-success @else text-danger @endif">
+                    {{ $order->stripe_status }}
+
+                </span>
+                </div>
+                <div>
+                    {{ __('Payment ID') }}: 
+                    <span class="text-muted-small">
+                        {{ $order->payment_id ?? 'N/A' }}
+                    </span>
+                </div>
+            @endif
+        </small>
+        </div>
+        
+
         </div>
         <div class="mt-5 text-center">
             <span>{{ __('Thank you for your business!') }}</span>
