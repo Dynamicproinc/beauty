@@ -45,7 +45,7 @@ class StripeController extends Controller
         return "Order not found.";
     }
 
-    if ($order->payment_status === 'paid') {
+    if ($order->stripe_status === 'paid') {
         return view('stripe.payment-success');
     }
 
