@@ -45,6 +45,8 @@ class Checkout extends Component
         $this->shipping_locations = ShippingLocation::orderBy('location', 'ASC')->get();
         $this->pickup_locations = PickupLocation::orderBy('pickup_location', 'ASC')->get();
         $this->email = auth()->user() ? auth()->user()->email : '';
+        $this->first_name = auth()->user() ? auth()->user()->name : '';
+        $this->last_name = auth()->user() ? auth()->user()->last_name : '';
         $this->getFinalValue();
     }
 
