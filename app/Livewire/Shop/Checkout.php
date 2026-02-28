@@ -264,12 +264,12 @@ $slug = Str::random(25);
                     'product_data' => [
                         'name' => 'Tallow Skincare',
                     ],
-                    'unit_amount' => 1000,
+                    'unit_amount' => 1000, //need to change this to dynamic amount in cents
                 ],
                 'quantity' => 1,
             ]],
             'mode' => 'payment',
-            'success_url' => route('success'),
+            'success_url' => route('success') . '?session_id={CHECKOUT_SESSION_ID}',
             'cancel_url' => route('cancel'),
             'metadata' => [
                 'order_id' => $sales_order->id,

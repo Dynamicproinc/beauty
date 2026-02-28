@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Stripe\Stripe;
 use Stripe\Checkout\Session;
+use App\Models\SalesOrder;
 
 class StripeController extends Controller
 {
@@ -34,10 +35,22 @@ class StripeController extends Controller
         return redirect($session->url);
     }
 
-    public function success(Request $request)
-    {
-        return "Payment completed. Waiting for confirmation...";
+   public function success(Request $request)
+{
+    $sessionId = $request->get('session_id');
+
+    $order = SalesOrder::where('stripe_session_id', $sessionId)->first();
+
+    if (!$order) {
+        return "Order not found.";
     }
+
+    if ($order->payment_status === 'paid') {
+        return view('payment-success');
+    }
+
+    return view('payment-processing');
+}
 
     public function cancel()
     {
