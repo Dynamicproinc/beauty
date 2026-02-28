@@ -1091,6 +1091,17 @@ transform: translateY(-50%) rotate(0.5turn);
     border-radius: 50%;
     object-fit: cover;
 }
+.empry-avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #232e20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+}
 /* google button */
 
 /* end google button */
