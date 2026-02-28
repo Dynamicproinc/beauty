@@ -1090,6 +1090,7 @@ transform: translateY(-50%) rotate(0.5turn);
     height: 24px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .empty-avatar{
     width: 24px;
@@ -1102,6 +1103,8 @@ transform: translateY(-50%) rotate(0.5turn);
     color: #fff;
     font-size: 14px;
     margin: 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
 }
 /* google button */
 
