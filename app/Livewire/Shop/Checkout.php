@@ -266,7 +266,7 @@ $slug = Str::random(25);
                 'price_data' => [
                     'currency' => 'eur',
                     'product_data' => [
-                        'name' => 'Tallow Skincare',
+                        'name' => 'Ukupan iznos za narudžbu br.' . $sales_order->id,
                     ],
                     'unit_amount' => $total_amount_cents, //need to change this to dynamic amount in cents
                 ],
