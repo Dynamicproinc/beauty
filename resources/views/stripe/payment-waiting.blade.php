@@ -8,8 +8,8 @@
             <span class="spinner-border" role="status">
   <span class="visually-hidden">Loading...</span>
 </span>
-            <h5>Confirming your payment</h5>
-            <p>Please wait...</p>
+            <h5>{{__('Confirming your payment')}}</h5>
+            <p>{{__('Please wait...')}}</p>
             
             <div id="status"></div>
         </div>

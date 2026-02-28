@@ -12,7 +12,7 @@
         body {
             background-color: #f8f9fa;
             padding: 40px 0;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important; */
             font-size: 14px;
         }
@@ -51,13 +51,13 @@
                 <div class="d-flex">
                     <img src="{{ asset('media/images/logo.png') }}" alt="Tallow Skincare Logo" width="100">
                 </div>
-                <h5 class="fw-bold">Tallow Skincare j.d.o.o</h5>
-                <p class="text-muted-small mb-0">
+                <h5 class="text-uppercase">Tallow Skincare j.d.o.o</h5>
+                <p class=" mb-0">
                     Donja Švarča 79c<br>
                     Karlovac, Karlovačka, 47000<br>
                     Croatia
                 </p>
-                <p class="text-muted">info@tallow-skincare.hr</p>
+                <p class="">info@tallow-skincare.hr</p>
             </div>
 
             <div class="col-md-6 text-md-end mt-3 mt-md-0">
@@ -71,6 +71,13 @@
                 <p class="mb-0">
                     <strong>{{ __('Payment Method') }}:</strong> <span class="text-uppercase">{{ $order->payment_method }}</span>
                 </p>
+                <div>
+                    @if ($order->stripe_session_id)
+                        {{__('Online Payment')}}: <span class="@if($order->stripe_status == 'paid') text-success @else text-danger @endif">{{$order->stripe_status}}</span>
+                    @endif
+                    
+                </div>
+
             </div>
         </div>
 
@@ -79,7 +86,7 @@
         <!-- Billing & Shipping -->
         <div class="row mb-4">
             <div class="col-md-6">
-                <h6 class="fw-bold bg-light p-2">{{ __('Bill To') }}</h6>
+                <h6 class=" bg-light p-2">{{ __('Bill To') }}</h6>
                 <p class="">
                     {{ $order->first_name }} {{ $order->last_name }}<br>
                     {{ $order->phone_number }}<br>
@@ -93,7 +100,7 @@
 
             <div class="col-md-6">
                 @if ($order->delivery_method === 'home_delivery')
-                    <h6 class="fw-bold bg-light p-2">{{ __('Ship To') }}</h6>
+                    <h6 class=" bg-light p-2">{{ __('Ship To') }}</h6>
                     @if ($order->shipping_other)
                         <p class="">
                             {{ $order->first_name_other }} {{ $order->last_name_other }}<br>
@@ -114,7 +121,7 @@
                     @endif
                 @endif
                 @if ($order->delivery_method === 'pickup')
-                    <h6 class="fw-bold bg-light p-2">{{ __('Pickup Location') }}</h6>
+                    <h6 class=" bg-light p-2">{{ __('Pickup Location') }}</h6>
                     <p class="text-capitalize">
                         @php
                             $pl = \App\Models\PickupLocation::where('id', $order->pickup_location)->first();
@@ -172,7 +179,7 @@
                             $finalTotal = $order->total_amount - $order->discount_amount + $order->shipping_cost;
                         @endphp
 
-                        <td class="text-end fw-bold">
+                        <td class="text-end ">
                             €{{ number_format($finalTotal, 2, ',', '.') }}
                         </td>
                     </tr>
@@ -180,7 +187,7 @@
             </table>
         </div>
         <div class="mt-3">
-            <h6 class="fw-bold">{{ __('Message:') }}</h6>
+            <h6 class="">{{ __('Message:') }}</h6>
             <p>{{ $order->message ?? '' }}</p>
         </div>
         <div class="mt-5 text-center">
