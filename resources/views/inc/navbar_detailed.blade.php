@@ -10,8 +10,8 @@
                     <div class="col-4">
                         <div class="navbar-links">
 
-                            <a class="link-secondary non-hover" href="#">{{ __('Home') }}</a>
-                            <a class="link-secondary non-hover" href="#">{{ __('Tallow Balm') }}</a>
+                            <a class="link-secondary non-hover" href="{{ route('welcome') }}">{{ __('Home') }}</a>
+                            <a class="link-secondary non-hover" href="{{ route('shop') }}">{{ __('Tallow Balm') }}</a>
                             <a class="link-secondary non-hover" href="#">{{ __('contact') }}</a>
                         </div>
                     </div>
