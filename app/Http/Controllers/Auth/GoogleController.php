@@ -39,7 +39,7 @@ $user = User::updateOrCreate(
         'name' => $googleUser->user['given_name'],
         'last_name' =>$googleUser->user['family_name'],
         'google_id' => $googleUser->getId(),
-        'google_token' => $googleUser->token,
+        // 'google_token' => $googleUser->token,
         'avatar' => $googleUser->getAvatar(),
         'password' => bcrypt($randomPassword),
     ]
