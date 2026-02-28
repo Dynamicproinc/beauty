@@ -8,8 +8,9 @@
                             
                         
                         <div class="py-3 mb-3">
-                            <p>{{ __('If you have an account, please sign in to continue') }}</p>
-                            <button class="gsi-material-button">
+                            <p>{{ __('If you have an account, please login in to continue') }}</p>
+                            <a href="{{ route('login') }}" class="btn btn-dark">{{ __('Login') }}</a>
+                            {{-- <button class="gsi-material-button">
                                 <div class="gsi-material-button-state"></div>
                                 <div class="gsi-material-button-content-wrapper">
                                     <div class="gsi-material-button-icon">
@@ -33,7 +34,7 @@
                                     <span class="gsi-material-button-contents">{{ __('Continue with Google') }}</span>
                                     <span style="display: none;">{{__('Continue with Google')}}</span>
                                 </div>
-                            </button>
+                            </button> --}}
                         </div>
                         @else
                             <div class="py-3 mb-3">
