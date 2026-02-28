@@ -352,7 +352,7 @@
                                                         wire:model="payment_method" type="radio" id="pmcod"
                                                         value="cod">
                                                     <label class="pm-check-label my-3" for="pmcod">
-                                                        {{ __('Cash or Card Payment on Delivery or Personal Pickup') }}
+                                                        {{ __('Cash/Card for delivery or pickup') }}
 
                                                     </label>
                                                     {{-- <section class="acd-section border-top">
