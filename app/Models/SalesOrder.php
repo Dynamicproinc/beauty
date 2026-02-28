@@ -40,7 +40,8 @@ class SalesOrder extends Model
        'slug',
        'stripe_session_id',
        'stripe_currency',
-       'stripe_status'
+       'stripe_status',
+       'payment_id',
     ];
 
     protected $casts = [
