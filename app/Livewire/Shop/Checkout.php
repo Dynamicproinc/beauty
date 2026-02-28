@@ -237,6 +237,7 @@ $slug = Str::random(25);
     'stripe_status'=> 'pending',
     ]);
 
+    
 
 
     // save order items
@@ -254,18 +255,20 @@ $slug = Str::random(25);
     if($this->payment_method == 'card'){
         //stripe 
         Stripe::setApiKey(config('services.stripe.secret'));
-
+    // calculate total amount in cents
+    $total_amount = $sales_order->total_amount + $sales_order->shipping_cost - $sales_order->discount_amount;
+    $total_amount_cents = $total_amount * 100;
         
         $session = Session::create([
             'payment_method_types' => ['card'],
-            'customer_email' => $this->email,
+            'customer_email' => $sales_order->email,
             'line_items' => [[
                 'price_data' => [
                     'currency' => 'eur',
                     'product_data' => [
                         'name' => 'Tallow Skincare',
                     ],
-                    'unit_amount' => 1000, //need to change this to dynamic amount in cents
+                    'unit_amount' => $total_amount_cents, //need to change this to dynamic amount in cents
                 ],
                 'quantity' => 1,
             ]],
