@@ -62,6 +62,14 @@ Route::get('/check-payment-status/{sessionId}', function ($sessionId) {
 
 // 
 
+// test route
+// Route::get('/testing', function (){
+//     $sessionId = 'dsdsdsdsds';
+//  return view('stripe.payment-waiting', [
+//             'sessionId' => $sessionId
+//         ]);
+// });
+
 Route::get('/abc123', function () {
     Artisan::call('migrate', ['--force' => true]);
 

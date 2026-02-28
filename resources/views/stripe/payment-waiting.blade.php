@@ -1,7 +1,22 @@
-<h2>⏳ Confirming your payment...</h2>
-<p>Please wait. Do not close this page.</p>
+@extends('layouts.app')
+{{-- need so much thing to here --}}
+@section('title', __('Confirming Your Payment'))
+@section('content')
+<div class="modal-box">
+    <div class="modal-box-content">
+        <div class="text-center">
+            <span class="spinner-border" role="status">
+  <span class="visually-hidden">Loading...</span>
+</span>
+            <h5>Confirming your payment</h5>
+            <p>Please wait...</p>
+            
+            <div id="status"></div>
+        </div>
+    </div>
+</div>
 
-<div id="status"></div>
+
 
 <script>
     const sessionId = "{{ $sessionId }}";
@@ -25,3 +40,4 @@
     // Check every 3 seconds
     setInterval(checkStatus, 3000);
 </script>
+@endsection
