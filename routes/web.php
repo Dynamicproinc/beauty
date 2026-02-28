@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\StripeWebhookController;
-use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\Auth\GoogleController;
 
 Route::get('/', function () {
     return view('tallow_theme');
