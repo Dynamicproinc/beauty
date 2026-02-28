@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\StripeWebhookController;
+use App\Http\Controllers\GoogleController;
 
 Route::get('/', function () {
     return view('tallow_theme');
@@ -58,7 +59,11 @@ Route::get('/check-payment-status/{sessionId}', function ($sessionId) {
     ]);
 });
 
-// payment susccess card payment and show invoice
+//google
+
+
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 // 
 
