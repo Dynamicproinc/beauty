@@ -12,7 +12,7 @@
                     <div class="row justify-content-center">
                         <div class="col-6 p-3">
                             {{-- {{ route('google.login') }} --}}
-                            <a href="#" class="btn d-flex align-items-center justify-content-center"
+                            <a href="{{ route('google.login') }}" class="btn d-flex align-items-center justify-content-center"
                                 style="background-color: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 10px;">
                                 <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo"
                                     style="width: 20px; margin-right: 8px;">
