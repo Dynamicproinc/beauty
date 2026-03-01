@@ -91,11 +91,7 @@
 <body>
 
     <div>
-        <div class="container">
-            <a href="{{ route('welcome') }}" class="button">
-              <i class="bi bi-arrow-left"></i>  {{ __('Back to Home') }}
-            </a>
-        </div>
+       
         <div class="invoice-box">
         
         <!-- Company Info -->

@@ -39,7 +39,7 @@ class StripeWebhookController extends Controller
                     'stripe_status' => $session->payment_status,
                     'stripe_currency' => $session->currency,
                 ]);
-                Mail::to($sales_order->email)->send(new OrderConfirmation($sales_order));
+                Mail::to($order->email)->send(new OrderConfirmation($order));
             }
         }
 
