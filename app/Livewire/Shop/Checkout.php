@@ -295,7 +295,9 @@ $slug = Str::random(25);
 // if payment method is not car send email to customer
     if ($this->payment_method !== 'card') {
         // send order confirmation email to customer
-        Mail::to($sales_order->email)->send(new OrderConfirmation($sales_order));
+         Mail::to($sales_order->email)
+                    ->bcc('info@tallow-skincare.hr')
+                    ->send(new OrderConfirmation($sales_order));
     }
 
     //clear the cart
