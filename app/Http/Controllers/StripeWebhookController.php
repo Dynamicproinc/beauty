@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Stripe\Webhook;
 use App\Models\SalesOrder;
+use App\Mail\OrderConfirmation;
+use Illuminate\Support\Facades\Mail;
 
 class StripeWebhookController extends Controller
 {
@@ -37,6 +39,7 @@ class StripeWebhookController extends Controller
                     'stripe_status' => $session->payment_status,
                     'stripe_currency' => $session->currency,
                 ]);
+                Mail::to($sales_order->email)->send(new OrderConfirmation($sales_order));
             }
         }
 
