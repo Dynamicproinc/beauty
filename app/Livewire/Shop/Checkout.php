@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 use Stripe\Stripe;
 use Stripe\Checkout\Session;
 use App\Models\Order;
+use App\Mail\OrderConfirmation;
+use Illuminate\Support\Facades\Mail;
 
 class Checkout extends Component
 {
@@ -290,7 +292,11 @@ $slug = Str::random(25);
         return redirect($session->url);
         // end stripe 
     }
-
+// if payment method is not car send email to customer
+    if ($this->payment_method !== 'card') {
+        // send order confirmation email to customer
+        Mail::to($sales_order->email)->send(new OrderConfirmation($sales_order));
+    }
 
     //clear the cart
     session()->forget('cart');

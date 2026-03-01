@@ -3,11 +3,13 @@
         <div class="col-lg-10">
             <div class="row">
                 <div class="col-lg-6 order-2 order-lg-1">
+                     
                     <div class="container" style="margin-top: 80px;">
                         @guest
                             
                         
                         <div class="py-3 mb-3">
+                           
                             <p>{{ __('If you have an account, please login in to continue') }}</p>
                             <a href="{{ route('login') }}" class="btn btn-dark">{{ __('Login') }}</a>
                             {{-- <button class="gsi-material-button">
@@ -44,6 +46,7 @@
                         @endguest
                         
                         <form wire:submit="saveOrder">
+                            
                             <div>
                                 <div class="d-flex mb-3">
                                     <div class="w-100">

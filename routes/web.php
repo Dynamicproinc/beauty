@@ -4,15 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\StripeWebhookController;
 use App\Http\Controllers\Auth\GoogleController;
+use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', function () {
     return view('tallow_theme');
 })->name('welcome');
-use Illuminate\Support\Facades\Artisan;
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 Route::get('product/{id}',[App\Http\Controllers\ShopController::class, 'showProduct'])->name('shop.product.show');
 Route::get('cart',[App\Http\Controllers\ShopController::class, 'cart'])->name('shop.cart');
 Route::get('checkout',[App\Http\Controllers\ShopController::class, 'checkout'])->name('shop.checkout');
@@ -31,15 +31,6 @@ Route::post('/admin/products/edit/product-info/edit/{id}/update', [App\Http\Cont
 // inventory
 Route::get('/admin/inventory/add-stock', [App\Http\Controllers\AdminController::class, 'addStock'])->name('admin.inventory.addstock');
 Route::get('/admin/inventory/stock-entries', [App\Http\Controllers\AdminController::class, 'stockEntries'])->name('admin.inventory.stockentries');
-
-// Route::get('/abc123', function () {
-//     Artisan::call('migrate', ['--force' => true]);
-//     return response()->json(['status' => 'Migration completed']);
-
-
-// });;
-// use Illuminate\Support\Facades\Artisan;
-// payment routes
 
 
 Route::get('/checkout-stripe', [StripeController::class, 'checkout']);
@@ -65,15 +56,8 @@ Route::get('/check-payment-status/{sessionId}', function ($sessionId) {
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
-// 
 
-// test route
-// Route::get('/testing', function (){
-//     $sessionId = 'dsdsdsdsds';
-//  return view('stripe.payment-waiting', [
-//             'sessionId' => $sessionId
-//         ]);
-// });
+// testing area
 
 Route::get('/abc123', function () {
     Artisan::call('migrate', ['--force' => true]);
