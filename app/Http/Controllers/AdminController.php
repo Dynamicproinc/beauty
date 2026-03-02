@@ -49,7 +49,7 @@ class AdminController extends Controller
     }
 
     public function orders(){
-        $orders = SalesOrder::orderBy('created_at', 'desc')->get();
+        $orders = SalesOrder::orderBy('updated_at', 'desc')->where('payment_status', 'success')->paginate(20);
         return view('admin.orders.index')->with('orders', $orders);
     }
 
