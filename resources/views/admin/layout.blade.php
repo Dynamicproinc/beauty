@@ -15,6 +15,7 @@
   @livewireScripts
 
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
         .sidebar {
             position: fixed;
             top: 0;
@@ -125,14 +126,19 @@ label {
   max-width: 90%;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
+table{
+  
+}
 th{
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
   color: #000;  
+  
 }
 td{
   font-size: 14px;
+  font-family: 'JetBrains Mono', monospace !important;
 }
     </style>
 </head>
