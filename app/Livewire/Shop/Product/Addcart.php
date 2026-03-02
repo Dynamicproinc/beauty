@@ -52,6 +52,9 @@ class Addcart extends Component
     public function addCart()
     {
         
+    $this->validate([
+        'quantity' => 'required|integer|min:1',
+    ]);
 
         //    validate quantity
         if ($this->quantity < 1) {

@@ -173,6 +173,9 @@ class Checkout extends Component
     'phone_number' => 'required|string|min:2|max:50',
     'first_name' => 'required|string|min:2|max:50',
     'last_name' => 'required|string|min:2|max:50',
+    'delivery_method'=> 'required|in:home_delivery,pickup',
+    'payment_method' => 'required|in:cod,card',
+    'billing' => 'required|in:default,other',
 ]);
 
 if ($this->delivery_method === 'home_delivery') {

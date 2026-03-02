@@ -60,7 +60,7 @@
                                         <input type="radio" id="pick" value="pickup" class="d-type-radio"
                                             wire:model.live="delivery_method" wire:click = "refreshDeliveryMethod">
                                         <label for="pick" class="btn-radio">
-                                            <i class="bi bi-box-seam mx-2"></i> {{ __(' Personal Pickup') }}
+                                            <i class="bi bi-box-seam mx-2"></i> {{ __('Personal Pickup') }}
                                         </label>
                                     </div>
                                 </div>
