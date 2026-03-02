@@ -34,6 +34,7 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
     // inventory
     Route::get('/inventory/add-stock', [App\Http\Controllers\AdminController::class, 'addStock'])->name('admin.inventory.addstock');
     Route::get('/inventory/stock-entries', [App\Http\Controllers\AdminController::class, 'stockEntries'])->name('admin.inventory.stockentries');
+    Route::get('/orders', [App\Http\Controllers\AdminController::class, 'orders'])->name('admin.orders');
 });
 
 

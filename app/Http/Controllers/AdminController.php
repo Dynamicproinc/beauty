@@ -48,6 +48,11 @@ class AdminController extends Controller
         return view('admin.product.addproductinfo')->with('product_id', $id);
     }
 
+    public function orders(){
+        $orders = SalesOrder::orderBy('created_at', 'desc')->get();
+        return view('admin.orders.index')->with('orders', $orders);
+    }
+
     public function editProductInfo($id){
         $pi =  ProductInformation::where('id', $id)->first();
         if($pi){

@@ -48,7 +48,7 @@
                 <div class="row">
                     <div class="col-12 col-xl-8 mb-4 mb-lg-0">
                         <div class="card">
-                            <h5 class="card-header">Latest transactions</h5>
+                            <h5 class="card-header">{{ __('Latest Orders') }}</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table">
