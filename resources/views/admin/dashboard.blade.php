@@ -66,7 +66,7 @@
                                         <tbody>
                                           @foreach($sales_order as $order)
                                           <tr>
-                                            <th scope="row">{{ $order->id }}</th>
+                                            <th scope="row">#ORD-{{ str_pad($order->id, 4, '0', STR_PAD_LEFT) }}</th>
                                             <td>
                                               {{ $order->first_name }} {{ $order->last_name }}
                                               <small class="d-block text-muted">

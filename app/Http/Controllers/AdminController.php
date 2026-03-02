@@ -12,7 +12,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $sales_order = SalesOrder::orderBy('created_at', 'desc')->take(6)->get();
+        $sales_order = SalesOrder::orderBy('created_at', 'desc')->where('payment_status', 'success')->take(6)->get();
         $data = [
             'sales_order' => $sales_order,
         ];
