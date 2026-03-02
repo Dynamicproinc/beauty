@@ -293,7 +293,9 @@ $payment_status = $this->payment_method === 'cod' ? 'success' : 'pending';
 
         return redirect($session->url);
         // end stripe 
+
     }
+
 // if payment method is not car send email to customer
     if ($this->payment_method !== 'card') {
         // send order confirmation email to customer
@@ -303,9 +305,12 @@ $payment_status = $this->payment_method === 'cod' ? 'success' : 'pending';
     }
 
     //clear the cart
+    return 'test';
     session()->forget('cart');
     
     return redirect()->to(route('shop.invoice', ['slug' => $sales_order->slug]));
 
 }
+
+
 }
