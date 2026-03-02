@@ -133,13 +133,19 @@ th{
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
-  color: #000;  
+  color: #000; 
+  white-space: nowrap; 
   
 }
 td{
   font-size: 14px;
   font-family: 'JetBrains Mono', monospace !important;
 }
+.table-area{
+  max-width: 100%;
+  overflow-x: auto;
+}
+
     </style>
 </head>
 <body>
@@ -226,7 +232,7 @@ td{
                 <div>
                     @yield('content')
                 </div>
-                <footer class="pt-5 d-flex justify-content-between">
+                {{-- <footer class="pt-5 d-flex justify-content-between vh-100">
                     <span>Copyright © 2024</span>
                     <ul class="nav m-0">
                         <li class="nav-item">
@@ -239,7 +245,7 @@ td{
                           <a class="nav-link text-secondary" href="#">Contact</a>
                         </li>
                       </ul>
-                </footer>
+                </footer> --}}
             </main>
         </div>
     </div>

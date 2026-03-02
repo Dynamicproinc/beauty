@@ -3,14 +3,14 @@
 @section('content')
     <div>
 
-        <div class="">
+        <div class="table-area">
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">{{ __('#') }}</th>
                         <th scope="col">{{ __('Date') }}</th>
-                        <th scope="col">{{ __('First Name') }}</th>
-                        <th scope="col">{{ __('Last Name') }}</th>
+                        <th scope="col" class="text-nowrap">{{ __('First Name') }}</th>
+                        <th scope="col" class="text-nowrap">{{ __('Last Name') }}</th>
                         <th scope="col">{{ __('Contact') }}</th>
                         <th scope="col">{{ __('Bill to') }}</th>
                         {{-- if pickup in the  --}}

@@ -274,7 +274,7 @@ $payment_status = $this->payment_method === 'cod' ? 'success' : 'pending';
                     'product_data' => [
                         'name' => 'Ukupan iznos za narudžbu br.' . $sales_order->id,
                     ],
-                    'unit_amount' => $total_amount_cents, //need to change this to dynamic amount in cents
+                    'unit_amount' => (int) round($total_amount * 100), //need to change this to dynamic amount in cents
                 ],
                 'quantity' => 1,
             ]],
@@ -305,7 +305,7 @@ $payment_status = $this->payment_method === 'cod' ? 'success' : 'pending';
     }
 
     //clear the cart
-    return 'test';
+    
     session()->forget('cart');
     
     return redirect()->to(route('shop.invoice', ['slug' => $sales_order->slug]));
