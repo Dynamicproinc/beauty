@@ -136,7 +136,7 @@ $pl = \App\Models\PickupLocation::where('id', $order->pickup_location)->first();
 <tr>
 <td style="border:1px solid #cccccc;">{{ $key + 1 }}</td>
 <td style="border:1px solid #cccccc;">{{ $item->getProduct()->title }}</td>
-<td style="border:1px solid #cccccc;text-align:right;">{{ $item->quantity }}</td>
+<td style="border:1px solid #cccccc;text-align:right;">{{ number_format($item->quantity, 0, ',', '.') }}</td>
 <td style="border:1px solid #cccccc;text-align:right;">€ {{ number_format($item->price, 2, ',', '.') }}</td>
 <td style="border:1px solid #cccccc;text-align:right;">
 € {{ number_format($item->price * $item->quantity, 2, ',', '.') }}
