@@ -63,4 +63,15 @@ public function getShippingCountryOther(){
 
 }
 
+public function getOrderNumberAttribute(){
+
+    return str_pad($this->id, 4, '0', STR_PAD_LEFT);
+}
+
+public function getFinalAmountAttribute(){
+
+    $value = ($this->total_amount + $this->shipping_cost) - $this->discount_amount;
+    return number_format($value, 2, ',', '.');
+
+}
 }

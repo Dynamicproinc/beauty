@@ -55,7 +55,7 @@
                                         <thead>
                                           <tr>
                                             <th scope="col">{{ __('Order') }}</th>
-                                            <th scope="col">{{ __('Customer') }}</th>
+                                            <th scope="col" class="text-nowrap">{{ __('Customer') }}</th>
                                             <th scope="col">{{ __('phone') }}</th>
                                             <th scope="col">{{ __('Total') }}</th>
                                             <th scope="col">{{ __('Date') }}</th>
@@ -66,7 +66,7 @@
                                         <tbody>
                                           @foreach($sales_order as $order)
                                           <tr>
-                                            <th scope="row">#ORD-{{ str_pad($order->id, 4, '0', STR_PAD_LEFT) }}</th>
+                                            <th scope="row">{{ $order->order_number }}</th>
                                             <td>
                                               {{ $order->first_name }} {{ $order->last_name }}
                                               <small class="d-block text-muted">
@@ -74,7 +74,7 @@
                                               </small>
                                             </td>
                                             <td>{{ $order->phone_number }}</td>
-                                            <td>€{{ number_format(($order->total_amount + $order->shipping_cost) - $order->discount_amount, 2, ',', '.') }}</td>
+                                            <td>€{{ $order->final_amount }}</td>
                                             <td>{{ $order->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}</td>
                                             <td><a href="{{ route('shop.invoice',$order->slug) }}" class="btn btn-sm btn-primary">View</a></td>
                                           </tr>

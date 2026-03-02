@@ -277,7 +277,7 @@ $payment_status = $this->payment_method === 'cod' ? 'success' : 'pending';
                     'product_data' => [
                         'name' => 'Ukupan iznos za narudžbu br.' . $sales_order->id,
                     ],
-                    'unit_amount' => (int) round($total_amount * 100), //need to change this to dynamic amount in cents
+                    'unit_amount' => (int) round($total_amount_cents), //need to change this to dynamic amount in cents
                 ],
                 'quantity' => 1,
             ]],

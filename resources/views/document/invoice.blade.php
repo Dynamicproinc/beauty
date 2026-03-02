@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Order #ORD-{{ str_pad($order->id, 4, '0', STR_PAD_LEFT) }}</title>
+<title>Order #ORD-{{ $order->order_number }}</title>
 </head>
 
 <body style="margin:0;padding:0;background-color:#f4f4f4;font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:14px;">
@@ -32,7 +32,7 @@ info@tallow-skincare.hr
 
 <td align="right" valign="top">
 <strong style="font-size:18px;">
-#ORD-{{ str_pad($order->id, 4, '0', STR_PAD_LEFT) }}
+#ORD-{{ $order->order_number }}
 </strong><br><br>
 
 <strong>Date:</strong><br>
@@ -174,7 +174,7 @@ $finalTotal = $order->total_amount - $order->discount_amount + $order->shipping_
 <tr>
 <td colspan="4" style="border:1px solid #cccccc;text-align:right;font-size:16px;"><strong>Total</strong></td>
 <td style="border:1px solid #cccccc;text-align:right;font-size:16px;">
-<strong>€{{ number_format($finalTotal, 2, ',', '.') }}</strong>
+<strong>€{{ $order->final_amount }}</strong>
 </td>
 </tr>
 

@@ -174,7 +174,7 @@ $finalTotal = $order->total_amount - $order->discount_amount + $order->shipping_
 <tr>
 <td colspan="4" style="border:1px solid #cccccc;text-align:right;font-size:16px;"><strong>Total</strong></td>
 <td style="border:1px solid #cccccc;text-align:right;font-size:16px;">
-<strong>€{{ number_format($finalTotal, 2, ',', '.') }}</strong>
+<strong>€{{ $order->final_amount }}</strong>
 </td>
 </tr>
 

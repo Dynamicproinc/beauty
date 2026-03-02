@@ -2,7 +2,9 @@
 @section('title', 'Orders')
 @section('content')
     <div>
-
+        {{-- <div>
+            {{ number_format($orders->sum('total_amount'), 2, ',', '.') }}
+        </div> --}}
         <div class="table-area">
             <table class="table table-striped">
                 <thead>
@@ -18,9 +20,9 @@
                         <th scope="col">{{ __('Shipping') }}</th>
                         <th scope="col">{{ __('Pickup') }}</th>
                         {{-- Payments  --}}
-                        <th scope="col">{{ __('Total') }}</th>
-                        <th scope="col">{{ __('Payment Method') }}</th>
-                        <th scope="col">{{ __('Status') }}</th>
+                        <th scope="col" class="text-right">{{ __('Total') }}</th>
+                        <th scope="col" class="text-right">{{ __('Payment Method') }}</th>
+                        <th scope="col" class="text-right">{{ __('Status') }}</th>
 
                     </tr>
                 </thead>
@@ -29,7 +31,7 @@
                         @foreach ($orders as $order)
                             <tr>
                                 <td scope="row" class="text-nowrap"><a href="{{ route('shop.invoice', $order->slug) }}"
-                                        target="_blank"><strong>{{ str_pad($order->id, 4, '0', STR_PAD_LEFT) }}</strong></a>
+                                        target="_blank"><strong>{{ $order->order_number }}</strong></a>
                                 </td>
                                 <td class="text-nowrap">
                                     {{ $order->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}</td>
@@ -58,15 +60,24 @@
                                     @endif
                                 </td>
                                 <td class="text-nowrap text-capitalize">
-                                    @php
-                                        $pl = \App\Models\PickupLocation::where('id', $order->pickup_location)->first();
-                                    @endphp
-                                    {{ $pl?->pickup_location }}<br>
-                                    {{ $order?->pickup_date?->format('d.m.Y. H:i') }}
+                                    @if ($order->delivery_method === 'pickup')
+                                        @php
+                                            $pl = \App\Models\PickupLocation::where(
+                                                'id',
+                                                $order->pickup_location,
+                                            )->first();
+                                        @endphp
+                                        {{ $pl?->pickup_location }}<br>
+                                        {{ $order?->pickup_date?->format('d.m.Y. H:i') }}
+                                    @else
+                                       n/a
+                                    @endif
                                 </td>
-                                <td class="text-nowrap">{{ $order->total_amount }}</td>
-                                <td class="text-uppercase">{{ $order->payment_method }}</td>
-                                <td><small class="text-uppercase font-weight-bold text-{{ $order->payment_status === 'success' ? 'success' : 'danger' }}">{{ $order->payment_status }}</small></td>
+                                <td class="text-nowrap text-right">{{ $order->final_amount }}</td>
+                                <td class="text-uppercase text-right">{{ $order->payment_method }}</td>
+                                <td class="text-right "><small
+                                        class="text-uppercase font-weight-bold text-{{ $order->payment_status === 'success' ? 'success' : 'danger' }}">{{ $order->payment_status }}</small>
+                                </td>
                             </tr>
                         @endforeach
                     @else
@@ -78,11 +89,11 @@
 
                 </tbody>
             </table>
-            
+
         </div>
         <div class="mt-3">
-                {{ $orders->links() }}
-            </div>
+            {{ $orders->links() }}
+        </div>
     </div>
 
 
