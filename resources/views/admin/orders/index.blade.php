@@ -14,13 +14,13 @@
                         <th scope="col">{{ __('Contact') }}</th>
                         <th scope="col">{{ __('Bill to') }}</th>
                         {{-- if pickup in the  --}}
-                        <th scope="col">{{ __('Pickup/Ship') }}</th>
+                        <th scope="col">{{ __('Delivery/Pickup') }}</th>
                         <th scope="col">{{ __('Shipping') }}</th>
                         <th scope="col">{{ __('Pickup') }}</th>
                         {{-- Payments  --}}
                         <th scope="col">{{ __('Total') }}</th>
-                        <th scope="col">{{ __('P. Method') }}</th>
-                        <th scope="col">{{ __('P. Status') }}</th>
+                        <th scope="col">{{ __('Payment Method') }}</th>
+                        <th scope="col">{{ __('Status') }}</th>
 
                     </tr>
                 </thead>

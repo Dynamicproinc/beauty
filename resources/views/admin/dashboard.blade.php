@@ -85,7 +85,7 @@
                                         </tbody>
                                       </table>
                                 </div>
-                                <a href="#" class="btn btn-block btn-light">View all</a>
+                                <a href="{{ route('admin.orders') }}" class="btn btn-block btn-light">View all</a>
                             </div>
                         </div>
                     </div>
