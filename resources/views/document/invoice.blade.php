@@ -6,7 +6,7 @@
 </head>
 
 <body style="margin:0;padding:0;background-color:#f4f4f4;font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:14px;">
-
+<a href="{{ route('welcome') }}" style="margin:10px 0 0 0;display:block;">{{ __('Back to Home') }}</a>
 <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:30px 0;">
 <tr>
 <td align="center">
