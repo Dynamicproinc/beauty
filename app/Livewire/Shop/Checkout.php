@@ -208,6 +208,8 @@ if ($this->delivery_method === 'pickup') {
 // create a unique slug for the order
 $slug = Str::random(25);
 
+$payment_status = $this->payment_method === 'cod' ? 'success' : 'pending';
+// dd($payment_status);
 //creating the sales order
     $sales_order = SalesOrder::create([
     'user_id' => auth()?->id() ?? 0,
@@ -222,7 +224,7 @@ $slug = Str::random(25);
     'discount_amount' => $this->dis_amount,
     'delivery_method' => $this->delivery_method,
     'payment_method' => $this->payment_method,
-    'payment_status' => 'pending',
+    'payment_status' => $payment_status,
     'pickup_location' => $this->pickup_location,
     'pickup_date' => $this->pickup_datetime,
     'country' => $this->shipping_location,

@@ -5,13 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use \App\Models\ProductInformation;
+use App\Models\SalesOrder;
 
 
 class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard');
+        $sales_order = SalesOrder::orderBy('created_at', 'desc')->take(6)->get();
+        $data = [
+            'sales_order' => $sales_order,
+        ];
+        return view('admin.dashboard', $data);
     }
 
     public function products()

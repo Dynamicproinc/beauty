@@ -41,12 +41,16 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <div class="col-lg 8">
-                    <div class="panel bg-white rounded p-3 mb-3">
+                <div class="col-lg-8">
+                    
+                    <div class="card mb-3">
+                       <h5 class="card-header">{{ __('Product Details') }}</h5>
+                       <div class="card-body">
+                        <div class="panel bg-white rounded p-3 mb-3">
                         <div class="form-group">
                             <label for="">{{ __('Title') }}</label>
                             <input type="text"
-                                class="form-control form-control-sm @error('title') is-invalid @enderror"
+                                class="form-control @error('title') is-invalid @enderror"
                                 placeholder="{{ __('Enter the product title') }}" wire:model="title">
                             @error('title')
                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -59,8 +63,13 @@
                                 x-init="initCKEditor()"></textarea>
                         </div>
                     </div>
-                    <div class="panel bg-white rounded p-3 mb-3">
-                        <h5 class="panel-heading mb-2" for="">{{ __('Media') }}</h5>
+                       </div>
+                    </div>
+                    <div class="card mb-3">
+                        <h5 class="card-header">{{ __('Media') }}</h5>
+                        <div class="card-body">
+                            <div class="panel bg-white rounded p-3 mb-3">
+                       
                         <div class="d-flex flex-wrap gap-3">
                             @if ($urls && count($urls) > 0)
                                 @foreach ($urls as $image)
@@ -74,20 +83,27 @@
                                 @endforeach
                             @endif
                             <div class="img-upload">
-                                <button class="btn btn-0 btn-sm" wire:click="openUrlModal">+</button>
+                                <button class="btn btn-sm btn-outline-primary" wire:click="openUrlModal">+</button>
                             </div>
                         </div>
 
                     </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <h5 class="card-header">{{ __('Pricing') }}</h5>
+                        <div class="card-body">
+                            {{--  --}}
+                            
                     <div class="panel bg-white rounded mb-3">
                         <div class="p-3">
-                            <h5 class="panel-heading mb-2" for="">{{ __('Pricing') }}</h5>
+                            
                             <div>
                                 <div class="row mb-3">
                                     <div class="form-group col-lg-6">
                                         <label for="">{{ __('Discounted Price') }}</label>
                                         <input type="number"
-                                            class="form-control form-control-sm @error('discounted_price') is-invalid @enderror"
+                                            class="form-control @error('discounted_price') is-invalid @enderror"
                                             placeholder="€ 0.00" wire:model="discounted_price">
                                         @error('discounted_price')
                                             <div class="invalid-feedback">{{ $message }}</div>
@@ -96,7 +112,7 @@
                                     <div class="form-group col-lg-6">
                                         <label for="">{{ __('Original Price') }}</label>
                                         <input type="number"
-                                            class="form-control form-control-sm @error('original_price') is-invalid @enderror"
+                                            class="form-control @error('original_price') is-invalid @enderror"
                                             placeholder="€ 0.00" wire:model="original_price">
                                         @error('original_price')
                                             <div class="invalid-feedback">{{ $message }}</div>
@@ -118,7 +134,7 @@
                             <div class="form-group">
                                 <label for="">{{ __('Item cost') }}</label>
                                 <input type="number"
-                                    class="form-control form-control-sm @error('cost_per_item') is-invalid @enderror"
+                                    class="form-control @error('cost_per_item') is-invalid @enderror"
                                     placeholder="€ 0.00" wire:model="cost_per_item">
                                 @error('cost_per_item')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -128,6 +144,16 @@
                         </div>
 
                     </div>
+                            {{--  --}}
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-3">
+                        <h5 class="card-header">{{ __('Inventory') }}</h5>
+                        <div class="card-body">
+                            {{--  --}}
+                            
                     <div class="panel bg-white rounded mb-3">
                         <div class="p-3">
 
@@ -137,7 +163,7 @@
                                     <div class="col-lg-6 form-group">
                                         <label for="">SKU (Stock Keeping Unit)</label>
                                         <input type="text"
-                                            class="form-control form-control-sm  @error('sku') is-invalid @enderror"
+                                            class="form-control  @error('sku') is-invalid @enderror"
                                             wire:model="sku">
                                         @error('sku')
                                             <div class="invalid-feedback">{{ $message }}</div>
@@ -146,7 +172,7 @@
                                     <div class="col-lg-6 form-group">
                                         <label for="">Barcode</label>
                                         <input type="text"
-                                            class="form-control form-control-sm  @error('barcode') is-invalid @enderror"
+                                            class="form-control  @error('barcode') is-invalid @enderror"
                                             wire:model="barcode">
                                         @error('barcode')
                                             <div class="invalid-feedback">{{ $message }}</div>
@@ -184,7 +210,7 @@
                             <div class="form-group col-6">
                                 <label for="">Quantity</label>
                                 <input type="number"
-                                    class="form-control form-control-sm @error('quantity') is-invalid @enderror"
+                                    class="form-control @error('quantity') is-invalid @enderror"
                                     wire:model="quantity">
                                 @error('quantity')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -192,12 +218,21 @@
                             </div>
                         </div>
                     </div>
+                            {{--  --}}
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <h5 class="card-header">{{ __('Variants') }}</h5>
+                        <div class="card-body">
+                            {{--  --}}
+                            
                     <div class="panel bg-white rounded mb-3">
                         <div class="p-3">
                             <h5 class="panel-heading mb-2" for="">{{ __('Variants') }}</h5>
                             <div class="row">
                                 <div class="col-lg-5 form-group">
-                                    <select wire:model="option_id" class="form-control form-control-sm">
+                                    <select wire:model="option_id" class="form-control">
 
                                         <option value="">{{ __('Select an option') }}</option>
                                         @foreach ($options as $option)
@@ -210,7 +245,7 @@
                                     @enderror
                                 </div>
                                 <div class="col-lg-4 form-group">
-                                    <input required type="text" class="form-control form-control-sm"
+                                    <input required type="text" class="form-control"
                                         placeholder="{{ __('Value') }}" wire:model="o_value">
                                     @error('o_value')
                                         <small class="text-danger">{{ $message }}</small>
@@ -242,17 +277,17 @@
                                                 <td>
                                                     <input type="text"
                                                         wire:model="variants.{{ $index }}.value"
-                                                        class="form-control form-control-sm" placeholder="">
+                                                        class="form-control" placeholder="">
                                                 </td>
                                                 <td>
                                                     <input type="number"
                                                         wire:model="variants.{{ $index }}.additional_price"
-                                                        class="form-control form-control-sm" placeholder="€ 0.00">
+                                                        class="form-control" placeholder="€ 0.00">
                                                 </td>
                                                 <td>
                                                     <input type="number"
                                                         wire:model="variants.{{ $index }}.quantity"
-                                                        class="form-control form-control-sm" placeholder="0">
+                                                        class="form-control" placeholder="0">
                                                 </td>
                                                 <td>
                                                     <button type="button"
@@ -288,13 +323,19 @@
                             @endif
                         </div>
                     </div>
+                            {{--  --}}
+                        </div>
+                    </div>
 
                 </div>
                 <div class="col-lg-4">
-                    <div class="panel bg-white rounded p-3 mb-3">
-                        <h5 class="panel-heading mb-2" for="">{{ __('Product status') }}</h5>
+                   <div class="card mb-3">
+                    <h5 class="card-header">{{ __('Product Status') }}</h5>
+                    <div class="card-body">
+                         <div class="panel bg-white rounded p-3 mb-3">
+                        
                         <div class="form-group">
-                            <select name="" id="" class="form-control form-control-sm"
+                            <select name="" id="" class="form-control"
                                 wire:model="status">
                                 <option value="draft">{{ __('Draft') }}</option>
                                 <option value="active">{{ __('Active') }}</option>
@@ -303,12 +344,17 @@
 
                         </div>
                     </div>
-                    <div class="panel bg-white rounded p-3 mb-3">
-                        <h5 class="panel-heading mb-2" for="">{{ __('Product Categories') }}</h5>
+                    </div>
+                   </div>
+                    <div class="card mb-3">
+                        <h5 class="card-header">{{ __('Product Categories') }}</h5>
+                        <div class="card-body">
+                            <div class="panel bg-white rounded p-3 mb-3">
+                        
 
                         <div class="form-group">
                             <label for="">{{ __('Supplier') }}</label>
-                            <select name="" id="" class="form-control form-control-sm"
+                            <select name="" id="" class="form-control"
                                 wire:model="supplier_id">
                                 @foreach ($suppliers as $supplier)
                                     <option value="{{ $supplier->id }}">{{ $supplier->supplier_name }}</option>
@@ -319,7 +365,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">{{ __('Category') }}</label>
-                            <select name="" id="" class="form-control form-control-sm"
+                            <select name="" id="" class="form-control"
                                 wire:model="category_id">
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->category_name }}</option>
@@ -329,11 +375,16 @@
 
                         </div>
                     </div>
-                    <div class="panel bg-white rounded p-3 mb-3">
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <h5 class="card-header">{{ __('Product Tags') }}</h5>
+                        <div class="card-body">
+                            <div class="panel bg-white rounded p-3 mb-3">
                         <h5 class="panel-heading mb-2" for="">{{ __('Tags') }}</h5>
                         <div class="row">
                             <div class="col-lg-8 form-group">
-                                <input type="text" class="form-control form-control-sm"
+                                <input type="text" class="form-control"
                                     placeholder="{{ __('Enter tags') }}" wire:model="tags">
                             </div>
 
@@ -343,14 +394,18 @@
                         </div>
 
                     </div>
-                    <div class="panel bg-white rounded  mb-3">
-                        <div class="p-3">
-                            <h5 class="panel-heading mb-2" for="">{{ __('Product Highlights') }}</h5>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <h5 class="card-header">{{ __('Product Highlights') }}</h5>
+                        <div class="card-body">
+                            
                             <div class="alert alert-info" style="font-size: 12px">
                                 {{ __('Add up to 4 highlights to describe the product.') }}</div>
                             <div class="row">
                                 <div class="col-lg-8 form-group">
-                                    <input type="text" class="form-control form-control-sm"
+                                    <input type="text" class="form-control"
                                         placeholder="{{ __('Enter highlights') }}" wire:model="highlight_text">
                                     @error('highlight_text')
                                         <small class="text-danger">{{ $message }}</small>
@@ -394,9 +449,11 @@
                         </div>
 
                     </div>
-                    <div class="panel bg-white rounded mb-3">
-                        <h5 class="panel-heading mb-2 p-3" for="">{{ __('Page Information') }}</h5>
-                        <div>
+
+
+                    <div class="card rounded mb-3">
+                        <h5 class="card-header mb-2 p-3" for="">{{ __('Page Information') }}</h5>
+                        <div class="card-body">
                             @if (count($product_information) > 0) 
                                 <ul class="list-group list-group-flush">
                                 @foreach ($product_information as $item )
@@ -474,7 +531,7 @@
 
                 <div>
 
-                    <button class="btn-2" wire:click="updateProduct">
+                    <button class="btn btn-primary" wire:click="updateProduct">
                         <span class="spinner-border spinner-border-sm" role="status" wire:loading
                             wire:target="updateProduct" aria-hidden="true">
                         </span>
@@ -519,18 +576,18 @@
                 <div class="modal-wrap-content">
                     <h5 class="panel-heading mb-2" for="">{{ __('Image URL') }}</h5>
                     <div class="form-group">
-                        <input type="url" class="form-control form-control-sm"
+                        <input type="url" class="form-control"
                             placeholder="{{ _('Past image URL here...') }}" wire:model = "url">
                     </div>
-                    <div class="d-flex flex-row-reverse">
-                        <button class="btn btn-sm btn-success" wire:click="addMedia">
+                    <div class="d-flex flex-row-reverse mt-3">
+                        <button class="btn btn-primary" wire:click="addMedia">
                             <span class="spinner-border spinner-border-sm" role="status" wire:loading
                                 wire:target="addMedia" aria-hidden="true">
 
                             </span>
                             Add
                         </button>
-                        <button class="btn btn-sm btn-default" wire:click="closeUrlModal">Cancel</button>
+                        <button class="btn mx-2 btn-default" wire:click="closeUrlModal">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -547,7 +604,7 @@
                                 <div class="col-6 form-group">
                                     <label>{{ __('Energy') }}</label>
                                     <input type="text"
-                                        class="form-control form-control-sm @error('energy') is-invalid @enderror"
+                                        class="form-control @error('energy') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 200 kcal') }}" wire:model="energy">
                                     @error('energy')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -556,7 +613,7 @@
                                 <div class="col-6 form-group">
                                     <label>{{ __('Fat') }}</label>
                                     <input type="text"
-                                        class="form-control form-control-sm @error('fat') is-invalid @enderror"
+                                        class="form-control @error('fat') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 10g') }}" wire:model="fat">
                                     @error('fat')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -565,7 +622,7 @@
                                 <div class="col-6 form-group">
                                     <label>{{ __('Saturates') }}</label>
                                     <input type="text"
-                                        class="form-control form-control-sm @error('saturates') is-invalid @enderror"
+                                        class="form-control @error('saturates') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 5g') }}" wire:model="saturates">
                                     @error('saturates')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -574,7 +631,7 @@
                                 <div class="col-6 form-group">
                                     <label>{{ __('Carbohydrates') }}</label>
                                     <input type="text"
-                                        class="form-control form-control-sm @error('carbohydrate') is-invalid @enderror"
+                                        class="form-control @error('carbohydrate') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 20g') }}" wire:model="carbohydrate">
                                     @error('carbohydrate')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -583,7 +640,7 @@
                                 <div class="col-6 form-group">
                                     <label>{{ __('Sugar') }}</label>
                                     <input type="text"
-                                        class="form-control form-control-sm @error('sugars') is-invalid @enderror"
+                                        class="form-control @error('sugars') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 15g') }}" wire:model="sugars">
                                     @error('sugars')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -592,7 +649,7 @@
                                 <div class="col-6 form-group">
                                     <label>{{ __('Protein') }}</label>
                                     <input type="text"
-                                        class="form-control form-control-sm @error('protein') is-invalid @enderror"
+                                        class="form-control @error('protein') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 8g') }}" wire:model="protein">
                                     @error('protein')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -601,7 +658,7 @@
                                 <div class="col-6 form-group">
                                     <label>{{ __('Salt') }}</label>
                                     <input type="text"
-                                        class="form-control form-control-sm @error('salt') is-invalid @enderror"
+                                        class="form-control @error('salt') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 0.5g') }}" wire:model="salt">
                                     @error('salt')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -611,7 +668,7 @@
                             <div>
                                 {{-- <div class="form-group" wire:ignore>
                             <label>{{ __('Disclaimer') }}</label>
-                            <textarea class="form-control form-control-sm" id="editor_2" rows="3" placeholder="" wire:model="disclaimer" x-data x-init="initCKEditor()"></textarea>
+                            <textarea class="form-control" id="editor_2" rows="3" placeholder="" wire:model="disclaimer" x-data x-init="initCKEditor()"></textarea>
                         </div> --}}
                             </div>
                             <div class="d-flex flex-row-reverse">

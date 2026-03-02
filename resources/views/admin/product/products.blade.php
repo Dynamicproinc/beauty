@@ -1,9 +1,9 @@
 @extends('admin.layout')
-@section('title', 'Inventory')
+@section('title', 'Products')
 @section('content')
    <div class="">
-    <div class="d-flex justify-content-between mb-3">
-        <div class="p-2"><h5>{{__('Products')}}</h5></div>
+    <div class="d-flex flex-row-reverse mb-3">
+        
         <div class="d-flex d-flex-reverse">
             
             <a href="{{ route('admin.products.add') }}" class="btn btn-dark btn-2">{{__('Add Product')}}</a>
@@ -42,10 +42,10 @@
       <td>{{ $product->quantity }}</td>
       <td>
         @if($product->status == 'draft')
-        <span class="badge badge-pill badge-light text-bg-light"> {{ $product->status }}</span>
+        <span class="badge bg-secondary"> {{ $product->status }}</span>
         @endif
         @if($product->status == 'active')
-        <span class="badge badge-pill badge-success text-bg-success"> {{ $product->status }}</span>
+        <span class="badge bg-success"> {{ $product->status }}</span>
         @endif
        
       </td>

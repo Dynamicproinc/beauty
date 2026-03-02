@@ -1,5 +1,5 @@
 @extends('admin.layout')
-@section('title', 'Edit Product')
+@section('title', 'Edit Product ID: '.$id)
 @section('content')
 <div>
    <div class="row justify-content-center">

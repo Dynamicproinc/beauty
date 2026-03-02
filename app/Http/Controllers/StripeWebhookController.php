@@ -38,10 +38,11 @@ class StripeWebhookController extends Controller
                     'payment_id' => $session->payment_intent,
                     'stripe_status' => $session->payment_status,
                     'stripe_currency' => $session->currency,
+                    'payment_status' => 'success',
                 ]);
-               Mail::to($order->email)
-    ->bcc('info@tallow-skincare.hr')
-    ->send(new OrderConfirmation($order));
+                Mail::to($order->email)
+                    ->bcc('info@tallow-skincare.hr')
+                    ->send(new OrderConfirmation($order));
             }
         }
 

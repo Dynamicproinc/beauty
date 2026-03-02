@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\StripeWebhookController;
 use App\Http\Controllers\Auth\GoogleController;
@@ -20,17 +21,22 @@ Route::get('checkout',[App\Http\Controllers\ShopController::class, 'checkout'])-
 route::get('order-confirmation/{slug}', [App\Http\Controllers\ShopController::class, 'invoice'])->name('shop.invoice');
 route::get('order-confirmation-card-payment/{stripe_session_id}', [App\Http\Controllers\ShopController::class, 'stripeSuccess'])->name('shop.stripe.success');
 // admin routes
-Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
-Route::get('/admin/products', [App\Http\Controllers\AdminController::class, 'products'])->name('admin.products');
-Route::get('/admin/products/add', [App\Http\Controllers\AdminController::class, 'addProduct'])->name('admin.products.add');
-Route::get('/admin/products/edit/{id}', [App\Http\Controllers\AdminController::class, 'editProduct'])->name('admin.products.edit');
-Route::get('/admin/products/edit/{id}/add/product-info', [App\Http\Controllers\AdminController::class, 'addProductInfo'])->name('admin.products.edit.info');
-Route::post('/admin/products/edit/product-info/update/{id}', [App\Http\Controllers\AdminController::class, 'saveProductInfo'])->name('admin.products.edit.infoupdate');
-Route::get('/admin/products/edit/product-info/edit/{id}', [App\Http\Controllers\AdminController::class, 'editProductInfo'])->name('admin.products.edit.infoedit');
-Route::post('/admin/products/edit/product-info/edit/{id}/update', [App\Http\Controllers\AdminController::class, 'updateProductInfo'])->name('admin.products.edit.infoedit.update');
-// inventory
-Route::get('/admin/inventory/add-stock', [App\Http\Controllers\AdminController::class, 'addStock'])->name('admin.inventory.addstock');
-Route::get('/admin/inventory/stock-entries', [App\Http\Controllers\AdminController::class, 'stockEntries'])->name('admin.inventory.stockentries');
+
+Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(function () {
+    Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/products', [App\Http\Controllers\AdminController::class, 'products'])->name('admin.products');
+    Route::get('/products/add', [App\Http\Controllers\AdminController::class, 'addProduct'])->name('admin.products.add');
+    Route::get('/products/edit/{id}', [App\Http\Controllers\AdminController::class, 'editProduct'])->name('admin.products.edit');
+    Route::get('/products/edit/{id}/add/product-info', [App\Http\Controllers\AdminController::class, 'addProductInfo'])->name('admin.products.edit.info');
+    Route::post('/products/edit/product-info/update/{id}', [App\Http\Controllers\AdminController::class, 'saveProductInfo'])->name('admin.products.edit.infoupdate');
+    Route::get('/products/edit/product-info/edit/{id}', [App\Http\Controllers\AdminController::class, 'editProductInfo'])->name('admin.products.edit.infoedit');
+    Route::post('/products/edit/product-info/edit/{id}/update', [App\Http\Controllers\AdminController::class, 'updateProductInfo'])->name('admin.products.edit.infoedit.update');
+    // inventory
+    Route::get('/inventory/add-stock', [App\Http\Controllers\AdminController::class, 'addStock'])->name('admin.inventory.addstock');
+    Route::get('/inventory/stock-entries', [App\Http\Controllers\AdminController::class, 'stockEntries'])->name('admin.inventory.stockentries');
+});
+
+
 
 
 Route::get('/checkout-stripe', [StripeController::class, 'checkout']);

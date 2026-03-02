@@ -1,7 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 body {
   /* font-size: .875rem; */
-  background-color: #f6f6f7;
+  /* background-color: #f6f6f7; */
 }
 a{
   color: #333;
@@ -92,6 +92,28 @@ label {
 .btn-c-sm{
     padding: 4px 8px;
     font-size: 12px;
+}
+
+.modal-wrap{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+
+}
+.modal-wrap-content{
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 /*
