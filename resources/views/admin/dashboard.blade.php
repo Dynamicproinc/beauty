@@ -67,7 +67,7 @@
                                           @foreach($sales_order as $order)
                                           <tr>
                                             <th scope="row">{{ $order->order_number }}</th>
-                                            <td>
+                                            <td class="text-nowrap text-capitalize">
                                               {{ $order->first_name }} {{ $order->last_name }}
                                               <small class="d-block text-muted">
                                                 {{ $order->delivery_method === 'pickup' ? __('Pickup') : __('Delivery') }}
