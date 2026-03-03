@@ -47,7 +47,7 @@ if (!$user->email_verified_at) {
 
             Auth::login($user, true);
 
-            return redirect('/home');
+            return redirect()->route('home');
         } catch (Exception $e) {
             // dd($e->getMessage());
              return redirect()->route('login')->with('error', 'Google login failed or was canceled.');
