@@ -40,6 +40,7 @@
             
         </main>
          @include('inc.footer')
+         @include('inc.cookie')
         {{--  --}}
         
         {{--  --}}

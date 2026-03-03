@@ -1,5 +1,5 @@
-<div>
-    <div class="card rounded-0">
+<div class="mb-5">
+    <div class="card rounded-0 ">
         <div class="card-body">
             <h1 class="mb-4">{{ __('Contact Us') }}</h1>
             <p class="mb-4">
@@ -45,7 +45,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="tt_btn_theme w-100" wire:loading.attr="disabled">
+                <button type="submit" class="tt_btn_theme w-100 mt-5" wire:loading.attr="disabled">
                     <span wire:loading.remove>{{ __('Send Message') }}</span>
                     <span wire:loading>{{ __('Sending...') }}</span>
                 </button>
