@@ -16,7 +16,7 @@
 
                 <!-- Name -->
                 <div class="mb-3">
-                    <label class="form-label">Name</label>
+                    <label class="form-label">{{ __('Name') }}</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" wire:model="name">
 
                     @error('name')
@@ -26,7 +26,7 @@
 
                 <!-- Email -->
                 <div class="mb-3">
-                    <label class="form-label">Email</label>
+                    <label class="form-label">{{ __('Email') }}</label>
                     <input type="email" class="form-control @error('email') is-invalid @enderror" wire:model="email">
 
                     @error('email')
@@ -36,8 +36,8 @@
 
                 <!-- Message -->
                 <div class="mb-3">
-                    <label class="form-label">Message</label>
-                    <textarea rows="4" class="form-control @error('message') is-invalid @enderror" wire:model="message"></textarea>
+                    <label class="form-label">{{ __('Message') }}</label>
+                    <textarea rows="5" class="form-control @error('message') is-invalid @enderror" wire:model="message"></textarea>
 
                     @error('message')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -46,8 +46,8 @@
 
                 <!-- Submit Button -->
                 <button type="submit" class="tt_btn_theme w-100" wire:loading.attr="disabled">
-                    <span wire:loading.remove>Send Message</span>
-                    <span wire:loading>Sending...</span>
+                    <span wire:loading.remove>{{ __('Send Message') }}</span>
+                    <span wire:loading>{{ __('Sending...') }}</span>
                 </button>
 
             </form>
