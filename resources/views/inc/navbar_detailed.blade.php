@@ -12,7 +12,7 @@
 
                             <a class="link-secondary non-hover" href="{{ route('welcome') }}">{{ __('Home') }}</a>
                             <a class="link-secondary non-hover" href="#">{{ __('Tallow Balm') }}</a>
-                            <a class="link-secondary non-hover" href="#">{{ __('contact') }}</a>
+                            <a class="link-secondary non-hover" href="{{ route('shop.contact') }}">{{ __('contact') }}</a>
                         </div>
                     </div>
                     <div class="col-4 text-center">
@@ -137,7 +137,7 @@
 
                             <a class="link-secondary non-hover scrolled" href="{{ route('welcome') }}">{{ __('Home') }}</a>
                             <a class="link-secondary non-hover scrolled" href="#">{{ __('Tallow Balm') }}</a>
-                            <a class="link-secondary non-hover scrolled" href="#">{{ __('contact') }}</a>
+                            <a class="link-secondary non-hover scrolled" href="{{ route('shop.contact') }}">{{ __('contact') }}</a>
                         </div>
                     </div>
                     <div class="col-4 text-center">
