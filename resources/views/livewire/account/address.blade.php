@@ -11,6 +11,16 @@
                         <input type="text" class="form-control" placeholder="{{__('Last name')}}" readonly value="{{auth()->user()->last_name}}" disabled>
                     </div>
                 </div>
+                <div class="row mb-3">
+                    <div class="form-group col-6">
+                        <label for="">{{__('Phone')}}</label>
+                        <input type="text" class="form-control" placeholder="{{__('Phone')}}" readonly value="{{auth()->user()->phone}}" disabled>
+                    </div>
+                    <div class="form-group col-6">
+                         <label for="">{{__('Email')}}</label>
+                        <input type="text" class="form-control" placeholder="{{__('Email')}}" readonly value="{{auth()->user()->email}}" disabled>
+                    </div>
+                </div>
                 
                 <div class="row mb-3">
                     <div class="form-group col-lg-6">
