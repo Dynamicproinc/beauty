@@ -41,7 +41,7 @@
                             </td>
                             <td>{{ str_replace('_', ' ', $order->delivery_method) }}</td>
                             {{-- <td>{{ $order->phone_number }}</td> --}}
-                            <td><a href="{{ route('shop.invoice', $order->slug) }}" class="btn btn-sm btn-primary">View</a>
+                            <td><a target="_blank" href="{{ route('shop.invoice', $order->slug) }}" class="btn btn-sm btn-primary">View</a>
                             </td>
                         </tr>
                     @endforeach
