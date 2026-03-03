@@ -343,6 +343,9 @@ footer{
     height: 200px;
 }
 
+.line-active{
+    border-bottom: 2px solid var(--p_color);
+}
 
 @keyframes scroll-left {
     0% {
