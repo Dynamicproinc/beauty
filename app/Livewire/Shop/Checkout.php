@@ -42,6 +42,7 @@ class Checkout extends Component
 
     public function mount()
     {
+       
         //    dd($this->getCartValue());
         //    get Shiping Loations
         $this->shipping_locations = ShippingLocation::orderBy('location', 'ASC')->get();
@@ -49,6 +50,16 @@ class Checkout extends Component
         $this->email = auth()->user() ? auth()->user()->email : '';
         $this->first_name = auth()->user() ? auth()->user()->name : '';
         $this->last_name = auth()->user() ? auth()->user()->last_name : '';
+        // addressess
+        if (auth()->user()) {
+            $address = auth()->user()->address;
+            if ($address) {
+                $this->address = $address->address;
+                $this->city = $address->city;
+                $this->postal_code = $address->postal_code;
+                $this->shipping_location = $address->country;
+            }
+        }
         $this->getFinalValue();
     }
 
