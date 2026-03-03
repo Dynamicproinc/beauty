@@ -8,13 +8,13 @@
         <div class="col-lg-8">
             <div class="mb-5">
                 <div class="d-flex">
-                    <div class="me-3 line-active">{{__('Personal information')}}</div>
-                    <div class="me-3">{{__('Order history')}}</div>
-                    <div class="me-3">{{__('Setting')}}</div>
+                    <div class="me-3 @if(Route::currentRouteName() == 'home') line-active @endif"><a href="{{ route('home') }}">{{__('Address')}}</a></div>
+                    <div class="me-3 @if(Route::currentRouteName() == 'account.orders') line-active @endif"><a href="{{ route('account.orders') }}">{{__('Order history')}}</a></div>
+                    <div class="me-3"><a href="#">{{__('Setting')}}</a></div>
                 </div>
             </div>
             <div>
-                @livewire('account.address')
+               @yield('content-account')
             </div>
         </div>
     </div>

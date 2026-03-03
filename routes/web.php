@@ -14,6 +14,7 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
+Route::get('account-orders', [App\Http\Controllers\HomeController::class, 'orders'])->name('account.orders')->middleware('verified');
 Route::get('product/{id}',[App\Http\Controllers\ShopController::class, 'showProduct'])->name('shop.product.show');
 Route::get('cart',[App\Http\Controllers\ShopController::class, 'cart'])->name('shop.cart');
 Route::get('checkout',[App\Http\Controllers\ShopController::class, 'checkout'])->name('shop.checkout');
