@@ -5,7 +5,7 @@ namespace App\Livewire\Admin\Product;
 use Livewire\Component;
 use App\Models\Product;
 use App\Models\Variant;
-use App\Models\Categories;
+use App\Models\categories;
 use App\Models\Supplier;
 use App\Models\Media;
 use Illuminate\Support\Str;
@@ -78,7 +78,7 @@ class Edit extends Component
             // $this->deleted = $product->deleted;
         // mount other product properties as needed
         $this->options = Option::all();
-        $this->categories = Categories::all();
+        $this->categories = categories::all();
         $this->suppliers = Supplier::all();
         $this->product_information = ProductInformation::where('product_id', $this->product->id)->get();
         // $this->pro_hightlights = $product->highlights;
