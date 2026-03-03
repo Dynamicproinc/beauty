@@ -19,6 +19,9 @@ Route::get('product/{id}',[App\Http\Controllers\ShopController::class, 'showProd
 Route::get('cart',[App\Http\Controllers\ShopController::class, 'cart'])->name('shop.cart');
 Route::get('checkout',[App\Http\Controllers\ShopController::class, 'checkout'])->name('shop.checkout');
 Route::get('contact',[App\Http\Controllers\ShopController::class, 'contact'])->name('shop.contact');
+Route::get('privacy-statement',[App\Http\Controllers\PagesController::class, 'privacy'])->name('shop.privacy');
+Route::get('terms-and-conditions',[App\Http\Controllers\PagesController::class, 'terms'])->name('shop.terms');
+
 // Route::get('order-confirmation/{slug}',[App\Http\Controllers\ShopController::class, 'thankyou'])->name('shop.thankyou');
 route::get('order-confirmation/{slug}', [App\Http\Controllers\ShopController::class, 'invoice'])->name('shop.invoice');
 route::get('order-confirmation-card-payment/{stripe_session_id}', [App\Http\Controllers\ShopController::class, 'stripeSuccess'])->name('shop.stripe.success');

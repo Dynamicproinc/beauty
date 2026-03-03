@@ -333,7 +333,7 @@
             </div>
         </section>
         {{-- faq --}}
-         <section class="section-padding section-primary">
+         <section class="section-padding section-primary" id="faq">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mb-3">
