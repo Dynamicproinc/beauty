@@ -35,7 +35,7 @@ class Contact extends Component
                  ->subject(__('New Contact Message from ') . $this->name);
         });
 
-        session()->flash('success', 'Message sent successfully!');
+        session()->flash('success', __('Your message has been sent successfully! We will get back to you soon.'));
 
         $this->reset();
     }
