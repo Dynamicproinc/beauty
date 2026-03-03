@@ -1,8 +1,8 @@
-<div id="cookieBanner" class="position-fixed bottom-0 start-0 end-0 bg-dark text-white p-4 shadow-lg" style="z-index:1050; display:none;">
+<div id="cookieBanner" class="position-fixed bottom-0 start-0 end-0 bg-tallow-theme text-white p-4 shadow-lg" style="z-index:1050; display:none;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8 mb-3 mb-lg-0">
-                <h5>We use cookies</h5>
+                <h5 class="text-white">We use cookies</h5>
                 <p class="mb-0 small">
                     We use necessary cookies to make our website work. With your consent, we may also use
                     analytics and marketing cookies to improve your experience.
