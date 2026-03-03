@@ -20,6 +20,7 @@ html{
 body{
     font-family: Campton, Arial, sans-serif !important; 
     letter-spacing: .0175rem;
+    background-color: #F7F7F7 !important;
 }
 h1, h2, h3, h4, h5, h6, p {
     text-wrap: balance !important;
