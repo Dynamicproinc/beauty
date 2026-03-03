@@ -1,0 +1,11 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tallowsk
+    - /bin/cp -R . $DEPLOYPATH/beauty
+    - cd $DEPLOYPATH/laravel_app
+    - /usr/local/bin/composer install --no-dev --optimize-autoloader
+    - /bin/rm -rf $DEPLOYPATH/public_html
+    - /bin/ln -s $DEPLOYPATH/beauty/public $DEPLOYPATH/public_html
+    - /bin/chmod -R 775 storage
+    - /bin/chmod -R 775 bootstrap/cache

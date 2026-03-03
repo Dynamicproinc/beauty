@@ -225,7 +225,7 @@ td{
             <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">@yield('title')</li>
                     </ol>
                 </nav>
