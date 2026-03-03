@@ -8,10 +8,10 @@
         <div style="height:100px"></div>
         <div class="container">
             @if (session()->has('cart') == false || count(session('cart')) == 0)
-               <div>
+               <div class="mt-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <div> <img src="{{asset('media/svg/cart-empty.svg')}}" alt="Empty cart" class="empty-cart-img"></div>
+                        <div class="d-flex justify-content-center"> <img src="{{asset('media/svg/cart-empty.svg')}}" alt="Empty cart" class="empty-cart-img"></div>
                         <div class="text-center mt-3">
                             <h5 class="">{{__('Your cart is empty!')}}</h5>
                             <p>{{__('Add some product to get started')}}</p>

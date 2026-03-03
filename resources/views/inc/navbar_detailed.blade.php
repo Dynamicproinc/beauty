@@ -135,7 +135,7 @@
                     <div class="col-4">
                         <div class="navbar-links">
 
-                            <a class="link-secondary non-hover scrolled" href="#">{{ __('Home') }}</a>
+                            <a class="link-secondary non-hover scrolled" href="{{ route('welcome') }}">{{ __('Home') }}</a>
                             <a class="link-secondary non-hover scrolled" href="#">{{ __('Tallow Balm') }}</a>
                             <a class="link-secondary non-hover scrolled" href="#">{{ __('contact') }}</a>
                         </div>
