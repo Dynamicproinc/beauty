@@ -28,7 +28,7 @@ class HomeController extends Controller
     }
 
     public function orders(){
-        $orders = SalesOrder::where('user_id', Auth::id())->orderBy('created_at', 'desc')->where('payment_status', 'success')->get();
+        $orders = SalesOrder::where('user_id', Auth::id())->orderBy('created_at', 'desc')->where('payment_status', 'success')->paginate(10);
         return view('account.orders', compact('orders'));
        
     }
