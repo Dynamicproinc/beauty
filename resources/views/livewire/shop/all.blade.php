@@ -4,7 +4,7 @@
             <div class="col-lg-2">
                 <h6 class="text-uppercase mb-5">{{ __('Categories') }}</h6>
                 <div>
-                  <ul>
+                  <ul class="category-list">
                      @foreach ($categories as $item)
                     <li>{{ $item->category_name }}</li>
                    @endforeach
@@ -28,20 +28,22 @@
                     </div>
                     <div>
                         <div class="row">
-                            <div class="col-lg-4">
+                           @foreach ($products as $item)
+                                <div class="col-lg-4">
                                <div>
                                 <div class="th-md">
-                                     <img src="https://shopthegallowayfarm.com/cdn/shop/files/IMG_3548.jpg?v=1707002913" alt="" class="">
+                                     <img src="{{$item->media->first()->file_path}}" alt="" class="">
                                 </div>
                                    <div class="mt-3">
-                                       <h6 class="text-center theme-color fw-bold text-uppercase">Tallow Balm 30g</h6>
-                                     <h6 class="text-center">25.00 EUR</h6>
-                                     <button class="tt_btn_theme w-100">
+                                       <h6 class="text-center theme-color fw-bold text-uppercase">{{ $item->title }}</h6>
+                                     <h6 class="text-center">€{{ number_format($item->discounted_price, 2, ',', '.') }}</h6>
+                                     <a href="{{  route('shop.product.show', $item->slug) }}" class="tt_btn_theme w-100">
                                         {{__('Add cart')}}
-                                     </button>
+                                     </a>
                                    </div>
                                </div>
                             </div>
+                           @endforeach
                         </div>
                     </div>
                 </div>

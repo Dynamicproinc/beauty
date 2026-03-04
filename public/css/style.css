@@ -821,6 +821,11 @@ border-top: 1px solid #04030214;
 /* border-bottom: 1px solid #04030214; */
 padding: 16px 0px;
 }
+.category-list{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
 
 .accord-show {
 height: 0;
