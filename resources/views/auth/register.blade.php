@@ -165,7 +165,7 @@
                                         name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div> --}}
-                            <div>
+                            <div class="mb-3">
                                  <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
 
                             </div>
