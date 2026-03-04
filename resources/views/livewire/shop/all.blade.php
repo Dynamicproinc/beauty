@@ -22,7 +22,7 @@
                             </ol>
                         </nav>
                         <div>
-                            <h6 class="text-dark">Show 18/24</h6>
+                            <h6 class="text-dark">Show 1/1</h6>
                         </div>
                        </div>
                     </div>
