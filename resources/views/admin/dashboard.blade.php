@@ -67,7 +67,7 @@
                                           @foreach($sales_order as $order)
                                           <tr>
                                             <td>{{ $order->order_number }}</td>
-                                            <td class="text-right">{{ $order->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}</td>
+                                            <td class="text-right text-nowrap">{{ $order->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}</td>
                                             <td class="text-nowrap text-capitalize">
                                               {{ $order->first_name }} {{ $order->last_name }}
                                               <small class="d-block text-muted">

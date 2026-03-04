@@ -28,15 +28,12 @@
             
 
             <!-- Resources -->
-            <div class="col-6 col-md-3 mb-4">
-                <h6 class="text-white">{{__('Quick Links')}}</h6>
+            <div class="col-6 col-md-3">
+                <div class="position-relative">
+                   <div>
+                     <h6 class="text-white">{{__('Quick Links')}}</h6>
                 <ul class="nav flex-column">
-                    {{-- <li class="nav-item mb-2">
-                        <a href="/blog" class="nav-link p-0 text-white">Blog</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <a href="/support" class="nav-link p-0 text-white">Support</a>
-                    </li> --}}
+                   
                     <li class="nav-item mb-2">
                         <a href="/" class="nav-link p-0 text-white">{{__('Home')}}</a>
                     </li>
@@ -55,11 +52,23 @@
                     </li>
                     
                 </ul>
+                   </div>
+                </div>
             </div>
 
             <!-- Services -->
           
+             <div class="col-6 col-md-3">
+                <div>
+                      <strong>Tallow Skincare j.d.o.o.</strong><br>
+            Donja Švarča 79c<br>
+            47000 Karlovac, Croatia<br>
+            {{__('Email')}}: info@tallow-skincare.hr<br>
+            {{__('Telepone')}}: 0996680498
 
+
+                </div>
+             </div>
            
 
         </div>
