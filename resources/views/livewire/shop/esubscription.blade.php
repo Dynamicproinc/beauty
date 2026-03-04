@@ -29,6 +29,11 @@
                         </div>
                     @enderror
                 </div>
+                <script>
+    function onRecaptchaSuccess(token) {
+        @this.set('gRecaptchaResponse', token);
+    }
+</script>
 
 
                 <button class="tt_btn_theme w-100 rounded-0">
