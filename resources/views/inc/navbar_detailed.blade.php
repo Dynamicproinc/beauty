@@ -218,7 +218,8 @@
                 </div>
             </div>
         </header>
-        @include('inc.sidenav')
+        @include('inc.mobile_sidenav')
         {{--  --}}
     </nav>
+    
 @endif
