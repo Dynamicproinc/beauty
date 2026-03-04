@@ -23,7 +23,7 @@
                         data-callback="onRecaptchaSuccess">
                     </div>
 
-                    @error('g-recaptcha-response')
+                    @error('gRecaptchaResponse')
                         <div class="text-danger mt-2">
                             {{ $message }}
                         </div>
