@@ -165,6 +165,10 @@
                                         name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div> --}}
+                            <div>
+                                 <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+
+                            </div>
                             <div class="form-group">
                                 <button class="tt_btn_theme w-100" id="submit-btn" type="submit">
                                     {{ __('Register') }}
