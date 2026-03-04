@@ -28,7 +28,11 @@
                     </div>
                 @enderror
             </div>
-          
+            <script>
+    window.addEventListener('resetRecaptcha', () => {
+        grecaptcha.reset();
+    });
+</script>
 
             <button class="tt_btn_theme w-100 rounded-0">
                 {{ __('Subscribe') }}
