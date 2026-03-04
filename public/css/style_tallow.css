@@ -537,7 +537,7 @@ i{
     position: fixed;
     top: 0;
     left: -400px;
-    width: 400px;
+    min-width: 400px;
     height: 100%;
     z-index: 9999;
    
