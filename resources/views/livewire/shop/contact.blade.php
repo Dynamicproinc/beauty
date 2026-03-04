@@ -43,7 +43,23 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
+                 <div class="mb-3" wire:ignore>
+                <div class="g-recaptcha"
+                     data-sitekey="{{ config('services.recaptcha.site_key') }}"
+                     data-callback="onRecaptchaSuccess">
+                </div>
 
+                @error('gRecaptchaResponse')
+                    <div class="text-danger mt-2">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+            <script>
+    window.addEventListener('resetRecaptcha', () => {
+        grecaptcha.reset();
+    });
+</script>
                 <!-- Submit Button -->
                 <button type="submit" class="tt_btn_theme w-100 mt-5" wire:loading.attr="disabled">
                     <span wire:loading.remove>{{ __('Send Message') }}</span>
@@ -53,4 +69,11 @@
             </form>
         </div>
     </div>
+     @push('scripts')
+<script>
+    function onRecaptchaSuccess(token) {
+        @this.set('gRecaptchaResponse', token);
+    }
+</script>
+@endpush
 </div>
