@@ -52,4 +52,8 @@ class ShopController extends Controller
     public function contact(){
         return view('shop.contact');
     }
+
+    public function allProducts(){
+        return view('shop.all');
+    }
 }
