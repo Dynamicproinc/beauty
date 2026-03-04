@@ -23,7 +23,7 @@ class Esubscription extends Component
          $response = Http::asForm()->post(
         'https://www.google.com/recaptcha/api/siteverify',
         [
-            'secret' => config('services.recaptcha.secret_key'),
+            'secret' => env('RECAPTCHA_SITE_KEY'),
             'response' => $this->recaptchaToken,
             'remoteip' => request()->ip(),
         ]
