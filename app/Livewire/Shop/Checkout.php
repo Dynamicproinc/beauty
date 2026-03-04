@@ -57,8 +57,8 @@ class Checkout extends Component
                 $this->address = $address->address;
                 $this->city = $address->city;
                 $this->postal_code = $address->postal_code;
-                $this->shipping_location = $address->country;
-                $this->getFinalValue();
+                // $this->shipping_location = $address->country;
+                // $this->getFinalValue();
             }
         }
         $this->getFinalValue();
