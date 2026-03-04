@@ -54,6 +54,7 @@
         function openSB(){
             const navbar = document.getElementById("side_nav_bar");
             navbar.style.left = 0;
+            navbar.style.width = "100%";
         }
         function closeSB(){
             const navbar = document.getElementById("side_nav_bar");
