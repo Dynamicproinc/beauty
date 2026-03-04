@@ -15,22 +15,25 @@
             <div class="mb-5">
                 <ul class="sn-menu">
                     <li>
-                        {{ _('Home') }}
+                        <a href="{{ route('welcome') }}">{{ _('Home') }}</a>
                     </li>
                     <li>
-                        {{ _('All Products') }}
+                        <a href="{{ route('shop.product.all') }}">{{ _('All Products') }}</a>
                     </li>
                     <li>
-                        {{ _('FAQ') }}
+                        <a href="/#faq">{{__('FAQ')}}</a>
                     </li>
                     <li>
-                        {{ _('My Account') }}
+                        <a href="{{ route('home') }}">{{ _('My Account') }}</a>
+                        
                     </li>
                     <li>
-                        {{ _('Contact Us') }}
+                         <a href="{{ route('shop.contact') }}">{{ _('Contact Us') }}</a>
+                        
                     </li>
                     <li>
-                        {{ _('Subscribe to Newsletters') }}
+                        <a href="{{ route('shop.subscribe') }}">  {{ _('Subscribe to Newsletters') }}</a>
+                      
                     </li>
                 </ul>
             </div>
