@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Http;
 
 class Esubscription extends Component
 {
-    public $email, $ip_address;
+    public $email, $ip_address, $recaptchaToken;
 
     public function render()
     {
