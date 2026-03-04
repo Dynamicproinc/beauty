@@ -14,4 +14,9 @@ class PagesController extends Controller
     {
         return view('pages.terms');
     }
+
+    public function emailSubscription()
+    {
+        return view('pages.subscribe');
+    }
 }

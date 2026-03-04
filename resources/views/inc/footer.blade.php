@@ -4,7 +4,14 @@
 
              <!-- Newsletter -->
             <div class="col-md-4 mb-4">
-                @livewire('shop.esubscription')
+                {{-- @livewire('shop.esubscription') --}}
+                <h5 class="text-white">{{ __('About Tallow Skincare') }}</h5>
+        <p class="text-white">
+            {{ __('Tallow skincare is a premium, natural skincare line made from 100% pure beef tallow. It is rich in vitamins A, D, E, and K and is designed to nourish and protect your skin.') }}
+        </p>
+                <a href="{{route('shop.subscribe')}}" class="btn btn-light w-100 rounded-0">
+                {{ __('Subscribe') }}
+            </a>
             </div>
             <!-- Company -->
             

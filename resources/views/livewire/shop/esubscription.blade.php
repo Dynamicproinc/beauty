@@ -1,37 +1,39 @@
 <div>
-    <form wire:submit="subscribe">
-        <h5 class="text-white">{{ __('About Tallow Skincare') }}</h5>
-        <p class="text-white">
-            {{ __('Tallow skincare is a premium, natural skincare line made from 100% pure beef tallow. It is rich in vitamins A, D, E, and K and is designed to nourish and protect your skin.') }}
+    <div class="container">
+        <form wire:submit="subscribe">
+        <h5 class="">{{ __('Subscribe to our newsletter') }}</h5>
+        <p class="">
+            {{ __('Subscribe to our newsletter and be the first to receive the latest updates, news, tips, and special offers directly in your inbox. Join our community today and never miss important updates.') }}
         </p>
 
-        <h6 class="fw-bold">{{ __('Subscribe to our newsletter') }}</h6>
+        {{-- <h6 class="fw-bold">{{ __('Subscribe to our newsletter') }}</h6> --}}
         <div class="">
             <label for="newsletterEmail" class="visually-hidden">
                 {{ _('Email address') }}
             </label>
             <input id="newsletterEmail" type="email" class="form-control mb-3" placeholder="{{ _('Email address') }}"
                 required wire:model="email">
-            <div>
+            <div class="mb-3">
                 @error('email')
                     <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
-            <input type="hidden" wire:model="recaptchaToken">
+            <div class="mb-3">
+                                <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+                                @error('g-recaptcha-response')
+                                    <div class="text-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
 
-            <button class="btn btn-light w-100 rounded-0">
+                            </div>
+           
+
+            <button class="tt_btn_theme w-100 rounded-0">
                 {{ __('Subscribe') }}
             </button>
         </div>
     </form>
-    <script>
-        grecaptcha.ready(function() {
-            grecaptcha.execute('{{ env('RECAPTCHA_SITE_KEY') }} ', {
-                    action: 'subscribe'
-                })
-                .then(function(token) {
-                    @this.set('recaptchaToken', token);
-                });
-        });
-    </script>
+    
+    </div>
 </div>

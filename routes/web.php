@@ -20,7 +20,7 @@ Route::get('cart',[App\Http\Controllers\ShopController::class, 'cart'])->name('s
 Route::get('checkout',[App\Http\Controllers\ShopController::class, 'checkout'])->name('shop.checkout');
 Route::get('contact',[App\Http\Controllers\ShopController::class, 'contact'])->name('shop.contact');
 Route::get('privacy-statement',[App\Http\Controllers\PagesController::class, 'privacy'])->name('shop.privacy');
-Route::get('terms-and-conditions',[App\Http\Controllers\PagesController::class, 'terms'])->name('shop.terms');
+Route::get('news-letter-subscription',[App\Http\Controllers\PagesController::class, 'emailSubscription'])->name('shop.subscribe');
 
 // Route::get('order-confirmation/{slug}',[App\Http\Controllers\ShopController::class, 'thankyou'])->name('shop.thankyou');
 route::get('order-confirmation/{slug}', [App\Http\Controllers\ShopController::class, 'invoice'])->name('shop.invoice');

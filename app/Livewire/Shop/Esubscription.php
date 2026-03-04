@@ -5,6 +5,7 @@ namespace App\Livewire\Shop;
 use Livewire\Component;
 use App\Models\EmailSubscription;
 use Illuminate\Support\Facades\Http;
+use App\Rules\Recaptcha;
 
 class Esubscription extends Component
 {
@@ -18,21 +19,8 @@ class Esubscription extends Component
     public function subscribe(){
         $this->validate([
            'email' => 'required|email|max:50|unique:email_subscriptions,email',
-              'recaptchaToken' => 'required'
+             'g-recaptcha-response' => ['required', new Recaptcha()],
         ]);
-         $response = Http::asForm()->post(
-        'https://www.google.com/recaptcha/api/siteverify',
-        [
-            'secret' => env('RECAPTCHA_SITE_KEY'),
-            'response' => $this->recaptchaToken,
-            'remoteip' => request()->ip(),
-        ]
-    );
-
-    if (! $response->json('success') || $response->json('score') < 0.5) {
-        $this->addError('recaptcha', 'Spam detected.');
-        return;
-    }
         
 
        $subs = EmailSubscription::create([
