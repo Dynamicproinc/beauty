@@ -69,7 +69,7 @@
                         <div class="navbar-links d-flex">
                             {{-- <a class="link-secondary" href="#">{{__('Home')}}</a>
                         <a class="link-secondary" href="#">{{__('Products')}}</a> --}}
-                            <a class="link-secondary" href="#" onclick="openSB()" role="button"><i class="bi bi-list" id="menu_icon"></i></a>
+                            <a class="link-secondary" href="javascript:void(0);" onclick="openSB()" role="button"><i class="bi bi-list" id="menu_icon"></i></a>
                             <a class="link-secondary" href="#"><i class="bi bi-search"></i></a>
 
                         </div>
@@ -179,7 +179,7 @@
                         <div class="navbar-links d-flex">
                             {{-- <a class="link-secondary" href="#">{{__('Home')}}</a>
                         <a class="link-secondary" href="#">{{__('Products')}}</a> --}}
-                            <a class="link-secondary" href="#" onclick="openSB()" role="button"><i class="bi bi-list" id="menu_icon"></i></a>
+                            <a class="link-secondary scrolled" href="javascript:void(0);" onclick="openSB()" role="button"><i class="bi bi-list" id="menu_icon"></i></a>
                             <a class="link-secondary scrolled" href="#"><i class="bi bi-search"></i></a>
 
                         </div>

@@ -27,7 +27,10 @@
                         {{ _('My Account') }}
                     </li>
                     <li>
-                        {{ _('Contact us') }}
+                        {{ _('Contact Us') }}
+                    </li>
+                    <li>
+                        {{ _('Subscribe to Newsletters') }}
                     </li>
                 </ul>
             </div>
