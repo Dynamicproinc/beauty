@@ -97,5 +97,6 @@ window.addEventListener('scroll', () => {
 <script>
   AOS.init();
 </script>
+@stack('scripts')
 </body>
 </html>
