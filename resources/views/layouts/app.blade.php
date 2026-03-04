@@ -51,6 +51,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     {{-- side navbar script --}}
     <script>
+        function openSB(){
+            const navbar = document.getElementById("side_nav_bar");
+            navbar.style.left = 0;
+        }
+        function closeSB(){
+            const navbar = document.getElementById("side_nav_bar");
+            navbar.style.left = "-400px";
+        }
+    </script>
+    <script>
         function openNav() {
             document.getElementById("snav").style.width = "100%";
             document.getElementById("navcont").style.right = "0";

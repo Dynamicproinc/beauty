@@ -160,6 +160,26 @@ p{
     color: #fff;
     text-align: center;
 }
+.tt_btn_theme-sm {
+    outline: 0;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    height: 1.5rem;
+    padding: 8px;
+    transition: .3s, color .3s, border-color .3s, background-color .3s;
+    display: inline-flex;
+
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center */
+
+    background: var(--p_color);
+    color: #fff;
+    text-align: center;
+}
+
 /* button{
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -516,26 +536,37 @@ i{
 .mobile-sidenavbar{
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: -400px;
+    width: 400px;
     height: 100%;
     z-index: 9999;
    
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.605);
     
     
 }
 .ms-wrap{
-    width: 100%;
+    max-width: 400px;
     height: 100%;
     color: black;
+    position: relative;
+    background: #fff;
 }
 
+.sn-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* height: 200px; */
+    color: #58644C;
+    font-size: 12px;
+}
 .sn-menu{
     padding: 0;
     margin: 0;
     list-style-type: none;
-    font-size: 14px;
+    font-size: 16px;
 
 }
 .sn-menu li{
