@@ -5,7 +5,7 @@
             <div class="mb-3 d-flex justify-content-between align-items-center" style="height:35px">
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('media/images/logo.png') }}" alt="" class="logo-md">
-                    <span class="logo-text">Tallow Skincare</span>
+                    <span class="logo-text fw-bold">Tallow Skincare</span>
                 </div>
                 <button class="btn btn-default" onclick="closeSB()"><i class="bi bi-x-lg"></i></button>
             </div>
