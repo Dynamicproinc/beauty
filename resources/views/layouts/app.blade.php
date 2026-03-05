@@ -3,11 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{-- SEO --}}
+<meta name="title" content="{{__('Premium Grass-Fed Tallow Balm for Ultimate Hydration')}}">
+<meta name="description" content="{{__('Experience the power of 100% natural tallow balm made from grass-fed ingredients. Perfect for dry and sensitive skin, it provides long-lasting moisture, supports skin repair, and keeps your skin soft and healthy.')}}">
+<meta name="keywords" content="{{__('tallow balm, tallow skin care, grass fed tallow, natural moisturizer, organic tallow balm, beef tallow skincare, handmade tallow balm, sensitive skin moisturizer, deep hydration balm, natural skin cream, chemical free skincare, traditional skincare, nourishing face balm')}}">
+ <meta property="og:image" content="{{asset('ico/favicon-32x32.png')}}">
+    {{-- End SEO --}}
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') {{ config('app.name', 'Laravel') }} </title>
+    <title>@yield('title') {{ config('app.name', 'Tallow Skin Care') }} -  {{__('Premium Grass-Fed Tallow Balm for Ultimate Hydration')}}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
