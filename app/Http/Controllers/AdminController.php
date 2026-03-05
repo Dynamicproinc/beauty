@@ -16,29 +16,60 @@ class AdminController extends Controller
     {
         $start_raw =  Carbon::now()->startOfMonth();
         $end_raw = Carbon::now()->endOfMonth();
-
+// sales
         $sales_order = SalesOrder::orderBy('created_at', 'desc')->where('payment_status', 'success')->take(6)->get();
         $monthly_sales = SalesOrder::whereBetween('created_at', [$start_raw, $end_raw])->where('payment_status', 'success')->get();
         $tot = 0;
         foreach($monthly_sales as $item){
                 $tot = $tot + ($item->total_amount + $item->shipping_cost) - $item->discount_amount;
         }
-        $total_sale = $tot;
+        $this_month_total_sale = $tot;
+
+// last month sales
+ $monthly_sales_last = SalesOrder::whereBetween('created_at', [ now()->subMonth()->startOfMonth(),  now()->subMonth()->endOfMonth()])->where('payment_status', 'success')->get();
+        $totl = 0;
+        foreach($monthly_sales_last as $item){
+                $totl = $totl + ($item->total_amount + $item->shipping_cost) - $item->discount_amount;
+        }
+        $last_month_total_sale = $totl;
+
+        $sales_growth = $last_month_total_sale > 0
+    ? (($this_month_total_sale - $last_month_total_sale) / $last_month_total_sale) * 100
+    : 100;
+
+// 
+
 
       
        $start_format = $start_raw->format('M j');
        $end_format = $end_raw->addDays(1)->format('M j');
 
+    //    user
         $this_month_users = User::whereBetween('created_at', [
            $start_raw,
             $end_raw
         ])->count();
+    // last month count
+
+    $last_month_user_count = User::whereBetween('created_at', [
+    now()->subMonth()->startOfMonth(),
+    now()->subMonth()->endOfMonth()
+])->count();
+
+// comparision
+$user_growth = $last_month_user_count > 0
+    ? (($this_month_users - $last_month_user_count) / $last_month_user_count) * 100
+    : 100;
+
+        // 
         $data = [
             'sales_order' => $sales_order,
             'users' => $this_month_users,
+            'user_growth' => $user_growth,
             'start_format' => $start_format,
             'end_format' => $end_format,
-            'total_sale' => $total_sale,
+            'total_sale' => $this_month_total_sale,
+            'sales_growth' => $sales_growth,
             
         ];
         return view('admin.dashboard', $data);

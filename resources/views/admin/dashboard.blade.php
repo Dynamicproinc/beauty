@@ -11,7 +11,14 @@
                             <div class="card-body">
                               <h5 class="card-title">{{ $users }}</h5>
                               <p class="card-text">{{$start_format}} - {{$end_format}}</p>
-                              <p class="card-text text-success">18.2% increase since last month</p>
+                              <div>
+                                @if($user_growth > 0)
+                                <span class="text-success">▲ + {{round($user_growth, 1)}} % from last month</span>
+                                @endif
+                                @if($user_growth < 0)
+                                <span class="text-danger">▲  {{round($user_growth, 1)}} % from last month</span>
+                                @endif
+                              </div>
                             </div>
                           </div>
                     </div>
@@ -19,9 +26,16 @@
                         <div class="card">
                             <h5 class="card-header">Revenue</h5>
                             <div class="card-body">
-                              <h5 class="card-title">{{number_format($total_sale, 2, ',', '.');}}</h5>
+                              <h5 class="card-title">{{number_format($total_sale, 2, ',', '.')}} EUR</h5>
                               <p class="card-text">{{$start_format}} - {{$end_format}}</p>
-                              <p class="card-text text-success">4.6% increase since last month</p>
+                             <div>
+                                @if($sales_growth > 0)
+                                <span class="text-success">▲ + {{round($user_growth, 1)}} % from last month</span>
+                                @endif
+                                @if($sales_growth < 0)
+                                <span class="text-danger">▲  {{round($user_growth, 1)}} % from last month</span>
+                                @endif
+                              </div>
                             </div>
                           </div>
                     </div>
