@@ -16,6 +16,9 @@
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+      body{
+        /* letter-spacing: 1px; */
+      }
         .sidebar {
             position: fixed;
             top: 0;
@@ -171,7 +174,15 @@ td{
     color: steelblue;
     cursor: pointer;
 }
-
+.card-header{
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+th{
+  letter-spacing: 2px;
+}
     </style>
 </head>
 <body>
