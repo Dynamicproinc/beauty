@@ -92,6 +92,7 @@ $user_growth = $last_month_user_count > 0
             'purchases' => $this_month_purchases,
             'purchase_growth' => $purchase_growth,
             'this_month_visits' => $this_month_visits,
+            'last_month_visits' => $last_month_visits,
             'visit_growth' => $visit_growth
             
         ];

@@ -138,6 +138,16 @@ th{
   min-width: 120px
   
 }
+.db-muted{
+  font-size: 12px;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+}
+.db-muted-upper{
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 td{
   font-size: 14px;
   font-family: 'JetBrains Mono', monospace !important;
