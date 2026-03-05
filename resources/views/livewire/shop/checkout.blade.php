@@ -53,7 +53,7 @@
                                         <input type="radio" id="hd" value="home_delivery" class="d-type-radio"
                                             wire:model.live="delivery_method" wire:click = "refreshDeliveryMethod">
                                         <label for="hd" class="btn-radio">
-                                            <i class="bi bi-truck mx-2"></i> {{ __(' Home Delivery') }}
+                                            <i class="bi bi-truck mx-2"></i> {{ __('Home Delivery') }}
                                         </label>
                                     </div>
                                     <div class="mx-2 w-100">
@@ -220,13 +220,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-check mb-3">
+                                    {{-- <div class="form-check mb-3">
                                         <input class="form-check-input" type="checkbox" value=""
                                             id="sinfo" checked wire:model="save_address_data">
                                         <label class="form-check-label" for="sinfo">
                                             {{ __('Save this information for next time') }}
                                         </label>
-                                    </div>
+                                    </div> --}}
 
                                 </div>
 
@@ -325,7 +325,7 @@
                                                         wire:model="payment_method" type="radio" id="pmcard"
                                                         checked value="card">
                                                     <label class="pm-check-label my-3" for="pmcard">
-                                                        <span>{{ __('Credit card') }}</span>
+                                                        <span>{{ __('Credit Card') }}</span>
                                                         <img src="{{ asset('media/svg/visa.svg') }}" alt="">
                                                         <img src="{{ asset('media/svg/master.svg') }}"
                                                             alt="">
@@ -558,10 +558,10 @@
                                 @endif
                                 <div class="form-group mt-3">
                                     <p style="font-size:14px; color:#666;">
-                                        By clicking “Place Order”, you agree to our
-                                        <a href="/privacy-statement" target="_blank">Privacy Policy</a>
-                                        and
-                                        <a href="/terms-and-conditions" target="_blank">Terms &amp; Conditions</a>.
+                                        {!! __('place_order_terms', [
+                                            'privacy' => '<a href="/privacy-statement" target="_blank">Privacy Policy</a>',
+                                            'terms' => '<a href="/terms-and-conditions" target="_blank">Terms & Conditions</a>',
+                                        ]) !!}
                                     </p>
                                     <button class="btn btn-lg btn-warning w-100">{{ __('PLACE ORDER') }}</button>
                                 </div>
@@ -647,7 +647,7 @@
 
                                     <div class="d-flex justify-content-between">
                                         <div>
-                                            <span>Subtotal items</span>
+                                            <span>{{__('Subtotal')}}</span>
 
                                         </div>
                                         <div class="text-right">
@@ -679,7 +679,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between fw-bold">
                                         <div>
-                                            <h5>Total</h5>
+                                            <h5>{{__('Total')}}</h5>
 
                                         </div>
                                         <div class="text-right">

@@ -16,8 +16,8 @@
                         </div>
                     </div>
                     <div class="col-4 text-center">
-                        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">
-                            <img src="{{ asset('media/images/logo.png') }}" alt="" class="logo-md">
+                        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="{{route('welcome')}}">
+                            <img src="{{ asset('media/images/logo.png') }}" alt="Tallow skincare logo" class="logo-md">
                         </a>
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center">
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="col-4 text-center">
-                        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">
+                        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="{{route('welcome')}}">
                             <img src="{{ asset('media/images/logo.png') }}" alt="" class="logo-md">
                         </a>
                     </div>
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                     <div class="col-4 text-center">
-                        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">
+                        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="{{route('welcome')}}">
                             <img src="{{ asset('media/images/logo.png') }}" alt="" class="logo-md">
                         </a>
                     </div>
@@ -187,7 +187,7 @@
                         </div>
                     </div>
                     <div class="col-4 text-center">
-                        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">
+                        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="{{route('welcome')}}">
                             <img src="{{ asset('media/images/logo.png') }}" alt="" class="logo-md">
                         </a>
                     </div>

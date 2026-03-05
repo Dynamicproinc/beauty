@@ -1,6 +1,42 @@
 {
 
     "Hello" : "Hello",
-    "Your cart is empty!" : "Your cart is empty!"
+    "Your cart is empty!" : "Your cart is empty!",
+    "Home":"Home",
+    "All Products": "All Products",
+    "Contact" : "Contact",
+    "You are currently signed in as" : "You are currently signed in as",
+    "Login" : "Login",
+    "If you have an account, please login in to continue" : "If you have an account, please login in to continue",
+    "Home Delivery" : "Home Delivery",
+    "Personal Pickup" : "Personal Pickup",
+    "First Name" : "First Name",
+    "Last Name" : "Last Name",
+    "Email" : "Email",
+    "Phone" : "Phone",
+    "Billing Information" : "Billing Information",
+    "Select" : "Select",
+    "Country/Region" : "Country/Region",
+    "Address" : "Address",
+    "Postal Code" : "Postal Code",
+    "City" : "City",
+    "Pickup Location": "Pickup Location",
+    "Pickup Date & Time" : "Pickup Date & Time",
+    "Message" : "Message",
+    "All transactions are secure and encrypted." : "All transactions are secure and encrypted.",
+    "Credit Card" : "Credit Card",
+    "After clicking Pay Credit card, you will be redirected to Stripe to complete your purchase securely." : "After clicking Pay Credit card, you will be redirected to Stripe to complete your purchase securely.",
+    "Cash/Card for delivery or pickup" : "Cash/Card for delivery or pickup",
+    "Same as billing address" : "Same as billing address",
+    "Use different shipping address" : "Use different shipping address",
+    "place_order_terms": "By clicking “Place Order”, you agree to our :privacy and :terms.",
+    "Subtotal" : "Subtotal",
+    "Discount" : "Discount",
+    "Shipping" : "Shipping",
+    "Total" : "Total",
+    "PLACE ORDER" : "PLACE ORDER"
+   
+
+    
 
 }

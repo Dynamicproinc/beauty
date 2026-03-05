@@ -141,7 +141,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="bg-white">
             {{-- <div class="tb-p bg-white">
                 <div class="container">
                     <div class="d-flex justify-content-center mb-5">
