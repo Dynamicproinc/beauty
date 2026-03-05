@@ -15,24 +15,24 @@
             <div class="mb-5">
                 <ul class="sn-menu">
                     <li>
-                        <a href="{{ route('welcome') }}">{{ _('Home') }}</a>
+                        <a href="{{ route('welcome') }}">{{ __('Home') }}</a>
                     </li>
                     <li>
-                        <a href="{{ route('shop.product.all') }}">{{ _('All Products') }}</a>
+                        <a href="{{ route('shop.product.all') }}">{{ __('All Products') }}</a>
                     </li>
                     <li>
                         <a href="/#faq">{{ __('FAQ') }}</a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}">{{ _('My Account') }}</a>
+                        <a href="{{ route('home') }}">{{ __('My Account') }}</a>
 
                     </li>
                     <li>
-                        <a href="{{ route('shop.contact') }}">{{ _('Contact Us') }}</a>
+                        <a href="{{ route('shop.contact') }}">{{ __('Contact') }}</a>
 
                     </li>
                     <li>
-                        <a href="{{ route('shop.subscribe') }}"> {{ _('Subscribe to Newsletters') }}</a>
+                        <a href="{{ route('shop.subscribe') }}"> {{ __('Subscribe to Newsletters') }}</a>
 
                     </li>
                 </ul>
@@ -63,7 +63,7 @@
             <div class="mb-3">
 
                 <h6 class="text-black">
-                    {{ __('If you already created an account, please log in to access your dashboard.') }}</h6>
+                    {{ __('If you already created an account, please log in to access your account.') }}</h6>
 
                 <button class="tt_btn_theme">{{ __('Login') }} </button>
             </div>

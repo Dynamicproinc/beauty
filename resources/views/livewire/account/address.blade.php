@@ -3,12 +3,12 @@
                 <div>
                 <div class="row mb-3">
                     <div class="form-group col-6">
-                        <label for="">{{__('First name')}}</label>
-                        <input type="text" class="form-control" placeholder="{{__('First name')}}" readonly value="{{auth()->user()->name}}" disabled>
+                        <label for="">{{__('First Name')}}</label>
+                        <input type="text" class="form-control" placeholder="{{__('First Name')}}" readonly value="{{auth()->user()->name}}" disabled>
                     </div>
                     <div class="form-group col-6">
-                         <label for="">{{__('Last name')}}</label>
-                        <input type="text" class="form-control" placeholder="{{__('Last name')}}" readonly value="{{auth()->user()->last_name}}" disabled>
+                         <label for="">{{__('Last Name')}}</label>
+                        <input type="text" class="form-control" placeholder="{{__('Last Name')}}" readonly value="{{auth()->user()->last_name}}" disabled>
                     </div>
                 </div>
                 <div class="row mb-3">

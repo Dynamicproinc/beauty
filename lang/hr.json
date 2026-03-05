@@ -45,5 +45,24 @@
     "Add your coupon": "Dodajte svoj kupon",
     "Buy now tallow skincare product": "Kupite sada proizvod za njegu kože od loja",
     "Checkout": "Plaćanje",
-    "Cart" : "Košarica"
+    "Cart" : "Košarica",
+    "My Account": "Moj račun",
+    "Subscribe to Newsletters": "Pretplatite se na newsletter",
+    "Select language":"Odaberite jezik",
+    "If you already created an account, please log in to access your account.": "Ako ste već kreirali račun, prijavite se kako biste pristupili svom računu.",
+   "Update": "Ažuriraj",
+   "Payment type" :  "Vrsta plaćanja",
+    "View": "Pregled",
+    "Order": "Narudžba",
+    "Date": "Datum",
+  "Contact Us": "Kontaktirajte nas",
+  "If you have any questions, concerns, or feedback, please feel free to reach out to us. We are here to assist you with any inquiries related to our products, orders, or anything else you may need help with.": "Ako imate bilo kakva pitanja, nedoumice ili povratne informacije, slobodno nas kontaktirajte. Ovdje smo da vam pomognemo sa svim upitima vezanim uz naše proizvode, narudžbe ili bilo što drugo u čemu vam možemo pomoći.",
+  "Name": "Ime",
+  "Sending...": "Šalje se...",
+  "Send Message": "Pošalji poruku",
+    "Subscribe to our newsletter": "Pretplatite se na naš newsletter",
+  "Subscribe to our newsletter and be the first to receive the latest updates, news, tips, and special offers directly in your inbox.": "Pretplatite se na naš newsletter i budite prvi koji će primati najnovije informacije, vijesti, savjete i posebne ponude izravno u svoj inbox.",
+  "Subscribe": "Pretplati se"
+
+
 }

@@ -518,7 +518,7 @@ Retrieved 2026-03-05, License - CC BY-SA 4.0
     <span>100% Pure Black Angus Tallow🌿</span>
     <span>Natural🌿</span>
     <span>Clean🌿</span>
-    <span>Taditional🌿</span>
+    <span>Traditional🌿</span>
     <span>Premium Quallity🌿</span>
   </div>
 </div>

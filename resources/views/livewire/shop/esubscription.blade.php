@@ -9,7 +9,7 @@
 
             <input type="email"
                    class="form-control mb-3"
-                   placeholder="{{ __('Email address') }}"
+                   placeholder="{{ __('Email') }}"
                    wire:model="email">
 
             @error('email')

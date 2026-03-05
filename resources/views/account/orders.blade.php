@@ -19,7 +19,7 @@
                         <th scope="col" class="text-right">{{ __('Total') }}</th>
                         <th scope="col" class="text-right">{{ __('Payment') }}</th>
                         <th scope="col" class="text-right text-nowrap">{{ __('Payment type') }}</th>
-                        <th scope="col" class="text-nowrap">{{ __('Delivery') }}</th>
+                        <th scope="col" class="text-nowrap">{{ __('Shipping') }}</th>
                         {{-- <th scope="col">{{ __('phone') }}</th> --}}
                         <th scope="col"></th>
                     </tr>
@@ -41,7 +41,7 @@
                             </td>
                             <td>{{ str_replace('_', ' ', $order->delivery_method) }}</td>
                             {{-- <td>{{ $order->phone_number }}</td> --}}
-                            <td><a target="_blank" href="{{ route('shop.invoice', $order->slug) }}" class="btn btn-sm btn-primary">View</a>
+                            <td><a target="_blank" href="{{ route('shop.invoice', $order->slug) }}" class="btn btn-sm btn-primary">{{__('View')}}</a>
                             </td>
                         </tr>
                     @endforeach
