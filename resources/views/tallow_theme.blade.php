@@ -462,7 +462,7 @@
         </section>
         {{--  --}}
         {{-- a word from owner --}}
-        <section class="br-1-bg medium-section">
+        <section class="br-1-bg medium-section mb-0">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="row">
@@ -495,7 +495,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        {{-- <section>
             <div class="marquee">
                 <div class="marquee-content">
                     <div class="">
@@ -508,7 +508,7 @@
             </style>
 
 
-{{-- <div class="running-line-wrapper">
+<div class="running-line-wrapper">
   <div class="running-line">
     <!-- The overall width of the text element should be twice the width of the screen -->
     <span>100% Pure Black Angus Tallow🌿</span>
@@ -517,9 +517,9 @@
     <span>Traditional🌿</span>
     <span>Premium Quallity🌿</span>
   </div>
-</div> --}}
-        </section>
-        {{-- end a word from founder --}}
+</div>
+        </section> --}}
+       
 
     </div>
     <script>

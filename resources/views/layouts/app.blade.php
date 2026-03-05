@@ -42,7 +42,7 @@
     <div id="app">
        
         @include('inc.navbar_detailed')
-        <main class="mb-5">
+        <main class="">
            
                  @yield('content')
             
