@@ -8,6 +8,7 @@ use \App\Models\ProductInformation;
 use App\Models\SalesOrder;
 use Carbon\Carbon;
 use App\Models\User;
+use App\Models\Visit;
 
 
 class AdminController extends Controller
@@ -35,6 +36,15 @@ class AdminController extends Controller
 
         $sales_growth = $last_month_total_sale > 0
     ? (($this_month_total_sale - $last_month_total_sale) / $last_month_total_sale) * 100
+    : 100;
+
+// 
+
+// vistis
+    $this_month_visits = Visit::whereBetween('created_at', [$start_raw, $end_raw])->get()->count();
+    $last_month_visits = Visit::whereBetween('created_at', [now()->subMonth()->startOfMonth(),  now()->subMonth()->endOfMonth()])->get()->count();
+     $visit_growth = $last_month_visits > 0
+    ? (($$this_month_visits - $last_month_visits) / $last_month_visits) * 100
     : 100;
 
 // 
@@ -81,6 +91,8 @@ $user_growth = $last_month_user_count > 0
             'sales_growth' => $sales_growth,
             'purchases' => $this_month_purchases,
             'purchase_growth' => $purchase_growth,
+            'this_month_visits' => $this_month_visits,
+            'visit_growth' => $visit_growth
             
         ];
         return view('admin.dashboard', $data);

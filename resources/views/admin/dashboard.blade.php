@@ -60,9 +60,16 @@
                         <div class="card">
                             <h5 class="card-header">Traffic</h5>
                             <div class="card-body">
-                              <h5 class="card-title">64k</h5>
-                              <p class="card-text">Feb 1 - Apr 1, United States</p>
-                              <p class="card-text text-success">2.5% increase since last month</p>
+                              <h5 class="card-title">{{$this_month_visits}}</h5>
+                             <p class="card-text">{{$start_format}} - {{$end_format}}</p>
+                               <div>
+                                @if($visit_growth > 0)
+                                <span class="text-success">▲ + {{round($visit_growth, 1)}} % from last month</span>
+                                @endif
+                                @if($visit_growth < 0)
+                                <span class="text-danger">▼  {{round($visit_growth, 1)}} % from last month</span>
+                                @endif
+                              </div>
                             </div>
                         </div>
                     </div>
