@@ -336,7 +336,7 @@
                                                     <section class="acd-section border-top border-bottom">
                                                         <div class="text-center">
                                                             <p class="fw-light">
-                                                                {{ __('After clicking "Pay Credit card", you will be redirected to Stripe to complete your purchase securely.') }}
+                                                                {{ __('After clicking Pay Credit card, you will be redirected to Stripe to complete your purchase securely.') }}
                                                             </p>
                                                         </div>
                                                     </section>

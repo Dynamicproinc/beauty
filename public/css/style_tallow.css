@@ -575,6 +575,36 @@ i{
     font-weight: 500;
     
 }
+/* Wrapper */
+.running-line-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+
+/* Text */
+.running-line {
+  display: inline-block;
+  font-size: 20px; /* You can change this freely */
+  font-family: sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #444;
+  white-space: nowrap;
+
+  animation: run 15s linear infinite;
+}
+
+/* Animation */
+@keyframes run {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* end marq run */
 /* start media queries for the small devices */
 @media (max-width: 480px) {
     .html{
