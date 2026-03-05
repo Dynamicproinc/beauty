@@ -40,6 +40,15 @@ class AdminController extends Controller
 // 
 
 
+// purchase
+$last_month_purchases = SalesOrder::whereBetween('created_at', [ now()->subMonth()->startOfMonth(),  now()->subMonth()->endOfMonth()])->where('payment_status', 'success')->count();
+$this_month_purchases = SalesOrder::whereBetween('created_at',[$start_raw, $end_raw])->where('payment_status', 'success')->count();
+$purchase_growth = $last_month_purchases > 0
+    ? (($this_month_purchases - $last_month_purchases) / $last_month_purchases) * 100
+    : 100;
+// end purchase
+
+
       
        $start_format = $start_raw->format('M j');
        $end_format = $end_raw->addDays(1)->format('M j');
@@ -70,6 +79,8 @@ $user_growth = $last_month_user_count > 0
             'end_format' => $end_format,
             'total_sale' => $this_month_total_sale,
             'sales_growth' => $sales_growth,
+            'purchases' => $this_month_purchases,
+            'purchase_growth' => $purchase_growth,
             
         ];
         return view('admin.dashboard', $data);

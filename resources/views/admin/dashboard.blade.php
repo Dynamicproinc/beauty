@@ -30,10 +30,10 @@
                               <p class="card-text">{{$start_format}} - {{$end_format}}</p>
                              <div>
                                 @if($sales_growth > 0)
-                                <span class="text-success">▲ + {{round($user_growth, 1)}} % from last month</span>
+                                <span class="text-success">▲ + {{round($sales_growth, 1)}} % from last month</span>
                                 @endif
                                 @if($sales_growth < 0)
-                                <span class="text-danger">▲  {{round($user_growth, 1)}} % from last month</span>
+                                <span class="text-danger">▲  {{round($sales_growth, 1)}} % from last month</span>
                                 @endif
                               </div>
                             </div>
@@ -43,9 +43,16 @@
                         <div class="card">
                             <h5 class="card-header">Purchases</h5>
                             <div class="card-body">
-                              <h5 class="card-title">43</h5>
-                              <p class="card-text">Feb 1 - Apr 1, United States</p>
-                              <p class="card-text text-danger">2.6% decrease since last month</p>
+                              <h5 class="card-title">{{$purchases}}</h5>
+                               <p class="card-text">{{$start_format}} - {{$end_format}}</p>
+                              <div>
+                                @if($purchase_growth > 0)
+                                <span class="text-success">▲ + {{round($purchase_growth, 1)}} % from last month</span>
+                                @endif
+                                @if($purchase_growth < 0)
+                                <span class="text-danger">▲  {{round($purchase_growth, 1)}} % from last month</span>
+                                @endif
+                              </div>
                             </div>
                           </div>
                     </div>
