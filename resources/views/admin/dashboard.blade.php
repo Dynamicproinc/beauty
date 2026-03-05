@@ -15,7 +15,7 @@
                                 @if($user_growth > 0)
                                 <span class="text-success">▲ + {{round($user_growth, 1)}} % from last month</span>
                                 @endif
-                                @if($user_growth < 0)
+                                @if($user_growth <= 0)
                                 <span class="text-danger">▲  {{round($user_growth, 1)}} % from last month</span>
                                 @endif
                               </div>
@@ -32,7 +32,7 @@
                                 @if($sales_growth > 0)
                                 <span class="text-success">▲ + {{round($sales_growth, 1)}} % from last month</span>
                                 @endif
-                                @if($sales_growth < 0)
+                                @if($sales_growth <= 0)
                                 <span class="text-danger">▼  {{round($sales_growth, 1)}} % from last month</span>
                                 @endif
                               </div>
@@ -49,7 +49,7 @@
                                 @if($purchase_growth > 0)
                                 <span class="text-success">▲ + {{round($purchase_growth, 1)}} % from last month</span>
                                 @endif
-                                @if($purchase_growth < 0)
+                                @if($purchase_growth <= 0)
                                 <span class="text-danger">▲  {{round($purchase_growth, 1)}} % from last month</span>
                                 @endif
                               </div>
