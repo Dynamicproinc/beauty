@@ -26,7 +26,7 @@
                                                         @endphp
                                                         <a
                                                             href="{{ route('shop.product.show', ['id' => $product->slug]) }}">
-                                                            <img src="{{ \App\Models\Media::where('product_id', $item['product_id'])->first()?->file_path }}"
+                                                            <img src="{{ asset('uploads/products/'.\App\Models\Media::where('product_id', $item['product_id'])->first()?->file_path) }}"
                                                                 alt="">
                                                         </a>
                                                     </div>
