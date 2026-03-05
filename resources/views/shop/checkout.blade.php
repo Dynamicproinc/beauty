@@ -305,7 +305,7 @@
             <a  href="{{ route('shop.cart') }}" class="btn btn-default"><i class="bi bi-cart h4"></i></a>
         </div>
         <div>
-            <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+            <a href="{{route('welcome')}}" class="d-flex align-items-center text-dark text-decoration-none">
             <img src="{{ asset('media/images/logo.png') }}" alt="Logo" class="mx-auto d-block logo-checkout"
                 style="max-height: 80px;">
         </a>

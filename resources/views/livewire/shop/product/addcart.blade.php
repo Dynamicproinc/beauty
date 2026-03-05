@@ -109,9 +109,9 @@
                 <div class="col-lg-8 form-group">
                     @if (count($product->getVariants()) > 0)
                         @if ($selected_variant_data?->quantity <= 0 || $total_variation_quantity <= 0)
-                            <button class="tt_btn_theme" disabled>{{ __('OUT OF STOCK') }}</button>
+                            <button class="tt_btn_theme w-100" disabled>{{ __('OUT OF STOCK') }}</button>
                         @else
-                            <button class="tt_btn_theme" wire:click = "addCart">
+                            <button class="tt_btn_theme w-100" wire:click = "addCart">
                                 <span class="spinner-border spinner-border-sm mx-2" aria-hidden="true" wire:loading
                                     wire:target="addCart"></span>
                                 {{ __('ADD TO CART') }}
@@ -120,17 +120,17 @@
                     @else
                         @if ($product->track_quantity)
                             @if ($product->quantity > 0)
-                                <button class="tt_btn_theme" wire:click = "addCart">
+                                <button class="tt_btn_theme w-100" wire:click = "addCart">
 
                                     <span class="spinner-border spinner-border-sm" aria-hidden="true" wire:loading
                                         wire:target="addCart"></span>
                                     {{ __('ADD TO CART') }}
                                 </button>
                             @else
-                                <button class="tt_btn_theme" disabled>{{ __('OUT OF STOCK') }}</button>
+                                <button class="tt_btn_theme w-100" disabled>{{ __('OUT OF STOCK') }}</button>
                             @endif
                         @else
-                            <button class="tt_btn_theme" wire:click = "addCart">
+                            <button class="tt_btn_theme w-100" wire:click = "addCart">
                                 <span class="spinner-border spinner-border-sm" role="status" wire:loading
                                     wire:target="addCart" aria-hidden="true"></span>
                                 {{ __('ADD TO CART') }}

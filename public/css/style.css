@@ -866,22 +866,27 @@ transition: transform 0.4s;
 .accord-label{
 height:28px;
 width: 100%;
-font-weight: 18px !important;
+font-size: 12px !important;
 font-weight: 900 !important;
+letter-spacing: 3px;
 display: block;
 color: var(--pri_color_text);
 font-weight: 500;
 cursor: pointer;
 position: relative;
 transition: background 0.1s;
+text-transform: uppercase;
+
 }
 .accord-label-title{
 
 width: 100%;
-font-weight: 18px !important;
+font-size: 12px !important;
 font-weight: 900 !important;
 display: block;
+letter-spacing: 3px;
 color: var(--pri_color_text);
+text-transform: uppercase;
 
 }
 

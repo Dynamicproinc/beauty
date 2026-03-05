@@ -199,6 +199,7 @@ $finalTotal = $order->total_amount - $order->discount_amount + $order->shipping_
 {{ __('Thank you for your business!') }}<br><br>
 {{ __('If you have any questions, please contact us at') }}<br>
 <a href="mailto:info@tallow-skincare.hr">info@tallow-skincare.hr</a>
+
 </td>
 </tr>
 

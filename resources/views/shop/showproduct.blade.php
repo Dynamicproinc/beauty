@@ -128,7 +128,7 @@
                                         @foreach ($product->getProductInformation() as $item)
                                             <div class="accord-cont">
                                                 <input type="checkbox" id="chkb{{$item->id}}" name="page_info" class="accdcheck" value="chkb{{$item->id}}">
-                                                <label for="chkb{{$item->id}}" class="accord-label">{{ __($item->gettitle()->title)}}</label>
+                                                <label for="chkb{{$item->id}}" class="accord-label text-uppercase">{{ __($item->gettitle()->title)}}</label>
                                                 <section class="accord-show pro-description">
                                                    {!! $item->content !!}
                                                 </section>
