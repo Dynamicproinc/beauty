@@ -31,7 +31,7 @@
       <th scope="row">
         <input type="checkbox" class="select-item" data-id="{{ $product->id }}">
       </th>
-      <td><img src="{{ $product->getImage()?->file_path ?? asset('media/images/no_image.jpg') }}" width="50"></td>
+      <td><img src="{{ asset('uploads/products/'.$product->getImage()?->file_path) ?? asset('media/images/no_image.jpg') }}" width="50"></td>
       <td class="text-truncate" style="max-width: 150px;">
         <a href="{{ route('admin.products.edit', ['id' => $product->id]) }}">
           {{ $product->title }}
