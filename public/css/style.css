@@ -885,6 +885,8 @@ color: var(--pri_color_text);
 
 }
 
+
+
 .accord-cont input:checked ~ .accord-show {
     margin-top:16px;
 height: 100%;

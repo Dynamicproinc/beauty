@@ -186,17 +186,17 @@ public function addUrl(){
         }
 
             // Save URLs
-            $this->urls = session()->get('urls', []);
-            if(!empty($this->urls)) {
-            foreach($this->urls as $url){
-               $media = Media::create([
-                    'product_id' => $product->id,
-                    'file_path' => $url,
-                    'file_type' => null,
-                    'alt_text' => null,
-               ]);
-            }
-        }
+        //     $this->urls = session()->get('urls', []);
+        //     if(!empty($this->urls)) {
+        //     foreach($this->urls as $url){
+        //        $media = Media::create([
+        //             'product_id' => $product->id,
+        //             'file_path' => $url,
+        //             'file_type' => null,
+        //             'alt_text' => null,
+        //        ]);
+        //     }
+        // }
 
             // Clear session data
            

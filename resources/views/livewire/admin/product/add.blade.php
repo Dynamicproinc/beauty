@@ -10,7 +10,12 @@
         </div>
         <div class="row mb-3">
             <div class="col-lg 8">
-                <div class="panel bg-white rounded p-3 mb-3">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h5 class="h5 card-title">{{__('Product details')}}</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="panel bg-white rounded p-3 mb-3">
                     <div class="form-group">
                         <label for="">{{__('Title')}}</label>
                         <input type="text" class="form-control form-control-sm @error('title') is-invalid @enderror"
@@ -25,26 +30,42 @@
                         <textarea name="" id="editor" cols="30" rows="10" wire:model="description" x-data x-init="initCKEditor()"></textarea>
                     </div>
                 </div>
-                <div class="panel bg-white rounded p-3 mb-3">
+                    </div>
+
+                </div>
+
+                <div class="card mb-3">
+                   
+                    <div class="card-body">
+                        <div class="panel bg-white rounded p-3 mb-3">
                     <h5 class="panel-heading mb-2" for="">{{__('Media')}}</h5>
                     <div class="d-flex flex-wrap gap-3">
-                        @if(session()->has('urls') && count(session('urls', [])) > 0)
+                        {{-- @if(session()->has('urls') && count(session('urls', [])) > 0)
                             @foreach(session('urls', []) as $image)
                                 <div class="img-upload-preview">
                                     <img src="{{ $image }}" alt="Product Image" style="width: 100%; height: 100%; object-fit: cover;">
-                                    {{-- <button class="btn btn-sm btn-danger" wire:click="removeImage('{{ $image }}')">x</button> --}}
+                                  
                                 </div>
                             @endforeach
                         @endif
                         <div class="img-upload">
                             <button class="btn btn-0 btn-sm" wire:click="urlModal">+</button>
+                        </div> --}}
+                        <div class="text-muted">
+                            {{__('After creating the product, you can upload its media and photos.')}}
                         </div>
                     </div>
                    
                 </div>
-                <div class="panel bg-white rounded mb-3">
+                    </div>
+                </div>
+                
+                <div class="card mb-3">
+                    <div class="card-header"><h5>{{__('Pricing')}}</h5></div>
+                    <div class="card-body">
+                        <div class="panel bg-white rounded mb-3">
                     <div class="p-3">
-                        <h5 class="panel-heading mb-2" for="">{{__('Pricing')}}</h5>
+                        
                         <div>
                             <div class="row mb-3">
                                 <div class="form-group col-lg-6">
@@ -89,10 +110,18 @@
                     </div>
 
                 </div>
+
+                    </div>
+                </div>
+                
+                <div class="card mb-3">
+                    <div class="card-header"><h5>{{__('Imventory')}}</h5></div>
+                    <div class="card-body">
+                        
                 <div class="panel bg-white rounded mb-3">
                     <div class="p-3">
 
-                        <h5 class="panel-heading mb-2" for="">{{__('Inventory')}}</h5>
+                        
                         <div>
                             <div class="row">
                                 <div class="col-lg-6 form-group">
@@ -144,9 +173,16 @@
                         </div>
                     </div>
                 </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-header"><h5>{{__('Variation')}}</h5></div>
+                    <div class="card-body">
+                        
                 <div class="panel bg-white rounded mb-3">
                     <div class="p-3">
-                        <h5 class="panel-heading mb-2" for="">{{__('Variants')}}</h5>
+                      
                         <div class="row">
                             <div class="col-lg-5 form-group">
                                 <select wire:model="option_id" class="form-control form-control-sm">
@@ -220,11 +256,16 @@
                         @endif
                     </div>
                 </div>
+                    </div>
+                </div>
 
             </div>
             <div class="col-lg-4">
-                <div class="panel bg-white rounded p-3 mb-3">
-                    <h5 class="panel-heading mb-2" for="">{{__('Product status')}}</h5>
+                <div class="card mb-3">
+                    <div class="card-header"><h5>{{__('Status')}}</h5></div>
+                    <div class="card-body">
+                        <div class="panel bg-white rounded p-3 mb-3">
+                    
                     <div class="form-group">
                         <select name="" id="" class="form-control form-control-sm" wire:model="status">
                             <option value="draft" >{{__('Draft')}}</option>
@@ -234,8 +275,13 @@
 
                     </div>
                 </div>
-                <div class="panel bg-white rounded p-3 mb-3">
-                    <h5 class="panel-heading mb-2" for="">{{__('Product Categories')}}</h5>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header"><h5>{{__('Categories')}}</h5></div>
+                    <div class="card-body">
+                        <div class="panel bg-white rounded p-3 mb-3">
+                   
 
                     <div class="form-group">
                         <label for="">{{__('Supplier')}}</label>
@@ -258,8 +304,13 @@
 
                     </div>
                 </div>
-                <div class="panel bg-white rounded p-3 mb-3">
-                    <h5 class="panel-heading mb-2" for="">{{__('Tags')}}</h5>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header"><h5>{{__('Tags')}}</h5></div>
+                    <div class="card-body">
+                        <div class="panel bg-white rounded p-3 mb-3">
+                    
                     <div class="row">
                         <div class="col-lg-8 form-group">
                             <input type="text" class="form-control form-control-sm" placeholder="{{__('Enter tags')}}" wire:model="tags">
@@ -271,11 +322,13 @@
                     </div>
 
                 </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="d-flex flex-row-reverse">
             <div>
-                <button class="btn-2" wire:click="saveProduct">
+                <button class="btn btn-primary" wire:click="saveProduct">
                     <span class="spinner-border spinner-border-sm" role="status" wire:loading wire:target="saveProduct" aria-hidden="true">
                     </span>
                    {{__('Save Product')}}

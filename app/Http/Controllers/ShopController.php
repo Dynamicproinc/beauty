@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\SalesOrder;
+use Symfony\Component\Routing\Route;
 
 class ShopController extends Controller
 {
@@ -15,7 +16,7 @@ class ShopController extends Controller
 
     public function checkout(){
        if(session()->has('cart') == false || count(session('cart')) == 0){
-            return 'Cart is empty';
+            return redirect()->to(route('shop.cart'));
        }
        
         return view('shop.checkout');

@@ -147,6 +147,21 @@ td{
   overflow-x: auto;
 }
 
+.upload-image{
+    visibility: hidden;
+}
+.up-label{
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    border: 2px dashed steelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: steelblue;
+    cursor: pointer;
+}
+
     </style>
 </head>
 <body>

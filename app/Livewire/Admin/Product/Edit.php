@@ -15,10 +15,13 @@ use App\Models\Nutrition;
 use App\Models\CookingInstruction;
 use App\Models\PageInformation;
 use App\Models\ProductInformation;
+use Livewire\WithFileUploads;
 
 
 class Edit extends Component
 {
+    use WithFileUploads;
+
     public $product, $options, $categories, $suppliers;
     public $title, $description, $discounted_price, $original_price, $tax = 0, $cost_per_item, $category_id, $sku, $barcode, $quantity, $auto_update_quantity = true, $out_of_stock = false, $track_quantity = true, $supplier_id, $tags = [], $status;
     public $url_modal = false;
@@ -37,6 +40,8 @@ class Edit extends Component
     public $info_title;
     public $info_content;
     public $product_info_modal = false;
+
+    public $product_image;
 
     public function render()
     {
@@ -423,6 +428,35 @@ public function removeHighlight($highlightId)
 
         }
         
+    }
+
+    public function updatedProductImage()
+    {
+        $this->validate([
+            'product_image' => 'image|max:2048',
+        ]);
+
+        $filename = time() . '_' . uniqid() . '.' . $this->product_image->extension();
+
+        // Save to public/uploads
+       $path = $this->product_image->storeAs('products', $filename, 'public');
+
+        // Save filename to database
+       
+
+        $media = new Media();
+        $media->file_path =$filename;
+        $media->product_id = $this->product->id;
+        $media->save();
+
+        // Add the new media to the urls array to update the UI
+        $this->urls[] = $media;
+
+        // Optionally, you can add a success message or notification here
+        $this->success_message = 'Media added successfully!';
+
+        // Reset input
+        $this->reset('product_image');
     }
 
    }

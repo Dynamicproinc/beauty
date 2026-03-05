@@ -42,108 +42,114 @@
             </div>
             <div class="row mb-3">
                 <div class="col-lg-8">
-                    
-                    <div class="card mb-3">
-                       <h5 class="card-header">{{ __('Product Details') }}</h5>
-                       <div class="card-body">
-                        <div class="panel bg-white rounded p-3 mb-3">
-                        <div class="form-group">
-                            <label for="">{{ __('Title') }}</label>
-                            <input type="text"
-                                class="form-control @error('title') is-invalid @enderror"
-                                placeholder="{{ __('Enter the product title') }}" wire:model="title">
-                            @error('title')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="form-group" wire:ignore>
 
-                            <label for="">{{ __('Description') }}</label>
-                            <textarea name="" id="editor" cols="30" rows="10" wire:model="description" x-data
-                                x-init="initCKEditor()"></textarea>
+                    <div class="card mb-3">
+                        <h5 class="card-header">{{ __('Product Details') }}</h5>
+                        <div class="card-body">
+                            <div class="panel bg-white rounded p-3 mb-3">
+                                <div class="form-group">
+                                    <label for="">{{ __('Title') }}</label>
+                                    <input type="text" class="form-control @error('title') is-invalid @enderror"
+                                        placeholder="{{ __('Enter the product title') }}" wire:model="title">
+                                    @error('title')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="form-group" wire:ignore>
+
+                                    <label for="">{{ __('Description') }}</label>
+                                    <textarea name="" id="editor" cols="30" rows="10" wire:model="description" x-data
+                                        x-init="initCKEditor()"></textarea>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                       </div>
                     </div>
                     <div class="card mb-3">
                         <h5 class="card-header">{{ __('Media') }}</h5>
                         <div class="card-body">
                             <div class="panel bg-white rounded p-3 mb-3">
-                       
-                        <div class="d-flex flex-wrap gap-3">
-                            @if ($urls && count($urls) > 0)
-                                @foreach ($urls as $image)
-                                    <div class="image-upload-preview">
-                                        <img src="{{ $image->file_path }}" alt="Product Image"
-                                            style="width: 100%; height: 100%; object-fit: cover;">
-                                        <button class="btn btn-sm btn-danger"
-                                            wire:click="removeMedia('{{ $image->id }}')"
-                                            wire:confirm="Are you sure you want to delete this media?">x</button>
-                                    </div>
-                                @endforeach
-                            @endif
-                            <div class="img-upload">
-                                <button class="btn btn-sm btn-outline-primary" wire:click="openUrlModal">+</button>
-                            </div>
-                        </div>
 
-                    </div>
+                                <div class="d-flex flex-wrap gap-3">
+                                    @if ($urls && count($urls) > 0)
+                                        @foreach ($urls as $image)
+                                            <div class="image-upload-preview">
+                                                <img src="{{ asset('uploads/products/'.$image->file_path) }}" alt="Product Image"
+                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                <button class="btn btn-sm btn-danger"
+                                                    wire:click="removeMedia('{{ $image->id }}')"
+                                                    wire:confirm="Are you sure you want to delete this media?">x</button>
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                   
+                                    <div>
+                                        <input type="file" wire:model="product_image" class="upload-image" id="product-image">
+                                    <label for="product-image" class="up-label">+</label>
+                                    <div wire:loading wire:target="product_image">
+                                        Uploading...
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                     <div class="card mb-3">
                         <h5 class="card-header">{{ __('Pricing') }}</h5>
                         <div class="card-body">
                             {{--  --}}
-                            
-                    <div class="panel bg-white rounded mb-3">
-                        <div class="p-3">
-                            
-                            <div>
-                                <div class="row mb-3">
-                                    <div class="form-group col-lg-6">
-                                        <label for="">{{ __('Discounted Price') }}</label>
-                                        <input type="number"
-                                            class="form-control @error('discounted_price') is-invalid @enderror"
-                                            placeholder="€ 0.00" wire:model="discounted_price">
-                                        @error('discounted_price')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group col-lg-6">
-                                        <label for="">{{ __('Original Price') }}</label>
-                                        <input type="number"
-                                            class="form-control @error('original_price') is-invalid @enderror"
-                                            placeholder="€ 0.00" wire:model="original_price">
-                                        @error('original_price')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="chek_tax" wire:model="tax">
-                                    <label class="form-check-label" for="chek_tax">
-                                        Tax
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <hr>
-                        </div>
-                        <div class="p-3">
-                            <div class="form-group">
-                                <label for="">{{ __('Item cost') }}</label>
-                                <input type="number"
-                                    class="form-control @error('cost_per_item') is-invalid @enderror"
-                                    placeholder="€ 0.00" wire:model="cost_per_item">
-                                @error('cost_per_item')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                                <small class="text-muted">{{ __('Not visible to customer') }}</small>
-                            </div>
-                        </div>
 
-                    </div>
+                            <div class="panel bg-white rounded mb-3">
+                                <div class="p-3">
+
+                                    <div>
+                                        <div class="row mb-3">
+                                            <div class="form-group col-lg-6">
+                                                <label for="">{{ __('Discounted Price') }}</label>
+                                                <input type="number"
+                                                    class="form-control @error('discounted_price') is-invalid @enderror"
+                                                    placeholder="€ 0.00" wire:model="discounted_price">
+                                                @error('discounted_price')
+                                                    <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                            <div class="form-group col-lg-6">
+                                                <label for="">{{ __('Original Price') }}</label>
+                                                <input type="number"
+                                                    class="form-control @error('original_price') is-invalid @enderror"
+                                                    placeholder="€ 0.00" wire:model="original_price">
+                                                @error('original_price')
+                                                    <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="chek_tax"
+                                                wire:model="tax">
+                                            <label class="form-check-label" for="chek_tax">
+                                                Tax
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <hr>
+                                </div>
+                                <div class="p-3">
+                                    <div class="form-group">
+                                        <label for="">{{ __('Item cost') }}</label>
+                                        <input type="number"
+                                            class="form-control @error('cost_per_item') is-invalid @enderror"
+                                            placeholder="€ 0.00" wire:model="cost_per_item">
+                                        @error('cost_per_item')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                        <small class="text-muted">{{ __('Not visible to customer') }}</small>
+                                    </div>
+                                </div>
+
+                            </div>
                             {{--  --}}
                         </div>
                     </div>
@@ -153,71 +159,71 @@
                         <h5 class="card-header">{{ __('Inventory') }}</h5>
                         <div class="card-body">
                             {{--  --}}
-                            
-                    <div class="panel bg-white rounded mb-3">
-                        <div class="p-3">
 
-                            <h5 class="panel-heading mb-2" for="">{{ __('Inventory') }}</h5>
-                            <div>
-                                <div class="row">
-                                    <div class="col-lg-6 form-group">
-                                        <label for="">SKU (Stock Keeping Unit)</label>
-                                        <input type="text"
-                                            class="form-control  @error('sku') is-invalid @enderror"
-                                            wire:model="sku">
-                                        @error('sku')
+                            <div class="panel bg-white rounded mb-3">
+                                <div class="p-3">
+
+                                    <h5 class="panel-heading mb-2" for="">{{ __('Inventory') }}</h5>
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-lg-6 form-group">
+                                                <label for="">SKU (Stock Keeping Unit)</label>
+                                                <input type="text"
+                                                    class="form-control  @error('sku') is-invalid @enderror"
+                                                    wire:model="sku">
+                                                @error('sku')
+                                                    <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                            <div class="col-lg-6 form-group">
+                                                <label for="">Barcode</label>
+                                                <input type="text"
+                                                    class="form-control  @error('barcode') is-invalid @enderror"
+                                                    wire:model="barcode">
+                                                @error('barcode')
+                                                    <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="chb_as" wire:model="auto_update_quantity">
+                                            <label class="form-check-label" for="chb_as">
+                                                {{ __('Automatic Stock Updates') }}
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="chb_os" wire:model="out_of_stock">
+                                            <label class="form-check-label" for="chb_os">
+                                                {{ __('Out-of-Stock Control') }}
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="chb_tc" wire:model="track_quantity">
+                                            <label class="form-check-label" for="chb_tc">
+                                                {{ __('Track Quantity') }}
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <hr />
+                                </div>
+                                <div class="p-3">
+                                    <div class="form-group col-6">
+                                        <label for="">Quantity</label>
+                                        <input type="number"
+                                            class="form-control @error('quantity') is-invalid @enderror"
+                                            wire:model="quantity">
+                                        @error('quantity')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
                                     </div>
-                                    <div class="col-lg-6 form-group">
-                                        <label for="">Barcode</label>
-                                        <input type="text"
-                                            class="form-control  @error('barcode') is-invalid @enderror"
-                                            wire:model="barcode">
-                                        @error('barcode')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="chb_as"
-                                        wire:model="auto_update_quantity">
-                                    <label class="form-check-label" for="chb_as">
-                                        {{ __('Automatic Stock Updates') }}
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="chb_os"
-                                        wire:model="out_of_stock">
-                                    <label class="form-check-label" for="chb_os">
-                                        {{ __('Out-of-Stock Control') }}
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="chb_tc"
-                                        wire:model="track_quantity">
-                                    <label class="form-check-label" for="chb_tc">
-                                        {{ __('Track Quantity') }}
-                                    </label>
-                                </div>
-
                             </div>
-                        </div>
-                        <div>
-                            <hr />
-                        </div>
-                        <div class="p-3">
-                            <div class="form-group col-6">
-                                <label for="">Quantity</label>
-                                <input type="number"
-                                    class="form-control @error('quantity') is-invalid @enderror"
-                                    wire:model="quantity">
-                                @error('quantity')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                    </div>
                             {{--  --}}
                         </div>
                     </div>
@@ -226,181 +232,184 @@
                         <h5 class="card-header">{{ __('Variants') }}</h5>
                         <div class="card-body">
                             {{--  --}}
-                            
-                    <div class="panel bg-white rounded mb-3">
-                        <div class="p-3">
-                            <h5 class="panel-heading mb-2" for="">{{ __('Variants') }}</h5>
-                            <div class="row">
-                                <div class="col-lg-5 form-group">
-                                    <select wire:model="option_id" class="form-control">
 
-                                        <option value="">{{ __('Select an option') }}</option>
-                                        @foreach ($options as $option)
-                                            <option value="{{ $option->id }}">{{ $option->name }}</option>
-                                        @endforeach
+                            <div class="panel bg-white rounded mb-3">
+                                <div class="p-3">
+                                    <h5 class="panel-heading mb-2" for="">{{ __('Variants') }}</h5>
+                                    <div class="row">
+                                        <div class="col-lg-5 form-group">
+                                            <select wire:model="option_id" class="form-control">
 
-                                    </select>
-                                    @error('option_id')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
+                                                <option value="">{{ __('Select an option') }}</option>
+                                                @foreach ($options as $option)
+                                                    <option value="{{ $option->id }}">{{ $option->name }}</option>
+                                                @endforeach
+
+                                            </select>
+                                            @error('option_id')
+                                                <small class="text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+                                        <div class="col-lg-4 form-group">
+                                            <input required type="text" class="form-control"
+                                                placeholder="{{ __('Value') }}" wire:model="o_value">
+                                            @error('o_value')
+                                                <small class="text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+                                        <div class="col-lg-3 form-group">
+                                            <button class="btn-c-sm btn btn-0" wire:click="addVariant">+</button>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div class="col-lg-4 form-group">
-                                    <input required type="text" class="form-control"
-                                        placeholder="{{ __('Value') }}" wire:model="o_value">
-                                    @error('o_value')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                <div class="col-lg-3 form-group">
-                                    <button class="btn-c-sm btn btn-0" wire:click="addVariant">+</button>
+                                <div>
+                                    @if ($variants && count($variants) > 0)
+                                        <table class="table tbl-v">
+                                            <thead>
+                                                <tr>
+
+                                                    <th scope="col">{{ __('Option') }}</th>
+                                                    <th scope="col">{{ __('Value') }}</th>
+                                                    <th scope="col" style="width:100px">{{ __('Price') }}</th>
+                                                    <th scope="col" style="width:100px">{{ __('Quantity') }}</th>
+                                                    <th scope="col"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($variants as $index => $item)
+                                                    <tr>
+                                                        <td>{{ \App\Models\Option::find($item['option_id'])->name }}
+                                                        </td>
+                                                        <td>
+                                                            <input type="text"
+                                                                wire:model="variants.{{ $index }}.value"
+                                                                class="form-control" placeholder="">
+                                                        </td>
+                                                        <td>
+                                                            <input type="number"
+                                                                wire:model="variants.{{ $index }}.additional_price"
+                                                                class="form-control" placeholder="€ 0.00">
+                                                        </td>
+                                                        <td>
+                                                            <input type="number"
+                                                                wire:model="variants.{{ $index }}.quantity"
+                                                                class="form-control" placeholder="0">
+                                                        </td>
+                                                        <td>
+                                                            <button type="button"
+                                                                wire:click="removeVariant({{ $item['id'] }})"
+                                                                class="btn btn-c-sm btn-0"
+                                                                wire:confirm="Are you sure you want to delete this variant?">
+                                                                <i class="bi bi-trash"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+
+
+
+
+                                            </tbody>
+                                        </table>
+                                        <div class="d-flex justify-content-between p-3">
+                                            <div></div>
+                                            <div>
+                                                <button class="btn btn-c-sm btn-0" wire:click="updateVariants">
+                                                    <span class="spinner-border spinner-border-sm" role="status"
+                                                        wire:loading wire:target="updateVariants" aria-hidden="true">
+                                                    </span>
+                                                    {{ __('Update Variants') }}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    @else
+                                        <div class="p-3">
+                                            <p class="text-muted">{{ __('No variants added.') }}</p>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
-
-                        </div>
-                        <div>
-                            @if ($variants && count($variants) > 0)
-                                <table class="table tbl-v">
-                                    <thead>
-                                        <tr>
-
-                                            <th scope="col">{{ __('Option') }}</th>
-                                            <th scope="col">{{ __('Value') }}</th>
-                                            <th scope="col" style="width:100px">{{ __('Price') }}</th>
-                                            <th scope="col" style="width:100px">{{ __('Quantity') }}</th>
-                                            <th scope="col"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($variants as $index => $item)
-                                            <tr>
-                                                <td>{{ \App\Models\Option::find($item['option_id'])->name }}</td>
-                                                <td>
-                                                    <input type="text"
-                                                        wire:model="variants.{{ $index }}.value"
-                                                        class="form-control" placeholder="">
-                                                </td>
-                                                <td>
-                                                    <input type="number"
-                                                        wire:model="variants.{{ $index }}.additional_price"
-                                                        class="form-control" placeholder="€ 0.00">
-                                                </td>
-                                                <td>
-                                                    <input type="number"
-                                                        wire:model="variants.{{ $index }}.quantity"
-                                                        class="form-control" placeholder="0">
-                                                </td>
-                                                <td>
-                                                    <button type="button"
-                                                        wire:click="removeVariant({{ $item['id'] }})"
-                                                        class="btn btn-c-sm btn-0"
-                                                        wire:confirm="Are you sure you want to delete this variant?">
-                                                        <i class="bi bi-trash"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        @endforeach
-
-
-
-
-                                    </tbody>
-                                </table>
-                                <div class="d-flex justify-content-between p-3">
-                                    <div></div>
-                                    <div>
-                                        <button class="btn btn-c-sm btn-0" wire:click="updateVariants">
-                                            <span class="spinner-border spinner-border-sm" role="status" wire:loading
-                                                wire:target="updateVariants" aria-hidden="true">
-                                            </span>
-                                            {{ __('Update Variants') }}
-                                        </button>
-                                    </div>
-                                </div>
-                            @else
-                                <div class="p-3">
-                                    <p class="text-muted">{{ __('No variants added.') }}</p>
-                                </div>
-                            @endif
-                        </div>
-                    </div>
                             {{--  --}}
                         </div>
                     </div>
 
                 </div>
                 <div class="col-lg-4">
-                   <div class="card mb-3">
-                    <h5 class="card-header">{{ __('Product Status') }}</h5>
-                    <div class="card-body">
-                         <div class="panel bg-white rounded p-3 mb-3">
-                        
-                        <div class="form-group">
-                            <select name="" id="" class="form-control"
-                                wire:model="status">
-                                <option value="draft">{{ __('Draft') }}</option>
-                                <option value="active">{{ __('Active') }}</option>
-                            </select>
-                            <small class="text-muted">Product will be visible once activated.</small>
+                    <div class="card mb-3">
+                        <h5 class="card-header">{{ __('Product Status') }}</h5>
+                        <div class="card-body">
+                            <div class="panel bg-white rounded p-3 mb-3">
 
+                                <div class="form-group">
+                                    <select name="" id="" class="form-control" wire:model="status">
+                                        <option value="draft">{{ __('Draft') }}</option>
+                                        <option value="active">{{ __('Active') }}</option>
+                                    </select>
+                                    <small class="text-muted">Product will be visible once activated.</small>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                   </div>
                     <div class="card mb-3">
                         <h5 class="card-header">{{ __('Product Categories') }}</h5>
                         <div class="card-body">
                             <div class="panel bg-white rounded p-3 mb-3">
-                        
-
-                        <div class="form-group">
-                            <label for="">{{ __('Supplier') }}</label>
-                            <select name="" id="" class="form-control"
-                                wire:model="supplier_id">
-                                @foreach ($suppliers as $supplier)
-                                    <option value="{{ $supplier->id }}">{{ $supplier->supplier_name }}</option>
-                                @endforeach
-                            </select>
 
 
-                        </div>
-                        <div class="form-group">
-                            <label for="">{{ __('Category') }}</label>
-                            <select name="" id="" class="form-control"
-                                wire:model="category_id">
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->category_name }}</option>
-                                @endforeach
-                            </select>
+                                <div class="form-group">
+                                    <label for="">{{ __('Supplier') }}</label>
+                                    <select name="" id="" class="form-control"
+                                        wire:model="supplier_id">
+                                        @foreach ($suppliers as $supplier)
+                                            <option value="{{ $supplier->id }}">{{ $supplier->supplier_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
 
 
-                        </div>
-                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">{{ __('Category') }}</label>
+                                    <select name="" id="" class="form-control"
+                                        wire:model="category_id">
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->category_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card mb-3">
                         <h5 class="card-header">{{ __('Product Tags') }}</h5>
                         <div class="card-body">
                             <div class="panel bg-white rounded p-3 mb-3">
-                        <h5 class="panel-heading mb-2" for="">{{ __('Tags') }}</h5>
-                        <div class="row">
-                            <div class="col-lg-8 form-group">
-                                <input type="text" class="form-control"
-                                    placeholder="{{ __('Enter tags') }}" wire:model="tags">
-                            </div>
+                                <h5 class="panel-heading mb-2" for="">{{ __('Tags') }}</h5>
+                                <div class="row">
+                                    <div class="col-lg-8 form-group">
+                                        <input type="text" class="form-control"
+                                            placeholder="{{ __('Enter tags') }}" wire:model="tags">
+                                    </div>
 
-                            <div class="col-lg-2 form-group">
-                                <button class="btn-c-sm btn btn-0" wire:click="addTag">{{ __('Add') }}</button>
-                            </div>
-                        </div>
+                                    <div class="col-lg-2 form-group">
+                                        <button class="btn-c-sm btn btn-0"
+                                            wire:click="addTag">{{ __('Add') }}</button>
+                                    </div>
+                                </div>
 
-                    </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="card mb-3">
                         <h5 class="card-header">{{ __('Product Highlights') }}</h5>
                         <div class="card-body">
-                            
+
                             <div class="alert alert-info" style="font-size: 12px">
                                 {{ __('Add up to 4 highlights to describe the product.') }}</div>
                             <div class="row">
@@ -454,30 +463,34 @@
                     <div class="card rounded mb-3">
                         <h5 class="card-header mb-2 p-3" for="">{{ __('Page Information') }}</h5>
                         <div class="card-body">
-                            @if (count($product_information) > 0) 
+                            @if (count($product_information) > 0)
                                 <ul class="list-group list-group-flush">
-                                @foreach ($product_information as $item )
-                                    <li class="list-group-item d-flex justify-content-between">
-                                    <span>{{$item->getTitle()?->title}}</span>
-                                    <div>
-                                        <a href="{{route('admin.products.edit.infoedit',$item->id)}}" class=" btn btn-sm btn-default"><i class="bi bi-pencil"></i></a>
-                                        <button class=" btn btn-sm btn-danger" wire:confirm="Are you sure you want to delete this item?" wire:click="removeProductInfo({{$item->id}})"><i class="bi bi-trash"></i></button>
+                                    @foreach ($product_information as $item)
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span>{{ $item->getTitle()?->title }}</span>
+                                            <div>
+                                                <a href="{{ route('admin.products.edit.infoedit', $item->id) }}"
+                                                    class=" btn btn-sm btn-default"><i class="bi bi-pencil"></i></a>
+                                                <button class=" btn btn-sm btn-danger"
+                                                    wire:confirm="Are you sure you want to delete this item?"
+                                                    wire:click="removeProductInfo({{ $item->id }})"><i
+                                                        class="bi bi-trash"></i></button>
 
-                                    </div>
-                                </li>
-                                @endforeach
+                                            </div>
+                                        </li>
+                                    @endforeach
                                 </ul>
-                                
                             @else
                                 <div class="p-3 text-center">
-                                    <p class="text-muted">{{ __('No product information available.')}}</p>
-                                    
+                                    <p class="text-muted">{{ __('No product information available.') }}</p>
+
                                 </div>
                             @endif
                             <div class="p-3 text-center">
-                                 <a class="btn btn-dark btn-sm" href="{{route('admin.products.edit.info', $product->id)}}">{{__('Create new')}}</a>
+                                <a class="btn btn-dark btn-sm"
+                                    href="{{ route('admin.products.edit.info', $product->id) }}">{{ __('Create new') }}</a>
                             </div>
-                           
+
                         </div>
                     </div>
                     {{-- <div class="panel bg-white rounded p-3 mb-3">
@@ -576,8 +589,8 @@
                 <div class="modal-wrap-content">
                     <h5 class="panel-heading mb-2" for="">{{ __('Image URL') }}</h5>
                     <div class="form-group">
-                        <input type="url" class="form-control"
-                            placeholder="{{ _('Past image URL here...') }}" wire:model = "url">
+                        <input type="url" class="form-control" placeholder="{{ _('Past image URL here...') }}"
+                            wire:model = "url">
                     </div>
                     <div class="d-flex flex-row-reverse mt-3">
                         <button class="btn btn-primary" wire:click="addMedia">
@@ -589,6 +602,7 @@
                         </button>
                         <button class="btn mx-2 btn-default" wire:click="closeUrlModal">Cancel</button>
                     </div>
+
                 </div>
             </div>
         @endif
@@ -603,8 +617,7 @@
                             <div class="row">
                                 <div class="col-6 form-group">
                                     <label>{{ __('Energy') }}</label>
-                                    <input type="text"
-                                        class="form-control @error('energy') is-invalid @enderror"
+                                    <input type="text" class="form-control @error('energy') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 200 kcal') }}" wire:model="energy">
                                     @error('energy')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -612,8 +625,7 @@
                                 </div>
                                 <div class="col-6 form-group">
                                     <label>{{ __('Fat') }}</label>
-                                    <input type="text"
-                                        class="form-control @error('fat') is-invalid @enderror"
+                                    <input type="text" class="form-control @error('fat') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 10g') }}" wire:model="fat">
                                     @error('fat')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -639,8 +651,7 @@
                                 </div>
                                 <div class="col-6 form-group">
                                     <label>{{ __('Sugar') }}</label>
-                                    <input type="text"
-                                        class="form-control @error('sugars') is-invalid @enderror"
+                                    <input type="text" class="form-control @error('sugars') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 15g') }}" wire:model="sugars">
                                     @error('sugars')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -648,8 +659,7 @@
                                 </div>
                                 <div class="col-6 form-group">
                                     <label>{{ __('Protein') }}</label>
-                                    <input type="text"
-                                        class="form-control @error('protein') is-invalid @enderror"
+                                    <input type="text" class="form-control @error('protein') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 8g') }}" wire:model="protein">
                                     @error('protein')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -657,8 +667,7 @@
                                 </div>
                                 <div class="col-6 form-group">
                                     <label>{{ __('Salt') }}</label>
-                                    <input type="text"
-                                        class="form-control @error('salt') is-invalid @enderror"
+                                    <input type="text" class="form-control @error('salt') is-invalid @enderror"
                                         placeholder="{{ _('e.g. 0.5g') }}" wire:model="salt">
                                     @error('salt')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -688,7 +697,7 @@
         {{-- end nuti modal --}}
 
         {{-- page inforamtion  --}}
-        
+
         {{-- end page information --}}
         <script>
             const editor = CKEDITOR.replace('editor');
@@ -697,7 +706,7 @@
                 @this.set('description', event.editor.getData());
             })
         </script>
-        
-        
+
+
     </div>
 </div>

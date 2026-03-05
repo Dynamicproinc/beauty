@@ -43,7 +43,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="form-group col-6">
-                        <label for="">{{__('Postal code')}}</label>
+                        <label for="">{{__('Postal Code')}}</label>
                         <input type="text" wire:model="postal_code" class="form-control  @error('postal_code') is-invalid @enderror" placeholder="{{__('Postal code')}}">
                     </div>
                     <div class="form-group col-6">
