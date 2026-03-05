@@ -6,10 +6,11 @@
                 <div class="row my-4">
                     <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                         <div class="card">
-                            <h5 class="card-header">Customers</h5>
+                            <h5 class="card-header">{{__('New users')}}</h5>
+                            
                             <div class="card-body">
-                              <h5 class="card-title">345k</h5>
-                              <p class="card-text">Feb 1 - Apr 1, United States</p>
+                              <h5 class="card-title">{{ $users }}</h5>
+                              <p class="card-text">{{$start_format}} - {{$end_format}}</p>
                               <p class="card-text text-success">18.2% increase since last month</p>
                             </div>
                           </div>
@@ -18,8 +19,8 @@
                         <div class="card">
                             <h5 class="card-header">Revenue</h5>
                             <div class="card-body">
-                              <h5 class="card-title">$2.4k</h5>
-                              <p class="card-text">Feb 1 - Apr 1, United States</p>
+                              <h5 class="card-title">{{number_format($total_sale, 2, ',', '.');}}</h5>
+                              <p class="card-text">{{$start_format}} - {{$end_format}}</p>
                               <p class="card-text text-success">4.6% increase since last month</p>
                             </div>
                           </div>

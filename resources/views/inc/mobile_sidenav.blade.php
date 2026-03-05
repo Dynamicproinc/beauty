@@ -65,7 +65,7 @@
                 <h6 class="text-black">
                     {{ __('If you already created an account, please log in to access your account.') }}</h6>
 
-                <button class="tt_btn_theme">{{ __('Login') }} </button>
+                <a href="{{__('home')}}" class="tt_btn_theme">{{ __('Login') }} </a>
             </div>
             <hr />
             <h6 class="mb-0">Tallow skin care j.d.o.o.</h6>

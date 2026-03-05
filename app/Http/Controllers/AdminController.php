@@ -6,15 +6,40 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use \App\Models\ProductInformation;
 use App\Models\SalesOrder;
+use Carbon\Carbon;
+use App\Models\User;
 
 
 class AdminController extends Controller
 {
     public function index()
     {
+        $start_raw =  Carbon::now()->startOfMonth();
+        $end_raw = Carbon::now()->endOfMonth();
+
         $sales_order = SalesOrder::orderBy('created_at', 'desc')->where('payment_status', 'success')->take(6)->get();
+        $monthly_sales = SalesOrder::whereBetween('created_at', [$start_raw, $end_raw])->where('payment_status', 'success')->get();
+        $tot = 0;
+        foreach($monthly_sales as $item){
+                $tot = $tot + ($item->total_amount + $item->shipping_cost) - $item->discount_amount;
+        }
+        $total_sale = $tot;
+
+      
+       $start_format = $start_raw->format('M j');
+       $end_format = $end_raw->addDays(1)->format('M j');
+
+        $this_month_users = User::whereBetween('created_at', [
+           $start_raw,
+            $end_raw
+        ])->count();
         $data = [
             'sales_order' => $sales_order,
+            'users' => $this_month_users,
+            'start_format' => $start_format,
+            'end_format' => $end_format,
+            'total_sale' => $total_sale,
+            
         ];
         return view('admin.dashboard', $data);
     }
@@ -35,57 +60,64 @@ class AdminController extends Controller
         return view('admin.product.edit', ['id' => $id]);
     }
 
-    public function addStock(){
+    public function addStock()
+    {
 
         return view('admin.inventory.addstock');
     }
 
-    public function stockEntries(){
+    public function stockEntries()
+    {
         return view('admin.inventory.stockentries');
     }
 
-    public function addProductInfo($id){
+    public function addProductInfo($id)
+    {
         return view('admin.product.addproductinfo')->with('product_id', $id);
     }
 
-    public function orders(){
+    public function orders()
+    {
         $orders = SalesOrder::orderBy('created_at', 'desc')->where('payment_status', 'success')->paginate(20);
         return view('admin.orders.index')->with('orders', $orders);
     }
 
-    public function editProductInfo($id){
+    public function editProductInfo($id)
+    {
         $pi =  ProductInformation::where('id', $id)->first();
-        if($pi){
+        if ($pi) {
 
             return view('admin.product.editproductinfo')->with('product_info', $pi);
         }
-         abort(404);
+        abort(404);
     }
 
-    public function updateProductInfo(Request $request, $id){
-         $request->validate([
-            
+    public function updateProductInfo(Request $request, $id)
+    {
+        $request->validate([
+
             'info_content' => 'required|string',
         ], [
-           
+
             'info_title.exists' => 'Selected title does not exist.',
             'info_content.required' => 'Please information selected title.',
             'info_content.string' => 'The content must be a string.',
-            
+
         ]);
 
-         $pi =  ProductInformation::where('id', $id)->first();
-        if($pi){
-                $pi->content = $request->input('info_content');
-                $pi->save();
+        $pi =  ProductInformation::where('id', $id)->first();
+        if ($pi) {
+            $pi->content = $request->input('info_content');
+            $pi->save();
 
-                return redirect()->back()->with('success', 'Changes saved');
+            return redirect()->back()->with('success', 'Changes saved');
         }
     }
 
-    public function saveProductInfo(Request $request, $id){
+    public function saveProductInfo(Request $request, $id)
+    {
 
-         $request->validate([
+        $request->validate([
             'info_title' => 'required|exists:page_information_titles,id',
             'info_content' => 'required|string',
         ], [
@@ -93,7 +125,7 @@ class AdminController extends Controller
             'info_title.exists' => 'Selected title does not exist.',
             'info_content.required' => 'Please information selected title.',
             'info_content.string' => 'The content must be a string.',
-            
+
         ]);
 
         $pro_info = \App\Models\ProductInformation::updateOrCreate(
@@ -107,10 +139,8 @@ class AdminController extends Controller
                 'order' => 0
             ]
         );
-       
-        
-          return redirect()->back()->with('success', 'Changes saved');
-          
-    }
 
+
+        return redirect()->back()->with('success', 'Changes saved');
+    }
 }
