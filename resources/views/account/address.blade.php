@@ -1,6 +1,6 @@
 @extends('home')
 @section('content-account')
-<div>
+<div class="py-5">
      @livewire('account.address')
 </div>
 @endsection

@@ -51,14 +51,14 @@
                         <input type="text" wire:model="city" class="form-control  @error('city') is-invalid @enderror" placeholder="{{__('City')}}">
                     </div>
                 </div>
-            <div>
+            <div class="mb-5">
                 <button class="tt_btn_theme w-100" type="submit" wire:loading.attr="disabled">{{__('Update')}}</button>
+                @if (session()->has('message'))
+                    <div class="alert alert-success mt-3">
+                        {{ session('message') }}
+                    </div>
+                    @endif
             </div>
-            @if (session()->has('message'))
-                <div class="alert alert-success mt-3">
-                    {{ session('message') }}
-                </div>
-                @endif
             </div>
             </form>
 </div>

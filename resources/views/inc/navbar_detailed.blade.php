@@ -146,12 +146,13 @@
                         </a>
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center">
-                        <div class="navbar-links d-flex">
-                            <div>
+                        <div class="navbar-links d-flex align-items-center">
+                            <div style="height:20px">
                                 @livewire('shop.cartbutton')
 
                             </div>
-                            <a href="{{ route('login') }}" class="link-secondary non-hover scrolled">
+                            <div style="height:20px">
+                                <a href="{{ route('login') }}" class="link-secondary non-hover scrolled">
                                 @auth
                                     @if (auth()->user()->avatar)
                                     <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="google-avatar">
@@ -164,6 +165,7 @@
                                   <i class="bi bi-person"></i>
                               @endauth
                             </a>
+                            </div>
                             
                             {{-- <a class="link-secondary" href="#">{{__('Cart')}}</a> --}}
                         </div>
