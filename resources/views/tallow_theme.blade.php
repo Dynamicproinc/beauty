@@ -496,23 +496,19 @@
             </div>
         </section>
         <section>
-            {{-- <div class="marquee">
+            <div class="marquee">
                 <div class="marquee-content">
                     <div class="">
                         <span>🌿 100% Pure Black Angus Tallow • Natural • Clean • Traditional • Premium Quality •</span>
                     </div>
                 </div>
-            </div> --}}
+            </div>
             <style>
                
             </style>
-<!--
-Source - https://stackoverflow.com/a/78912278
-Posted by Andrei Fedorov
-Retrieved 2026-03-05, License - CC BY-SA 4.0
--->
 
-<div class="running-line-wrapper">
+
+{{-- <div class="running-line-wrapper">
   <div class="running-line">
     <!-- The overall width of the text element should be twice the width of the screen -->
     <span>100% Pure Black Angus Tallow🌿</span>
@@ -521,7 +517,7 @@ Retrieved 2026-03-05, License - CC BY-SA 4.0
     <span>Traditional🌿</span>
     <span>Premium Quallity🌿</span>
   </div>
-</div>
+</div> --}}
         </section>
         {{-- end a word from founder --}}
 
