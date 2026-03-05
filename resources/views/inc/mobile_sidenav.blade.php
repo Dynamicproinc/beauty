@@ -41,8 +41,8 @@
                 <div class="">
                     <span class="small">{{__('Select language')}}</span>
                     <div class="d-flex">
-                        <div class="me-2"><a href="#" class="tt_btn_theme-sm">EN</a></div>
-                        <div class="me-2"><a href="#" >HR</a></div>
+                        <div class="me-2"><a href="/language/en" class="tt_btn_theme-sm">EN</a></div>
+                        <div class="me-2"><a href="/language/hr" >HR</a></div>
             </div>
                     
                 </div>

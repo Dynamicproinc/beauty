@@ -6,11 +6,27 @@ use App\Http\Controllers\StripeController;
 use App\Http\Controllers\StripeWebhookController;
 use App\Http\Controllers\Auth\GoogleController;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Middleware\SetLanguage;
+// use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 Route::get('/', function () {
     return view('tallow_theme');
 })->name('welcome');
 
+// language change
+Route::get('/language/{lang}', function ($lang) {
+
+    $availableLanguages = ['en', 'hr'];
+
+    if (in_array($lang, $availableLanguages)) {
+        Session::put('locale', $lang);
+    }
+
+    return redirect()->back();
+});
+
+// 
 Auth::routes(['verify' => true]);
 
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
