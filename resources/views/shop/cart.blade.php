@@ -1,6 +1,6 @@
 @extends('layouts.app')
 {{-- need so much thing to here --}}
-@section('title', 'Your Shopping Cart - ')
+@section('title', __('Your Shopping Cart -'))
 
 
 @section('content')
