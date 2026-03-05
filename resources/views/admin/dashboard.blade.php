@@ -33,7 +33,7 @@
                                 <span class="text-success">▲ + {{round($sales_growth, 1)}} % from last month</span>
                                 @endif
                                 @if($sales_growth < 0)
-                                <span class="text-danger">▲  {{round($sales_growth, 1)}} % from last month</span>
+                                <span class="text-danger">▼  {{round($sales_growth, 1)}} % from last month</span>
                                 @endif
                               </div>
                             </div>
