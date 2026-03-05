@@ -26,7 +26,7 @@
                         <div class="card">
                             <h5 class="card-header">Revenue</h5>
                             <div class="card-body">
-                              <h5 class="card-title">{{number_format($total_sale, 2, ',', '.')}} EUR</h5>
+                              <h5 class="card-title">{{number_format($total_sale, 2, ',', '.')}} <small class="text-muted">EUR</small></h5>
                               <small class="fw-bold text-muted db-muted-upper">{{$start_format}} - {{$end_format}}</small>
                              <div class="db-muted">
                                 @if($sales_growth > 0)
