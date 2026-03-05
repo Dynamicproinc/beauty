@@ -108,7 +108,7 @@
         }
 
         .accord-item input:checked~section.acd-section-h100 {
-            height: 390px !important;
+            height: 100%;
 
             padding: 16px;
             background: #F0F0F0;

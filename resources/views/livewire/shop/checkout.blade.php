@@ -416,7 +416,7 @@
                                                             {{ __('Use different shipping address') }}
 
                                                         </label>
-                                                        <section class="acd-section-h100 border-top">
+                                                        <section class="acd-section-h100">
                                                             <div class="form-floating mb-3">
                                                                 <select
                                                                     class="form-select @error('shipping_location_other') is-invalid @enderror"

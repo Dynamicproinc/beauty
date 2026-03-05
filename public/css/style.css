@@ -805,6 +805,14 @@ h5{
     color: #fff;
     border: 1px solid #333 !important;
 }
+.acc-container{
+     min-height:500px !important;
+    overflow-y: auto;
+}
+.acd-section-h100{
+    height:700px !important;
+    overflow-y: auto;
+}
 
 /* accord  */
 .accdcheck{
