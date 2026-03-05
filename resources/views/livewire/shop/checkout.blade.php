@@ -442,7 +442,7 @@
                                                                 </small>
                                                             </div>
                                                             <div class="row">
-                                                                <div class="col-lg-6 form-group">
+                                                                <div class="col-6 form-group">
                                                                     <div class="form-floating mb-3">
                                                                         <input type="text"
                                                                             class="form-control @error('first_name_other') is-invalid @enderror"
@@ -459,7 +459,7 @@
                                                                         </small>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-lg-6 form-group">
+                                                                <div class="col-6 form-group">
                                                                     <div class="form-floating mb-3">
                                                                         <input type="text"
                                                                             class="form-control @error('last_name_other') is-invalid @enderror"
