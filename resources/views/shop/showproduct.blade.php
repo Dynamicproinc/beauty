@@ -40,7 +40,7 @@
                                     @foreach ($product->media as $key => $image)
                                         <div class="carousel-item @if ($key == 0) active @endif">
                                             {{-- <img src="{{ asset('media/images/sample.png') }}" class="d-block w-100" alt="image"> --}}
-                                            <img src="{{ asset('uploads/products/',$image->file_path) }}" class="d-block w-100" alt="image">
+                                            <img src="{{ asset('uploads/products/'.$image->file_path) }}" class="d-block w-100" alt="image">
                                         </div>
                                     @endforeach
 
@@ -61,7 +61,7 @@
                                 <div class="d-flex flex-row-wrap mt-2">
                                     @foreach ($product->media as $key => $image)
                                         <div class="img-thumb-cr">
-                                            <img src="{{asset('uploads/products/',$image->file_path) }}" class="img-fluid" alt=""
+                                            <img src="{{asset('uploads/products/'.$image->file_path) }}" class="img-fluid" alt=""
                                                 data-bs-target="#cindex" data-bs-slide-to="{{ $key }}"
                                                 class="@if ($key == 0) active @endif" aria-current="true"
                                                 aria-label="Slide {{ $key }}">
