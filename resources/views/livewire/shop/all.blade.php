@@ -6,7 +6,7 @@
                 <div>
                   <ul class="category-list">
                      @foreach ($categories as $item)
-                    <li>{{ $item->category_name }}</li>
+                    <li class="text-capitalize">{{ $item->category_name }}</li>
                    @endforeach
                   </ul>
                 </div>
