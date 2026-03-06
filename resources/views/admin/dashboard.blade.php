@@ -76,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div class="row mb-3">
+        <div class="row mb-4">
             <div class="col-12 col-xl-8 mb-4 mb-lg-0">
                 <div class="card">
                     <h5 class="card-header">{{ __('Latest Orders') }}</h5>
