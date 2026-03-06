@@ -81,7 +81,7 @@
                 <div class="card">
                     <h5 class="card-header">{{ __('Latest Orders') }}</h5>
                     <div class="card-body">
-                        <div class="table-responsive">
+                        <div class="table-responsive mb-3">
                             <table class="table">
                                 <thead>
                                     <tr>

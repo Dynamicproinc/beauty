@@ -23,11 +23,12 @@
 <td align="left" valign="top">
 <img src="{{ asset('media/images/logo.png') }}" width="100" style="display:block;margin-bottom:10px;">
 <strong style="font-size:16px;text-transform:uppercase;">Tallow Skincare j.d.o.o</strong><br>
-Donja Švarča 79c<br>
-Karlovac, 47000<br>
-Croatia<br>
-OIB-15582754597<br>
-info@tallow-skincare.hr
+Donja Švarča 79c<br/>
+Karlovac, 47000<br/>
+Croatia<b/r>
+OIB-15582754597<br/>
+info@tallow-skincare.hr<br>
+ <small> 0996680498</small>
 </td>
 
 <td align="right" valign="top">

@@ -24,7 +24,7 @@
             </div>
 
             
-            <div class="star-rating  mb-3">
+            {{-- <div class="star-rating  mb-3">
                 <div class="f-4">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -33,7 +33,7 @@
                     <i class="bi bi-star-fill text-muted"></i>
                     <small> 142 Reviews</small>
                 </div>
-            </div>
+            </div> --}}
             @if (!count($product->getVariants()) > 0)
                 @if ($product->track_quantity)
                     <div class="mb-2" style="height: 24px;">
