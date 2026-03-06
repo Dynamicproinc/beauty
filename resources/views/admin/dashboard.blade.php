@@ -3,6 +3,7 @@
 @section('content')
    <div>
        <p>{{ __('Welcome to the admin dashboard. Control, monitor, and manage everything from your dashboard') }}</p>
+       
                 <div class="row my-4">
                     <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                         <div class="card">
@@ -127,5 +128,44 @@
                         </div>
                     </div>
                 </div>
+                <div>
+                  <canvas id="dashboardChart"></canvas>
+                  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const ctx = document.getElementById('dashboardChart');
+
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        datasets: [
+            {
+                label: 'Users',
+                data: @json($months['users']),
+                borderWidth: 2,
+                tension: 0.3
+            },
+            
+            // {
+            //     label: 'Traffic',
+            //     data: [120,200,300,400,500,600,700,800,900,1000,1100,1200],
+            //     borderWidth: 2,
+            //     tension: 0.3
+            // }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top'
+            }
+        }
+    }
+});
+</script>
+                </div>
    </div>
+   
 @endsection

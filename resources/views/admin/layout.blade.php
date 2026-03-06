@@ -11,6 +11,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
  {{-- <script src="https://cdn.ckeditor.com/4.25.1-lts/standard/ckeditor.js"></script> --}}
   {{-- <script src="{{ asset('ckeditor/ckeditor.js') }}"></script> --}}
+  {{-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> --}}
   @livewireStyles
   @livewireScripts
 

@@ -9,6 +9,7 @@ use App\Models\SalesOrder;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Visit;
+use Illuminate\Support\Facades\DB;
 
 
 class AdminController extends Controller
@@ -17,68 +18,90 @@ class AdminController extends Controller
     {
         $start_raw =  Carbon::now()->startOfMonth();
         $end_raw = Carbon::now()->endOfMonth();
-// sales
+        // sales
         $sales_order = SalesOrder::orderBy('created_at', 'desc')->where('payment_status', 'success')->take(6)->get();
         $monthly_sales = SalesOrder::whereBetween('created_at', [$start_raw, $end_raw])->where('payment_status', 'success')->get();
         $tot = 0;
-        foreach($monthly_sales as $item){
-                $tot = $tot + ($item->total_amount + $item->shipping_cost) - $item->discount_amount;
+        foreach ($monthly_sales as $item) {
+            $tot = $tot + ($item->total_amount + $item->shipping_cost) - $item->discount_amount;
         }
         $this_month_total_sale = $tot;
 
-// last month sales
- $monthly_sales_last = SalesOrder::whereBetween('created_at', [ now()->subMonth()->startOfMonth(),  now()->subMonth()->endOfMonth()])->where('payment_status', 'success')->get();
+        // last month sales
+        $monthly_sales_last = SalesOrder::whereBetween('created_at', [now()->subMonth()->startOfMonth(),  now()->subMonth()->endOfMonth()])->where('payment_status', 'success')->get();
         $totl = 0;
-        foreach($monthly_sales_last as $item){
-                $totl = $totl + ($item->total_amount + $item->shipping_cost) - $item->discount_amount;
+        foreach ($monthly_sales_last as $item) {
+            $totl = $totl + ($item->total_amount + $item->shipping_cost) - $item->discount_amount;
         }
         $last_month_total_sale = $totl;
 
         $sales_growth = $last_month_total_sale > 0
-    ? (($this_month_total_sale - $last_month_total_sale) / $last_month_total_sale) * 100
-    : 100;
+            ? (($this_month_total_sale - $last_month_total_sale) / $last_month_total_sale) * 100
+            : 100;
 
-// 
+        // 
 
-// vistis
-    $this_month_visits = Visit::whereBetween('created_at', [$start_raw, $end_raw])->get()->count();
-    $last_month_visits = Visit::whereBetween('created_at', [now()->subMonth()->startOfMonth(),  now()->subMonth()->endOfMonth()])->get()->count();
-     $visit_growth = $last_month_visits > 0
-    ? (($$this_month_visits - $last_month_visits) / $last_month_visits) * 100
-    : 100;
+        // vistis
+        $this_month_visits = Visit::whereBetween('created_at', [$start_raw, $end_raw])->get()->count();
+        $last_month_visits = Visit::whereBetween('created_at', [now()->subMonth()->startOfMonth(),  now()->subMonth()->endOfMonth()])->get()->count();
+        $visit_growth = $last_month_visits > 0
+            ? (($$this_month_visits - $last_month_visits) / $last_month_visits) * 100
+            : 100;
 
-// 
-
-
-// purchase
-$last_month_purchases = SalesOrder::whereBetween('created_at', [ now()->subMonth()->startOfMonth(),  now()->subMonth()->endOfMonth()])->where('payment_status', 'success')->count();
-$this_month_purchases = SalesOrder::whereBetween('created_at',[$start_raw, $end_raw])->where('payment_status', 'success')->count();
-$purchase_growth = $last_month_purchases > 0
-    ? (($this_month_purchases - $last_month_purchases) / $last_month_purchases) * 100
-    : 100;
-// end purchase
+        // 
 
 
-      
-       $start_format = $start_raw->format('M j');
-       $end_format = $end_raw->addDays(1)->format('M j');
+        // purchase
+        $last_month_purchases = SalesOrder::whereBetween('created_at', [now()->subMonth()->startOfMonth(),  now()->subMonth()->endOfMonth()])->where('payment_status', 'success')->count();
+        $this_month_purchases = SalesOrder::whereBetween('created_at', [$start_raw, $end_raw])->where('payment_status', 'success')->count();
+        $purchase_growth = $last_month_purchases > 0
+            ? (($this_month_purchases - $last_month_purchases) / $last_month_purchases) * 100
+            : 100;
+        // end purchase
 
-    //    user
+
+
+        $start_format = $start_raw->format('M j');
+        $end_format = $end_raw->addDays(1)->format('M j');
+
+        //    user
         $this_month_users = User::whereBetween('created_at', [
-           $start_raw,
+            $start_raw,
             $end_raw
         ])->count();
-    // last month count
+        // last month count
 
-    $last_month_user_count = User::whereBetween('created_at', [
-    now()->subMonth()->startOfMonth(),
-    now()->subMonth()->endOfMonth()
-])->count();
+        $last_month_user_count = User::whereBetween('created_at', [
+            now()->subMonth()->startOfMonth(),
+            now()->subMonth()->endOfMonth()
+        ])->count();
 
-// comparision
-$user_growth = $last_month_user_count > 0
-    ? (($this_month_users - $last_month_user_count) / $last_month_user_count) * 100
-    : 100;
+        // comparision
+        $user_growth = $last_month_user_count > 0
+            ? (($this_month_users - $last_month_user_count) / $last_month_user_count) * 100
+            : 100;
+
+        // 
+        // Chart for monthly growth of purchases , views, user registrations
+
+        $users = User::select(
+            DB::raw('MONTH(created_at) as month'),
+            DB::raw('count(*) as total')
+        )
+            ->whereYear('created_at', date('Y'))
+            ->groupBy('month')
+            ->pluck('total', 'month')
+            ->toArray();
+
+            // dd($users);
+
+
+        $months = [];
+
+        for ($i = 1; $i <= 12; $i++) {
+            $months['users'][] = $users[$i] ?? 0;
+            // $months['sales'][] = $sales[$i] ?? 0;
+        }
 
         // 
         $data = [
@@ -93,8 +116,9 @@ $user_growth = $last_month_user_count > 0
             'purchase_growth' => $purchase_growth,
             'this_month_visits' => $this_month_visits,
             'last_month_visits' => $last_month_visits,
-            'visit_growth' => $visit_growth
-            
+            'visit_growth' => $visit_growth,
+            'months' => $months,
+
         ];
         return view('admin.dashboard', $data);
     }
