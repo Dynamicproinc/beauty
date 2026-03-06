@@ -17,8 +17,10 @@ class TrackVisits
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $page = $request->path();
-        $key = 'viewed_' . $page;
+         $page = $request->path();
+
+        $random_key = Str::random(10);
+        $key = 'viewed_' .$request->ip().$request->userAgent();
 
         if (!session()->has($key)) {
 
