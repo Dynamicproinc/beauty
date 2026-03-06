@@ -93,6 +93,22 @@ class AdminController extends Controller
             ->pluck('total', 'month')
             ->toArray();
 
+        $visits = Visit::select(
+            DB::raw('MONTH(created_at) as month'),
+            DB::raw('count(*) as total')
+        )
+            ->whereYear('created_at', date('Y'))
+            ->groupBy('month')
+            ->pluck('total', 'month')
+            ->toArray();
+
+       $sales = SalesOrder::selectRaw('MONTH(created_at) as month, SUM(final_total) as total')
+    ->whereYear('created_at', date('Y'))
+    ->where('payment_status', 'success')
+    ->groupByRaw('MONTH(created_at)')
+    ->pluck('total', 'month')
+    ->toArray();
+
             // dd($users);
 
 
@@ -100,8 +116,29 @@ class AdminController extends Controller
 
         for ($i = 1; $i <= 12; $i++) {
             $months['users'][] = $users[$i] ?? 0;
-            // $months['sales'][] = $sales[$i] ?? 0;
+             $months['sales'][] = $sales[$i] ?? 0;
+             $months['visits'][] = $visits[$i] ?? 0;
         }
+
+        // 
+
+        $traffic = Visit::select(
+        DB::raw('MONTH(created_at) as month'),
+        DB::raw('count(*) as total')
+    )
+    ->whereYear('created_at', date('Y'))
+    ->groupBy('month')
+    ->pluck('total', 'month')
+    ->toArray();
+
+// Build labels for all 12 months
+$labels = [];
+$series = [];
+
+for ($m = 1; $m <= 12; $m++) {
+    $labels[] = date('F', mktime(0, 0, 0, $m, 1));
+    $series[] = $traffic[$m] ?? 0; // default to 0 if no data
+}
 
         // 
         $data = [
@@ -118,6 +155,9 @@ class AdminController extends Controller
             'last_month_visits' => $last_month_visits,
             'visit_growth' => $visit_growth,
             'months' => $months,
+            'labels' => $labels,
+            'series' => $series
+            
 
         ];
         return view('admin.dashboard', $data);
