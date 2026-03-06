@@ -225,7 +225,9 @@ $slug = Str::random(25);
 
 $payment_status = $this->payment_method === 'cod' ? 'success' : 'pending';
 // dd($payment_status);
-//creating the sales order
+//creating the sales order\
+$final_total  = ($this->total_amount + $this->shipping_cost) - $this->discount_amount;
+
     $sales_order = SalesOrder::create([
     'user_id' => auth()?->id() ?? 0,
     'slug' => $slug,
@@ -256,6 +258,7 @@ $payment_status = $this->payment_method === 'cod' ? 'success' : 'pending';
     'message' => $this->message ? $this->message : null,
     'phone_other' => $this->phone_number_other ? $this->phone_number_other : null,
     'stripe_status'=> 'pending',
+    'final_total' =>  $final_total,
     ]);
 
     
