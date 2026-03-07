@@ -262,4 +262,13 @@ for ($m = 1; $m <= 12; $m++) {
 
         return redirect()->back()->with('success', 'Changes saved');
     }
+
+    public function users(){
+        $users = User::with('address')->paginate(20);
+        return view('admin.users.index',compact('users'));
+    }
+
+    public function shipping(){
+        return view('admin.shipping.shipping');
+    }
 }

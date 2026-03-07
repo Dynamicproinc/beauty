@@ -124,7 +124,7 @@ label {
 }
 .modal-wrap-content{
   background: #fff;
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 5px;
   width: 500px;
   max-width: 90%;
@@ -154,6 +154,9 @@ th{
 }
 td{
   font-size: 14px;
+ 
+ 
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif */
   font-family: 'JetBrains Mono', monospace !important;
 }
 .table-area{
@@ -183,6 +186,10 @@ td{
 }
 th{
   letter-spacing: 2px;
+}
+.panel-heading{
+  background: #eee;
+  padding: 16px
 }
     </style>
 </head>
@@ -238,7 +245,7 @@ th{
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link nav-link d-flex align-items-center" href="#">
+                          <a class="nav-link nav-link d-flex align-items-center @if(Route::currentRouteName() == 'admin.users') active @endif" href="{{ route('admin.users') }}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                             <span class="ml-2">Customers</span>
                           </a>

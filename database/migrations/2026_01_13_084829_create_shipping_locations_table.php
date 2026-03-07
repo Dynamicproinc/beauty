@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('location_code');
             $table->string('location');
             $table->boolean('free_delivery')->default(true);
-            $table->boolean('max_value');
+            $table->decimal('max_value', 10,2)->default(0);
             $table->decimal('shipping_cost', 10, 2);
             $table->timestamps();
         });
