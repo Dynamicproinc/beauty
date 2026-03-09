@@ -11,7 +11,7 @@
                     <th scope="col">{{ __('Free Shipping') }}</th>
                     <th scope="col">{{ __('Max Amount') }}</th>
                     <th scope="col">{{ __('Cost') }}</th>
-                    <th scope="col">{{ __('Cost') }}</th>
+                    <th scope="col">{{ __('') }}</th>
                 </tr>
             </thead>
             <tbody>
