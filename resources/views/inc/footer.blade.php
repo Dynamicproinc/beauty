@@ -5,7 +5,7 @@
              <!-- Newsletter -->
              <div class="col-md-4 mb-4">
                  {{-- @livewire('shop.esubscription') --}}
-                 <h5 class="text-white">{{ __('About Tallow Skincare') }}</h5>
+                 <h5 class="text-white">{{ __('Tallow Skincare') }}</h5>
                  <p class="text-white">
                      {{ __('Tallow skincare is a premium, natural skincare line made from 100% pure beef tallow. It is rich in vitamins A, D, E, and K and is designed to nourish and protect your skin.') }}
                  </p>
@@ -51,7 +51,7 @@
 
              <div class="col-6 col-md-3">
                  <div>
-                     <strong>Tallow Skincare j.d.o.o.</strong><br>
+                     <strong>Tallow Skin Care j.d.o.o.</strong><br>
                      Donja Švarča 79c<br>
                      47000 Karlovac, Croatia.<br>
                      <small> info@tallow-skincare.hr</small><br>
