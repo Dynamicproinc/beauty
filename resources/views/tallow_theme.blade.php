@@ -26,7 +26,7 @@
                                 </p>
                                 {{-- add the product link --}}
 
-                                <a href="/product/tallow-skin-care-cream-330g" class="tt_btn"
+                                <a href="/product/{{$selected_product->slug}}" class="tt_btn"
                                     title="{{ __('Buy now tallow skincare product') }}">{{ __('Buy Tallow Balm') }}</a>
 
                             </div>
@@ -209,7 +209,7 @@
                                 <p>
                                     {{ __('Don’t wait — order yours today and give your skin the care it deserves.') }}
                                 </p>
-                                <a href="/product/tallow-skin-care-cream-330g"
+                                <a href="/product/{{$selected_product->slug}}"
                                     class="btn-1-xl rounded-0">{{ __('BUY NOW') }}</a>
                             </div>
                         </div>

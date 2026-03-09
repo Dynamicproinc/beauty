@@ -10,10 +10,11 @@ use App\Http\Middleware\SetLanguage;
 // use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 
-Route::get('/', function () {
-    return view('tallow_theme');
-})->name('welcome');
+// Route::get('/', function () {
+//     return view('tallow_theme');
+// })->name('welcome');
 
+Route::get('/',[App\Http\Controllers\PagesController::class, 'welcome'])->name('welcome');
 // language change
 Route::get('/language/{lang}', function ($lang) {
 
