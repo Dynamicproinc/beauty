@@ -194,7 +194,7 @@
                     <div class="row">
                         <div class="col-md-6 col-lg-6">
                             <div class="product-image-xl">
-                                <img src="https://fatcowskin.com/cdn/shop/files/benefits_img.png?v=1746543799"
+                                <img src="{{ asset('uplload/products/'.$selected_product->getImage()->file_path) }}"
                                     alt="" class="img-fluid">
                             </div>
                         </div>
