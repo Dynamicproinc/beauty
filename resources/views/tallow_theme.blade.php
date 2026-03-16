@@ -194,7 +194,7 @@
                     <div class="row">
                         <div class="col-md-6 col-lg-6">
                             <div class="product-image-xl">
-                                <img src="{{ asset('uplload/products/'.$selected_product->getImage()->file_path) }}"
+                                <img src="{{ asset('uploads/products/'.$selected_product->getImage()->file_path) }}"
                                     alt="" class="img-fluid">
                             </div>
                         </div>
