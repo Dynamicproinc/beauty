@@ -8,7 +8,7 @@
 @endsection
 @section('content')
     <div class="container">
-        <div style="height:150px"></div>
+        <div style="height:100px"></div>
         <div class="row justify-content-center mb-5">
             <div class="col-lg-10">
                 <div class="gift-area p-3">
