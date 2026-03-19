@@ -32,13 +32,13 @@
                                         <div class="options">
                                             Online
                                         </div>
-                                        <div class="options">
+                                        <div class="options options-disabled">
                                             Delivery
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <span class="text-muted">{{__('Select Design')}}</span>
-                                        <d class="d-flex flex-wrap">
+                                        <div class="d-flex flex-wrap">
                                                 <div class="gift-card-design">
                                                     <img src="https://www.shutterstock.com/image-vector/happy-birthday-greeting-card-clipart-600nw-2557598275.jpg" alt="">
                                                 </div>
@@ -51,7 +51,7 @@
                                                 <div class="gift-card-design">
                                                     <img src="https://courtsofrayleigh.co.uk/wp-content/uploads/bb-plugin/cache/valentines-day-panorama-1b35f28d97179eb9d4b7d8390dc3ec76-lgvy0hoq38nw.jpg" alt="">
                                                 </div>
-                                        </d>
+                                        </div>
                                     </div>
                                     <div>
                                          <p class="fw-bold">
@@ -75,7 +75,7 @@
                                         
                                     </div>
                                      <div class="row mb-3">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 mb-2">
                                             <label for="" class="text-muted">{{__('From')}}</label>
                                             <input type="text" class="form-control">
                                         </div>
