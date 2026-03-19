@@ -37,6 +37,7 @@ Route::get('products',[App\Http\Controllers\ShopController::class, 'allProducts'
 Route::get('cart',[App\Http\Controllers\ShopController::class, 'cart'])->name('shop.cart');
 Route::get('checkout',[App\Http\Controllers\ShopController::class, 'checkout'])->name('shop.checkout');
 Route::get('contact',[App\Http\Controllers\ShopController::class, 'contact'])->name('shop.contact');
+Route::get('buy-gift-card',[App\Http\Controllers\ShopController::class, 'buyGiftCard'])->name('shop.buy-gift-card');
 Route::get('privacy-statement',[App\Http\Controllers\PagesController::class, 'privacy'])->name('shop.privacy');
 Route::get('terms-and-conditions',[App\Http\Controllers\PagesController::class, 'terms'])->name('shop.terms');
 Route::get('news-letter-subscription',[App\Http\Controllers\PagesController::class, 'emailSubscription'])->name('shop.subscribe');

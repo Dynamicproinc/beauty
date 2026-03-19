@@ -12,7 +12,8 @@
 
                             <a class="link-secondary non-hover" href="{{ route('welcome') }}">{{ __('Home') }}</a>
                             <a class="link-secondary non-hover" href="{{ route('shop.product.all') }}">{{ __('All Products') }}</a>
-                            <a class="link-secondary non-hover" href="{{ route('shop.contact') }}">{{ __('Contact') }}</a>
+                            {{-- <a class="link-secondary non-hover" href="{{ route('shop.contact') }}">{{ __('Contact') }}</a> --}}
+                            <a class="link-secondary non-hover" href="{{ route('shop.buy-gift-card') }}">{{ __('Buy Gift Card') }}</a>
                         </div>
                     </div>
                     <div class="col-4 text-center">
@@ -137,7 +138,8 @@
 
                             <a class="link-secondary non-hover scrolled" href="{{ route('welcome') }}">{{ __('Home') }}</a>
                             <a class="link-secondary non-hover scrolled" href="{{ route('shop.product.all') }}">{{ __('All Products') }}</a>
-                            <a class="link-secondary non-hover scrolled" href="{{ route('shop.contact') }}">{{ __('Contact') }}</a>
+                            {{-- <a class="link-secondary non-hover scrolled" href="{{ route('shop.contact') }}">{{ __('Contact') }}</a> --}}
+                             <a class="link-secondary non-hover scrolled" href="{{ route('shop.buy-gift-card') }}">{{ __('Buy Gift Card') }}</a>
                         </div>
                     </div>
                     <div class="col-4 text-center">

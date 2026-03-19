@@ -32,6 +32,10 @@
 
                     </li>
                     <li>
+                        <a href="{{ route('shop.buy-gift-card') }}">{{ __('Buy Gift Card') }}</a>
+                      
+                    </li>
+                    <li>
                         <a href="{{ route('shop.subscribe') }}"> {{ __('Subscribe to Newsletters') }}</a>
 
                     </li>

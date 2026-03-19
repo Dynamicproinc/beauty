@@ -57,4 +57,8 @@ class ShopController extends Controller
     public function allProducts(){
         return view('shop.all');
     }
+
+    public function buyGiftCard(){
+        return view('shop.gift-card');
+    }
 }

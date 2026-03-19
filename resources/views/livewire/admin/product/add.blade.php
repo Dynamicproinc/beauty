@@ -115,7 +115,7 @@
                 </div>
                 
                 <div class="card mb-3">
-                    <div class="card-header"><h5>{{__('Imventory')}}</h5></div>
+                    <div class="card-header"><h5>{{__('Inventory')}}</h5></div>
                     <div class="card-body">
                         
                 <div class="panel bg-white rounded mb-3">
