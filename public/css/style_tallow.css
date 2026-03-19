@@ -117,6 +117,29 @@ border-radius: 2px;
     justify-content: center;
     align-items: center;
     height:40px;
+    cursor: pointer;
+}
+
+.grouped-radio  input:checked + label {
+     /* box-shadow: 0 0 10px red; */
+     border: 2px solid var(--p_color);
+     position: relative;
+}
+.grouped-radio  input:checked + label::before {
+     position: absolute;
+     top: 0;
+     right: 0;
+     content: "✓";
+     width: 20px;
+     height: 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: var(--p_color);
+     border-radius: 50%;
+     color: #fff;
+    
+
 }
 
 .options-disabled{
