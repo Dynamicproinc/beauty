@@ -11,7 +11,7 @@
         <div style="height:150px"></div>
         <div class="row justify-content-center mb-5">
             <div class="col-lg-10">
-                <div class="gift-area">
+                <div class="gift-area p-3">
                     <div class="row">
                         <div class="col-lg-4">
                             <div>
