@@ -33,11 +33,11 @@
                                             Online
                                         </div>
                                         <div class="options">
-                                            Home Delivery
+                                            Delivery
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <p class="text-muted">{{__('Select Design')}}</p>
+                                        <span class="text-muted">{{__('Select Design')}}</span>
                                         <d class="d-flex flex-wrap">
                                                 <div class="gift-card-design">
                                                     <img src="https://www.shutterstock.com/image-vector/happy-birthday-greeting-card-clipart-600nw-2557598275.jpg" alt="">
@@ -89,11 +89,11 @@
                                         <textarea name="" class="form-control" placeholder="{{__('Hope you are enjoy with this gift card')}}"></textarea>
                                      </div>
                                      <div class="mb-3">
-                                        <label for="">{{__('Email')}}</label>
+                                        <label for="" class="text-muted">{{__('Email')}}</label>
                                         <input type="email" class="form-control">
                                      </div>
                                      <div class="mb-5">
-                                        <button class="tt_btn_theme">{{__('Plcae your order')}}</button>
+                                        <button class="tt_btn_theme w-100">{{__('Plcae your order')}}</button>
                                      </div>
                                     </div>
                                     </div>
