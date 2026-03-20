@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Stripe\Webhook;
 use App\Models\SalesOrder;
 use App\Mail\OrderConfirmation;
+use App\Mail\GiftCard;
 use App\Models\DigitalGiftCard;
 use Illuminate\Support\Facades\Mail;
 
@@ -53,6 +54,9 @@ class StripeWebhookController extends Controller
                     'status' => 'active'
                 ]);
                 // need to send the email the card
+                 Mail::to($digital_gift->email)
+                    ->bcc('info@tallow-skincare.hr')
+                    ->send(new GiftCard($digital_gift));
 
             }
 
