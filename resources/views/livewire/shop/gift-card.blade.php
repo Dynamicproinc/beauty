@@ -2,7 +2,39 @@
     <div class="row">
         <div class="col-lg-4">
             <div>
-                {{ __('Preview') }}
+                <h6> {{ __('Preview') }}</h6>
+                @if ($pre_image)
+                    <div class="g-card">
+                        <div class="g-c-preview">
+                            <img src="{{ asset('media/card_design/' . $pre_image) }}" alt="{{ $pre_image }}">
+                            <div class="g-card-message">
+                                <small class="text-uppercase" style="font-size: 11px;font-weight:600 "><span class="text-muted">From</span> {{ $from}} <span class="text-muted">To:</span> {{ $to}}</small>
+                                <h6 class="mt-3">{{ $message_body}}</h6>
+                            </div>
+                            <div class="g-card-message">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        @if($rate)
+                                        <h5 class="tt-text-hero-md text-uppercase">{{number_format($rate, 2, ',', '.')}}€</h5>
+                                        @else
+                                         <h5 class="tt-text-hero-md text-uppercase">{{number_format(0, 2, ',', '.')}}€</h5>
+                                        @endif
+                                        <div class="tt-text-xs text-uppercase mb-2">
+                                            <span>{{ __('Tallow skin care') }}</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('media/images/logo.png') }}" style="width:50px; height:50px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="g-card-message text-center">
+                                <h6 class="text-muted">GC-MK25QWE45689</h6>
+                            </div>
+
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
         <div class="col-lg-8">
@@ -10,7 +42,7 @@
                 <form wire:submit="save">
                     <div class="tt-text-hero-md text-uppercase">
 
-                        <p>{{ __('Buy Tallow skin care gift card for your loved once') }}</p>
+                        <p>{{ __('Treat Your Loved Ones to Nature’s Glow – Tallow Skincare Gift Card') }}</p>
                     </div>
                     <div>
                         <p class="fw-bold">
@@ -30,7 +62,8 @@
                                 @foreach ($card_designs ?? [] as $key => $item)
                                     <div class="grouped-radio">
                                         <input type="radio" id="dsg{{ $key }}" name="design"
-                                            value="{{ $item->id }}" wire:model="design" class="d-none">
+                                            value="{{ $item->id }}" wire:model="design" class="d-none"
+                                            wire:click="generatePreview({{ $item->id }})">
 
                                         <label for="dsg{{ $key }}" class="gift-card-design">
                                             <img src="{{ asset('media/card_design/' . $item->file_path) }}"
@@ -38,6 +71,7 @@
                                         </label>
                                     </div>
                                 @endforeach
+
 
 
 
@@ -57,7 +91,7 @@
                                         @foreach ($gift_card_rates ?? [] as $key => $item)
                                             <div class="grouped-radio">
                                                 <input type="radio" id="rate{{ $key }}" name="rate"
-                                                    value="{{ $item->amount }}" wire:model="rate" class="d-none">
+                                                    value="{{ $item->amount }}" wire:model.live="rate" class="d-none">
 
                                                 <label for="rate{{ $key }}" class="options-sm">
                                                     {{ $item->amount }} €
@@ -76,24 +110,24 @@
                                 <div class="row mb-3">
                                     <div class="col-lg-6 mb-2">
                                         <label for="" class="text-muted">{{ __('From') }}</label>
-                                        <input type="text" class="form-control" wire:model="from">
+                                        <input type="text" class="form-control" wire:model.live="from">
                                         @error('from')
-                                        <small class="fw-bold text-danger">{{ $message }}</small>
-                                    @enderror
+                                            <small class="fw-bold text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
                                     <div class="col-lg-6">
                                         <label for="" class="text-muted">{{ __('To') }}</label>
-                                        <input type="text" class="form-control" wire:model="to">
+                                        <input type="text" class="form-control" wire:model.live="to">
                                         @error('to')
-                                        <small class="fw-bold text-danger">{{ $message }}</small>
-                                    @enderror
+                                            <small class="fw-bold text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="" class="text-muted">{{ __('Message') }}</label>
                                     <textarea name="" class="form-control" placeholder="{{ __('Hope you are enjoy with this gift card') }}"
-                                        wire:model="message_body"></textarea>
-                                        @error('message_body')
+                                        wire:model.live="message_body"></textarea>
+                                    @error('message_body')
                                         <small class="fw-bold text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
@@ -105,7 +139,14 @@
                                     @enderror
                                 </div>
                                 <div class="mb-5">
-                                    <button class="tt_btn_theme w-100" type="submit">{{ __('BUY NOW') }}</button>
+                                    <button class="tt_btn_theme w-100" type="submit" wire:loading.attr="disabled"
+                                        wire:target="save">
+                                        <span class="spinner-border spinner-border-sm mx-3" role="status" wire:loading
+                                            wire:target="save">
+
+                                        </span>
+                                        {{ __('BUY NOW') }}
+                                    </button>
                                 </div>
                             </div>
                         </div>
