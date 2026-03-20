@@ -51,7 +51,9 @@ class ShopController extends Controller
         if($gift_card = DigitalGiftCard::where('stripe_session_id', $striped_session_id)->firstOrFail()){
             return 'Gft card has sent !';
         }
-         abort(404);
+        //  abort(404);
+
+        dd($gift_card);
        
     }
 
