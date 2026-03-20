@@ -39,7 +39,7 @@
                     <tr>
                         <td style="padding:16px; border-bottom:1px solid #dddddd; color:#333333;">
                             <p style="margin:0; font-size:14px; line-height:1.5;">
-                               hello {{ $gift_card->message }}
+                                {{ $gift_card->Message }}
                             </p>
                         </td>
                     </tr>

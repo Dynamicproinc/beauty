@@ -74,7 +74,7 @@ class GiftCard extends Component
             'phone_number' => $this->phone_number,
             'from' => $this->from,
             'to' => $this->to,
-            'message' => $this->message_body,
+            'Message' => $this->message_body,
             'uniq_code' => Str::random(16),
             'payment_status' => 'pending',
             'status' => 'pending',

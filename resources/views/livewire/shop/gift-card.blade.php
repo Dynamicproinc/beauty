@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div class="g-card-message text-center">
-                                <h6 class="text-muted">GC-MK25QWE45689</h6>
+                                <h6 class="text-muted">GC-XXXXXXXXXXXX</h6>
                             </div>
 
                         </div>
