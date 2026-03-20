@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Stripe\Webhook;
 use App\Models\SalesOrder;
 use App\Mail\OrderConfirmation;
+use App\Models\DigitalGiftCard;
 use Illuminate\Support\Facades\Mail;
 
 class StripeWebhookController extends Controller
@@ -32,6 +33,7 @@ class StripeWebhookController extends Controller
             $session = $event->data->object;
 
             $order = SalesOrder::where('stripe_session_id', $session->id)->first();
+            $digital_gift = DigitalGiftCard::where('stripe_session_id', $session->id)->first();
 
             if ($order) {
                 $order->update([
@@ -44,6 +46,17 @@ class StripeWebhookController extends Controller
                     ->bcc('info@tallow-skincare.hr')
                     ->send(new OrderConfirmation($order));
             }
+
+            if($digital_gift){
+                $digital_gift->update([
+                    'payment_status'=> 'paid',
+                    'status' => 'active'
+                ]);
+                // need to send the email the card
+
+            }
+
+
         }
 
         return response('Success', 200);

@@ -74,14 +74,28 @@ Route::post('/stripe/webhook', [StripeWebhookController::class, 'handle']);
 Route::get('/check-payment-status/{sessionId}', function ($sessionId) {
 
     $order = \App\Models\SalesOrder::where('stripe_session_id', $sessionId)->first();
+    $gift_card = \App\Models\DigitalGiftCard::where('stripe_session_id', $sessionId)->first();
 
-    if (!$order) {
-        return response()->json(['status' => 'not_found']);
-    }
 
+
+
+ 
+
+if ($order) {
     return response()->json([
         'status' => $order->stripe_status,
     ]);
+}
+
+if ($gift_card) {
+    return response()->json([
+        'status' => $gift_card->stripe_status,
+    ]);
+}
+
+return response()->json(['status' => 'not_found']);
+
+
 });
 
 //google

@@ -309,6 +309,7 @@ $final_total  = ($this->getCartValue() + $this->shipping_cost) - $this->dis_amou
             'stripe_session_id' => $session->id,
         ]);
 
+        
         return redirect($session->url);
         // end stripe 
 
