@@ -89,7 +89,7 @@ if ($order) {
 
 if ($gift_card) {
     return response()->json([
-        'status' => $gift_card->stripe_status,
+        'status' => $gift_card->payment_status,
     ]);
 }
 
