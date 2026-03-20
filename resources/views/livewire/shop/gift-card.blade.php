@@ -1,6 +1,6 @@
 <div>
     <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 mb-3">
             <div>
                 <h6> {{ __('Preview') }}</h6>
                 @if ($pre_image)
