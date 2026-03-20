@@ -10,62 +10,73 @@ use Symfony\Component\Routing\Route;
 
 class ShopController extends Controller
 {
-    public function showProduct($slug){
-            $product = Product::where('slug',$slug)->where('status', 'active')->where('deleted', 0)->firstOrFail();
+    public function showProduct($slug)
+    {
+        $product = Product::where('slug', $slug)->where('status', 'active')->where('deleted', 0)->firstOrFail();
         return view('shop.showproduct')->with('product', $product);
     }
 
-    public function checkout(){
-       if(session()->has('cart') == false || count(session('cart')) == 0){
+    public function checkout()
+    {
+        if (session()->has('cart') == false || count(session('cart')) == 0) {
             return redirect()->to(route('shop.cart'));
-       }
-       
+        }
+
         return view('shop.checkout');
     }
 
-    public function thankyou($slug){
-        
+    public function thankyou($slug)
+    {
+
         $order = \App\Models\SalesOrder::where('slug', $slug)->firstOrFail();
         return view('shop.thankyou')->with('order', $order);
     }
 
-    public function cart(){
-    //     if(session()->has('cart') == false || count(session('cart')) == 0){
-    //         return 'Cart is empty';
-    //    }
+    public function cart()
+    {
+        //     if(session()->has('cart') == false || count(session('cart')) == 0){
+        //         return 'Cart is empty';
+        //    }
         return view('shop.cart');
     }
 
-    public function invoice($slug){
-        
+    public function invoice($slug)
+    {
+
         $order = SalesOrder::where('slug', $slug)->firstOrFail();
         return view('document.invoice')->with('order', $order);
     }
-    public function stripeSuccess($striped_session_id){
-        
-        // if($order = SalesOrder::where('stripe_session_id', $striped_session_id)->firstOrFail()){
-        //     session()->forget('cart');
-        //     return view('document.invoice')->with('order', $order);
-        // }
+    public function stripeSuccess($striped_session_id)
+    {
 
-        if($gift_card = DigitalGiftCard::where('stripe_session_id', $striped_session_id)->firstOrFail()){
-            return 'Gft card has sent !';
+        $order = SalesOrder::where('stripe_session_id', $striped_session_id)->first();
+
+        if ($order) {
+            session()->forget('cart');
+            return view('document.invoice')->with('order', $order);
         }
-        //  abort(404);
 
-        dd($gift_card);
-       
+        $gift_card = DigitalGiftCard::where('stripe_session_id', $striped_session_id)->first();
+
+        if ($gift_card) {
+            return 'Gift card has sent!';
+        }
+
+        abort(404);
     }
 
-    public function contact(){
+    public function contact()
+    {
         return view('shop.contact');
     }
 
-    public function allProducts(){
+    public function allProducts()
+    {
         return view('shop.all');
     }
 
-    public function buyGiftCard(){
+    public function buyGiftCard()
+    {
         return view('shop.gift-card');
     }
 }
