@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DigitalGiftCard;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\SalesOrder;
@@ -45,6 +46,10 @@ class ShopController extends Controller
         if($order = SalesOrder::where('stripe_session_id', $striped_session_id)->firstOrFail()){
             session()->forget('cart');
             return view('document.invoice')->with('order', $order);
+        }
+
+        if($gift_card = DigitalGiftCard::where('stripe_session_id', $striped_session_id)->firstOrFail()){
+            return 'Gft card has sent !';
         }
          abort(404);
        
