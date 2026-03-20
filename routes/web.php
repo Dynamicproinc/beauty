@@ -45,6 +45,7 @@ Route::get('news-letter-subscription',[App\Http\Controllers\PagesController::cla
 // Route::get('order-confirmation/{slug}',[App\Http\Controllers\ShopController::class, 'thankyou'])->name('shop.thankyou');
 route::get('order-confirmation/{slug}', [App\Http\Controllers\ShopController::class, 'invoice'])->name('shop.invoice');
 route::get('order-confirmation-card-payment/{stripe_session_id}', [App\Http\Controllers\ShopController::class, 'stripeSuccess'])->name('shop.stripe.success');
+route::get('confirm-gift-card-payment/{stripe_session_id}', [App\Http\Controllers\ShopController::class, 'successGiftCard'])->name('shop.stripe.gift.success');
 // admin routes
 
 Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(function () {

@@ -59,7 +59,7 @@ class ShopController extends Controller
         $gift_card = DigitalGiftCard::where('stripe_session_id', $striped_session_id)->first();
 
         if ($gift_card) {
-            return 'Gift card has sent!';
+           return redirect(route('shop.stripe.gift.success', $striped_session_id));
         }
 
         abort(404);
@@ -78,5 +78,17 @@ class ShopController extends Controller
     public function buyGiftCard()
     {
         return view('shop.gift-card');
+    }
+
+    public function successGiftCard($stripe_session_id){
+
+        $gift_card = DigitalGiftCard::where('stripe_session_id', $stripe_session_id)->first();
+        if($gift_card){
+            return view('document.gift-success',compact('gift_card'));
+
+        }
+
+        return 'something went wrong!';
+
     }
 }

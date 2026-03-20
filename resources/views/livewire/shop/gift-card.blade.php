@@ -133,6 +133,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="text-muted">{{ __('Email') }}</label>
+                                    <small class="d-block mb-3 px-2 py-1 fw-semibold text-info-emphasis bg-info-subtle border border-info-subtle rounded-2">{{__('Your gift card will be sent to this email address.')}}</small>
                                     <input type="email" class="form-control" wire:model="email">
                                     @error('email')
                                         <small class="fw-bold text-danger">{{ $message }}</small>
