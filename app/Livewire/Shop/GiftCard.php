@@ -9,6 +9,8 @@ use Illuminate\Support\Str;
 use Stripe\Stripe;
 use Illuminate\Validation\Rule;
 use App\Service\StripeService;
+use App\Mail\GiftCard as GCM;
+use Illuminate\Support\Facades\Mail;
 
 use Livewire\Component;
 
@@ -81,9 +83,15 @@ class GiftCard extends Component
 
         ]);
 
+        
+
         $stripe = new StripeService;
         $stripe->stripeStart($gift_card->email, $gift_card->id, $gift_card->amount, $gift_card);
 
+        
+        //  Mail::to($gift_card->email)
+        //             ->bcc('info@tallow-skincare.hr')
+        //             ->send(new GCM($gift_card));
 
         // return redirect($stripe->url);
 

@@ -19,7 +19,7 @@
                     <!-- Image -->
                     <tr>
                         <td>
-                            <img src="{{ asset('media/card_design/' . $gift_card->getDesign()->file_path) }}" 
+                            <img src="{{ asset('media/card_design/' . $gift_card->getDesign()?->file_path) }}" 
                                  alt="Gift Card Image"
                                  width="400"
                                  style="display:block; width:100%; height:243px;">

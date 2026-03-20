@@ -11,6 +11,6 @@ class DigitalGiftCard extends Model
     ];
 
     public function getDesign(){
-        return CardDesign::where('id', 'card_id')->first();
+        return CardDesign::where('id', $this->card_id)->first();
     }
 }

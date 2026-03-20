@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use Stripe\Webhook;
 use App\Models\SalesOrder;
 use App\Mail\OrderConfirmation;
-use App\Mail\GiftCard;
 use App\Models\DigitalGiftCard;
+use App\Mail\GiftCard;
 use Illuminate\Support\Facades\Mail;
 
 class StripeWebhookController extends Controller
