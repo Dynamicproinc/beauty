@@ -43,10 +43,10 @@ class ShopController extends Controller
     }
     public function stripeSuccess($striped_session_id){
         
-        if($order = SalesOrder::where('stripe_session_id', $striped_session_id)->firstOrFail()){
-            session()->forget('cart');
-            return view('document.invoice')->with('order', $order);
-        }
+        // if($order = SalesOrder::where('stripe_session_id', $striped_session_id)->firstOrFail()){
+        //     session()->forget('cart');
+        //     return view('document.invoice')->with('order', $order);
+        // }
 
         if($gift_card = DigitalGiftCard::where('stripe_session_id', $striped_session_id)->firstOrFail()){
             return 'Gft card has sent !';
