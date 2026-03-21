@@ -2,8 +2,8 @@
     <div class="row">
         <div class="col-lg-4 mb-3">
             <div>
-                <h6> {{ __('Preview') }}</h6>
                 @if ($pre_image)
+                <h6> {{ __('Preview') }}</h6>
                     <div class="g-card">
                         <div class="g-c-preview">
                             <img src="{{ asset('media/card_design/' . $pre_image) }}" alt="{{ $pre_image }}">
