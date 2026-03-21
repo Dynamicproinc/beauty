@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DigitalGiftCard;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use \App\Models\ProductInformation;
@@ -270,5 +271,10 @@ for ($m = 1; $m <= 12; $m++) {
 
     public function shipping(){
         return view('admin.shipping.shipping');
+    }
+
+    public function giftCards(){
+        $gift_cards = DigitalGiftCard::where('payment_status', 'success')->paginate(20);
+        return view('admin.product.gift-card', compact('gift_cards'));
     }
 }
