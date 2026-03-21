@@ -42,7 +42,8 @@ class SalesOrder extends Model
        'stripe_currency',
        'stripe_status',
        'payment_id',
-       'final_total'
+       'final_total',
+       'gift_code'
     ];
 
     protected $casts = [
