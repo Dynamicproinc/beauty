@@ -647,7 +647,7 @@
 
                                     <div class="d-flex justify-content-between">
                                         <div>
-                                            <span>{{__('Subtotal')}} @if($gift_card) <small class="fw-bolder text-success">{{__('Gift card applied')}}</small> @endif</span>
+                                            <span>{{__('Subtotal')}} @if($gift_card_amount) <small class="fw-bolder text-success">{{__('Gift card applied')}}</small> @endif</span>
 
                                         </div>
                                         <div class="text-right">

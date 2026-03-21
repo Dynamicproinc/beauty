@@ -32,7 +32,7 @@ class Checkout extends Component
     public $billing = 'default';
     public $payment_method = "card";
     public $phone_number, $first_name, $last_name, $address, $city, $postal_code, $first_name_other, $last_name_other, $address_other, $postal_code_other, $city_other, $phone_other, $phone_number_other, $pickup_datetime, $message;
-    public $gift_card;
+    public $gift_card, $gift_card_amount;
 
 
 
@@ -97,7 +97,7 @@ class Checkout extends Component
         }
 
         // deduct coupone discount if applied 
-        $gift_card = $this->gift_card;
+        $gift_card = $this->gift_card_amount;
 
         $total = ($total - $gift_card) - $coupone_discount;
         return $total;
@@ -193,6 +193,7 @@ class Checkout extends Component
             // dd( $gift_card->gift_code);
 
             $this->gift_card = $gift_card->gift_code;
+            $this->gift_card_amount = $gift_card->amount;
         }
         // 
         // condtional validation feilds
