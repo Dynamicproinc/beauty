@@ -97,6 +97,15 @@ class Checkout extends Component
         }
 
         // deduct coupone discount if applied 
+        if(session()->has('gift_card_model')){
+
+            $gc = DigitalGiftCard::where('gift_code', session()->get('gift_card_model'))->where('status', 'active')->where('payment_status', 'paid')->first();
+            if($gc)
+                {
+                 $this->gift_card_amount = $gc->amount;
+                }
+        }
+        
         $gift_card = $this->gift_card_amount;
 
         $total = ($total - $gift_card) - $coupone_discount;
