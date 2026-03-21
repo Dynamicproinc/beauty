@@ -20,7 +20,7 @@
    @if(count($gift_cards) > 0)
     @foreach ($gift_cards as $item )
          <tr>
-      <td scope="row"> {{ $order->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}</td></td>
+      <td scope="row"> {{ $item->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}</td></td>
       <td>{{ $item->email }}</td>
       <td>Otto</td>
       <td>@mdo</td>
