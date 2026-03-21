@@ -187,6 +187,7 @@ class Checkout extends Component
             ])->first();
 
             if(!$gift_card){
+              
                 return null;
             }
 
