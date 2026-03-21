@@ -8,16 +8,20 @@
                         <div class="g-c-preview">
                             <img src="{{ asset('media/card_design/' . $pre_image) }}" alt="{{ $pre_image }}">
                             <div class="g-card-message">
-                                <small class="text-uppercase" style="font-size: 11px;font-weight:600 "><span class="text-muted">From</span> {{ $from}} <span class="text-muted">To:</span> {{ $to}}</small>
-                                <h6 class="mt-3">{{ $message_body}}</h6>
+                                <small class="text-uppercase" style="font-size: 11px;font-weight:600 "><span
+                                        class="text-muted">From</span> {{ $from }} <span
+                                        class="text-muted">To:</span> {{ $to }}</small>
+                                <h6 class="mt-3">{{ $message_body }}</h6>
                             </div>
                             <div class="g-card-message">
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        @if($rate)
-                                        <h5 class="tt-text-hero-md text-uppercase">{{number_format($rate, 2, ',', '.')}}€</h5>
+                                        @if ($rate)
+                                            <h5 class="tt-text-hero-md text-uppercase">
+                                                {{ number_format($rate, 2, ',', '.') }}€</h5>
                                         @else
-                                         <h5 class="tt-text-hero-md text-uppercase">{{number_format(0, 2, ',', '.')}}€</h5>
+                                            <h5 class="tt-text-hero-md text-uppercase">
+                                                {{ number_format(0, 2, ',', '.') }}€</h5>
                                         @endif
                                         <div class="tt-text-xs text-uppercase mb-2">
                                             <span>{{ __('Tallow skin care') }}</span>
@@ -48,12 +52,18 @@
                         <p class="fw-bold">
                             {{ __('1. Select the delivery method') }}
                         </p>
-                        <div class="d-flex mb-2">
-                            <div class="options">
-                                {{ __('Email') }}
+                        <div>
+                            <div class="d-flex mb-2">
+                                <div class="options">
+                                    {{ __('Email') }}
+                                </div>
+                                <div class="options options-disabled">
+                                    {{ __('Delivery') }}
+                                </div>
                             </div>
-                            <div class="options options-disabled">
-                                Delivery
+                            <div class="tallow-alert-bar">
+                                <small
+                                    class="text-small">{{ __('Please note that we are currently sending gift cards via email') }}</small>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -133,7 +143,11 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="text-muted">{{ __('Email') }}</label>
-                                    <small class="d-block mb-3 px-2 py-1 fw-semibold text-info-emphasis bg-info-subtle border border-info-subtle rounded-2">{{__('Your gift card will be sent to this email address.')}}</small>
+                                    <div class="tallow-alert-bar">
+                                        <small
+                                            class="text-small">{{ __('Your gift card will be sent to this email address.') }}</small>
+                                    </div>
+                                   
                                     <input type="email" class="form-control" wire:model="email">
                                     @error('email')
                                         <small class="fw-bold text-danger">{{ $message }}</small>

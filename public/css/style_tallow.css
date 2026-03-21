@@ -314,6 +314,13 @@ p{
     text-align: center;
 }
 
+.tallow-alert-bar{
+    padding: 8px 16px;
+    border-left: 2px solid var(--p_color);
+    background-color: rgba(35, 46, 32, 0.14);
+    color: var(--p_color);
+    margin-bottom: 8px;
+}
 /* button{
     letter-spacing: 3px;
     text-transform: uppercase;
