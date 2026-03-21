@@ -348,6 +348,7 @@ class Checkout extends Component
         //clear the cart
 
         session()->forget('cart');
+        session()->forget('gift_card');
 
         return redirect()->to(route('shop.invoice', ['slug' => $sales_order->slug]));
     }
