@@ -105,7 +105,7 @@ class Checkout extends Component
                  $this->gift_card_amount = $gc->amount;
                 }
         }
-        
+
         $gift_card = $this->gift_card_amount;
 
         $total = ($total - $gift_card) - $coupone_discount;
@@ -357,7 +357,7 @@ class Checkout extends Component
             ]);
             // send order confirmation email to customer
             Mail::to($sales_order->email)
-                // ->bcc('info@tallow-skincare.hr')
+                ->bcc('info@tallow-skincare.hr')
                 ->send(new OrderConfirmation($sales_order));
         }
 
