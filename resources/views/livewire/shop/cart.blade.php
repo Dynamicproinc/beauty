@@ -90,7 +90,7 @@
 
                     </div>
                     <div class="d-flex justify-content-between mb-5">
-                        <h6 class="mb-0 tt-text-md text-uppercase fw-bolder">{{ __('Total') }} @if($discount > 0)   (- {{$discount}})ccc @endif</h6>
+                        <h6 class="mb-0 tt-text-md text-uppercase fw-bolder">{{ __('Total') }} @if($discount > 0)   (- {{$discount}}) @endif</h6>
                         <span class="mb-0 tt-text-md text-uppercase fw-bolder">
                             {{ number_format($subtotal, 2, ',', '.') }} € </span>
                     </div>

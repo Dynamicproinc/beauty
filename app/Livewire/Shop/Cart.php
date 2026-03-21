@@ -141,7 +141,7 @@ class Cart extends Component
         // find amount of gift code
         if(session()->has('gift_card_model')){
 
-            $gc = DigitalGiftCard::where('gift_code', session()->get('gift_card_model'))->first();
+            $gc = DigitalGiftCard::where('gift_code', session()->get('gift_card_model'))->where('status', 'active')->first();
             if($gc)
                 {
                  $this->discount = $gc->amount;
