@@ -136,37 +136,7 @@ class Cart extends Component
         $this->subtotal = 0;
     }
 
-    public function refreshCart()
-    {
-        // find amount of gift code
-        if(session()->has('gift_card_model')){
-
-            $gc = DigitalGiftCard::where('gift_code', session()->get('gift_card_model'))->where('status', 'active')->first();
-            if($gc)
-                {
-                 $this->discount = $gc->amount;
-                }
-        }
-        
-        // calcaulte total
-        if ($cart = session('cart', [])) {
-            $total = 0;
-            foreach ($cart as $item) {
-                $total = $total + $item['price'] * $item['quantity'];
-            }
-
-            $this->total = $total;
-            if($this->discount > $this->total){
-                $this->total = 0;
-                $this->subtotal = 0;
-            }else{
-
-                $this->subtotal = $total - $this->discount;
-            }
-
-            $this->dispatch('refresh_navbar');
-        }
-    }
+  
 
     public function applyGiftCard()
 {
@@ -214,4 +184,36 @@ public function removeGiftCardSession()
     dd('wrong');
    }
 }
+
+  public function refreshCart()
+    {
+        // find amount of gift code
+        if(session()->has('gift_card_model')){
+
+            $gc = DigitalGiftCard::where('gift_code', session()->get('gift_card_model'))->where('status', 'active')->where('payment_status', 'paid')->first();
+            if($gc)
+                {
+                 $this->discount = $gc->amount;
+                }
+        }
+        
+        // calcaulte total
+        if ($cart = session('cart', [])) {
+            $total = 0;
+            foreach ($cart as $item) {
+                $total = $total + $item['price'] * $item['quantity'];
+            }
+
+            $this->total = $total;
+            if($this->discount > $this->total){
+                $this->total = 0;
+                $this->subtotal = 0;
+            }else{
+
+                $this->subtotal = $total - $this->discount;
+            }
+
+            $this->dispatch('refresh_navbar');
+        }
+    }
 }
