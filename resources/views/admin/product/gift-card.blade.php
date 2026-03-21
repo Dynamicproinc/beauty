@@ -11,9 +11,10 @@
       <th scope="col">{{__('date')}}</th>
       <th scope="col">{{__('email')}}</th>
       <th scope="col">{{__('from')}}</th>
-      <th scope="col">{{__('Amount')}}</th>
       <th scope="col">{{__('code')}}</th>
-      <th scope="col">{{__('status')}}</th>
+      <th scope="col" class="text-right">{{__('Amount')}}</th>
+      <th scope="col" class="text-right">{{__('Payment')}}</th>
+      <th scope="col" class="text-right">{{__('status')}}</th>
     </tr>
   </thead>
   <tbody>
@@ -22,17 +23,22 @@
          <tr>
       <td scope="row"> {{ $item->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}</td></td>
       <td>{{ $item->email }}</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>{{ $item->from}}</td>
+      <td>{{ $item->gift_code}}</td>
+      <td class="text-right">{{ number_format($item->amount, 2, ',', '.')}} €</td>
+      <td  class="text-right">{{ $item->payment_status}}</td>
+      <td  class="text-right">{{ $item->status}}</td>
     </tr>
     @endforeach
+    @else
     <td colspan="6">{{__('No gift cards.')}}</td>
-   @endif
-    
+    @endif
   </tbody>
 </table>
          </div>
-
+         <div>
+            {{$gift_cards->links()}}
+         </div>
       </div>
    </div>
 </div>
