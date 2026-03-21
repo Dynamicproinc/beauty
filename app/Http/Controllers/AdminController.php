@@ -274,7 +274,7 @@ for ($m = 1; $m <= 12; $m++) {
     }
 
     public function giftCards(){
-        $gift_cards = DigitalGiftCard::where('payment_status', 'paid')->paginate(20);
+        $gift_cards = DigitalGiftCard::where('payment_status', 'paid')->latest()->paginate(20);
         return view('admin.product.gift-card', compact('gift_cards'));
     }
 }
