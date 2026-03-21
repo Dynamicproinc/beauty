@@ -97,7 +97,7 @@ class Checkout extends Component
         }
 
         // deduct coupone discount if applied 
-        $gift_card = session('gift_card')['amount'] ?? 0;
+        $gift_card = $this->gift_card;
 
         $total = ($total - $gift_card) - $coupone_discount;
         return $total;
