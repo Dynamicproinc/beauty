@@ -74,7 +74,7 @@ class StripeWebhookController extends Controller
                 ]);
                 // need to send the email the card
                 Mail::to($digital_gift->email)
-                    ->bcc('info@tallow-skincare.hr')
+                    // ->bcc('info@tallow-skincare.hr')
                     ->send(new GiftCard($digital_gift));
             }
         }
