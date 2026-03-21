@@ -190,7 +190,7 @@ class Checkout extends Component
               
                 return null;
             }
-            dd( $gift_card->gift_code);
+            // dd( $gift_card->gift_code);
 
             $this->gift_card = $gift_card->gift_code;
         }
