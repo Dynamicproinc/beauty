@@ -24,6 +24,7 @@ class Cart extends Component
 
     public function mount()
     {
+        // dd(session()->all());
        
         $this->cart_items = session('cart', []);
         $this->refreshCart();
@@ -137,7 +138,16 @@ class Cart extends Component
 
     public function refreshCart()
     {
-         $this->discount =  session('gift_card')['amount'] ?? 0;
+        // find amount of gift code
+        if(session()->has('gift_card_model')){
+
+            $gc = DigitalGiftCard::where('gift_code', session()->get('gift_card_model'))->first();
+            if($gc)
+                {
+                 $this->discount = $gc->amount;
+                }
+        }
+        
         // calcaulte total
         if ($cart = session('cart', [])) {
             $total = 0;
@@ -179,19 +189,20 @@ class Cart extends Component
     $this->discount = $gift_card->amount;
     // if($gc_success){
         // }
-        $gc_success =  session()->put('gift_card', [
-            'id' => $gift_card->id,
-            'amount' => $gift_card->amount,
-            ]);
+        // $gc_success =  session()->put('gift_card', [
+        //     'id' => $gift_card->id,
+        //     'amount' => $gift_card->amount,
+        //     ]);
+        session()->put('gift_card_model', $gift_card->gift_code);
             $this->refreshCart();
     
 
 }
 
-public function removeGiftCard()
+public function removeGiftCardSession()
 {
-   if(session()->has('gift_card')){
-       session()->forget('gift_card');
+   if(session()->has('gift_card_model')){
+        session()->forget('gift_card_model');
        $this->discount = 0;
       
 

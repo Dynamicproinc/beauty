@@ -90,7 +90,7 @@
 
                     </div>
                     <div class="d-flex justify-content-between mb-5">
-                        <h6 class="mb-0 tt-text-md text-uppercase fw-bolder">{{ __('Total') }} @if(session()->has('gift_card'))   (- {{session('gift_card')['amount']}}) @endif</h6>
+                        <h6 class="mb-0 tt-text-md text-uppercase fw-bolder">{{ __('Total') }} @if(session()->has('gift_card'))   (- {{$discount}}) @endif</h6>
                         <span class="mb-0 tt-text-md text-uppercase fw-bolder">
                             {{ number_format($subtotal, 2, ',', '.') }} € </span>
                     </div>
@@ -122,7 +122,7 @@
                                                {{__('Your gift card is now active for this order — amount :') . number_format($discount ?? 0,2 , ',', '.')}}
                                             </p>
 
-                                            <button class="btn btn-sm btn-success" wire:click="removeGiftCard">{{__('Remove gift card')}}</button>
+                                            <button class="btn btn-sm btn-success" wire:click="removeGiftCardSession">{{__('Remove gift card')}}</button>
                                         
                                         </div>
                                     @endif

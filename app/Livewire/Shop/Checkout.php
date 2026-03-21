@@ -179,9 +179,9 @@ class Checkout extends Component
         }
 
         // 
-        if (session()->has('gift_card')) {
+        if (session()->has('gift_card_model')) {
             $gift_card = DigitalGiftCard::where([
-                'id' => session('gift_card')['id'],
+                'gift_code' => session('gift_card_model'),
                 'payment_status' => 'paid',
                 'status' => 'active'
             ])->first();
@@ -354,7 +354,7 @@ class Checkout extends Component
         //clear the cart
 
         session()->forget('cart');
-        session()->forget('gift_card');
+        session()->forget('gift_card_model');
 
         return redirect()->to(route('shop.invoice', ['slug' => $sales_order->slug]));
     }
