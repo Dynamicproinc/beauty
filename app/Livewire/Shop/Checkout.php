@@ -339,6 +339,12 @@ class Checkout extends Component
 
         // if payment method is not car send email to customer
         if ($this->payment_method !== 'card') {
+
+            // must redem the gift card
+            $g_c = DigitalGiftCard::where('gift_code', $sales_order->gift_code)->first();
+            $g_c->update([
+                'status' => 'redeemed'
+            ]);
             // send order confirmation email to customer
             Mail::to($sales_order->email)
                 ->bcc('info@tallow-skincare.hr')
