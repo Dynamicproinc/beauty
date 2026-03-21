@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Order #ORD-{{ str_pad($order->id, 4, '0', STR_PAD_LEFT) }}</title>
+<title>{{__('Order')}} #ORD-{{ str_pad($order->id, 4, '0', STR_PAD_LEFT) }}</title>
 </head>
 
 <body style="margin:0;padding:0;background-color:#f4f4f4;font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:14px;">
@@ -127,10 +127,10 @@ $pl = \App\Models\PickupLocation::where('id', $order->pickup_location)->first();
 
 <tr style="background:#f2f2f2;">
 <th style="border:1px solid #cccccc;text-align:left;">#</th>
-<th style="border:1px solid #cccccc;text-align:left;">Item</th>
-<th style="border:1px solid #cccccc;text-align:right;">Qty</th>
-<th style="border:1px solid #cccccc;text-align:right;">Price</th>
-<th style="border:1px solid #cccccc;text-align:right;">Total</th>
+<th style="border:1px solid #cccccc;text-align:left;">{{__('Item')}}</th>
+<th style="border:1px solid #cccccc;text-align:right;">{{__('Quantity')}}</th>
+<th style="border:1px solid #cccccc;text-align:right;">{{__('Price')}}</th>
+<th style="border:1px solid #cccccc;text-align:right;">{{__('Total')}}</th>
 </tr>
 
 @foreach ($order->getItems() as $key => $item)
@@ -148,21 +148,24 @@ $pl = \App\Models\PickupLocation::where('id', $order->pickup_location)->first();
 <!-- TOTALS -->
 
 <tr>
-<td colspan="4" style="border:1px solid #cccccc;text-align:right;"><strong>Subtotal</strong></td>
+<td colspan="4" style="border:1px solid #cccccc;text-align:right;">
+    <strong>{{__('Subtotal')}}</strong>
+     <small style="color:green">@if($order->gift_code) {{__('Gift card discount apllied.')}} @endif</small>
+</td>
 <td style="border:1px solid #cccccc;text-align:right;">
 €{{ number_format($order->total_amount, 2, ',', '.') }}
 </td>
 </tr>
 
 <tr>
-<td colspan="4" style="border:1px solid #cccccc;text-align:right;"><strong>Discount</strong></td>
+<td colspan="4" style="border:1px solid #cccccc;text-align:right;"><strong>{{__('Discount')}}</strong></td>
 <td style="border:1px solid #cccccc;text-align:right;">
 €{{ number_format($order->discount_amount, 2, ',', '.') }}
 </td>
 </tr>
 
 <tr>
-<td colspan="4" style="border:1px solid #cccccc;text-align:right;"><strong>Shipping</strong></td>
+<td colspan="4" style="border:1px solid #cccccc;text-align:right;"><strong>{{__('Shipping')}}</strong></td>
 <td style="border:1px solid #cccccc;text-align:right;">
 €{{ number_format($order->shipping_cost, 2, ',', '.') }}
 </td>
