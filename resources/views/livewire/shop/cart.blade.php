@@ -1,7 +1,7 @@
 <div>
     <div class="">
         <div class="d-flex justify-content-between">
-            <h5>{{ __('Cart') }} ({{count($cart_items)}})  </h5>
+            <h5>{{ __('Cart') }} ({{ count($cart_items) }}) </h5>
             <button class="btn btn-link text-danger" wire:click="clearCart">{{ __('Clear cart') }}</button>
         </div>
         <div class="row">
@@ -26,7 +26,7 @@
                                                         @endphp
                                                         <a
                                                             href="{{ route('shop.product.show', ['id' => $product->slug]) }}">
-                                                            <img src="{{ asset('uploads/products/'.\App\Models\Media::where('product_id', $item['product_id'])->first()?->file_path) }}"
+                                                            <img src="{{ asset('uploads/products/' . \App\Models\Media::where('product_id', $item['product_id'])->first()?->file_path) }}"
                                                                 alt="">
                                                         </a>
                                                     </div>
@@ -89,14 +89,47 @@
                         <span class="mb-0 tt-text-xs text-uppercase">{{ __('Calculated at checkout') }}</span>
 
                     </div>
-                    <div class="d-flex justify-content-between mb-3">
-                        <h6 class="mb-0 tt-text-md text-uppercase fw-bolder">{{ __('Total') }}</h6>
+                    <div class="d-flex justify-content-between mb-5">
+                        <h6 class="mb-0 tt-text-md text-uppercase fw-bolder">{{ __('Total') }} @if(session()->has('gift_card'))   (- {{session('gift_card')['amount']}}) @endif</h6>
                         <span class="mb-0 tt-text-md text-uppercase fw-bolder">
                             {{ number_format($subtotal, 2, ',', '.') }} € </span>
                     </div>
 
-                    <div>
-                        <button class="btn btn-link p-0 mb-5">{{ __('Add your coupon') }}</button>
+                    <div class="mb-5">
+                        {{-- gift card logic --}}
+                        <form wire:submit="applyGiftCard">
+                            <div class="row">
+                                <div class="col-8">
+                                    <input type="text" class="form-control @error('gift_code') is-invalid @enderror"
+                                        placeholder="{{ __('Enter gift card code') }}" wire:model="gift_code">
+                                    @error('gift_code')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
+                                    @if (session('error'))
+                                        <small class="text-danger">{{ session('error') }}</small>
+                                    @endif
+                                   
+                                </div>
+                                <div class="col-4">
+                                    <button class="tt_btn_theme_outline" type="submit">{{ __('Apply') }}</button>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                 @if ($discount)
+                                        <div class="alert alert-success" role="alert">
+                                            <h6 class="">{{__('Congratulations!')}}</h6>
+                                            <p>
+                                               {{__('Your gift card is now active for this order — amount :') . number_format($discount ?? 0,2 , ',', '.')}}
+                                            </p>
+
+                                            <button class="btn btn-sm btn-success" wire:click="removeGiftCard">{{__('Remove gift card')}}</button>
+                                        
+                                        </div>
+                                    @endif
+                            </div>
+                        </form>
+
+                        {{-- gift card logic --}}
                     </div>
                     <div>
                         <a href="{{ route('shop.checkout') }}" class="tt_btn_theme w-100"

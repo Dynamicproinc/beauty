@@ -10,6 +10,7 @@ class Cartcount extends Component
     public $total_quantity;
     public $total_sum;
     public $listeners = ['refreshCartNav' => 'refreshData'];
+    
 
     public function render()
     {
@@ -43,4 +44,6 @@ class Cartcount extends Component
         }
         return $this->total_sum;
     }
+
+    
 }

@@ -274,6 +274,26 @@ p{
     color: #fff;
     text-align: center;
 }
+.tt_btn_theme_outline {
+    outline: 0;
+    border: 1px solid var(--p_color) !important;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    height: 3rem;
+    padding: 1rem 3.275rem;
+    transition: .3s, color .3s, border-color .3s, background-color .3s;
+    display: inline-flex;
+
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center */
+
+    background: transparent;
+    color:var(--p_color);
+    text-align: center;
+    width: 100%;
+}
 .tt_btn_theme-sm {
     outline: 0;
     border: none;

@@ -5,6 +5,7 @@ namespace App\Livewire\Shop;
 use Livewire\Component;
 use App\Models\Product;
 use App\Models\Variant;
+use App\Models\DigitalGiftCard;
 
 class Cart extends Component
 {
@@ -12,23 +13,27 @@ class Cart extends Component
     public $cart_items = [];
 
     public $subtotal, $total, $discount = 0;
+    public $gift_code, $gift_card;
 
     public function render()
     {
-        return view('livewire.shop.cart',[
-             'cart_items' => $this->cart_items
+        return view('livewire.shop.cart', [
+            'cart_items' => $this->cart_items
         ]);
     }
 
-    public function mount(){
+    public function mount()
+    {
+       
         $this->cart_items = session('cart', []);
         $this->refreshCart();
     }
 
-    public function addQuantity($index){
-     // if item exists in cart, increment quantity
+    public function addQuantity($index)
+    {
+        // if item exists in cart, increment quantity
         $cart = session('cart', []);
-        if(!$cart || count($cart) < 0){
+        if (!$cart || count($cart) < 0) {
             return null;
         }
         //check product maintain inventory
@@ -39,21 +44,20 @@ class Cart extends Component
             // if inventory managed take maxmimum stock limit quantity
             // 1. if product have variations get maxium quantity
             $variant = Variant::where('id', $cart[$index]['variant_id'])->first();
-            if($variant){
+            if ($variant) {
                 $max_qty = $variant->quantity;
             }
             // update qty in cart
-            if ($max_qty !== null && $cart[$index]['quantity'] < $max_qty){
+            if ($max_qty !== null && $cart[$index]['quantity'] < $max_qty) {
                 $cart[$index]['quantity'] += 1;
                 session()->put('cart', $cart);
                 $this->cart_items = $cart;
                 $this->dispatch('cartUpdated');
                 $this->dispatch('refreshCartNav');
+            } else {
 
-            }else{
-
-                 $product_max_qty = $product->quantity;
-                if ($product_max_qty !== null && $cart[$index]['quantity'] < $product_max_qty){
+                $product_max_qty = $product->quantity;
+                if ($product_max_qty !== null && $cart[$index]['quantity'] < $product_max_qty) {
                     $cart[$index]['quantity'] += 1;
                     session()->put('cart', $cart);
                     $this->cart_items = $cart;
@@ -62,14 +66,14 @@ class Cart extends Component
                 }
 
 
-            //    dd($max_qty);
+                //    dd($max_qty);
                 $this->error_message = 'Cannot add more items. Stock limit reached.';
-                $this->dispatch('error-message'); 
-            //     return null;
+                $this->dispatch('error-message');
+                //     return null;
             }
 
             //if dont have variation
-            if(!$variant){
+            if (!$variant) {
                 // $product_max_qty = $product->quantity;
                 // if ($product_max_qty !== null && $cart[$index]['quantity'] < $product_max_qty){
                 //     $cart[$index]['quantity'] += 1;
@@ -78,43 +82,43 @@ class Cart extends Component
                 //     $this->dispatch('cartUpdated');
                 // }
             }
-
-            
-        }else{
+        } else {
             //if product not maintain inventory
-            if(isset($cart[$index])){
+            if (isset($cart[$index])) {
                 $cart[$index]['quantity'] += 1;
             }
             session()->put('cart', $cart);
             $this->cart_items = $cart;
-            $this->dispatch('cartUpdated'); 
-            $this->dispatch('refreshCartNav'); 
+            $this->dispatch('cartUpdated');
+            $this->dispatch('refreshCartNav');
         }
         $this->refreshCart();
     }
 
-    public function decrementQuantity($index){
+    public function decrementQuantity($index)
+    {
         $cart = session('cart', []);
-        if(isset($cart[$index]) && $cart[$index]['quantity'] > 1){
+        if (isset($cart[$index]) && $cart[$index]['quantity'] > 1) {
             $cart[$index]['quantity'] -= 1;
             session()->put('cart', $cart);
             $this->cart_items = $cart;
-            $this->dispatch('cartUpdated'); 
-            $this->dispatch('refreshCartNav'); 
+            $this->dispatch('cartUpdated');
+            $this->dispatch('refreshCartNav');
         }
         $this->refreshCart();
     }
 
-    public function removeItem($index){
+    public function removeItem($index)
+    {
         $cart = session('cart', []);
-        if(isset($cart[$index])){
+        if (isset($cart[$index])) {
             unset($cart[$index]);
             session()->put('cart', $cart);
             $this->cart_items = $cart;
-            $this->dispatch('cartUpdated'); 
-            $this->dispatch('refreshCartNav'); 
+            $this->dispatch('cartUpdated');
+            $this->dispatch('refreshCartNav');
         }
-        if(count($cart) == 0){
+        if (count($cart) == 0) {
             $this->total = 0;
             $this->subtotal = 0;
         }
@@ -122,29 +126,81 @@ class Cart extends Component
         $this->refreshCart();
     }
 
-    public function clearCart(){
+    public function clearCart()
+    {
         session()->forget('cart');
         $this->cart_items = [];
-        
+
         $this->total = 0;
-        $this->subtotal =0; 
-       
+        $this->subtotal = 0;
     }
 
-    public function refreshCart(){
+    public function refreshCart()
+    {
+         $this->discount =  session('gift_card')['amount'] ?? 0;
         // calcaulte total
-        if($cart = session('cart', [])){
+        if ($cart = session('cart', [])) {
             $total = 0;
-            foreach($cart as $item){
+            foreach ($cart as $item) {
                 $total = $total + $item['price'] * $item['quantity'];
             }
-            
+
             $this->total = $total;
-            $this->subtotal = $total - $this->discount ;
+            if($this->discount > $this->total){
+                $this->total = 0;
+                $this->subtotal = 0;
+            }else{
+
+                $this->subtotal = $total - $this->discount;
+            }
 
             $this->dispatch('refresh_navbar');
         }
-
-
     }
+
+    public function applyGiftCard()
+{
+    $this->validate([
+        'gift_code' => 'required'
+    ]);
+
+    $gift_card = DigitalGiftCard::where([
+        'gift_code' => $this->gift_code,
+        'payment_status' => 'paid',
+        'status' => 'active'
+    ])->first();
+
+    if (!$gift_card) {
+        session()->flash('error', __('Invalid gift card'));
+        return;
+    }
+
+    // Store only necessary data in session
+    $this->discount = $gift_card->amount;
+    // if($gc_success){
+        // }
+        $gc_success =  session()->put('gift_card', [
+            'id' => $gift_card->id,
+            'amount' => $gift_card->amount,
+            ]);
+            $this->refreshCart();
+    
+
+}
+
+public function removeGiftCard()
+{
+   if(session()->has('gift_card')){
+       session()->forget('gift_card');
+       $this->discount = 0;
+      
+
+    $this->refreshCart();
+
+    $this->dispatch('$refresh');
+
+   }else{
+    dd('wrong');
+   }
+}
 }

@@ -14,6 +14,7 @@ use Stripe\Checkout\Session;
 use App\Models\Order;
 use App\Mail\OrderConfirmation;
 use Illuminate\Support\Facades\Mail;
+use App\Models\DigitalGiftCard;
 
 class Checkout extends Component
 {
@@ -31,7 +32,7 @@ class Checkout extends Component
     public $billing = 'default';
     public $payment_method = "card";
     public $phone_number, $first_name, $last_name, $address, $city, $postal_code, $first_name_other, $last_name_other, $address_other, $postal_code_other, $city_other, $phone_other, $phone_number_other, $pickup_datetime, $message;
-
+    public $gift_card;
 
 
 
@@ -42,7 +43,7 @@ class Checkout extends Component
 
     public function mount()
     {
-       
+
         //    dd($this->getCartValue());
         //    get Shiping Loations
         $this->shipping_locations = ShippingLocation::orderBy('location', 'ASC')->get();
@@ -96,7 +97,9 @@ class Checkout extends Component
         }
 
         // deduct coupone discount if applied 
-        $total = $total - $coupone_discount;
+        $gift_card = session('gift_card')['amount'] ?? 0;
+
+        $total = ($total - $gift_card) - $coupone_discount;
         return $total;
     }
 
@@ -113,15 +116,15 @@ class Checkout extends Component
 
 
         $pl = PickupLocation::where('id', $this->pickup_location)->first();
-        if(!$pl){
-           $this->dis_presentage = 0;
-           $this->dis_amount = 0;
-        }else{
+        if (!$pl) {
+            $this->dis_presentage = 0;
+            $this->dis_amount = 0;
+        } else {
             $this->dis_presentage = $pl->discount;
             $this->dis_amount = $this->getCartValue() * $this->dis_presentage / 100;
         }
 
-        
+
         $this->getFinalValue();
     }
 
@@ -136,7 +139,7 @@ class Checkout extends Component
     public function getShippingCost()
     {
 
-    
+
         // location table like this if location dont have any free delovey just keep like false 
         //location table id | location_code | Free_delivery (boolean) | free_delivery_line | cost
         if ($this->billing == 'other') {
@@ -174,162 +177,177 @@ class Checkout extends Component
         if (!$cart = session('cart', [])) {
             return null;
         }
+
+        // 
+        if (session()->has('gift_card')) {
+            $gift_card = DigitalGiftCard::where([
+                'id' => session('gift_card')['id'],
+                'payment_status' => 'paid',
+                'status' => 'active'
+            ])->first();
+
+            if(!$gift_card){
+                return null;
+            }
+
+
+            $this->gift_card = $gift_card->gift_code;
+        }
+        // 
         // condtional validation feilds
 
         //if user select the home dellivery option
         //contact details validatrion
-    
 
-  $this->validate([
-    'email' => 'required|email|max:100',
-    'phone_number' => 'required|string|min:2|max:50',
-    'first_name' => 'required|string|min:2|max:50',
-    'last_name' => 'required|string|min:2|max:50',
-    'delivery_method'=> 'required|in:home_delivery,pickup',
-    'payment_method' => 'required|in:cod,card',
-    'billing' => 'required|in:default,other',
-]);
 
-if ($this->delivery_method === 'home_delivery') {
-
-    $this->validate([
-        'address' => 'required|string|min:2|max:255',
-        'city' => 'required|string',
-        'postal_code' => 'required|string',
-        'shipping_location' => 'required|exists:shipping_locations,id',
-    ]);
-
-    if ($this->billing === 'other') {
         $this->validate([
-            'first_name_other' => 'required|string|min:2|max:50',
-            'last_name_other' => 'required|string|min:2|max:50',
-            'address_other' => 'required|string|min:2|max:255',
-            'city_other' => 'required|string',
-            'postal_code_other' => 'required|string|min:2|max:50',
-            'phone_number_other' => 'required|string|min:2|max:50',
-            'shipping_location_other' => 'required|exists:shipping_locations,id',
-        ]);
-    }
-}
-
-if ($this->delivery_method === 'pickup') {
-    $this->validate([
-        'pickup_location' => 'required|exists:pickup_locations,id',
-        'pickup_datetime' => 'required|date|after:now',
-        'message' => 'nullable|string|max:500',
-        'phone_number_other' => 'nullable|string|min:2|max:50',
-    ]);
-}
-// create a unique slug for the order
-$slug = Str::random(25);
-
-$payment_status = $this->payment_method === 'cod' ? 'success' : 'pending';
-// dd($payment_status);
-//creating the sales order\
-$final_total  = ($this->getCartValue() + $this->shipping_cost) - $this->dis_amount;
-
-    $sales_order = SalesOrder::create([
-    'user_id' => auth()?->id() ?? 0,
-    'slug' => $slug,
-    'email' => $this->email,
-    'phone_number' => $this->phone_number,
-    'first_name' => $this->first_name,
-    'last_name' => $this->last_name,
-    'status' => 'pending',
-    'total_amount' => $this->getCartValue(),
-    'shipping_cost' => $this->shipping_cost,
-    'discount_amount' => $this->dis_amount,
-    'delivery_method' => $this->delivery_method,
-    'payment_method' => $this->payment_method,
-    'payment_status' => $payment_status,
-    'pickup_location' => $this->pickup_location,
-    'pickup_date' => $this->pickup_datetime,
-    'country' => $this->shipping_location,
-    'address' => $this->address,
-    'postal_code' => $this->postal_code,
-    'city' => $this->city,
-    'shipping_other' => $this->billing === 'other' ? 1 : 0,
-    'first_name_other' => $this->first_name_other ? $this->first_name_other : null,
-    'last_name_other' => $this->last_name_other ? $this->last_name_other : null,
-    'country_other' => $this->shipping_location_other ? $this->shipping_location_other : null,
-    'address_other' => $this->address_other ? $this->address_other : null,
-    'postal_code_other' => $this->postal_code_other ? $this->postal_code_other : null,
-    'city_other' => $this->city_other ? $this->city_other : null,
-    'message' => $this->message ? $this->message : null,
-    'phone_other' => $this->phone_number_other ? $this->phone_number_other : null,
-    'stripe_status'=> 'pending',
-    'final_total' =>  $final_total,
-    ]);
-
-    
-
-
-    // save order items
-    foreach ($cart as $item) {
-       SalesOrderItem::create([
-            'sales_order_id' => $sales_order->id,
-            'product_id' => $item['product_id'],
-            'quantity' => $item['quantity'],
-            'price' => $item['price'],
+            'email' => 'required|email|max:100',
+            'phone_number' => 'required|string|min:2|max:50',
+            'first_name' => 'required|string|min:2|max:50',
+            'last_name' => 'required|string|min:2|max:50',
+            'delivery_method' => 'required|in:home_delivery,pickup',
+            'payment_method' => 'required|in:cod,card',
+            'billing' => 'required|in:default,other',
         ]);
 
+        if ($this->delivery_method === 'home_delivery') {
 
-    }
+            $this->validate([
+                'address' => 'required|string|min:2|max:255',
+                'city' => 'required|string',
+                'postal_code' => 'required|string',
+                'shipping_location' => 'required|exists:shipping_locations,id',
+            ]);
 
-    if($this->payment_method == 'card'){
-        //stripe 
-        Stripe::setApiKey(config('services.stripe.secret'));
-    // calculate total amount in cents
-    $total_amount = $sales_order->total_amount + $sales_order->shipping_cost - $sales_order->discount_amount;
-    $total_amount_cents = $total_amount * 100;
-        
-        $session = Session::create([
-            'payment_method_types' => ['card'],
-            'customer_email' => $sales_order->email,
-            'line_items' => [[
-                'price_data' => [
-                    'currency' => 'eur',
-                    'product_data' => [
-                        'name' => 'Ukupan iznos za narudžbu br.' . $sales_order->id,
+            if ($this->billing === 'other') {
+                $this->validate([
+                    'first_name_other' => 'required|string|min:2|max:50',
+                    'last_name_other' => 'required|string|min:2|max:50',
+                    'address_other' => 'required|string|min:2|max:255',
+                    'city_other' => 'required|string',
+                    'postal_code_other' => 'required|string|min:2|max:50',
+                    'phone_number_other' => 'required|string|min:2|max:50',
+                    'shipping_location_other' => 'required|exists:shipping_locations,id',
+                ]);
+            }
+        }
+
+        if ($this->delivery_method === 'pickup') {
+            $this->validate([
+                'pickup_location' => 'required|exists:pickup_locations,id',
+                'pickup_datetime' => 'required|date|after:now',
+                'message' => 'nullable|string|max:500',
+                'phone_number_other' => 'nullable|string|min:2|max:50',
+            ]);
+        }
+        // create a unique slug for the order
+        $slug = Str::random(25);
+
+        $payment_status = $this->payment_method === 'cod' ? 'success' : 'pending';
+        // dd($payment_status);
+        //creating the sales order\
+        $final_total  = ($this->getCartValue() + $this->shipping_cost) - $this->dis_amount;
+
+
+        $sales_order = SalesOrder::create([
+            'user_id' => auth()?->id() ?? 0,
+            'slug' => $slug,
+            'email' => $this->email,
+            'phone_number' => $this->phone_number,
+            'first_name' => $this->first_name,
+            'last_name' => $this->last_name,
+            'status' => 'pending',
+            'total_amount' => $this->getCartValue(),
+            'shipping_cost' => $this->shipping_cost,
+            'discount_amount' => $this->dis_amount,
+            'delivery_method' => $this->delivery_method,
+            'payment_method' => $this->payment_method,
+            'payment_status' => $payment_status,
+            'pickup_location' => $this->pickup_location,
+            'pickup_date' => $this->pickup_datetime,
+            'country' => $this->shipping_location,
+            'address' => $this->address,
+            'postal_code' => $this->postal_code,
+            'city' => $this->city,
+            'shipping_other' => $this->billing === 'other' ? 1 : 0,
+            'first_name_other' => $this->first_name_other ? $this->first_name_other : null,
+            'last_name_other' => $this->last_name_other ? $this->last_name_other : null,
+            'country_other' => $this->shipping_location_other ? $this->shipping_location_other : null,
+            'address_other' => $this->address_other ? $this->address_other : null,
+            'postal_code_other' => $this->postal_code_other ? $this->postal_code_other : null,
+            'city_other' => $this->city_other ? $this->city_other : null,
+            'message' => $this->message ? $this->message : null,
+            'phone_other' => $this->phone_number_other ? $this->phone_number_other : null,
+            'stripe_status' => 'pending',
+            'final_total' =>  $final_total,
+            'gift_code' => $this->gift_card ?? null,
+
+        ]);
+
+
+
+
+        // save order items
+        foreach ($cart as $item) {
+            SalesOrderItem::create([
+                'sales_order_id' => $sales_order->id,
+                'product_id' => $item['product_id'],
+                'quantity' => $item['quantity'],
+                'price' => $item['price'],
+            ]);
+        }
+
+        if ($this->payment_method == 'card') {
+            //stripe 
+            Stripe::setApiKey(config('services.stripe.secret'));
+            // calculate total amount in cents
+            $total_amount = $sales_order->total_amount + $sales_order->shipping_cost - $sales_order->discount_amount;
+            $total_amount_cents = $total_amount * 100;
+
+            $session = Session::create([
+                'payment_method_types' => ['card'],
+                'customer_email' => $sales_order->email,
+                'line_items' => [[
+                    'price_data' => [
+                        'currency' => 'eur',
+                        'product_data' => [
+                            'name' => 'Ukupan iznos za narudžbu br.' . $sales_order->id,
+                        ],
+                        'unit_amount' => (int) round($total_amount_cents), //need to change this to dynamic amount in cents
                     ],
-                    'unit_amount' => (int) round($total_amount_cents), //need to change this to dynamic amount in cents
+                    'quantity' => 1,
+                ]],
+                'mode' => 'payment',
+                'success_url' => route('success') . '?session_id={CHECKOUT_SESSION_ID}',
+                'cancel_url' => route('cancel'),
+                'metadata' => [
+                    'order_id' => $sales_order->id,
                 ],
-                'quantity' => 1,
-            ]],
-            'mode' => 'payment',
-            'success_url' => route('success') . '?session_id={CHECKOUT_SESSION_ID}',
-            'cancel_url' => route('cancel'),
-            'metadata' => [
-                'order_id' => $sales_order->id,
-            ],
-        ]);
+            ]);
 
-        // Save session ID
-        $sales_order->update([
-            'stripe_session_id' => $session->id,
-        ]);
+            // Save session ID
+            $sales_order->update([
+                'stripe_session_id' => $session->id,
+            ]);
 
-        
-        return redirect($session->url);
-        // end stripe 
 
+            return redirect($session->url);
+            // end stripe 
+
+        }
+
+        // if payment method is not car send email to customer
+        if ($this->payment_method !== 'card') {
+            // send order confirmation email to customer
+            Mail::to($sales_order->email)
+                ->bcc('info@tallow-skincare.hr')
+                ->send(new OrderConfirmation($sales_order));
+        }
+
+        //clear the cart
+
+        session()->forget('cart');
+
+        return redirect()->to(route('shop.invoice', ['slug' => $sales_order->slug]));
     }
-
-// if payment method is not car send email to customer
-    if ($this->payment_method !== 'card') {
-        // send order confirmation email to customer
-         Mail::to($sales_order->email)
-                    ->bcc('info@tallow-skincare.hr')
-                    ->send(new OrderConfirmation($sales_order));
-    }
-
-    //clear the cart
-    
-    session()->forget('cart');
-    
-    return redirect()->to(route('shop.invoice', ['slug' => $sales_order->slug]));
-
-}
-
-
 }
