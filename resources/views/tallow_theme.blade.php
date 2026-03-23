@@ -295,7 +295,7 @@
                                 </div>
                                 <div class="d-block d-lg-none">
 
-                                    <a href="/contact-us" class="tt_btn w-100"
+                                    <a href="/contact-us" class="tt_btn w-100 text-center"
                                         title="{{ __('Buy now tallow skincare product') }}">{{ __('Contact Us') }}</a>
                                 </div>
 
