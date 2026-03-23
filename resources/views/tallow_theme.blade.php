@@ -124,12 +124,12 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="obj-mid">
-                                <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start mb-0">
-                                    {{ __('Available at') }}
-                                </h1>
-                                <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start">
+                                <p class="tt-text-hero-md text-uppercase text-center text-sm-start mb-0">
+                                    {{ __('Purified beef tallow is one of the ingredients that most closely resembles human skin.') }}
+                                </p>
+                                {{-- <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start">
                                     {{ __('the m brothers in Velika gorica') }}
-                                </h1>
+                                </h1> --}}
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
@@ -233,8 +233,8 @@
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
                                <div>
-                                <h5>NATURAL VITAMINS A, D, E & K:</h5>
-                                <p class="p-reviews"> Stimulate skin regeneration and provide protection against free radicals.</p>
+                                <h5>{{__('NATURAL VITAMINS A, D, E & K:')}}</h5>
+                                <p class="p-reviews"> {{__('Stimulate skin regeneration and provide protection against free radicals.')}}</p>
                                </div>
                                
                             </div>
@@ -242,24 +242,24 @@
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
                               <div>
-                                 <h5>SKIN-IDENTICAL LIPIDS: </h5>
-                                <p class="p-reviews">Offer optimal absorption while repairing and strengthening the skin’s protective barrier.</p>
+                                 <h5>{{__('SKIN-IDENTICAL LIPIDS: ')}}</h5>
+                                <p class="p-reviews">{{__('Offer optimal absorption while repairing and strengthening the skin’s protective barrier.')}}</p>
                               </div>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
                                <div>
-                                 <h5>ANTIOXIDANTS</h5>
-                                <p class="p-reviews">Shield the skin from environmental stressors and prevent premature aging.</p>
+                                 <h5>{{__('ANTIOXIDANTS')}}</h5>
+                                <p class="p-reviews">{{__('Shield the skin from environmental stressors and prevent premature aging.')}}</p>
                                </div>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
                                <div>
-                                <h5>ESSENTIAL FATTY ACIDS:</h5>
-                                <p class="p-reviews">Enriched with Omega-3 and Omega-6 to fortify the skin barrier and ensure deep, long-lasting hydration.</p>
+                                <h5>{{__('ESSENTIAL FATTY ACIDS:')}}</h5>
+                                <p class="p-reviews">{{__('Enriched with Omega-3 and Omega-6 to fortify the skin barrier and ensure deep, long-lasting hydration.')}}</p>
                                </div>
                             </div>
                         </div>
