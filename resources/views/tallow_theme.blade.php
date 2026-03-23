@@ -196,7 +196,7 @@
                 </div>
             </div> --}}
 
-            <div class="medium-section">
+            <div class="medium-section mb-3">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-6 mb-3">
