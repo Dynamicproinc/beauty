@@ -207,7 +207,7 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="">
-                                <h5 class="tt-text-hero-md text-uppercase mb-3">
+                                <h5 class="tt-text-hero-md text-uppercase mb-3 text-center">
                                     {{ __('100% Natural Product, Tallow helps the skin to maintain its natural balance') }}
                                 </h5>
                                 
@@ -216,7 +216,7 @@
                                     <div class="row mb-3">
                                         <div class="col-6">
                                             <div class="">
-                                                <div class="d-flex justify-content-center">
+                                                <div class="d-flex justify-content-center mb-3">
                                                     <img src="{{ asset('media/svg/icon1.svg') }}" alt=""
                                                         class="b-icon">
                                                 </div>
@@ -226,7 +226,7 @@
                                             </div>
                                         </div>
                                         <div class="col-6">
-                                            <div class="d-flex justify-content-center">
+                                            <div class="d-flex justify-content-center mb-3">
                                                 <img src="{{ asset('media/svg/icon2.svg') }}" alt=""
                                                     class="b-icon">
                                             </div>
@@ -235,14 +235,14 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-6">
-                                            <div class="d-flex justify-content-center">
+                                            <div class="d-flex justify-content-center mb-3">
                                                 <img src="{{ asset('media/svg/icon3.svg') }}" alt=""
                                                     class="b-icon">
                                             </div>
                                             {{ __('Free of harmful substances Pure care ideal for your skins health') }}
                                         </div>
                                         <div class="col-6">
-                                            <div class="d-flex justify-content-center">
+                                            <div class="d-flex justify-content-center mb-3">
                                                 <img src="{{ asset('media/svg/icon4.svg') }}" alt=""
                                                     class="b-icon">
                                             </div>
