@@ -36,7 +36,7 @@ info@tallow-skincare.hr<br>
 #ORD-{{ $order->order_number }}
 </strong><br><br>
 
-<strong>Date:</strong><br>
+<strong>{{__('Date')}}:</strong><br>
 {{ $order->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}
 <br><br>
 
