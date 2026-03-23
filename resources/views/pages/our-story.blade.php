@@ -30,7 +30,7 @@
             </div>
         </div>
         </section>
-         <section class="br-1-bg medium-section mb-0" id="founders-word">
+         <section class="br-1-bg medium-section mb-0" id="founders-word" style="top:100px">
           <div class="row justify-content-center">
             <div class="col-lg-6">
                   <div class="container">
