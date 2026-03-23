@@ -207,8 +207,8 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="">
-                                <h5 class="tt-text-hero-md text-uppercase mb-3 text-center">
-                                    {{ __('Tallow helps the skin to maintain its natural balance; effectively and without
+                                <h5 class="tt-text-hero-md fw-bold text-uppercase mb-3 text-center">
+                                    {{ __('Tallow helps the skin to maintain its natural balance, effectively and without
                                     suspicious supplements.') }}
                                 </h5>
 
