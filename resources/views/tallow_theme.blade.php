@@ -17,16 +17,16 @@
                                 </div>
 
                                 <div class="tt-text-hero-md text-uppercase">
-                                    <p class="mb-0">{{ __('Elite care. Essential purity.') }}</p>
+                                    <p class="mb-0">{{ __('Natural, unique & effective skin care from Croatia!') }}</p>
                                     <p>{{ __('Clean as the source. Pure as the care.') }}</p>
                                 </div>
 
                                 <p class="sec_text_p_md fw-bold">
-                                    {{ __('Discover the power of tallow for healthier, nourished skin') }}
+                                    {{ __('Natural balance is the most important.') }}
                                 </p>
                                 {{-- add the product link --}}
 
-                                <a href="/product/{{$selected_product->slug}}" class="tt_btn"
+                                <a href="/product/{{ $selected_product->slug }}" class="tt_btn"
                                     title="{{ __('Buy now tallow skincare product') }}">{{ __('Buy Tallow Balm') }}</a>
 
                             </div>
@@ -48,6 +48,9 @@
                                 </h1>
                                 <p class="sec_text_p_md">
                                     {{ __('Premium beef tallow has become a beauty essential because it works in harmony with the skin. Rich in vitamins A, D, E, and K, it deeply nourishes, strengthens the skin barrier, and enhances natural radiance. Pure, powerful, and time-honored, tallow delivers luxury your skin truly understands.') }}
+                                </p>
+                                <p>
+
                                 </p>
                             </div>
                         </div>
@@ -194,7 +197,7 @@
                     <div class="row">
                         <div class="col-md-6 col-lg-6">
                             <div class="product-image-xl">
-                                <img src="{{ asset('uploads/products/'.$selected_product->getImage()->file_path) }}"
+                                <img src="{{ asset('uploads/products/' . $selected_product->getImage()->file_path) }}"
                                     alt="" class="img-fluid">
                             </div>
                         </div>
@@ -209,7 +212,7 @@
                                 <p>
                                     {{ __('Don’t wait — order yours today and give your skin the care it deserves.') }}
                                 </p>
-                                <a href="/product/{{$selected_product->slug}}"
+                                <a href="/product/{{ $selected_product->slug }}"
                                     class="btn-1-xl rounded-0">{{ __('BUY NOW') }}</a>
                             </div>
                         </div>
@@ -222,111 +225,47 @@
                 <div class="reviews-section-content">
                     <div class="container mb-3 text-center">
                         <h1 class="tt-text-hero-md text-uppercase">
-                            {{ __('Customer Reviews') }}
+                            {{ __('WHY TALLOW?') }}
                         </h1>
-                        <p>{{ __('See what our customers are saying about our products') }}</p>
+                        <p>{{ __('SUPERFOOD FOR THE SKIN') }}</p>
                     </div>
                     <div class="main-carousel-3">
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <p class="p-reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit. dolor
-                                    repellendus similique fugiat nisi.</p>
-                                <div class="text-muted">
-                                    <p><small>Jane Doe - 2 Weeks ago</small></p>
-                                </div>
+                               <div>
+                                <h5>NATURAL VITAMINS A, D, E & K:</h5>
+                                <p class="p-reviews"> Stimulate skin regeneration and provide protection against free radicals.</p>
+                               </div>
+                               
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
-                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
-                                    fugiat nisi.</p>
+                              <div>
+                                 <h5>SKIN-IDENTICAL LIPIDS: </h5>
+                                <p class="p-reviews">Offer optimal absorption while repairing and strengthening the skin’s protective barrier.</p>
+                              </div>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
-                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
-                                    fugiat nisi.</p>
+                               <div>
+                                 <h5>ANTIOXIDANTS</h5>
+                                <p class="p-reviews">Shield the skin from environmental stressors and prevent premature aging.</p>
+                               </div>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
-                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
-                                    fugiat nisi.</p>
+                               <div>
+                                <h5>ESSENTIAL FATTY ACIDS:</h5>
+                                <p class="p-reviews">Enriched with Omega-3 and Omega-6 to fortify the skin barrier and ensure deep, long-lasting hydration.</p>
+                               </div>
                             </div>
                         </div>
-                        <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
-                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
-                                    fugiat nisi.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
-                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
-                                    fugiat nisi.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <p class="p-reviews">Expedita odio aperiam itaque a deserunt quos veniam consectetur est
-                                    repudiandae beatae omnis vitae maiores incidunt magnam, dolor repellendus similique
-                                    fugiat nisi.</p>
-                            </div>
-                        </div>
+                       
+                       
+                       
                     </div>
                 </div>
             </div>
@@ -519,7 +458,7 @@
   </div>
 </div>
         </section> --}}
-       
+
 
     </div>
     <script>

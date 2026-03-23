@@ -218,7 +218,8 @@ p{
    font-family: "IBM Plex Serif", serif; 
 }
 .p-reviews{
-    font-size: 14px;
+    font-size: 18px;
+
 }
 .text-bracket{
     border-left:1px solid #fff;
@@ -429,12 +430,20 @@ width: 100%; /* full width */
 
 }
 .review-content{
-    padding: 16px 16px;
+    padding: 32px;
     background: #fff;
     min-width: 250px;
     height: 250px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     
+}
+.review-content h5{
+    font-weight: bold;
 }
 .product-image-xl{
 height: 400px !important;
