@@ -180,7 +180,7 @@
   "ADD TO CART": "DODAJ U KOŠARICU",
   "OUT OF STOCK": "NEMA NA SKLADIŠTU",
    "Invalid gift card": "Nevažeća poklon kartica",
-   {
+   
   "Your payment is being confirmed. Please do not close or refresh this page.": "Vaša uplata se potvrđuje. Molimo, ne zatvarajte niti osvježavajte ovu stranicu.",
   "Do not close or refresh this page. Please wait...": "Ne zatvarajte niti osvježavajte ovu stranicu. Molimo pričekajte...",
   "Payment Successful!": "Uplata uspješna!",
@@ -191,7 +191,7 @@
   "Congratulations!": "Čestitamo!",
   "Your gift card is now active for this order — amount": "Vaša poklon kartica je sada aktivna za ovu narudžbu — iznos",
   "Remove gift card": "Ukloni poklon karticu"
-}
+
 
 
 
