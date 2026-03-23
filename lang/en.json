@@ -160,6 +160,16 @@
 
 "Hope you are enjoy with this gift card":"Hope you are enjoy with this gift card",
 "Your gift card will be sent to this email address.": "Your gift card will be sent to this email address.",
-"Shipping to different address":"Shipping to different address"
+"Shipping to different address":"Shipping to different address",
+
+
+
+
+"Description":"Description",
+"In-stock":"In-stock",
+"Out of stock": "Out of stock",
+"ADD TO CART":"ADD TO CART",
+"OUT OF STOCK":"OUT OF STOCK",
+"Invalid gift card":"Invalid gift card"
 
 }

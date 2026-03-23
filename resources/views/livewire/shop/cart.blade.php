@@ -106,7 +106,7 @@
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                     @if (session('error'))
-                                        <small class="text-danger">{{ session('error') }}</small>
+                                        <small class="text-danger">{{ __(session('error')) }}</small>
                                     @endif
                                    
                                 </div>

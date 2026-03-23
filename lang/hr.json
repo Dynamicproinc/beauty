@@ -172,7 +172,14 @@
   "Amount": "Iznos",
   "Hope you are enjoy with this gift card": "Nadamo se da ćete uživati u ovoj poklon kartici",
   "Your gift card will be sent to this email address.": "Vaša poklon kartica bit će poslana na ovu adresu e-pošte.",
-  "Shipping to different address":"Dostava na drugu adresu"
+  "Shipping to different address":"Dostava na drugu adresu",
+
+  "Description": "Opis",
+  "In-stock": "Na skladištu",
+  "Out of stock": "Nema na skladištu",
+  "ADD TO CART": "DODAJ U KOŠARICU",
+  "OUT OF STOCK": "NEMA NA SKLADIŠTU",
+   "Invalid gift card": "Nevažeća poklon kartica"
 
 
 

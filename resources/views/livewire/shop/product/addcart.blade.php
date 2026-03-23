@@ -39,11 +39,10 @@
                     <div class="mb-2" style="height: 24px;">
                         @if ($product->quantity > 0)
                             <span> {{ $product->quantity }} <span
-                                    class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill">In-stock</span></span>
+                                    class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill">{{__('In-stock')}}</span></span>
                         @else
                             <span
-                                class="badge bg-danger-subtle border border-danger-subtle text-danger-emphasis rounded-pill">Out
-                                of Stock</span>
+                                class="badge bg-danger-subtle border border-danger-subtle text-danger-emphasis rounded-pill">{{__('Out of stock')}}</span>
                         @endif
 
                     </div>
