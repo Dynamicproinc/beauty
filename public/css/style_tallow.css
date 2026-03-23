@@ -744,6 +744,27 @@ i{
 
   animation: run 15s linear infinite;
 }
+.benifit-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.benifit-list li{
+    padding:.5rem 0;
+    font-size: 16px;
+}
+.b-icon{
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--p_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(35, 46, 32, 0.071);
+}
 
 /* Animation */
 @keyframes run {

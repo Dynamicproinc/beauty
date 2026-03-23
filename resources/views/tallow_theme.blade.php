@@ -13,7 +13,7 @@
                             <div class="text-white text-bracket p-3">
 
                                 <div class="tt-text-xs text-uppercase mb-2">
-                                    <span>{{ __('Loved by thousands. Proven by nature.') }}</span>
+                                    <span>{{ __('Less is more, even in skincare.') }}</span>
                                 </div>
 
                                 <div class="tt-text-hero-md text-uppercase">
@@ -44,10 +44,11 @@
                         <div class="tt_mid_c">
                             <div class="p-3">
                                 <h1 class="tt-text-hero-md text-uppercase">
-                                    {{ __('Why Tallow Skincare Has Become a Beauty Essential') }}
+                                    {{ __('Simple skin care means few ingredients, full of benefits.') }}
                                 </h1>
                                 <p class="sec_text_p_md">
-                                    {{ __('Premium beef tallow has become a beauty essential because it works in harmony with the skin. Rich in vitamins A, D, E, and K, it deeply nourishes, strengthens the skin barrier, and enhances natural radiance. Pure, powerful, and time-honored, tallow delivers luxury your skin truly understands.') }}
+                                    {{ __('Our beef tallow hydrates, nourishes and supports your skins barrier without overloading it. That is exactly what Tallow does because it is so similar to skin naturally.
+                                    Skincare with tallow is care that works reduced to the essentials.') }}
                                 </p>
                                 <p>
 
@@ -128,7 +129,7 @@
                                     {{ __('Purified beef tallow is one of the ingredients that most closely resembles human skin.') }}
                                 </p>
                                 <p class="text-center text-sm-start mb-0">
-                                    {{__('It is an ancient skin care product, not a new popular ingredient.')}}
+                                    {{ __('It is an ancient skin care product, not a new popular ingredient.') }}
                                 </p>
                                 {{-- <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start">
                                     {{ __('the m brothers in Velika gorica') }}
@@ -206,15 +207,53 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="text-sm-start" style="text-align: justify; text-align-last: left; hyphens: auto;">
-                                <h5 class="">
-                                    {{ __('Buy our tallow balm skin care cream and experience the transformative power of nature for your skin') }}
+                                <h5 class="title-md fw-bolder">
+                                    {{ __('100% NATURAL') }}
                                 </h5>
-                                <p class="">
+                                {{-- <p class="">
                                     {{ __('Our tallow skincare cream is specially formulated with pure, natural ingredients to deeply nourish, hydrate, and protect your skin. Rich in skin-loving nutrients, it helps restore softness and support a healthy, radiant glow.') }}
                                 </p>
                                 <p>
                                     {{ __('Don’t wait — order yours today and give your skin the care it deserves.') }}
-                                </p>
+                                </p> --}}
+                                <div>
+                                    {{-- <ul class="benifit-list">
+                                        <li>{{__('No artificial fragrances Ideal for even the most sensitive skin types')}}</li>
+                                        <li>{{__('Free of parabens and phenols Gentle and skin-friendly formula')}}</li>
+                                        <li>{{__('Free of harmful substances Pure care ideal for your skins health')}}</li>
+                                        <li>{{__('Free of microplastics Good for the skin and the environment')}}</li>
+                                    </ul> --}}
+                                    <div class="row mb-3">
+                                        <div class="col-6">
+                                           <div class="">
+                                            <div class="d-flex justify-content-center">
+                                                    <img src="{{asset('media/svg/icon1.svg')}}" alt="" class="b-icon">
+                                            </div>
+                                            <div class=""> {{__('No artificial fragrances Ideal for even the most sensitive skin types')}}</div>
+                                           </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex justify-content-center">
+                                                    <img src="{{asset('media/svg/icon2.svg')}}" alt="" class="b-icon">
+                                            </div>
+                                            {{__('Free of parabens and phenols Gentle and skin-friendly formula')}}
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-6">
+                                            <div class="d-flex justify-content-center">
+                                                    <img src="{{asset('media/svg/icon3.svg')}}" alt="" class="b-icon">
+                                            </div>
+                                            {{__('Free of harmful substances Pure care ideal for your skins health')}}
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex justify-content-center">
+                                                    <img src="{{asset('media/svg/icon4.svg')}}" alt="" class="b-icon">
+                                            </div>
+                                            {{__('Free of microplastics Good for the skin and the environment')}}
+                                        </div>
+                                    </div>
+                                </div>
                                 <a href="/product/{{ $selected_product->slug }}"
                                     class="btn-1-xl rounded-0">{{ __('BUY NOW') }}</a>
                             </div>
@@ -235,40 +274,48 @@
                     <div class="main-carousel-3">
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
-                               <div>
-                                <h5>{{__('NATURAL VITAMINS A, D, E & K:')}}</h5>
-                                <p class="p-reviews"> {{__('Stimulate skin regeneration and provide protection against free radicals.')}}</p>
-                               </div>
-                               
+                                <div>
+                                    <h5>{{ __('NATURAL VITAMINS A, D, E & K') }}</h5>
+                                    <p class="p-reviews">
+                                        {{ __('Stimulate skin regeneration and provide protection against free radicals.') }}
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
-                              <div>
-                                 <h5>{{__('SKIN-IDENTICAL LIPIDS: ')}}</h5>
-                                <p class="p-reviews">{{__('Offer optimal absorption while repairing and strengthening the skin’s protective barrier.')}}</p>
-                              </div>
+                                <div>
+                                    <h5>{{ __('SKIN-IDENTICAL LIPIDS') }}</h5>
+                                    <p class="p-reviews">
+                                        {{ __('Offer optimal absorption while repairing and strengthening the skin’s protective barrier.') }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
-                               <div>
-                                 <h5>{{__('ANTIOXIDANTS')}}</h5>
-                                <p class="p-reviews">{{__('Shield the skin from environmental stressors and prevent premature aging.')}}</p>
-                               </div>
+                                <div>
+                                    <h5>{{ __('ANTIOXIDANTS') }}</h5>
+                                    <p class="p-reviews">
+                                        {{ __('Shield the skin from environmental stressors and prevent premature aging.') }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content">
-                               <div>
-                                <h5>{{__('ESSENTIAL FATTY ACIDS:')}}</h5>
-                                <p class="p-reviews">{{__('Enriched with Omega-3 and Omega-6 to fortify the skin barrier and ensure deep, long-lasting hydration.')}}</p>
-                               </div>
+                                <div>
+                                    <h5>{{ __('ESSENTIAL FATTY ACIDS:') }}</h5>
+                                    <p class="p-reviews">
+                                        {{ __('Enriched with Omega-3 and Omega-6 to fortify the skin barrier and ensure deep, long-lasting hydration.') }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                       
-                       
-                       
+
+
+
                     </div>
                 </div>
             </div>
