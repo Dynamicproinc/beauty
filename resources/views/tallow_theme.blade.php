@@ -276,7 +276,7 @@
                     </div>
                     <div class="main-carousel-3">
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content" style="background-image: url('https://i.pinimg.com/736x/72/13/51/721351b33b80201c4ad142cb3dd46cd3.jpg')">
+                            <div class="review-content" style="background-image: url('{{asset('media/images/card-bg-1.jpg')}}')">
                                 <div>
                                     <h5>{{ __('NATURAL VITAMINS A, D, E & K') }}</h5>
                                     <p class="p-reviews">
@@ -287,7 +287,7 @@
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content" style="background-image: url('https://i.pinimg.com/1200x/d7/44/dc/d744dcb5e612b2438f89af968f05e08b.jpg')">
+                            <div class="review-content" style="background-image: url('{{asset('media/images/card-bg-2.jpg')}}')">
                                 <div>
                                     <h5>{{ __('SKIN-IDENTICAL LIPIDS') }}</h5>
                                     <p class="p-reviews">
@@ -297,7 +297,7 @@
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content" style="background-image: url('https://i.pinimg.com/1200x/33/33/ec/3333ec0e9822d6d1e324b5daa68c8ef7.jpg')">
+                            <div class="review-content" style="background-image: url('{{asset('media/images/card-bg-3.jpg')}}')">
                                 <div>
                                     <h5>{{ __('ANTIOXIDANTS') }}</h5>
                                     <p class="p-reviews">
@@ -307,7 +307,7 @@
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content"  style="background-image: url('https://i.pinimg.com/736x/bf/3d/d1/bf3dd17b7579caab934c88ef6479de07.jpg')">
+                            <div class="review-content"  style="background-image: url('{{asset('media/images/card-bg-4.jpg')}}')">
                                 <div>
                                     <h5>{{ __('ESSENTIAL FATTY ACIDS:') }}</h5>
                                     <p class="p-reviews">
