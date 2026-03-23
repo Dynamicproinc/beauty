@@ -122,10 +122,13 @@
             <div class="banner">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-6 col-md-6 mb-3">
                             <div class="obj-mid">
                                 <p class="tt-text-hero-md text-uppercase text-center text-sm-start mb-0">
                                     {{ __('Purified beef tallow is one of the ingredients that most closely resembles human skin.') }}
+                                </p>
+                                <p class="text-center text-sm-start mb-0">
+                                    {{__('It is an ancient skin care product, not a new popular ingredient.')}}
                                 </p>
                                 {{-- <h1 class="tt-text-hero-md text-uppercase text-center text-sm-start">
                                     {{ __('the m brothers in Velika gorica') }}
@@ -134,7 +137,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="text-center text-sm-end text-white text-uppercase">
-                                <img src="{{ asset('media/images/the-m-brothers.png') }}" alt="" class="img-fluid">
+                                <img src="{{ asset('media/images/logo.png') }}" alt="" class="img-fluid">
 
                             </div>
                         </div>

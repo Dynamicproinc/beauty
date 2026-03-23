@@ -766,7 +766,7 @@ i{
     display: block; 
    }
    .banner{
-    height: 200px;
+    height: auto;
     padding-top:50px;
     padding-bottom:50px;
    }
