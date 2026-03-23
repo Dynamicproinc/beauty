@@ -5,8 +5,8 @@
         <section>
             <div class="big-picture">
             <img src="{{ asset('media/images/our-story.png') }}" alt="{{ __('Our story') }}">
-            <div class="big-picture-content">
-                <div class="">
+            <div class="big-picture-content d-flex justify-content-center">
+                <div class="" style="max-width:500px">
                    <div class="text-center">
                      <img src="{{ asset('media/images/logo.png') }}" alt="Tallow Skin Care" style="width: 64px; height:auto">
                     <div class="tt-text-xs text-uppercase mb-2 mt-3">
@@ -16,7 +16,7 @@
                     <p class="tt-text-hero-md text-uppercase text-center mb-0">
                                     {{ __('Natural balance is the most important.') }}
                                 </p>
-                                <div class="mt-3 text-center p-3">
+                                <div class="text-center p-3">
                                     <p class="p-3">{{__('Tallow skin care was born out of personal enthusiasm and over the past year and a half has grown into a real project to create natural skin care products.')}}</p>
                                     {{-- <p>{{__('After a year and a half of research, testing, and sharing experiences, we founded Tallow skin care in 2025.')}}</p>
                                     <p>{{__('The base for the products, beef tallow, comes from the brand The M Brothers, who breed Black Angus, which is a prerequisite for us to know what we are working with and to have a reliable base for tallow cosmetics.')}}</p>
