@@ -29,4 +29,8 @@ class PagesController extends Controller
     {
         return view('pages.subscribe');
     }
+
+    public function ourStory(){
+        return view('pages.our-story');
+    }
 }

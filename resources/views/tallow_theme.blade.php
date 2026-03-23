@@ -142,7 +142,7 @@
                                  <div>
                                     <img src="{{ asset('media/images/logo.png') }}" alt="" class="img-fluid mb-3">
                                  </div>
-                                 <a href="/products" class="tt_btn"
+                                 <a href="/our-story" class="tt_btn"
                                     title="{{ __('Our story') }}">{{ __('Our story') }}</a>
 
                                </div>

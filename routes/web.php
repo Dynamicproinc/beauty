@@ -41,6 +41,7 @@ Route::get('buy-gift-card',[App\Http\Controllers\ShopController::class, 'buyGift
 Route::get('privacy-statement',[App\Http\Controllers\PagesController::class, 'privacy'])->name('shop.privacy');
 Route::get('terms-and-conditions',[App\Http\Controllers\PagesController::class, 'terms'])->name('shop.terms');
 Route::get('news-letter-subscription',[App\Http\Controllers\PagesController::class, 'emailSubscription'])->name('shop.subscribe');
+Route::get('our-story',[App\Http\Controllers\PagesController::class, 'ourStory'])->name('shop.our-story');
 
 // Route::get('order-confirmation/{slug}',[App\Http\Controllers\ShopController::class, 'thankyou'])->name('shop.thankyou');
 route::get('order-confirmation/{slug}', [App\Http\Controllers\ShopController::class, 'invoice'])->name('shop.invoice');
