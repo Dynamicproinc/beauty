@@ -26,7 +26,7 @@
                                 </p>
                                 {{-- add the product link --}}
 
-                                <a href="/product/{{ $selected_product->slug }}" class="tt_btn"
+                                <a href="/products" class="tt_btn"
                                     title="{{ __('Buy now tallow skincare product') }}">{{ __('Buy Tallow Balm') }}</a>
 
                             </div>
@@ -251,7 +251,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="/product/{{ $selected_product->slug }}"
+                                <a href="/products"
                                     class="btn-1-xl rounded-0">{{ __('BUY NOW') }}</a>
                             </div>
                         </div>
@@ -325,10 +325,10 @@
                         <div class="mid-cont p-3 mb-3">
                             <div>
                                 <h1 class="tt-text-hero-md text-uppercase">
-                                    {{ __('Everything You Need to Know About Tallow Balm') }}
+                                    {{ __('Everything You Need to Know About our tallow skin care produts') }}
                                 </h1>
                                 <p>
-                                    {{ __('Discover the benefits, uses, and myths about tallow Balm. From its rich nutrient profile to its suitability for sensitive skin, we answer all your burning questions about this traditional beauty secret. Learn how tallow can transform your skincare routine and why it’s becoming a must-have for radiant, healthy skin.') }}
+                                    {{ __('Our tallow is ultra-purified through a specialized, all-natural filtration process. By removing impurities without compromising quality, we ensure a clean, non-greasy finish that nourishes your skin with only the most essential nutrients.') }}
                                 </p>
 
                                 <p>{{ __('If you need more information, please contact us!') }}</p>
