@@ -48,7 +48,7 @@
                                 </h1>
                                 <p class="sec_text_p_md">
                                     {{ __('Our beef tallow hydrates, nourishes and supports your skins barrier without overloading it. That is exactly what Tallow does because it is so similar to skin naturally.
-                                                                        Skincare with tallow is care that works reduced to the essentials.') }}
+                                                                                                            Skincare with tallow is care that works reduced to the essentials.') }}
                                 </p>
                                 <p>
 
@@ -208,11 +208,12 @@
                         <div class="col-md-6 col-lg-6">
                             <div class="">
                                 <h5 class="tt-text-hero-md text-uppercase mb-3 text-center">
-                                    {{ __('100% Natural Product, Tallow helps the skin to maintain its natural balance') }}
+                                    {{ __('Tallow helps the skin to maintain its natural balance; effectively and without
+                                    suspicious supplements.') }}
                                 </h5>
-                                
+
                                 <div class="text-center">
-                                   
+
                                     <div class="row mb-3">
                                         <div class="col-6">
                                             <div class="">
