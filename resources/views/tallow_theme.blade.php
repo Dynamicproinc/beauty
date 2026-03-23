@@ -138,8 +138,14 @@
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="text-center text-sm-end text-white text-uppercase">
-                                <img src="{{ asset('media/images/logo.png') }}" alt="" class="img-fluid">
+                               <div>
+                                 <div>
+                                    <img src="{{ asset('media/images/logo.png') }}" alt="" class="img-fluid mb-3">
+                                 </div>
+                                 <a href="/products" class="tt_btn"
+                                    title="{{ __('Our story') }}">{{ __('Our story') }}</a>
 
+                               </div>
                             </div>
                         </div>
                     </div>
