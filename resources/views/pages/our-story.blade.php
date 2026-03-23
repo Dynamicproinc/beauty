@@ -10,7 +10,7 @@
                    <div class="text-center">
                      <img src="{{ asset('media/images/logo.png') }}" alt="Tallow Skin Care" style="width: 64px; height:auto">
                     <div class="tt-text-xs text-uppercase mb-2 mt-3">
-                        <span>{{ __('Our Story') }}</span>
+                        <span>{{ __('Our story') }}</span>
                     </div>
                    </div>
                     <p class="tt-text-hero-md text-uppercase text-center mb-0">
@@ -51,7 +51,7 @@
                                     <div>
                                         <h6>
                                             Lorena Maturanec
-                                            <small class="text-muted">Founder CEO</small>
+                                            <small class="text-muted">{{__('Founder CEO')}}</small>
                                         </h6>
                                     </div>
                                 </div>

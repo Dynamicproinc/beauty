@@ -9,8 +9,8 @@
                             <img src="{{ asset('media/card_design/' . $pre_image) }}" alt="{{ $pre_image }}">
                             <div class="g-card-message">
                                 <small class="text-uppercase" style="font-size: 11px;font-weight:600 "><span
-                                        class="text-muted">From</span> {{ $from }} <span
-                                        class="text-muted">To:</span> {{ $to }}</small>
+                                        class="text-muted">{{__('From')}}:</span> {{ $from }} <span
+                                        class="text-muted">{{__('To')}}:</span> {{ $to }}</small>
                                 <h6 class="mt-3">{{ $message_body }}</h6>
                             </div>
                             <div class="g-card-message">

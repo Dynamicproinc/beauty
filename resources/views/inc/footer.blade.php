@@ -67,7 +67,7 @@
          <!-- Bottom Bar -->
          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
              <small class="mb-2 mb-sm-0">
-                 © {{ date('Y') }} Tallow skincare j.d.o.o. All rights reserved.
+                 © {{ date('Y') }} Tallow skincare j.d.o.o. {{__('All rights reserved.')}}.
              </small>
 
              <ul class="list-unstyled d-flex mb-0">

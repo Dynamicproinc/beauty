@@ -27,7 +27,7 @@
                                 {{-- add the product link --}}
 
                                 <a href="/products" class="tt_btn"
-                                    title="{{ __('Buy now tallow skincare product') }}">{{ __('Buy Tallow Balm') }}</a>
+                                    title="{{ __('Buy now tallow skincare product') }}">{{ __('BUY NOW') }}</a>
 
                             </div>
                         </div>
@@ -47,8 +47,8 @@
                                     {{ __('Simple skin care means few ingredients, full of benefits.') }}
                                 </h1>
                                 <p class="sec_text_p_md">
-                                    {{ __('Our beef tallow hydrates, nourishes and supports your skins barrier without overloading it. That is exactly what Tallow does because it is so similar to skin naturally.
-                                                                                                            Skincare with tallow is care that works reduced to the essentials.') }}
+                                    {{ __('Our beef tallow hydrates, nourishes and supports your skins barrier without overloading it. That is exactly what Tallow does because it is so similar to skin naturally. Skincare with tallow is care that works reduced to the essentials.') }}
+                                                                                                          
                                 </p>
                                 <p>
 
@@ -214,8 +214,7 @@
                         <div class="col-md-6 col-lg-6">
                             <div class="">
                                 <h5 class="tt-text-hero-md fw-bold text-uppercase mb-3 text-center">
-                                    {{ __('Tallow helps the skin to maintain its natural balance, effectively and without
-                                    suspicious supplements.') }}
+                                    {{ __('Tallow helps the skin to maintain its natural balance, effectively and without suspicious supplements.') }}
                                 </h5>
 
                                 <div class="text-center">
@@ -309,7 +308,7 @@
                         <div class="carousel-cell ca-cel-re p-3">
                             <div class="review-content"  style="background-image: url('{{asset('media/images/card-bg-4.jpg')}}')">
                                 <div>
-                                    <h5>{{ __('ESSENTIAL FATTY ACIDS:') }}</h5>
+                                    <h5>{{ __('ESSENTIAL FATTY ACIDS') }}</h5>
                                     <p class="p-reviews">
                                         {{ __('Enriched with Omega-3 and Omega-6 to fortify the skin barrier and ensure deep, long-lasting hydration.') }}
                                     </p>
@@ -476,7 +475,7 @@
                                     <div>
                                         <h6>
                                             Lorena Maturanec
-                                            <small class="text-muted">Founder CEO</small>
+                                            <small class="text-muted">{{__('Founder CEO')}}</small>
                                         </h6>
                                     </div>
                                 </div>
