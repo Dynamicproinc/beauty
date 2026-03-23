@@ -170,6 +170,17 @@
 "Out of stock": "Out of stock",
 "ADD TO CART":"ADD TO CART",
 "OUT OF STOCK":"OUT OF STOCK",
-"Invalid gift card":"Invalid gift card"
+"Invalid gift card":"Invalid gift card",
+
+"Your payment is being confirmed. Please do not close or refresh this page.":"Your payment is being confirmed. Please do not close or refresh this page.",
+"Do not close or refresh this page. Please wait...":"Do not close or refresh this page. Please wait...",
+"Payment Successful!":"Payment Successful!",
+"Your gift card has been successfully sent":"Your gift card has been successfully sent",
+"he recipient will receive the gift card shortly via email.":"he recipient will receive the gift card shortly via email.",
+"Enter gift card code":"Enter gift card code",
+"Apply":"Apply",
+"Congratulations!":"Congratulations!",
+"Your gift card is now active for this order — amount":"Your gift card is now active for this order — amount",
+"Remove gift card":"Remove gift card"
 
 }
