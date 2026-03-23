@@ -48,7 +48,7 @@
                                 </h1>
                                 <p class="sec_text_p_md">
                                     {{ __('Our beef tallow hydrates, nourishes and supports your skins barrier without overloading it. That is exactly what Tallow does because it is so similar to skin naturally.
-                                    Skincare with tallow is care that works reduced to the essentials.') }}
+                                                                        Skincare with tallow is care that works reduced to the essentials.') }}
                                 </p>
                                 <p>
 
@@ -199,58 +199,54 @@
             <div class="medium-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6 mb-3">
                             <div class="product-image-xl">
                                 <img src="{{ asset('uploads/products/' . $selected_product->getImage()->file_path) }}"
                                     alt="" class="img-fluid">
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-6">
-                            <div class="text-sm-start" style="text-align: justify; text-align-last: left; hyphens: auto;">
-                                <h5 class="title-md fw-bolder">
-                                    {{ __('100% NATURAL') }}
+                            <div class="">
+                                <h5 class="tt-text-hero-md text-uppercase mb-3">
+                                    {{ __('100% Natural Product, Tallow helps the skin to maintain its natural balance') }}
                                 </h5>
-                                {{-- <p class="">
-                                    {{ __('Our tallow skincare cream is specially formulated with pure, natural ingredients to deeply nourish, hydrate, and protect your skin. Rich in skin-loving nutrients, it helps restore softness and support a healthy, radiant glow.') }}
-                                </p>
-                                <p>
-                                    {{ __('Don’t wait — order yours today and give your skin the care it deserves.') }}
-                                </p> --}}
-                                <div>
-                                    {{-- <ul class="benifit-list">
-                                        <li>{{__('No artificial fragrances Ideal for even the most sensitive skin types')}}</li>
-                                        <li>{{__('Free of parabens and phenols Gentle and skin-friendly formula')}}</li>
-                                        <li>{{__('Free of harmful substances Pure care ideal for your skins health')}}</li>
-                                        <li>{{__('Free of microplastics Good for the skin and the environment')}}</li>
-                                    </ul> --}}
+                                
+                                <div class="text-center">
+                                   
                                     <div class="row mb-3">
                                         <div class="col-6">
-                                           <div class="">
-                                            <div class="d-flex justify-content-center">
-                                                    <img src="{{asset('media/svg/icon1.svg')}}" alt="" class="b-icon">
+                                            <div class="">
+                                                <div class="d-flex justify-content-center">
+                                                    <img src="{{ asset('media/svg/icon1.svg') }}" alt=""
+                                                        class="b-icon">
+                                                </div>
+                                                <div class="">
+                                                    {{ __('No artificial fragrances Ideal for even the most sensitive skin types') }}
+                                                </div>
                                             </div>
-                                            <div class=""> {{__('No artificial fragrances Ideal for even the most sensitive skin types')}}</div>
-                                           </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="d-flex justify-content-center">
-                                                    <img src="{{asset('media/svg/icon2.svg')}}" alt="" class="b-icon">
+                                                <img src="{{ asset('media/svg/icon2.svg') }}" alt=""
+                                                    class="b-icon">
                                             </div>
-                                            {{__('Free of parabens and phenols Gentle and skin-friendly formula')}}
+                                            {{ __('Free of parabens and phenols Gentle and skin-friendly formula') }}
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-6">
                                             <div class="d-flex justify-content-center">
-                                                    <img src="{{asset('media/svg/icon3.svg')}}" alt="" class="b-icon">
+                                                <img src="{{ asset('media/svg/icon3.svg') }}" alt=""
+                                                    class="b-icon">
                                             </div>
-                                            {{__('Free of harmful substances Pure care ideal for your skins health')}}
+                                            {{ __('Free of harmful substances Pure care ideal for your skins health') }}
                                         </div>
                                         <div class="col-6">
                                             <div class="d-flex justify-content-center">
-                                                    <img src="{{asset('media/svg/icon4.svg')}}" alt="" class="b-icon">
+                                                <img src="{{ asset('media/svg/icon4.svg') }}" alt=""
+                                                    class="b-icon">
                                             </div>
-                                            {{__('Free of microplastics Good for the skin and the environment')}}
+                                            {{ __('Free of microplastics Good for the skin and the environment') }}
                                         </div>
                                     </div>
                                 </div>
