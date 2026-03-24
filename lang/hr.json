@@ -205,7 +205,15 @@
   "Online Payment": "Online plaćanje",
   "Thank you for your business!": "Hvala na vašoj kupnji!",
   "If you have any questions, please contact us at": "Ako imate bilo kakvih pitanja, kontaktirajte nas na",
-   "Bill To:": "Račun za:"
+   "Bill To:": "Račun za:",
+   "Item": "Stavka",
+  "Quantity": "Količina",
+  "Price": "Cijena",
+
+   "Your gift card is now active for this order — amount :":"Vaša poklon kartica je sada aktivna za ovu narudžbu — iznos:",
+  "Add cart":"Dodaj Košaricu",
+  "Product":"Proizvod",
+  "Categories":"Kategorije"
 
 
     

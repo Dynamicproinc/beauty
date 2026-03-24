@@ -192,7 +192,16 @@
 "Online Payment":"Online Payment",
 "Thank you for your business!":"Thank you for your business!",
 "f you have any questions, please contact us at":"f you have any questions, please contact us at",
-"Bill To:":"Bill To:"
+"Bill To:":"Bill To:",
+"Your gift card is now active for this order — amount :":"Your gift card is now active for this order — amount :",
+"Item": "Item",
+"Quantity": "Quantity",
+"Price":"Price",
+"Add cart":"Add cart",
+"Product": "Product",
+"Categories":"Categories"
+
+
 
 
 
