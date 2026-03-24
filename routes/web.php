@@ -33,42 +33,36 @@ Route::get('/language/{lang}', function ($lang) {
   
 
 Route::get('unsubscribe-email/{ref}/{email}', function ($ref, $email) {
-
-    // 1️⃣ Validate the email format
-    $validator = Validator::make(['email' => $email], [
-        'email' => 'required|email'
-    ]);
-
-    if ($validator->fails()) {
-        return response()->json([
-            'message' => 'Invalid email address.'
-        ], 400);
+    
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        return "<h2>Invalid email address.</h2>";
     }
 
-    
+   
     $subs = EmailSubscription::where('reference', $ref)
                              ->where('email', $email)
                              ->first();
 
     if (!$subs) {
-        return response()->json([
-            'message' => 'Subscription not found.'
-        ], 404);
+        return "<h2>Subscription not found or invalid link.</h2>";
     }
 
     if ($subs->status === 'unsubscribed') {
-        return response()->json([
-            'message' => 'You have already unsubscribed.'
-        ]);
+        return "<h2>You have already unsubscribed from our emails.</h2>";
     }
 
     
     $subs->status = 'unsubscribed';
     $subs->save();
 
-    return response()->json([
-        'message' => 'Your email has been successfully unsubscribed. You will no longer receive newsletters from us.'
-    ]);
+   
+    return "
+        <div style='font-family: sans-serif; text-align: center; margin-top: 50px;'>
+            <h1>Email Unsubscribed ✅</h1>
+            <p>Your email <strong>{$email}</strong> has been successfully unsubscribed from our newsletters.</p>
+            <p>Thank you for staying with us!</p>
+        </div>
+    ";
 });
 
 // 

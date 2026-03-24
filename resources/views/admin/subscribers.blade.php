@@ -18,7 +18,7 @@
              <tr>
       <th scope="row">{{ $item->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i')}}</th>
       <td>{{ $item->email }}</td>
-      <td>{{ $item->status }}</td>
+      <td class="text-uppercase {{$item->status === 'subscribed' ? 'text-success' : 'text-danger'}}">{{ $item->status }}</td>
       
     </tr>
         @endforeach
