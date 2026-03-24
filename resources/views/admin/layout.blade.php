@@ -238,7 +238,12 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li><a class="dropdown-item" href="#">Settings</a></li>
                     <li><a class="dropdown-item" href="#">Messages</a></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    <li>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="dropdown-item">Sign out</button>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -325,7 +330,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link d-flex align-items-center @if (Route::currentRouteName() == 'admin.subscribers') active @endif" href="{{ route('admin.subscribers') }}">
+                            <a class="nav-link nav-link d-flex align-items-center @if (Route::currentRouteName() == 'admin.subscribers') active @endif"
+                                href="{{ route('admin.subscribers') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-rss" viewBox="0 0 16 16">
                                     <path

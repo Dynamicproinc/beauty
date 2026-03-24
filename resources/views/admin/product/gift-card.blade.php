@@ -9,6 +9,7 @@
   <thead>
     <tr>
       <th scope="col">{{__('date')}}</th>
+      <th>{{__('Design')}}</th>
       <th scope="col">{{__('email')}}</th>
       <th scope="col">{{__('from')}}</th>
       <th scope="col">{{__('code')}}</th>
@@ -22,6 +23,9 @@
     @foreach ($gift_cards as $item )
          <tr>
       <td scope="row"> {{ $item->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}</td></td>
+      <td>
+        <img src="{{asset('media/card_design/'.$item->getDesign()->file_path)}}" alt="" style="width:100px;height:auto;border-radius:8px">
+      </td>
       <td>{{ $item->email }}</td>
       <td>{{ $item->from}}</td>
       <td>{{ $item->gift_code}}</td>
