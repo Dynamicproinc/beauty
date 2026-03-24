@@ -8,7 +8,7 @@ use App\Models\Category;
 use App\Models\Option;
 use App\Models\Product as ProductModel;
 use App\Models\Variant;
-use App\Models\Categories;
+use App\Models\categories;
 use App\Models\Supplier;
 use App\Models\Media;
 use Illuminate\Support\Str;
@@ -44,7 +44,7 @@ class Add extends Component
         $this->options = Option::all();
         $this->variants = session('variants', []);
          $this->urls = session('urls', []);
-         $this->categories = Categories::all();
+         $this->categories = categories::all();
          $this->suppliers = Supplier::all();
            
         
