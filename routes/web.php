@@ -6,6 +6,7 @@ use App\Http\Controllers\StripeController;
 use App\Http\Controllers\StripeWebhookController;
 use App\Http\Controllers\Auth\GoogleController;
 use Illuminate\Support\Facades\Artisan;
+use App\Models\EmailSubscription;
 use App\Http\Middleware\SetLanguage;
 // use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
@@ -25,6 +26,17 @@ Route::get('/language/{lang}', function ($lang) {
     }
 
     return redirect()->back();
+});
+
+Route::get('unsubscribe-email/{ref}/{email}', function ($email, $ref){
+    $subs = EmailSubscription::where('email', $email)->where('reference', $ref)->first();
+    if($subs){
+        $subs->status = 'unsubscribed';
+        $subs->save();
+
+        return __('Your email has been successfully unsubscribed. You will no longer receive newsletters from us.');
+    }
+    return __('Your request could not be processed. Something went wrong');
 });
 
 // 

@@ -5,6 +5,7 @@ namespace App\Livewire\Shop;
 use Livewire\Component;
 use App\Models\EmailSubscription;
 use App\Rules\Recaptcha;
+use Illuminate\Support\Str;
 
 class Esubscription extends Component
 {
@@ -26,6 +27,7 @@ class Esubscription extends Component
         EmailSubscription::create([
             'email' => $this->email,
             'ip_address' => request()->ip(),
+            'reference'=>Str::random(16),
         ]);
 
         // send thanksing email to customer
