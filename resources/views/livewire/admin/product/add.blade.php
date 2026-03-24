@@ -12,7 +12,7 @@
             <div class="col-lg 8">
                 <div class="card mb-3">
                     <div class="card-header">
-                        <h5 class="h5 card-title">{{__('Product details')}}</h5>
+                        <h5 class="h5">{{__('Product details')}}</h5>
                     </div>
                     <div class="card-body">
                         <div class="panel bg-white rounded p-3 mb-3">
@@ -36,9 +36,11 @@
 
                 <div class="card mb-3">
                    
+                    <div class="card-header">
+                        <h5 class="h5">{{__('Media')}}</h5>
+                    </div>
                     <div class="card-body">
                         <div class="panel bg-white rounded p-3 mb-3">
-                    <h5 class="panel-heading mb-2" for="">{{__('Media')}}</h5>
                     <div class="d-flex flex-wrap gap-3">
                         {{-- @if(session()->has('urls') && count(session('urls', [])) > 0)
                             @foreach(session('urls', []) as $image)
