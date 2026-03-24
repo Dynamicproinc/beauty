@@ -29,9 +29,9 @@
                     <!-- From / To -->
                     <tr>
                         <td style="padding:16px; border-bottom:1px solid #dddddd; font-size:12px; color:#333333;">
-                            <span style="color:#888888;">From</span> {{ $gift_card->from }}
+                            <span style="color:#888888;">{{__('From')}}</span> {{ $gift_card->from }}
                             &nbsp;&nbsp;
-                            <span style="color:#888888;">To:</span> {{ $gift_card->to }}
+                            <span style="color:#888888;">{{__('To')}}</span> {{ $gift_card->to }}
                         </td>
                     </tr>
 

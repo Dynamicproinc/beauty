@@ -18,10 +18,16 @@ class PagesController extends Controller
 
     public function privacy()
     {
+         if(session()->get('locale') == 'hr'){
+            return view('pages.privacy-hr');
+        }
         return view('pages.privacy');
     }
     public function terms()
     {
+          if(session()->get('locale') == 'hr'){
+            return view('pages.terms-hr');
+        }
         return view('pages.terms');
     }
 
@@ -31,6 +37,8 @@ class PagesController extends Controller
     }
 
     public function ourStory(){
+
+       
         return view('pages.our-story');
     }
 }
