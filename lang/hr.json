@@ -213,7 +213,19 @@
    "Your gift card is now active for this order — amount :":"Vaša poklon kartica je sada aktivna za ovu narudžbu — iznos:",
   "Add cart":"Dodaj Košaricu",
   "Product":"Proizvod",
-  "Categories":"Kategorije"
+  "Categories":"Kategorije",
+  
+  "We use cookies": "Koristimo kolačiće",
+  "We use necessary cookies to make our website work. With your consent, we may also use analytics and marketing cookies to improve your experience.": "Koristimo potrebne kolačiće kako bi naša web stranica funkcionirala. Uz vaš pristanak, možemo koristiti i analitičke i marketinške kolačiće za poboljšanje vašeg iskustva.",
+  "Accept All": "Prihvati sve",
+  "Reject": "Odbij",
+  "Settings": "Postavke",
+  "Cookie Preferences": "Postavke kolačića",
+  "Necessary Cookies (Always Active)": "Potrebni kolačići (Uvijek aktivni)",
+  "Analytics Cookies": "Analitički kolačići",
+  "Marketing Cookies": "Marketinški kolačići",
+  "Save Preferences": "Spremi postavke"
+
 
 
     

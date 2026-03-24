@@ -199,7 +199,18 @@
 "Price":"Price",
 "Add cart":"Add cart",
 "Product": "Product",
-"Categories":"Categories"
+"Categories":"Categories",
+"We use cookies":"We use cookies",
+"We use necessary cookies to make our website work. With your consent, we may also use analytics and marketing cookies to improve your experience." : "We use necessary cookies to make our website work. With your consent, we may also use analytics and marketing cookies to improve your experience.",
+"Accept All":"Accept All",
+"Reject":"Reject",
+"Settings":"Settings",
+"Cookie Preferences":"Cookie Preferences",
+"Necessary Cookies (Always Active)":"Necessary Cookies (Always Active)",
+"Analytics Cookies":"Analytics Cookies",
+"Marketing Cookies":"Marketing Cookies",
+"Save Preferences":"Save Preferences"
+
 
 
 
