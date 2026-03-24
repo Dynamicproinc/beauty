@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Artisan;
 use App\Models\EmailSubscription;
 use App\Http\Middleware\SetLanguage;
 // use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 
 // Route::get('/', function () {
@@ -28,15 +29,46 @@ Route::get('/language/{lang}', function ($lang) {
     return redirect()->back();
 });
 
-Route::get('unsubscribe-email/{ref}/{email}', function ($email, $ref){
-    $subs = EmailSubscription::where('email', $email)->where('reference', $ref)->first();
-    if($subs){
-        $subs->status = 'unsubscribed';
-        $subs->save();
 
-        return __('Your email has been successfully unsubscribed. You will no longer receive newsletters from us.');
+  
+
+Route::get('unsubscribe-email/{ref}/{email}', function ($ref, $email) {
+
+    // 1️⃣ Validate the email format
+    $validator = Validator::make(['email' => $email], [
+        'email' => 'required|email'
+    ]);
+
+    if ($validator->fails()) {
+        return response()->json([
+            'message' => 'Invalid email address.'
+        ], 400);
     }
-    return __('Your request could not be processed. Something went wrong');
+
+    
+    $subs = EmailSubscription::where('reference', $ref)
+                             ->where('email', $email)
+                             ->first();
+
+    if (!$subs) {
+        return response()->json([
+            'message' => 'Subscription not found.'
+        ], 404);
+    }
+
+    if ($subs->status === 'unsubscribed') {
+        return response()->json([
+            'message' => 'You have already unsubscribed.'
+        ]);
+    }
+
+    
+    $subs->status = 'unsubscribed';
+    $subs->save();
+
+    return response()->json([
+        'message' => 'Your email has been successfully unsubscribed. You will no longer receive newsletters from us.'
+    ]);
 });
 
 // 
