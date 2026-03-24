@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\DigitalGiftCard;
+use App\Models\EmailSubscription;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use \App\Models\ProductInformation;
@@ -276,5 +277,10 @@ for ($m = 1; $m <= 12; $m++) {
     public function giftCards(){
         $gift_cards = DigitalGiftCard::where('payment_status', 'paid')->latest()->paginate(20);
         return view('admin.product.gift-card', compact('gift_cards'));
+    }
+
+    public function subscribers(){
+        $subscribers = EmailSubscription::latest()->paginate(50);
+        return view('admin.subscribers',compact('subscribers'));
     }
 }

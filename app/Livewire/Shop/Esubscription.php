@@ -28,6 +28,8 @@ class Esubscription extends Component
             'ip_address' => request()->ip(),
         ]);
 
+        // send thanksing email to customer
+
         session()->flash('success', __('Subscription completed'));
     }
 }

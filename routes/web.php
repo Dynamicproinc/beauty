@@ -65,6 +65,7 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
     Route::get('/users', [App\Http\Controllers\AdminController::class, 'users'])->name('admin.users');
     Route::get('/shipping', [App\Http\Controllers\AdminController::class, 'shipping'])->name('admin.shipping');
     Route::get('/gift-cards', [App\Http\Controllers\AdminController::class, 'giftCards'])->name('admin.gift-card');
+    Route::get('/subscribers', [App\Http\Controllers\AdminController::class, 'subscribers'])->name('admin.subscribers');
 });
 
 
