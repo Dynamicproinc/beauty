@@ -32,6 +32,7 @@ class Esubscription extends Component
 
         // send thanksing email to customer
 
+        $this->reset();
         session()->flash('success', __('Subscription completed'));
     }
 }
