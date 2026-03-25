@@ -36,7 +36,7 @@
 
                 <!-- Message -->
                 <div class="mb-3">
-                    <label class="form-label">{{ __('Message') }}<small class="text-danger">*</small></label>
+                    <label class="form-label">{{ __('Message') }} <small class="text-danger">*</small></label>
                     <textarea rows="5" class="form-control @error('message') is-invalid @enderror" wire:model="message"></textarea>
 
                     @error('message')

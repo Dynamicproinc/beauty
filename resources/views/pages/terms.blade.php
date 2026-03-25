@@ -16,20 +16,20 @@
             Website: https://tallow-skincare.hr
         </div>
 
-        <h2 class="mt-4">1. General Provisions</h2>
+        <h5 class="mt-4">1. General Provisions</h5>
         <p>
             These Terms and Conditions govern the use of the website https://tallow-skincare.hr 
             and the purchase of products offered by Tallow Skincare j.d.o.o.
             By accessing this website or placing an order, you agree to be bound by these Terms.
         </p>
 
-        <h2 class="mt-4">2. Company Information</h2>
+        <h5 class="mt-4">2. Company Information</h5>
         <p>
             The seller is Tallow Skincare j.d.o.o., registered in Croatia, 
             with its registered office at Donja Švarča 79c, 47000 Karlovac.
         </p>
 
-        <h2 class="mt-4">3. Products and Pricing</h2>
+        <h5 class="mt-4">3. Products and Pricing</h5>
         <p>
             We strive to ensure that all product descriptions, images, and prices are accurate.
             However, we reserve the right to correct errors and update information without prior notice.
@@ -39,25 +39,25 @@
             <li>Shipping costs are calculated separately and displayed at checkout.</li>
         </ul>
 
-        <h2 class="mt-4">4. Orders</h2>
+        <h5 class="mt-4">4. Orders</h5>
         <p>
             By placing an order, you confirm that all information provided is accurate and complete.
             We reserve the right to refuse or cancel any order if fraud or unauthorized activity is suspected.
         </p>
 
-        <h2 class="mt-4">5. Payment</h2>
+        <h5 class="mt-4">5. Payment</h5>
         <p>
             Payment must be completed before the order is processed and shipped.
             We use secure payment providers to ensure safe transactions.
         </p>
 
-        <h2 class="mt-4">6. Delivery</h2>
+        <h5 class="mt-4">6. Delivery</h5>
         <p>
             Delivery times are estimates and may vary depending on location and courier services.
             Tallow Skincare j.d.o.o. is not responsible for delays caused by third-party delivery services.
         </p>
 
-        <h2 class="mt-4">7. Right of Withdrawal</h2>
+        <h5 class="mt-4">7. Right of Withdrawal</h5>
         <p>
             In accordance with EU consumer protection laws, customers have the right to withdraw 
             from the purchase within 14 days of receiving the goods without providing a reason.
@@ -67,31 +67,31 @@
             Products must be returned unused and in their original packaging.
         </p>
 
-        <h2 class="mt-4">8. Returns and Refunds</h2>
+        <h5 class="mt-4">8. Returns and Refunds</h5>
         <p>
             Refunds will be processed after we receive and inspect the returned product.
             Shipping costs may not be refundable unless the return is due to our error.
         </p>
 
-        <h2 class="mt-4">9. Liability</h2>
+        <h5 class="mt-4">9. Liability</h5>
         <p>
             Tallow Skincare j.d.o.o. shall not be liable for any indirect, incidental, or consequential damages
             arising from the use of our products or website, except as required by law.
         </p>
 
-        <h2 class="mt-4">10. Intellectual Property</h2>
+        <h5 class="mt-4">10. Intellectual Property</h5>
         <p>
             All website content, including text, images, logos, and design, is the property of 
             Tallow Skincare j.d.o.o. and may not be copied, reproduced, or distributed without written permission.
         </p>
 
-        <h2 class="mt-4">11. Governing Law</h2>
+        <h5 class="mt-4">11. Governing Law</h5>
         <p>
             These Terms are governed by the laws of the Republic of Croatia.
             Any disputes shall be subject to the jurisdiction of Croatian courts.
         </p>
 
-        <h2 class="mt-4">12. Changes to Terms</h2>
+        <h5 class="mt-4">12. Changes to Terms</h5>
         <p>
             We reserve the right to modify these Terms and Conditions at any time.
             Updates will be published on this page.
