@@ -16,14 +16,14 @@
             Web stranica: https://tallow-skincare.hr
         </div>
 
-        <h2 class="mt-4">1. Uvod</h2>
+        <h5 class="mt-4">1. Uvod</h5>
         <p>
             Tallow Skincare j.d.o.o. poštuje vašu privatnost i obvezuje se štititi vaše osobne podatke.
             Ova Izjava o privatnosti objašnjava kako prikupljamo, koristimo, pohranjujemo i štitimo vaše podatke
             u skladu s važećim zakonima o zaštiti podataka, uključujući Opću uredbu o zaštiti podataka (GDPR).
         </p>
 
-        <h2 class="mt-4">2. Podaci koje prikupljamo</h2>
+        <h5 class="mt-4">2. Podaci koje prikupljamo</h5>
         <ul>
             <li>Ime i prezime</li>
             <li>Email adresa</li>
@@ -34,7 +34,7 @@
             <li>Tehnički podaci (IP adresa, vrsta preglednika, kolačići)</li>
         </ul>
 
-        <h2 class="mt-4">3. Svrha obrade podataka</h2>
+        <h5 class="mt-4">3. Svrha obrade podataka</h5>
         <ul>
             <li>Odgovaranje na upite</li>
             <li>Obrada i dostava narudžbi</li>
@@ -44,7 +44,7 @@
             <li>Slanje marketinških poruka (uz privolu)</li>
         </ul>
 
-        <h2 class="mt-4">4. Pravna osnova za obradu</h2>
+        <h5 class="mt-4">4. Pravna osnova za obradu</h5>
         <ul>
             <li>Vaša privola</li>
             <li>Izvršenje ugovora</li>
@@ -52,13 +52,13 @@
             <li>Legitimni poslovni interesi</li>
         </ul>
 
-        <h2 class="mt-4">5. Pohrana podataka</h2>
+        <h5 class="mt-4">5. Pohrana podataka</h5>
         <p>
             Osobne podatke čuvamo samo onoliko dugo koliko je potrebno za svrhe za koje su prikupljeni,
             ili koliko je propisano važećim zakonima.
         </p>
 
-        <h2 class="mt-4">6. Dijeljenje podataka</h2>
+        <h5 class="mt-4">6. Dijeljenje podataka</h5>
         <p>Ne prodajemo niti iznajmljujemo vaše osobne podatke. Podaci se mogu dijeliti samo s:</p>
         <ul>
             <li>Dostavnim službama</li>
@@ -67,13 +67,13 @@
             <li>Nadležnim tijelima kada je to zakonski potrebno</li>
         </ul>
 
-        <h2 class="mt-4">7. Sigurnost podataka</h2>
+        <h5 class="mt-4">7. Sigurnost podataka</h5>
         <p>
             Provodimo odgovarajuće tehničke i organizacijske mjere za zaštitu vaših osobnih podataka
             od neovlaštenog pristupa, zlouporabe ili otkrivanja.
         </p>
 
-        <h2 class="mt-4">8. Vaša prava</h2>
+        <h5 class="mt-4">8. Vaša prava</h5>
         <p>Imate pravo na:</p>
         <ul>
             <li>Pristup svojim osobnim podacima</li>
@@ -88,13 +88,13 @@
             Za ostvarivanje svojih prava kontaktirajte nas na: <strong>info@tallow-skincare.hr</strong>
         </p>
 
-        <h2 class="mt-4">9. Kolačići</h2>
+        <h5 class="mt-4">9. Kolačići</h5>
         <p>
             Naša web stranica može koristiti kolačiće za poboljšanje korisničkog iskustva i analizu prometa.
             Kolačićima možete upravljati putem postavki vašeg preglednika.
         </p>
 
-        <h2 class="mt-4">10. Promjene ove Izjave o privatnosti</h2>
+        <h5 class="mt-4">10. Promjene ove Izjave o privatnosti</h5>
         <p>
             Zadržavamo pravo izmjene ove Izjave o privatnosti u bilo kojem trenutku.
             Sve promjene bit će objavljene na ovoj stranici.
