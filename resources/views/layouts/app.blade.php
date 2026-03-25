@@ -16,8 +16,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') {{ config('app.name', 'Tallow Skin Care') }} -
-        {{ __('Premium Grass-Fed Tallow Balm for Ultimate Hydration') }}</title>
+    <title>
+        @yield('title') {{ config('app.name', 'Tallow Skin Care') }} -
+        {{ __('title') }}
+    </title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">

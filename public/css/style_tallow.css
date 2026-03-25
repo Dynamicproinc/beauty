@@ -66,6 +66,7 @@ h5{
     right:0%;
     bottom:0%;
     background-image: url('https://www.tallows.de/cdn/shop/files/tallow-header-neu.webp?v=1758545609&width=1920');
+    /* background-image: url('https://wallpapershome.com/images/pages/pic_h/168.jpg'); */
 }
 .hero-text-wrapper{
     position: absolute;
@@ -830,6 +831,7 @@ i{
     object-fit: cover;
 }
 .hero-wallpaper{
+   
     background-image:url('https://www.tallows.de/cdn/shop/files/1080_x_1920_px_1.webp?v=1758806267&width=1000');
 }
 .tt-text-hero-md{
