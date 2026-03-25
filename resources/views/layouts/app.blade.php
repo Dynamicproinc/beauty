@@ -1,69 +1,78 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- SEO --}}
-<meta name="title" content="{{__('Premium Grass-Fed Tallow Balm for Ultimate Hydration')}}">
-<meta name="description" content="{{__('Experience the power of 100% natural tallow balm made from grass-fed ingredients. Perfect for dry and sensitive skin, it provides long-lasting moisture, supports skin repair, and keeps your skin soft and healthy.')}}">
-<meta name="keywords" content="{{__('tallow balm, tallow skin care, grass fed tallow, natural moisturizer, organic tallow balm, beef tallow skincare, handmade tallow balm, sensitive skin moisturizer, deep hydration balm, natural skin cream, chemical free skincare, traditional skincare, nourishing face balm')}}">
- <meta property="og:image" content="{{asset('ico/favicon-32x32.png')}}">
+    <meta name="title" content="{{ __('Premium Grass-Fed Tallow Balm for Ultimate Hydration') }}">
+    <meta name="description"
+        content="{{ __('Experience the power of 100% natural tallow balm made from grass-fed ingredients. Perfect for dry and sensitive skin, it provides long-lasting moisture, supports skin repair, and keeps your skin soft and healthy.') }}">
+    <meta name="keywords"
+        content="{{ __('tallow balm, tallow skin care, grass fed tallow, natural moisturizer, organic tallow balm, beef tallow skincare, handmade tallow balm, sensitive skin moisturizer, deep hydration balm, natural skin cream, chemical free skincare, traditional skincare, nourishing face balm') }}">
+    <meta property="og:image" content="{{ asset('ico/favicon-32x32.png') }}">
     {{-- End SEO --}}
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') {{ config('app.name', 'Tallow Skin Care') }} -  {{__('Premium Grass-Fed Tallow Balm for Ultimate Hydration')}}</title>
+    <title>@yield('title') {{ config('app.name', 'Tallow Skin Care') }} -
+        {{ __('Premium Grass-Fed Tallow Balm for Ultimate Hydration') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Scripts -->
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
-    <link rel="stylesheet" href="{{asset('css/style.css?v='.uniqid())}}">
-    <link rel="stylesheet" href="{{asset('css/style_tallow.css?v='.uniqid())}}">
+    <link rel="stylesheet" href="{{ asset('css/style.css?v=' . uniqid()) }}">
+    <link rel="stylesheet" href="{{ asset('css/style_tallow.css?v=' . uniqid()) }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     {{-- icon --}}
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     {{--  --}}
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     {{-- <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script> --}}
-@livewireStyles
+    @livewireStyles
 
 </head>
+
 <body>
     <div id="app">
-       
+
         @include('inc.navbar_detailed')
         <main class="">
-           
-                 @yield('content')
-            
+
+            @yield('content')
+
         </main>
-         @include('inc.footer')
-         @include('inc.cookie')
+        @include('inc.footer')
+        @include('inc.cookie')
         {{--  --}}
-        
+
         {{--  --}}
     </div>
     @livewireScripts
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
     {{-- side navbar script --}}
     <script>
-        function openSB(){
+        function openSB() {
             const navbar = document.getElementById("side_nav_bar");
             navbar.style.left = 0;
             navbar.style.width = "100%";
-            
+
         }
-        function closeSB(){
+
+        function closeSB() {
             const navbar = document.getElementById("side_nav_bar");
             navbar.style.width = "400px";
             navbar.style.left = "-400px";
@@ -79,43 +88,43 @@
             document.getElementById("navcont").style.right = "-400px";
             document.getElementById("snav").style.width = "0";
         }
-        </script>
-        <script>
-    window.addEventListener('open-nav', event => {
-        openNav();
-    });
-</script>
+    </script>
+    <script>
+        window.addEventListener('open-nav', event => {
+            openNav();
+        });
+    </script>
 
-<script>
-    const header = document.getElementById('header');
-     const headerMo = document.getElementById('mobile_header');
-    const navLinks = document.querySelectorAll('.link-secondary');
-    const menuIcon = document.getElementById('menu_icon');
+    <script>
+        const header = document.getElementById('header');
+        const headerMo = document.getElementById('mobile_header');
+        const navLinks = document.querySelectorAll('.link-secondary');
+        const menuIcon = document.getElementById('menu_icon');
 
-    
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-        header.classList.add('scrolled');
-        headerMo.classList.add('scrolled');
-        menuIcon.style.color = "#000";
-        navLinks.forEach(link => link.classList.add('scrolled'));
-        
-        
-    } else {
-        header.classList.remove('scrolled');
-         headerMo.classList.remove('scrolled');
-        menuIcon.style.color = "#fff";
 
-        navLinks.forEach(link => link.classList.remove('scrolled'));
-    }
-});
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+                headerMo.classList.add('scrolled');
+                menuIcon.style.color = "#000";
+                navLinks.forEach(link => link.classList.add('scrolled'));
 
-</script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-@stack('scripts')
+
+            } else {
+                header.classList.remove('scrolled');
+                headerMo.classList.remove('scrolled');
+                menuIcon.style.color = "#fff";
+
+                navLinks.forEach(link => link.classList.remove('scrolled'));
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    @stack('scripts')
 </body>
+
 </html>

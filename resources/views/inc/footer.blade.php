@@ -5,7 +5,7 @@
              <!-- Newsletter -->
              <div class="col-md-4 mb-4">
                  {{-- @livewire('shop.esubscription') --}}
-                 <h5 class="text-white">{{ __('Tallow Skincare') }}</h5>
+                 <h5 class="text-white">{{ __('Tallow Skin Care') }}</h5>
                  <p class="text-white">
                      {{ __('Tallow skincare is a premium, natural skincare line made from 100% pure beef tallow. It is rich in vitamins A, D, E, and K and is designed to nourish and protect your skin.') }}
                  </p>
