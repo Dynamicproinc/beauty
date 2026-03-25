@@ -39,7 +39,7 @@
                                  <a href="/#faq" class="nav-link p-0 text-white">{{ __('FAQs') }}</a>
                              </li>
                              <li class="nav-item mb-2">
-                                 <a href="/contact" class="nav-link p-0 text-white">{{ __('Contact') }}</a>
+                                 <a href="/contact-us" class="nav-link p-0 text-white">{{ __('Contact') }}</a>
                              </li>
 
                          </ul>
