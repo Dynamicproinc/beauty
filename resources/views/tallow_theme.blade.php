@@ -485,8 +485,8 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="f-img-wr">
-                                <img src="https://www.tallows.de/cdn/shop/files/ece-tallow.webp?v=1758472868&width=1000"
-                                    alt="tallow-skin-care" class="">
+                                {{-- <img src="https://www.tallows.de/cdn/shop/files/ece-tallow.webp?v=1758472868&width=1000"
+                                    alt="tallow-skin-care" class=""> --}}
                             </div>
                         </div>
                     </div>
