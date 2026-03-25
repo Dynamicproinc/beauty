@@ -16,7 +16,7 @@
 
                 <!-- Name -->
                 <div class="mb-3">
-                    <label class="form-label">{{ __('Name') }}</label>
+                    <label class="form-label">{{ __('Name') }} <small class="text-danger">*</small></label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" wire:model="name">
 
                     @error('name')
@@ -26,7 +26,7 @@
 
                 <!-- Email -->
                 <div class="mb-3">
-                    <label class="form-label">{{ __('Email') }}</label>
+                    <label class="form-label">{{ __('Email') }} <small class="text-danger">*</small></label>
                     <input type="email" class="form-control @error('email') is-invalid @enderror" wire:model="email">
 
                     @error('email')
@@ -36,7 +36,7 @@
 
                 <!-- Message -->
                 <div class="mb-3">
-                    <label class="form-label">{{ __('Message') }}</label>
+                    <label class="form-label">{{ __('Message') }}<small class="text-danger">*</small></label>
                     <textarea rows="5" class="form-control @error('message') is-invalid @enderror" wire:model="message"></textarea>
 
                     @error('message')
