@@ -53,12 +53,12 @@ h5{
     align-items: center;
 }
 .hero-wallpaper{
-    background-image: linear-gradient(#00000080, #00000080);
+    /* background-image: linear-gradient(#00000080, #00000080); */
     background-repeat: no-repeat;
     position:absolute;
     /* object-fit:scale-down; */
     background-size: cover;
-
+    /* z-index: 9999; */
     height: 100%;
     width: 100%;
     top:0%;
@@ -74,6 +74,7 @@ h5{
     left:0;
     width:100%;
     height: 400px;
+    z-index: 2;
     
 }
 .tt-text-xs{
@@ -790,6 +791,16 @@ i{
     object-fit: cover;
 
 }
+.wrap-overlay{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(rgb(0, 0, 0), green, blue); */
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-image: linear-gradient(#00000080, #00000080);
+}
 /* Animation */
 @keyframes run {
   from {
@@ -834,6 +845,7 @@ i{
     
    min-height:2000px;
     background-color: #000;
+
     /* background-image:url('https://www.tallows.de/cdn/shop/files/1080_x_1920_px_1.webp?v=1758806267&width=1000'); */
 }
 video{

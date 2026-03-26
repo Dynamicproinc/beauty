@@ -4,6 +4,7 @@
     <div>
         {{-- hero section --}}
         <section class="section hero-section">
+            <div class="wrap-overlay"></div>
             <div class="hero-wallpaper">
                <div class="d-none d-sm-block">
                  <video width="100%" autoplay muted playsinline loop>
