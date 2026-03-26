@@ -4,7 +4,20 @@
     <div>
         {{-- hero section --}}
         <section class="section hero-section">
-            <div class="hero-wallpaper"></div>
+            <div class="hero-wallpaper">
+               <div class="d-none d-sm-block">
+                 <video width="100%" autoplay muted playsinline loop>
+                    <source src="{{asset('media/videos/tallow_intro.mp4')}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+               </div>
+               <div class="d-block d-sm-none">
+                 <video width="100%" autoplay muted playsinline loop>
+                    <source src="{{asset('media/videos/tallow_intro_mobile.mp4')}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+               </div>
+            </div>
 
             <div class="hero-text-wrapper p-3">
                 <div class="container">
@@ -48,7 +61,7 @@
                                 </h1>
                                 <p class="sec_text_p_md">
                                     {{ __('Our beef tallow hydrates, nourishes and supports your skins barrier without overloading it. That is exactly what Tallow does because it is so similar to skin naturally. Skincare with tallow is care that works reduced to the essentials.') }}
-                                                                                                          
+
                                 </p>
                                 <p>
 
@@ -82,7 +95,7 @@
                                     </div>
                                 </div>
 
-                               
+
 
 
 
@@ -98,7 +111,7 @@
                                     </div>
                                 </div>
 
-                                 <div class="carousel-cell">
+                                <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
                                         <img src="{{ asset('media/images/tllow_skin_care_fact_pure_black_angus01.png') }}"
                                             alt="tallow skin care">
@@ -140,14 +153,15 @@
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="text-center text-sm-end text-white text-uppercase">
-                               <div>
-                                 <div>
-                                    <img src="{{ asset('media/images/logo.png') }}" alt="" class="img-fluid mb-3">
-                                 </div>
-                                 <a href="/our-story" class="tt_btn"
-                                    title="{{ __('Our story') }}">{{ __('Our story') }}</a>
+                                <div>
+                                    <div>
+                                        <img src="{{ asset('media/images/logo.png') }}" alt=""
+                                            class="img-fluid mb-3">
+                                    </div>
+                                    <a href="/our-story" class="tt_btn"
+                                        title="{{ __('Our story') }}">{{ __('Our story') }}</a>
 
-                               </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -258,8 +272,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="/products"
-                                    class="btn-1-xl rounded-0">{{ __('BUY NOW') }}</a>
+                                <a href="/products" class="btn-1-xl rounded-0">{{ __('BUY NOW') }}</a>
                             </div>
                         </div>
                     </div>
@@ -277,7 +290,8 @@
                     </div>
                     <div class="main-carousel-3">
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content" style="background-image: url('{{asset('media/images/card-bg-1.jpg')}}')">
+                            <div class="review-content"
+                                style="background-image: url('{{ asset('media/images/card-bg-1.jpg') }}')">
                                 <div>
                                     <h5>{{ __('NATURAL VITAMINS A, D, E & K') }}</h5>
                                     <p class="p-reviews">
@@ -288,7 +302,8 @@
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content" style="background-image: url('{{asset('media/images/card-bg-2.jpg')}}')">
+                            <div class="review-content"
+                                style="background-image: url('{{ asset('media/images/card-bg-2.jpg') }}')">
                                 <div>
                                     <h5>{{ __('SKIN-IDENTICAL LIPIDS') }}</h5>
                                     <p class="p-reviews">
@@ -298,7 +313,8 @@
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content" style="background-image: url('{{asset('media/images/card-bg-3.jpg')}}')">
+                            <div class="review-content"
+                                style="background-image: url('{{ asset('media/images/card-bg-3.jpg') }}')">
                                 <div>
                                     <h5>{{ __('ANTIOXIDANTS') }}</h5>
                                     <p class="p-reviews">
@@ -308,7 +324,8 @@
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content"  style="background-image: url('{{asset('media/images/card-bg-4.jpg')}}')">
+                            <div class="review-content"
+                                style="background-image: url('{{ asset('media/images/card-bg-4.jpg') }}')">
                                 <div>
                                     <h5>{{ __('ESSENTIAL FATTY ACIDS') }}</h5>
                                     <p class="p-reviews">
@@ -469,15 +486,19 @@
                                         {{ __('At Tallow Skincare, we believe that skincare should be simple, honest, and close to nature. Our products are carefully crafted using high-quality, natural tallow to nourish and protect your skin the way it was meant to be cared for. Inspired by traditional wisdom and supported by a commitment to purity, we focus on clean ingredients without unnecessary additives. Every jar represents our dedication to quality, sustainability, and your skin’s natural balance. Thank you for trusting us to be part of your daily self-care journey. We are proud to create products that bring nature back to skincare. 🌿') }}
 
                                     </p> --}}
-                                     <p>{{__('After a year and a half of research, testing, and sharing experiences, we founded Tallow skin care in 2025.')}}</p>
-                                    <p>{{__('The base for the products, beef tallow, comes from the brand The M Brothers, who breed Black Angus, which is a prerequisite for us to know what we are working with and to have a reliable base for tallow cosmetics.')}}</p>
-                                    <p>{{__('To begin with, we have formulated unique, multi-purpose products that meet the skins needs for hydration and nutrition and complete them with natural active ingredients.')}}</p>
-                                    <p>{{__('We believe that skin health is not only determined by the product we apply to the skin, but is much more complex, and therefore we want to raise awareness of the importance of the health of our entire body.')}}</p>
-                                    <p>{{__('Let your skin be a mirror of whats going on inside!')}}</p>
+                                    <p>{{ __('After a year and a half of research, testing, and sharing experiences, we founded Tallow skin care in 2025.') }}
+                                    </p>
+                                    <p>{{ __('The base for the products, beef tallow, comes from the brand The M Brothers, who breed Black Angus, which is a prerequisite for us to know what we are working with and to have a reliable base for tallow cosmetics.') }}
+                                    </p>
+                                    <p>{{ __('To begin with, we have formulated unique, multi-purpose products that meet the skins needs for hydration and nutrition and complete them with natural active ingredients.') }}
+                                    </p>
+                                    <p>{{ __('We believe that skin health is not only determined by the product we apply to the skin, but is much more complex, and therefore we want to raise awareness of the importance of the health of our entire body.') }}
+                                    </p>
+                                    <p>{{ __('Let your skin be a mirror of whats going on inside!') }}</p>
                                     <div>
                                         <h6>
                                             Lorena Maturanec
-                                            <small class="text-muted">{{__('Founder CEO')}}</small>
+                                            <small class="text-muted">{{ __('Founder CEO') }}</small>
                                         </h6>
                                     </div>
                                 </div>
