@@ -831,8 +831,23 @@ i{
     object-fit: cover;
 }
 .hero-wallpaper{
-   
+    
+   min-height:2000px;
+    background-color: #000;
     /* background-image:url('https://www.tallows.de/cdn/shop/files/1080_x_1920_px_1.webp?v=1758806267&width=1000'); */
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-section{
+    width: 100%;
+    /* height:2000px; */
+    height: 700px;
+    
+   
 }
 .tt-text-hero-md{
      font-weight: 600 !important;
