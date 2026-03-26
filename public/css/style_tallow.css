@@ -852,7 +852,7 @@ i{
     /* background-image:url('https://www.tallows.de/cdn/shop/files/1080_x_1920_px_1.webp?v=1758806267&width=1000'); */
 }
 video{
-    height: 100vh;
+    height: 1000px;
     width: 100%;
     object-fit: cover;
 }
@@ -860,7 +860,7 @@ video{
 .hero-section{
     width: 100%;
     /* height:2000px; */
-    height: 700px;
+    height: 100vh;
     
    
 }
