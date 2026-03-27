@@ -294,19 +294,7 @@
 
         </section>
        
-        <section class="fixed-section" style="background-image: url('{{ asset('media/images/mbrothers-tallow.jpg') }}')">
-            <div class="wrap-overlay"></div>
-            <div class="fs-content text-center">
-                <img src="{{asset('media/images/the-m-brothers.png')}}" alt="The M Brothers Tallow">
-                <p class="tt-text-hero-md text-uppercase text-center text-white">
-                    {{ __('Powered by a Premium Ingredient at the Heart of Our Tallow Skincare') }}
-                </p>
-                <div class="text-white">
-                    {{'The base for the products, beef tallow, comes from The M Brothers, a Black Angus breeder, which is a prerequisite for us to know what we are working with and to have a reliable base for tallow cosmetics. '}}
-                </div>
-            </div>
-
-        </section>
+        
         <section class="section-type-1">
             <div class="reviews-section">
                 <div class="reviews-section-content">
