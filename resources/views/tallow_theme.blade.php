@@ -478,7 +478,7 @@
                 <div class="row justify-content-center">
                     <div class="row">
                         <div class="col-lg-6 mb-3">
-                            <div class="d-flex align-items-center justify-content-center mid-item">
+                            <div class=" wff">
                                 <div>
                                     <h1 class="tt-text-hero-md text-uppercase">
                                         {{ __('a word from our founder') }}
