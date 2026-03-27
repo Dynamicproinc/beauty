@@ -280,7 +280,7 @@
                 </div>
             </div>
         </section>
-        <section class="fixed-section" style="background-image: url('{{ asset('media/images/mbrothers-tallow.jpg') }}')">
+        <section class="fixed-section" style="">
             <div class="wrap-overlay"></div>
             <div class="fs-content text-center">
                 <img src="{{asset('media/images/the-m-brothers.png')}}" alt="The M Brothers Tallow">

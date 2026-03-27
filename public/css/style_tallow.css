@@ -810,6 +810,7 @@ i{
     background-repeat: no-repeat;
     background-size: cover;
      position: relative;
+     background-image: url('../media/images/mbrothers-tallow.jpg')
     
      
    }
@@ -935,7 +936,7 @@ header{
    }
    .fixed-section .fs-content{
     width: 350px;
-    
+    background-image: url('../media/images/mbrothers-tallow-mobile.JPG');
     overflow: hidden;
 
     
