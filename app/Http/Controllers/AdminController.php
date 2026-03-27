@@ -138,7 +138,7 @@ $labels = [];
 $series = [];
 
 for ($m = 1; $m <= 12; $m++) {
-    $labels[] = date('F', mktime(0, 0, 0, $m, 1));
+    $labels[] = date('M', mktime(0, 0, 0, $m, 1));
     $series[] = $traffic[$m] ?? 0; // default to 0 if no data
 }
 
