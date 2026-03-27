@@ -288,7 +288,7 @@
                     {{ __('Powered by a Premium Ingredient at the Heart of Our Tallow Skincare') }}
                 </p>
                 <div class="text-white">
-                    {{'The base for the products, beef tallow, comes from The M Brothers, a Black Angus breeder, which is a prerequisite for us to know what we are working with and to have a reliable base for tallow cosmetics. '}}
+                    {{__('fixed.section.description')}}
                 </div>
             </div>
 
