@@ -6,18 +6,18 @@
         <section class="section hero-section">
             <div class="wrap-overlay"></div>
             <div class="hero-wallpaper">
-               <div class="d-none d-sm-block">
-                 <video width="100%" autoplay muted playsinline loop>
-                    <source src="{{asset('media/videos/tallow_intro.mp4')}}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-               </div>
-               <div class="d-block d-sm-none">
-                 <video width="100%" height="100%" autoplay muted playsinline loop>
-                    <source src="{{asset('media/videos/tallow_intro_mobile.mp4')}}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-               </div>
+                <div class="d-none d-sm-block">
+                    <video width="100%" autoplay muted playsinline loop>
+                        <source src="{{ asset('media/videos/tallow_intro.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="d-block d-sm-none">
+                    <video width="100%" height="100%" autoplay muted playsinline loop>
+                        <source src="{{ asset('media/videos/tallow_intro_mobile.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
 
             <div class="hero-text-wrapper p-3">
@@ -219,7 +219,7 @@
                 </div>
             </div> --}}
 
-            <div class="medium-section mb-3">
+            <div class="medium-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-6 mb-3">
@@ -279,6 +279,19 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="fixed-section" style="background-image: url('{{ asset('media/images/mbrothers-tallow.jpg') }}')">
+            <div class="wrap-overlay"></div>
+            <div class="fs-content text-center">
+                <img src="{{asset('media/images/the-m-brothers.png')}}" alt="The M Brothers Tallow">
+                <p class="tt-text-hero-md text-uppercase text-center text-white">
+                    {{ __('Powered by a Premium Ingredient at the Heart of Our Tallow Skincare') }}
+                </p>
+                <div class="text-white">
+                    {{'The base for the products, beef tallow, comes from The M Brothers, a Black Angus breeder, which is a prerequisite for us to know what we are working with and to have a reliable base for tallow cosmetics. '}}
+                </div>
+            </div>
+
         </section>
         <section class="section-type-1">
             <div class="reviews-section">

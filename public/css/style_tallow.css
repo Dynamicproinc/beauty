@@ -800,7 +800,35 @@ i{
     top: 0;
     z-index: 1;
     background-image: linear-gradient(#00000080, #00000080);
+    
 }
+
+ .fixed-section{
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+     position: relative;
+    
+     
+   }
+   .fixed-section .fs-content{
+    max-width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    position: absolute;
+
+    
+   }
+   .fs-content img{
+    width: 100px;
+    height: auto;
+    margin-bottom: 32px;
+   }
+   
 /* Animation */
 @keyframes run {
   from {
@@ -821,6 +849,7 @@ i{
     height: 100%;
     display: block; 
    }
+  
   
    .banner{
     height: auto;
@@ -896,5 +925,21 @@ header{
     justify-content: center;
     align-items: center;
 }
+
+.fixed-section{
+   
+    height: 100vh;
+   
+    
+     
+   }
+   .fixed-section .fs-content{
+    width: 350px;
+    
+    overflow: hidden;
+
+    
+   }
+  
 }
 
