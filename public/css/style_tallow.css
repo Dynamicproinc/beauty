@@ -821,9 +821,7 @@ i{
     height: 100%;
     display: block; 
    }
-   .wff{
   
-   }
    .banner{
     height: auto;
     padding-top:50px;
@@ -864,6 +862,7 @@ video{
     width: 100%;
     /* height:2000px; */
     height: 100vh;
+  
     
    
 }
