@@ -31,7 +31,7 @@
       <td>{{ $item->gift_code}}</td>
       <td class="text-right">{{ number_format($item->amount, 2, ',', '.')}} €</td>
       <td  class="text-right">{{ $item->payment_status}}</td>
-      <td  class="text-right {{$item->status === 'active' ? 'text-success' : 'text-secondary'}}" >{{ $item->status}}</td>
+      <td  class="text-right text-uppercase {{$item->status === 'active' ? 'text-success' : 'text-secondary'}}" >{{ $item->status}}</td>
     </tr>
     @endforeach
     @else

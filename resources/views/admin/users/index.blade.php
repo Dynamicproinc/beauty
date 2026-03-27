@@ -37,8 +37,8 @@
                                 <td>{{ $user->email }}</td>
                                 {{-- <td>{{$user->address->country}}</td> --}}
                                 <td class="text-nowrap">
-                                    {{ $user->address->address }}<br>
-                                    {{ $user->address->city }} {{ $user->address->postal_code }}<br>
+                                    {{ $user->address?->address }}<br>
+                                    {{ $user->address?->city }} {{ $user->address?->postal_code }}<br>
                                    
                                 </td>
                                 

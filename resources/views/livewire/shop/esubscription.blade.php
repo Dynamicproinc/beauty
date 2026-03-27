@@ -1,6 +1,7 @@
 <div>
     <div class="container">
-        <form wire:submit="subscribe">
+        <div class="bg-white p-3 border">
+                <form wire:submit="subscribe">
             <h5>{{ __('Subscribe to our newsletter') }}</h5>
 
             <p>
@@ -42,6 +43,7 @@
             @if(session()->has('success'))
             <div class="alert alert-success">{{session('success')}}</div>
             @endif
+        </div>
         </div>
     </div>
     @push('scripts')

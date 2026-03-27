@@ -63,7 +63,7 @@ Route::get('unsubscribe-email/{ref}/{email}', function ($ref, $email) {
             <p>Thank you for staying with us!</p>
         </div>
     ";
-});
+})->name('unsubscribe-email');
 
 // 
 Auth::routes(['verify' => true]);

@@ -9,7 +9,7 @@
       <th scope="col">{{_('Date')}}</th>
       <th scope="col">{{__('Email')}}</th>
       <th scope="col">{{__('Status')}}</th>
-      
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -19,6 +19,9 @@
       <th scope="row">{{ $item->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i')}}</th>
       <td>{{ $item->email }}</td>
       <td class="text-uppercase {{$item->status === 'subscribed' ? 'text-success' : 'text-danger'}}">{{ $item->status }}</td>
+      <td>
+        <a href="{{route('unsubscribe-email',[$item->reference, $item->email])}}" class="btn btn-outline-danger btn-sm">{{__('Unsubscribe')}}</a>
+      </td>
       
     </tr>
         @endforeach
