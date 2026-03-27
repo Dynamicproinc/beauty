@@ -210,6 +210,13 @@
             background: #eee;
             padding: 16px
         }
+
+        .page-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
     </style>
 </head>
 
@@ -353,6 +360,17 @@
                                 <span class="ml-2">{{ __('Shipping') }}</span>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link d-flex align-items-center @if (Route::currentRouteName() == 'admin.pickup') active @endif"
+                                href="{{ route('admin.pickup') }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                                </svg>
+                                <span class="ml-2">{{ __('Pickup Locations') }}</span>
+                            </a>
+                        </li>
 
                     </ul>
                 </div>
@@ -364,7 +382,7 @@
                         <li class="breadcrumb-item active" aria-current="page">@yield('title')</li>
                     </ol>
                 </nav>
-                <h1 class="h3">@yield('title')</h1>
+                <h1 class="page-title">@yield('title')</h1>
                 <div>
                     @yield('content')
                 </div>

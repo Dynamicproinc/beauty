@@ -23,7 +23,7 @@
                             <td>{{ $item->discount }}</td>
                             <td>
                                 <button class="btn btn-primary btn-sm"
-                                    wire:click="selectedProduct({{ $item->id }})">View</button>
+                                    wire:click="selectedProduct({{ $item->id }})"><i class="bi bi-pencil"></i></button>
                                 <button class="btn btn-danger btn-sm"
                                     wire:click="delete({{ $item->id }})" wire:confirm="{{__('Are you sure?')}}">Delete</button>
                             </td>

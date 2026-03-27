@@ -1,7 +1,7 @@
 <div>
     <div>
         <div class="d-flex flex-row-reverse mb-3">
-            <button class="btn btn-primary" wire:click="openModal">Add Shipping</button>
+            <button class="btn btn-sm btn-primary" wire:click="openModal">Add Shipping</button>
         </div>
         <table class="table">
             <thead>
