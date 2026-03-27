@@ -283,4 +283,8 @@ for ($m = 1; $m <= 12; $m++) {
         $subscribers = EmailSubscription::latest()->paginate(50);
         return view('admin.subscribers',compact('subscribers'));
     }
+
+    public function pickupMethods(){
+        return view('admin.shipping.pickup');
+    }
 }
