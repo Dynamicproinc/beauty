@@ -9,7 +9,7 @@
         <h1 class="mb-4 text-center">Terms and Conditions</h1>
 
         <div class="mb-4">
-            <strong>Tallow Skincare j.d.o.o.</strong><br>
+            <strong>Tallow Skin Care j.d.o.o.</strong><br>
             Donja Švarča 79c<br>
             47000 Karlovac, Croatia<br>
             Email: info@tallow-skincare.hr<br>
@@ -19,13 +19,13 @@
         <h5 class="mt-4">1. General Provisions</h5>
         <p>
             These Terms and Conditions govern the use of the website https://tallow-skincare.hr 
-            and the purchase of products offered by Tallow Skincare j.d.o.o.
+            and the purchase of products offered by Tallow Skin care j.d.o.o.
             By accessing this website or placing an order, you agree to be bound by these Terms.
         </p>
 
         <h5 class="mt-4">2. Company Information</h5>
         <p>
-            The seller is Tallow Skincare j.d.o.o., registered in Croatia, 
+            The seller is Tallow Skin care j.d.o.o., registered in Croatia, 
             with its registered office at Donja Švarča 79c, 47000 Karlovac.
         </p>
 
@@ -54,7 +54,7 @@
         <h5 class="mt-4">6. Delivery</h5>
         <p>
             Delivery times are estimates and may vary depending on location and courier services.
-            Tallow Skincare j.d.o.o. is not responsible for delays caused by third-party delivery services.
+            Tallow Skin Care j.d.o.o. is not responsible for delays caused by third-party delivery services.
         </p>
 
         <h5 class="mt-4">7. Right of Withdrawal</h5>
@@ -63,7 +63,7 @@
             from the purchase within 14 days of receiving the goods without providing a reason.
         </p>
         <p>
-            To exercise this right, please contact us at info@tallow-skincare.hr.
+            To exercise this right, please contact us at info@tallow-skin Care.hr.
             Products must be returned unused and in their original packaging.
         </p>
 
@@ -75,14 +75,14 @@
 
         <h5 class="mt-4">9. Liability</h5>
         <p>
-            Tallow Skincare j.d.o.o. shall not be liable for any indirect, incidental, or consequential damages
+            Tallow Skin Care j.d.o.o. shall not be liable for any indirect, incidental, or consequential damages
             arising from the use of our products or website, except as required by law.
         </p>
 
         <h5 class="mt-4">10. Intellectual Property</h5>
         <p>
             All website content, including text, images, logos, and design, is the property of 
-            Tallow Skincare j.d.o.o. and may not be copied, reproduced, or distributed without written permission.
+            Tallow Skin Care j.d.o.o. and may not be copied, reproduced, or distributed without written permission.
         </p>
 
         <h5 class="mt-4">11. Governing Law</h5>

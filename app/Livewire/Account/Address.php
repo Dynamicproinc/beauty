@@ -5,6 +5,7 @@ namespace App\Livewire\Account;
 use Livewire\Component;
 use App\Models\Address as Adr;
 use App\Models\ShippingLocation;
+use App\Models\User;
 
 class Address extends Component
 {
@@ -55,6 +56,13 @@ class Address extends Component
         }else{
             session()->flash('message', __('Failed to update address'));    
         }
+    }
+
+    public function deleteMyAccount(){
+        // find user 
+        $user = User::findOrFail(auth()->user()->id);
+        $user->delete();
+        return redirect()->back();
     }
     
 }
