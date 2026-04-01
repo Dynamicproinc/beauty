@@ -58,7 +58,7 @@
                      {{-- <small> info@tallow-skincare.hr</small><br> --}}
                      <a href="tel:+385996680498" style="color:white">+385 996 680 498</a>
 
-
+                    
 
                  </div>
              </div>

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->longText('description')->nullable();
             $table->decimal('discounted_price', 10, 2);
             $table->decimal('original_price', 10, 2)->nullable();
-            $table->decimal('tax', 10, 2)->nullable();
+            $table->boolean('tax')->default(false);
             $table->decimal('cost_per_item', 10, 2)->nullable();
             $table->string('sku')->nullable();
             $table->string('barcode')->nullable();
@@ -52,4 +52,5 @@ return new class extends Migration
     {
         Schema::dropIfExists('products');
     }
+    
 };
