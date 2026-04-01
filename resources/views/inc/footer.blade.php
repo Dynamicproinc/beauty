@@ -55,7 +55,7 @@
                      Donja Švarča 79c<br>
                      47000 Karlovac, Croatia.<br>
                      <small> info@tallow-skincare.hr</small><br>
-                     <small> 0996680498</small>
+                     <small> +385 996 680 498</small>
 
 
                  </div>
