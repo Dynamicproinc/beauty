@@ -47,7 +47,7 @@ class AdminController extends Controller
         $this_month_visits = Visit::whereBetween('created_at', [$start_raw, $end_raw])->get()->count();
         $last_month_visits = Visit::whereBetween('created_at', [now()->subMonth()->startOfMonth(),  now()->subMonth()->endOfMonth()])->get()->count();
         $visit_growth = $last_month_visits > 0
-            ? (($$this_month_visits - $last_month_visits) / $last_month_visits) * 100
+            ? (($this_month_visits - $last_month_visits) / $last_month_visits) * 100
             : 100;
 
         // 
