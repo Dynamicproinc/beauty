@@ -54,7 +54,7 @@
 
                                         <td class="text-nowrap">
                                             <div class="">
-                                                <h6 class="mb-0 tt-text-xs mb-3">
+                                                <h6 class="mb-0 tt-text-xs mb-3 text-nowtrap">
                                                     {{ number_format($item['price'] * $item['quantity'], 2, ',', ' ') }}
                                                     €</h6>
                                                 <button class="btn btn-sm btn-link text-danger p-0"

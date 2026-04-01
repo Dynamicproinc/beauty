@@ -156,7 +156,7 @@
                             <div class="text-center text-sm-end text-white text-uppercase">
                                 <div>
                                     <div>
-                                        <img src="{{ asset('media/images/logo.png') }}" alt=""
+                                        <img src="{{ asset('media/images/logo.png') }}" alt="tallow skin care"
                                             class="img-fluid mb-3">
                                     </div>
                                     <a href="/our-story" class="tt_btn"
