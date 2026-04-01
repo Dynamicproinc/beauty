@@ -5,7 +5,7 @@
             <div class="mb-3 d-flex justify-content-between align-items-center" style="height:35px">
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('media/images/logo.png') }}" alt="" class="logo-md">
-                    <span class="logo-text fw-bold">Tallow Skincare</span>
+                    <span class="logo-text fw-bold">Tallow Skin Care</span>
                 </div>
                 <button class="btn btn-default" onclick="closeSB()"><i class="bi bi-x-lg"></i></button>
             </div>
@@ -72,7 +72,7 @@
                 <a href="{{__('home')}}" class="tt_btn_theme">{{ __('Login') }} </a>
             </div>
             <hr />
-            <h6 class="mb-0">Tallow skin care j.d.o.o.</h6>
+            <h6 class="mb-0">Tallow Skin Care j.d.o.o.</h6>
             <small>
                 Donja Švarča 79c, Karlovac, Karlovačka, 47000, Croatia
                 <br>
