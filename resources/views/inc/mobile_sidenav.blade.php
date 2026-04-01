@@ -76,8 +76,7 @@
             <small>
                 Donja Švarča 79c, Karlovac, Karlovačka, 47000, Croatia
                 <br>
-                info@tallow-skincare.hr
-
+               <a href="mailto:info@tallow-skincare.hr">info@tallow-skincare.hr</a>
 
             </small>
 
