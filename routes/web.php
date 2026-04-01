@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Session;
 //     return view('tallow_theme');
 // })->name('welcome');
 
-Route::get('/',[App\Http\Controllers\PagesController::class, 'welcome'])->name('welcome');
+Route::get('/', [App\Http\Controllers\PagesController::class, 'welcome'])->name('welcome');
 // language change
 Route::get('/language/{lang}', function ($lang) {
 
@@ -30,18 +30,18 @@ Route::get('/language/{lang}', function ($lang) {
 });
 
 
-  
+//  unsubscribe the email
 
 Route::get('unsubscribe-email/{ref}/{email}', function ($ref, $email) {
-    
+
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         return "<h2>Invalid email address.</h2>";
     }
 
-   
+
     $subs = EmailSubscription::where('reference', $ref)
-                             ->where('email', $email)
-                             ->first();
+        ->where('email', $email)
+        ->first();
 
     if (!$subs) {
         return "<h2>Subscription not found or invalid link.</h2>";
@@ -51,11 +51,11 @@ Route::get('unsubscribe-email/{ref}/{email}', function ($ref, $email) {
         return "<h2>You have already unsubscribed from our emails.</h2>";
     }
 
-    
+
     $subs->status = 'unsubscribed';
     $subs->save();
 
-   
+
     return "
         <div style='font-family: sans-serif; text-align: center; margin-top: 50px;'>
             <h1>Email Unsubscribed ✅</h1>
@@ -65,26 +65,29 @@ Route::get('unsubscribe-email/{ref}/{email}', function ($ref, $email) {
     ";
 })->name('unsubscribe-email');
 
-// 
+// Auth UI
 Auth::routes(['verify' => true]);
 
+// guest accessible pages 
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 Route::get('account-orders', [App\Http\Controllers\HomeController::class, 'orders'])->name('account.orders')->middleware('verified');
-Route::get('product/{id}',[App\Http\Controllers\ShopController::class, 'showProduct'])->name('shop.product.show');
-Route::get('products',[App\Http\Controllers\ShopController::class, 'allProducts'])->name('shop.product.all');
-Route::get('cart',[App\Http\Controllers\ShopController::class, 'cart'])->name('shop.cart');
-Route::get('checkout',[App\Http\Controllers\ShopController::class, 'checkout'])->name('shop.checkout');
-Route::get('contact-us',[App\Http\Controllers\ShopController::class, 'contact'])->name('shop.contact');
-Route::get('buy-gift-card',[App\Http\Controllers\ShopController::class, 'buyGiftCard'])->name('shop.buy-gift-card');
-Route::get('privacy-statement',[App\Http\Controllers\PagesController::class, 'privacy'])->name('shop.privacy');
-Route::get('terms-and-conditions',[App\Http\Controllers\PagesController::class, 'terms'])->name('shop.terms');
-Route::get('news-letter-subscription',[App\Http\Controllers\PagesController::class, 'emailSubscription'])->name('shop.subscribe');
-Route::get('our-story',[App\Http\Controllers\PagesController::class, 'ourStory'])->name('shop.our-story');
-
-// Route::get('order-confirmation/{slug}',[App\Http\Controllers\ShopController::class, 'thankyou'])->name('shop.thankyou');
+Route::get('product/{id}', [App\Http\Controllers\ShopController::class, 'showProduct'])->name('shop.product.show');
+Route::get('products', [App\Http\Controllers\ShopController::class, 'allProducts'])->name('shop.product.all');
+Route::get('cart', [App\Http\Controllers\ShopController::class, 'cart'])->name('shop.cart');
+Route::get('checkout', [App\Http\Controllers\ShopController::class, 'checkout'])->name('shop.checkout');
+Route::get('contact-us', [App\Http\Controllers\ShopController::class, 'contact'])->name('shop.contact');
+Route::get('buy-gift-card', [App\Http\Controllers\ShopController::class, 'buyGiftCard'])->name('shop.buy-gift-card');
+Route::get('privacy-statement', [App\Http\Controllers\PagesController::class, 'privacy'])->name('shop.privacy');
+Route::get('terms-and-conditions', [App\Http\Controllers\PagesController::class, 'terms'])->name('shop.terms');
+Route::get('news-letter-subscription', [App\Http\Controllers\PagesController::class, 'emailSubscription'])->name('shop.subscribe');
+Route::get('our-story', [App\Http\Controllers\PagesController::class, 'ourStory'])->name('shop.our-story');
 route::get('order-confirmation/{slug}', [App\Http\Controllers\ShopController::class, 'invoice'])->name('shop.invoice');
 route::get('order-confirmation-card-payment/{stripe_session_id}', [App\Http\Controllers\ShopController::class, 'stripeSuccess'])->name('shop.stripe.success');
 route::get('confirm-gift-card-payment/{stripe_session_id}', [App\Http\Controllers\ShopController::class, 'successGiftCard'])->name('shop.stripe.gift.success');
+
+
+
+
 // admin routes
 
 Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(function () {
@@ -96,7 +99,6 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
     Route::post('/products/edit/product-info/update/{id}', [App\Http\Controllers\AdminController::class, 'saveProductInfo'])->name('admin.products.edit.infoupdate');
     Route::get('/products/edit/product-info/edit/{id}', [App\Http\Controllers\AdminController::class, 'editProductInfo'])->name('admin.products.edit.infoedit');
     Route::post('/products/edit/product-info/edit/{id}/update', [App\Http\Controllers\AdminController::class, 'updateProductInfo'])->name('admin.products.edit.infoedit.update');
-    // inventory
     Route::get('/inventory/add-stock', [App\Http\Controllers\AdminController::class, 'addStock'])->name('admin.inventory.addstock');
     Route::get('/inventory/stock-entries', [App\Http\Controllers\AdminController::class, 'stockEntries'])->name('admin.inventory.stockentries');
     Route::get('/orders', [App\Http\Controllers\AdminController::class, 'orders'])->name('admin.orders');
@@ -109,6 +111,7 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
 
 
 
+//Payments handling and webhooks
 
 Route::get('/checkout-stripe', [StripeController::class, 'checkout']);
 Route::get('/success', [StripeController::class, 'success'])->name('success');
@@ -118,38 +121,27 @@ Route::get('/check-payment-status/{sessionId}', function ($sessionId) {
 
     $order = \App\Models\SalesOrder::where('stripe_session_id', $sessionId)->first();
     $gift_card = \App\Models\DigitalGiftCard::where('stripe_session_id', $sessionId)->first();
+    if ($order) {
+        return response()->json([
+            'status' => $order->stripe_status,
+        ]);
+    }
 
+    if ($gift_card) {
+        return response()->json([
+            'status' => $gift_card->payment_status,
+        ]);
+    }
 
-
-
- 
-
-if ($order) {
-    return response()->json([
-        'status' => $order->stripe_status,
-    ]);
-}
-
-if ($gift_card) {
-    return response()->json([
-        'status' => $gift_card->payment_status,
-    ]);
-}
-
-return response()->json(['status' => 'not_found']);
-
-
+    return response()->json(['status' => 'not_found']);
 });
 
 //google
-
-
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 
-// testing area
-
+// Artisan  commands for the migrations
 Route::get('/abc123', function () {
     Artisan::call('migrate', ['--force' => true]);
 
