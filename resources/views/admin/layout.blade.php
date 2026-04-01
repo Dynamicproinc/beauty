@@ -223,7 +223,7 @@
 <body>
     <nav class="navbar navbar-light bg-light p-3">
         <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ route('admin.dashboard') }}">
                 <h5 class="mb-0">{{ __('Admin') }} <small class="text-muted">{{ env('APP_NAME') }}</small></h5>
                 {{-- <small class="text-muted" style="font-size: 12px">{{env('APP_NAME')}}</small> --}}
             </a>
