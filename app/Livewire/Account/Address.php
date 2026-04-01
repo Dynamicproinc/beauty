@@ -62,7 +62,7 @@ class Address extends Component
         // find user 
         $user = User::findOrFail(auth()->user()->id);
         $user->delete();
-        return redirect()->back();
+        return redirect()->to(route('welcome'));
     }
     
 }

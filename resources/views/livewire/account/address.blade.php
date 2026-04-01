@@ -83,7 +83,7 @@
             {{ __('By clicking the delete button, all your data will be permanently removed from our system.') }}
         </p>
         
-        <button class="btn btn-danger btn-sm" wire:conirm="Are you sure?" wire:click="deleteMyAccount">
+        <button class="btn btn-danger btn-sm" wire:confirm="Are you sure?" wire:click="deleteMyAccount">
             {{ __('Delete My Account') }}
         </button>
     </div>
