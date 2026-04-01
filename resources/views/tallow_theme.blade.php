@@ -8,13 +8,13 @@
             <div class="hero-wallpaper">
                 <div class="d-none d-sm-block">
                     <video width="100%" autoplay muted playsinline loop>
-                        <source src="{{ asset('media/videos/video_intro.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('media/videos/TSC_XL.mp4') }}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="d-block d-sm-none">
                     <video width="100%" height="100%" autoplay muted playsinline loop>
-                        <source src="{{ asset('media/videos/video_intro_mobile.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('media/videos/TSC_SM.mp4') }}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
