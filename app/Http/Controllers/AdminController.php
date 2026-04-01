@@ -104,43 +104,43 @@ class AdminController extends Controller
             ->pluck('total', 'month')
             ->toArray();
 
-       $sales = SalesOrder::selectRaw('MONTH(created_at) as month, SUM(final_total) as total')
-    ->whereYear('created_at', date('Y'))
-    ->where('payment_status', 'success')
-    ->groupByRaw('MONTH(created_at)')
-    ->pluck('total', 'month')
-    ->toArray();
+        $sales = SalesOrder::selectRaw('MONTH(created_at) as month, SUM(final_total) as total')
+            ->whereYear('created_at', date('Y'))
+            ->where('payment_status', 'success')
+            ->groupByRaw('MONTH(created_at)')
+            ->pluck('total', 'month')
+            ->toArray();
 
-            // dd($users);
+        // dd($users);
 
 
         $months = [];
 
         for ($i = 1; $i <= 12; $i++) {
             $months['users'][] = $users[$i] ?? 0;
-             $months['sales'][] = $sales[$i] ?? 0;
-             $months['visits'][] = $visits[$i] ?? 0;
+            $months['sales'][] = $sales[$i] ?? 0;
+            $months['visits'][] = $visits[$i] ?? 0;
         }
 
         // 
 
         $traffic = Visit::select(
-        DB::raw('MONTH(created_at) as month'),
-        DB::raw('count(*) as total')
-    )
-    ->whereYear('created_at', date('Y'))
-    ->groupBy('month')
-    ->pluck('total', 'month')
-    ->toArray();
+            DB::raw('MONTH(created_at) as month'),
+            DB::raw('count(*) as total')
+        )
+            ->whereYear('created_at', date('Y'))
+            ->groupBy('month')
+            ->pluck('total', 'month')
+            ->toArray();
 
-// Build labels for all 12 months
-$labels = [];
-$series = [];
+        // Build labels for all 12 months
+        $labels = [];
+        $series = [];
 
-for ($m = 1; $m <= 12; $m++) {
-    $labels[] = date('M', mktime(0, 0, 0, $m, 1));
-    $series[] = $traffic[$m] ?? 0; // default to 0 if no data
-}
+        for ($m = 1; $m <= 12; $m++) {
+            $labels[] = date('M', mktime(0, 0, 0, $m, 1));
+            $series[] = $traffic[$m] ?? 0; // default to 0 if no data
+        }
 
         // 
         $data = [
@@ -159,7 +159,7 @@ for ($m = 1; $m <= 12; $m++) {
             'months' => $months,
             'labels' => $labels,
             'series' => $series
-            
+
 
         ];
         return view('admin.dashboard', $data);
@@ -265,26 +265,31 @@ for ($m = 1; $m <= 12; $m++) {
         return redirect()->back()->with('success', 'Changes saved');
     }
 
-    public function users(){
+    public function users()
+    {
         $users = User::with('address')->paginate(20);
-        return view('admin.users.index',compact('users'));
+        return view('admin.users.index', compact('users'));
     }
 
-    public function shipping(){
+    public function shipping()
+    {
         return view('admin.shipping.shipping');
     }
 
-    public function giftCards(){
+    public function giftCards()
+    {
         $gift_cards = DigitalGiftCard::where('payment_status', 'paid')->latest()->paginate(20);
         return view('admin.product.gift-card', compact('gift_cards'));
     }
 
-    public function subscribers(){
+    public function subscribers()
+    {
         $subscribers = EmailSubscription::latest()->paginate(50);
-        return view('admin.subscribers',compact('subscribers'));
+        return view('admin.subscribers', compact('subscribers'));
     }
 
-    public function pickupMethods(){
+    public function pickupMethods()
+    {
         return view('admin.shipping.pickup');
     }
 }

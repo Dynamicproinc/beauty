@@ -19,38 +19,38 @@ class GoogleController extends Controller
     public function handleGoogleCallback()
     {
         try {
-           $randomPassword = Str::random(12);
+            $randomPassword = Str::random(12);
 
-$googleUser = Socialite::driver('google')
-    ->scopes(['openid', 'profile', 'email'])
-    ->stateless()
-    ->user();
-    
+            $googleUser = Socialite::driver('google')
+                ->scopes(['openid', 'profile', 'email'])
+                ->stateless()
+                ->user();
 
-$user = User::updateOrCreate(
-    ['email' => $googleUser->getEmail()],
-    [
-        // 'name' => $googleUser->getName(),
-        // $guser =  $googleUser->getName(),
-        'name' => $googleUser->user['given_name'],
-        'last_name' =>$googleUser->user['family_name'],
-        'google_id' => $googleUser->getId(),
-        'avatar' => $googleUser->getAvatar(),
-        'password' => bcrypt($randomPassword),
-    ]
-);
 
-if (!$user->email_verified_at) {
-    $user->email_verified_at = now();
-    $user->save();
-}
+            $user = User::updateOrCreate(
+                ['email' => $googleUser->getEmail()],
+                [
+                    // 'name' => $googleUser->getName(),
+                    // $guser =  $googleUser->getName(),
+                    'name' => $googleUser->user['given_name'],
+                    'last_name' => $googleUser->user['family_name'],
+                    'google_id' => $googleUser->getId(),
+                    'avatar' => $googleUser->getAvatar(),
+                    'password' => bcrypt($randomPassword),
+                ]
+            );
+
+            if (!$user->email_verified_at) {
+                $user->email_verified_at = now();
+                $user->save();
+            }
 
             Auth::login($user, true);
 
             return redirect()->to(route('home'));
         } catch (Exception $e) {
             // dd($e->getMessage());
-             return redirect()->route('login')->with('error', 'Google login failed or was canceled.');
+            return redirect()->route('login')->with('error', 'Google login failed or was canceled.');
         }
     }
 }
