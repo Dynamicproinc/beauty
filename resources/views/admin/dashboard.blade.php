@@ -1,5 +1,5 @@
 @extends('admin.layout')
-@section('title', 'Dashboard')
+@section('title', __('Dashboard'))
 @section('content')
     <div>
         <p>{{ __('Welcome to the admin dashboard. Control, monitor, and manage everything from your dashboard') }}</p>
@@ -14,10 +14,10 @@
                         <small class="fw-bolder db-muted-upper text-muted">{{ $start_format }} - {{ $end_format }}</small>
                         <div class="db-muted">
                             @if ($user_growth > 0)
-                                <span class="text-success">▲ + {{ round($user_growth, 1) }} % from last month</span>
+                                <span class="text-success">▲ + {{ round($user_growth, 1) }} % {{__('from last month')}}</span>
                             @endif
                             @if ($user_growth < 0)
-                                <span class="text-danger">▼ {{ round($user_growth, 1) }} % from last month</span>
+                                <span class="text-danger">▼ {{ round($user_growth, 1) }} % {{__('from last month')}}</span>
                             @endif
                         </div>
                     </div>
@@ -25,17 +25,17 @@
             </div>
             <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
                 <div class="card">
-                    <h5 class="card-header">Revenue</h5>
+                    <h5 class="card-header">{{__('Revenue')}}</h5>
                     <div class="card-body">
                         <h5 class="card-title">{{ number_format($total_sale, 2, ',', '.') }} <small
                                 class="text-muted">EUR</small></h5>
                         <small class="fw-bold text-muted db-muted-upper">{{ $start_format }} - {{ $end_format }}</small>
                         <div class="db-muted">
                             @if ($sales_growth > 0)
-                                <span class="text-success">▲ + {{ round($sales_growth, 1) }} % from last month</span>
+                                <span class="text-success">▲ + {{ round($sales_growth, 1) }} % {{__('from last month')}}</span>
                             @endif
                             @if ($sales_growth < 0)
-                                <span class="text-danger">▼ {{ round($sales_growth, 1) }} % from last month</span>
+                                <span class="text-danger">▼ {{ round($sales_growth, 1) }} % {{__('from last month')}}</span>
                             @endif
                         </div>
                     </div>
@@ -43,16 +43,16 @@
             </div>
             <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
                 <div class="card">
-                    <h5 class="card-header">Purchases</h5>
+                    <h5 class="card-header">{{__('Purchases')}}</h5>
                     <div class="card-body">
                         <h5 class="card-title">{{ $purchases }}</h5>
                         <small class="fw-bold text-muted db-muted-upper">{{ $start_format }} - {{ $end_format }}</small>
                         <div class="db-muted">
                             @if ($purchase_growth > 0)
-                                <span class="text-success">▲ + {{ round($purchase_growth, 1) }} % from last month</span>
+                                <span class="text-success">▲ + {{ round($purchase_growth, 1) }} % {{__('from last month')}}</span>
                             @endif
                             @if ($purchase_growth < 0)
-                                <span class="text-danger">▼ {{ round($purchase_growth, 1) }} % from last month</span>
+                                <span class="text-danger">▼ {{ round($purchase_growth, 1) }} % {{__('from last month')}}</span>
                             @endif
                         </div>
                     </div>
@@ -60,16 +60,16 @@
             </div>
             <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
                 <div class="card">
-                    <h5 class="card-header">Visits</h5>
+                    <h5 class="card-header">{{__('Visits')}}</h5>
                     <div class="card-body">
                         <h5 class="card-title">{{ $this_month_visits }}</h5>
                         <small class="fw-bold text-muted db-muted-upper">{{ $start_format }} - {{ $end_format }}</small>
                         <div class="db-muted">
                             @if ($visit_growth > 0)
-                                <span class="text-success">▲ + {{ round($visit_growth, 1) }} % from last month</span>
+                                <span class="text-success">▲ + {{ round($visit_growth, 1) }} % {{__('from last month')}}</span>
                             @endif
                             @if ($visit_growth < 0)
-                                <span class="text-danger">▼ {{ round($visit_growth, 1) }} % from last month</span>
+                                <span class="text-danger">▼ {{ round($visit_growth, 1) }} % {{__('from last month')}}</span>
                             @endif
                         </div>
                     </div>
@@ -119,13 +119,13 @@
                                 </tbody>
                             </table>
                         </div>
-                        <a href="{{ route('admin.orders') }}" class="btn btn-block btn-light">View all</a>
+                        <a href="{{ route('admin.orders') }}" class="btn btn-block btn-light">{{__('View all')}}</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-xl-4">
                 <div class="card">
-                    <h5 class="card-header">Traffic last 6 months</h5>
+                    <h5 class="card-header">{{__('Traffic last 6 month')}}</h5>
                     <div class="card-body">
                         <div id="traffic-chart"></div>
                     </div>
