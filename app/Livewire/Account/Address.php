@@ -62,6 +62,7 @@ class Address extends Component
         // find user 
         $user = User::findOrFail(auth()->user()->id);
         $user->delete();
+        // redirect back to the home after remove user account
         return redirect()->to(route('welcome'));
     }
     
