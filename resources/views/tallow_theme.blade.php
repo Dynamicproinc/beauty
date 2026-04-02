@@ -103,7 +103,7 @@
 
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tsc_002.jpg') }}">
+                                        <img src="{{ asset('media/images/tsc_002.JPG') }}">
 
                                         <div class="sm-card-text">
 
