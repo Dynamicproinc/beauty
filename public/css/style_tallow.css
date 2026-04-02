@@ -153,8 +153,7 @@ h5 {
         rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     background-color: #fff;
 }
-.g-c-preview {
-}
+
 .g-c-preview img {
     width: 100%;
     height: 243px;
@@ -372,10 +371,7 @@ p {
     height: 300px; /* height of carousel */
     margin-right: 10px !important;
 }
-.ca-cel-re {
-    /* width: 0% !important; */
-    /* width: 18% !important; */
-}
+
 .carousel-cell div img {
     height: 300px;
     width: 100%;
@@ -519,10 +515,7 @@ footer {
     height: 600px;
     background-color: #f7f7f7;
 }
-.link-secondary:hover {
-    /* color: #000 !important;
-    background: #fff; */
-}
+
 .non-hover:hover {
     color: #fff !important;
     background: transparent;
@@ -863,14 +856,10 @@ i {
         width: 100%;
         object-fit: cover;
     }
-    .hero-section {
-        /* height: 2000px; */
-    }
+    
     .hero-wallpaper {
         height: 100vh !important;
         background-color: #000;
-
-       
     }
     video {
         height: 100vh;
