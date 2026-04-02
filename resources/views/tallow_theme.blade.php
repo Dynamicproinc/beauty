@@ -41,7 +41,7 @@
                                 {{-- add the product link --}}
 
                                 <a href="/products" class="tt_btn"
-                                    title="{{ __('Buy now tallow skincare product') }}">{{ __('BUY NOW') }}</a>
+                                    title="{{ __('Buy now tallow skincare product') }}">{{ __('OUR PRODUCTS') }}</a>
 
                             </div>
                         </div>
@@ -273,7 +273,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="/products" class="btn-1-xl rounded-0">{{ __('BUY NOW') }}</a>
+                                <a href="/products" class="btn-1-xl rounded-0">{{ __('OUR PRODUCTS') }}</a>
                             </div>
                         </div>
                     </div>
