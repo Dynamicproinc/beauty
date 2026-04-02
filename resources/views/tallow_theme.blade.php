@@ -103,7 +103,7 @@
 
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tllow_skin_care_fact_pure_black_angus03.png') }}">
+                                        <img src="{{ asset('media/images/tsc_002.jpg') }}">
 
                                         <div class="sm-card-text">
 
