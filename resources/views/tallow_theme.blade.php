@@ -114,7 +114,7 @@
 
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tllow_skin_care_fact_pure_black_angus01.png') }}"
+                                        <img src="{{ asset('media/images/tsc_production.jpg') }}"
                                             alt="tallow skin care">
 
                                         <div class="sm-card-text">
