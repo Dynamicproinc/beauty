@@ -100,7 +100,7 @@
                         <form wire:submit="applyGiftCard">
                             <div class="row">
                                 <div class="col-8">
-                                    <input type="text" class="form-control @error('gift_code') is-invalid @enderror"
+                                    <input type="text" class="form-control text-uppercase @error('gift_code') is-invalid @enderror"
                                         placeholder="{{ __('Enter gift card code') }}" wire:model="gift_code">
                                     @error('gift_code')
                                         <small class="text-danger">{{ $message }}</small>
