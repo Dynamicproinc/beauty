@@ -94,7 +94,9 @@
                                             <div class="col-lg-6 mb-1">
                                                 <div class="d-flex">
                                                    <div class="mid-icon">
-                                                    <i class="bi bi-check2"></i>
+                                                    {{-- <i class="bi bi-check2"></i> --}}
+                                                         <img src="{{ asset('media/svg/icon1.svg') }}" alt=""
+                                                        class="b-icon-sm">
                                                    </div>
                                                    <div> {{$highlight->highlight_text}}</div>
                                                 </div>
