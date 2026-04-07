@@ -140,9 +140,9 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--p_color);
+    background-color:#fff;
     border-radius: 50%;
-    color: #fff;
+    color:  var(--p_color);
 }
 
 .g-card {
