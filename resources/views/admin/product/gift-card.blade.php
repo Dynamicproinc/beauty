@@ -24,7 +24,7 @@
          <tr>
       <td scope="row"> {{ $item->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}</td></td>
       <td>
-        <img src="{{asset('media/card_design/'.$item->getDesign()->file_path)}}" alt="" style="width:100px;height:55px;boject-fit:cover;border-radius:8px">
+        <img src="{{asset('media/card_design/'.$item->getDesign()?->file_path)}}" alt="" style="width:100px;height:55px;boject-fit:cover;border-radius:8px">
       </td>
       <td>{{ $item->email }}</td>
       <td>{{ $item->from}}</td>
