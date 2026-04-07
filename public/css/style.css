@@ -462,7 +462,8 @@ ol{
 .pro-description h3,
 .pro-description h4,
 .pro-description h5,
-.pro-description h6 {
+.pro-description h6 ,
+.pro-description li {
     font-size: 15px !important;
     line-height: 1.5;
     /* font-weight: 400; */
