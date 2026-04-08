@@ -223,9 +223,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-6 mb-3">
-                            <div class="product-image-xl">
-                                <img src="{{ asset('uploads/products/' . $selected_product->getImage()->file_path) }}"
-                                    alt="" class="img-fluid">
+                            <div class="">
+                                <video  autoplay muted playsinline loop style="height: 100%;width:100%;background:white;border1px solid white">
+                                    <source src="{{asset('media/videos/0408.mp4')}}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-6">
