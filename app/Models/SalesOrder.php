@@ -77,7 +77,7 @@ public function getFinalAmountAttribute(){
 
 }
 
-    public function getGiftcode(){
+    public function getGiftCode(){
         return DigitalGiftCard::where('gift_code', $this->gift_code)->first();
     }
 }

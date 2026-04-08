@@ -150,7 +150,7 @@ $pl = \App\Models\PickupLocation::where('id', $order->pickup_location)->first();
 <tr>
 <td colspan="4" style="border:1px solid #cccccc;text-align:right;">
     <strong>{{__('Subtotal')}}</strong>
-    <small style="color:green">@if($order->gift_code) {{ $order->getGiftcode()?->amount }} - {{__('Gift card discount applied.')}} @endif</small>
+    <small style="color:green">@if($order->gift_code) {{ number_format($order->getGiftCode()?->discount_amount ?? 0, 2, ',', '.') }} - {{__('Gift card discount applied.')}} @endif</small>
 </td>
 <td style="border:1px solid #cccccc;text-align:right;">
 €{{ number_format($order->total_amount, 2, ',', '.') }}
