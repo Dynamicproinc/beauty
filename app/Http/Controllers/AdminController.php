@@ -284,7 +284,12 @@ class AdminController extends Controller
 
     public function subscribers()
     {
-        $subscribers = EmailSubscription::latest()->paginate(50);
+        $subscribers = EmailSubscription::orderByRaw("
+        FIELD(status, 'subscribed', 'unsubscribed')
+    ")
+            ->latest()
+            ->paginate(50);
+
         return view('admin.subscribers', compact('subscribers'));
     }
 
