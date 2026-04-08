@@ -224,7 +224,7 @@
                     <div class="row">
                         <div class="col-md-6 col-lg-6 mb-3">
                             <div class="" style="height:100%;width:100%;background:white;border: 1px solid white;overflow:hidden">
-                                <video  autoplay muted playsinline loop style="height: 110%;width:110%;background:white;border: 1px solid white">
+                                <video  autoplay muted playsinline loop style="height: 110%;width:110%;background:white;border: 1px solid white;object-fit:cover;object-position:center;">
                                     <source src="{{asset('media/videos/tallow_bottle.mp4')}}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
