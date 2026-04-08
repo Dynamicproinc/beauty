@@ -46,7 +46,7 @@ info@tallow-skincare.hr<br>
 @if ($order->stripe_session_id)
 <br><br>
 <strong>{{ __('Online Payment') }}</strong><br>
-<span style="color:@if($order->stripe_status=='paid')green @else red @endif;">
+<span style="color:@if($order->stripe_status=='paid' || $order->stripe_status=='success') green @else red @endif;">
 {{ $order->stripe_status }}
 </span>
 @endif
