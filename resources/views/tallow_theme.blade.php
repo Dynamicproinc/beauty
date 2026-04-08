@@ -225,7 +225,7 @@
                         <div class="col-md-6 col-lg-6 mb-3">
                             <div class="">
                                 <video  autoplay muted playsinline loop style="height: 100%;width:100%;background:white;border1px solid white">
-                                    <source src="{{asset('media/videos/0408.mp4')}}" type="video/mp4">
+                                    <source src="{{asset('media/videos/tallow_bottle.mp4')}}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
