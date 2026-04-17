@@ -13,9 +13,12 @@
                         <span>{{ __('Our story') }}</span>
                     </div>
                    </div>
-                    <p class="tt-text-hero-md text-uppercase text-center mb-0">
+                    {{-- <p class="tt-text-hero-md text-uppercase text-center mb-0">
                                     {{ __('Natural balance is the most important.') }}
-                                </p>
+                                </p> --}}
+                                <div class="d-flex justify-content-center">
+                                    <img src="{{asset('media/images/gif_en.gif')}}" alt="" style="width: auto; height: 150px; margin-top: 20px">
+                                </div>
                                 <div class="text-center p-3">
                                     <p class="p-3">{{__('Tallow skin care was born out of personal enthusiasm and over the past year and a half has grown into a real project to create natural skin care products.')}}</p>
                                     {{-- <p>{{__('After a year and a half of research, testing, and sharing experiences, we founded Tallow skin care in 2025.')}}</p>
@@ -32,7 +35,7 @@
         </section>
          <section class="br-1-bg medium-section mb-0" id="founders-word" style="top:100px">
           <div class="row justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                   <div class="container">
                   <div class="">
                                 <div>
@@ -57,19 +60,19 @@
                                 </div>
                             </div>
                              <div class="text-center">
-                            <div class="f-img-wr">
-                                {{-- <img src="https://www.tallows.de/cdn/shop/files/ece-tallow.webp?v=1758472868&width=1000"
-                                    alt="tallow-skin-care" class=""> --}}
-                            </div>
+                            {{-- <div class="f-img-wr">
+                                <img src="https://www.tallows.de/cdn/shop/files/ece-tallow.webp?v=1758472868&width=1000"
+                                    alt="tallow-skin-care" class="">
+                            </div> --}}
                         </div>
-                <div class="row justify-content-center">
+                {{-- <div class="row justify-content-center">
                     <div class="row">
                         <div class="col-lg-6 mb-3">
                           
                         </div>
                        
                     </div>
-                </div>
+                </div> --}}
             </div>
             </div>
           </div>
