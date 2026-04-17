@@ -35,9 +35,9 @@
                                     <p>{{ __('Clean as the source. Pure as the care.') }}</p>
                                 </div>
 
-                                <p class="sec_text_p_md fw-bold">
+                                {{-- <p class="sec_text_p_md fw-bold">
                                     {{ __('Natural balance is the most important.') }}
-                                </p>
+                                </p> --}}
                                 {{-- add the product link --}}
 
                                 <a href="/products" class="tt_btn"
@@ -466,21 +466,21 @@
                                     {{ __('faq.d.5') }}
                                 </p>
                             </div>
-                            <div class="faq-item">
+                            {{-- <div class="faq-item">
                                 <input type="radio" id="fq6" name="faq" class="faq-radio" value="fq1">
                                 <label for="fq6" class="faq-label">
                                     <div class="d-flex justify-content-between">
 
                                         <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">
                                             {{ __('faq.t.6') }}</h5>
-                                        {{-- <span><i class="bi bi-plus"></i></span> --}}
+                                       
                                     </div>
                                 </label>
 
                                 <p class="text-white faq-answer">
                                     {{ __('faq.d.6') }}
                                 </p>
-                            </div>
+                            </div> --}}
 
 
                         </div>
