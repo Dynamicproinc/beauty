@@ -76,7 +76,7 @@
                             <div class="main-carousel-2">
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tsc_img_001.JPG') }}">
+                                        <img src="{{ asset('media/images/tsc_bottle_on_grass.png') }}">
 
                                         <div class="sm-card-text">
 
@@ -87,7 +87,7 @@
                                 <div class="carousel-cell">
 
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tsc_003.PNG') }}">
+                                        <img src="{{ asset('media/images/tsc_box_bottle_on_grass.png') }}">
 
                                         <div class="sm-card-text">
 
