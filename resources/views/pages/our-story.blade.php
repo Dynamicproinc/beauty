@@ -17,7 +17,12 @@
                                     {{ __('Natural balance is the most important.') }}
                                 </p> --}}
                                 <div class="d-flex justify-content-center">
+                                    @if(config('app.locale') === 'en')
                                     <img src="{{asset('media/images/gif_en.gif')}}" alt="" style="width: auto; height: 150px; margin-top: 20px">
+                                    @endif
+                                    @if(config('app.locale') === 'hr')
+                                    <img src="{{asset('media/images/gif_hr.gif')}}" alt="" style="width: auto; height: 150px; margin-top: 20px">
+                                    @endif
                                 </div>
                                 <div class="text-center p-3">
                                     <p class="p-3">{{__('Tallow skin care was born out of personal enthusiasm and over the past year and a half has grown into a real project to create natural skin care products.')}}</p>
