@@ -76,7 +76,7 @@
                             <div class="main-carousel-2">
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tsc_bottle_on_grass.png') }}">
+                                        <img src="{{ asset('media/images/tsc_002.png') }}">
 
                                         <div class="sm-card-text">
 
@@ -101,16 +101,7 @@
 
 
 
-                                <div class="carousel-cell">
-                                    <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tsc_002.JPG') }}">
-
-                                        <div class="sm-card-text">
-
-                                            {{ __('Meticulously Crafted') }}
-                                        </div>
-                                    </div>
-                                </div>
+                               
 
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
@@ -120,6 +111,17 @@
                                         <div class="sm-card-text">
 
                                             {{ __('Pure Black Angus Tallow') }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                 <div class="carousel-cell">
+                                    <div class=" mb-3 cr-cont">
+                                        <img src="{{ asset('media/images/tsc_bottle_on_grass.png') }}">
+
+                                        <div class="sm-card-text">
+
+                                            {{ __('Meticulously Crafted') }}
                                         </div>
                                     </div>
                                 </div>
@@ -391,7 +393,7 @@
                     <div class="col-lg-6">
                         <div class="p-3">
                             <div class="faq-item">
-                                <input type="radio" id="fq1" name="faq" class="faq-radio" value="fq1">
+                                <input type="checkbox" id="fq1" name="faq1" class="faq-radio" value="fq1">
                                 <label for="fq1" class="faq-label">
                                     <div class="d-flex justify-content-between">
 
@@ -406,7 +408,7 @@
                                 </p>
                             </div>
                             <div class="faq-item">
-                                <input type="radio" id="fq2" name="faq" class="faq-radio" value="fq1">
+                                <input type="checkbox" id="fq2" name="faq2" class="faq-radio" value="fq1">
                                 <label for="fq2" class="faq-label">
                                     <div class="d-flex justify-content-between">
 
@@ -421,7 +423,7 @@
                                 </p>
                             </div>
                             <div class="faq-item">
-                                <input type="radio" id="fq3" name="faq" class="faq-radio" value="fq1">
+                                <input type="checkbox" id="fq3" name="faq3" class="faq-radio" value="fq1">
                                 <label for="fq3" class="faq-label">
                                     <div class="d-flex justify-content-between">
 
@@ -437,7 +439,7 @@
                                 </p>
                             </div>
                             <div class="faq-item">
-                                <input type="radio" id="fq4" name="faq" class="faq-radio" value="fq1">
+                                <input type="checkbox" id="fq4" name="faq4" class="faq-radio" value="fq1">
                                 <label for="fq4" class="faq-label">
                                     <div class="d-flex justify-content-between">
 
@@ -452,7 +454,7 @@
                                 </p>
                             </div>
                             <div class="faq-item">
-                                <input type="radio" id="fq5" name="faq" class="faq-radio" value="fq1">
+                                <input type="checkbox" id="fq5" name="faq5" class="faq-radio" value="fq1">
                                 <label for="fq5" class="faq-label">
                                     <div class="d-flex justify-content-between">
 
