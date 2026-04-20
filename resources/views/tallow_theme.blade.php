@@ -84,6 +84,28 @@
                                         </div>
                                     </div>
                                 </div>
+                                 <div class="carousel-cell">
+                                    <div class=" mb-3 cr-cont">
+                                        <img src="{{ asset('media/images/tsc_bottle_on_grass.png') }}">
+
+                                        <div class="sm-card-text">
+
+                                            {{ __('Meticulously Crafted') }}
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="carousel-cell">
+                                    <div class=" mb-3 cr-cont">
+                                        <img src="{{ asset('media/images/tsc_production.jpg') }}"
+                                            alt="tallow skin care">
+
+                                        <div class="sm-card-text">
+
+                                            {{ __('Pure Black Angus Tallow') }}
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="carousel-cell">
 
                                     <div class=" mb-3 cr-cont">
@@ -103,29 +125,9 @@
 
                                
 
-                                <div class="carousel-cell">
-                                    <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tsc_production.jpg') }}"
-                                            alt="tallow skin care">
+                               
 
-                                        <div class="sm-card-text">
-
-                                            {{ __('Pure Black Angus Tallow') }}
-                                        </div>
-                                    </div>
-                                </div>
-
-                                 <div class="carousel-cell">
-                                    <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tsc_bottle_on_grass.png') }}">
-
-                                        <div class="sm-card-text">
-
-                                            {{ __('Meticulously Crafted') }}
-                                        </div>
-                                    </div>
-                                </div>
-
+                                
 
 
                             </div>
