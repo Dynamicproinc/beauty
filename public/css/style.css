@@ -1067,7 +1067,7 @@ transform: translateY(-50%) rotate(0.5turn);
     cursor: pointer;
     position: relative;
     padding-right: 24px;
-    height: 20px;
+    
     /* height: 0px; */
 }
 .faq-answer{
@@ -1096,7 +1096,7 @@ transform: translateY(-50%) rotate(0.5turn);
 
 .faq-item .faq-radio:checked ~ .faq-answer{
     display: block;
-    height:100px;
+    min-height:100px;
     margin-top: 12px;
     transition: transform 0.4s;
 
