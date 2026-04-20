@@ -793,7 +793,13 @@ i {
     left: 0;
     top: 0;
     z-index: 1;
-    background-image: linear-gradient(#00000080, #00000080);
+    /* background-image: linear-gradient(#00000080, #00000080); */
+     background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85) 0%,   /* bottom (darkest) */
+        rgba(0, 0, 0, 0.5) 50%,   /* middle */
+        rgba(0, 0, 0, 0.25) 100%  /* top (slightly dark) */
+    );
 }
 
 .fixed-section {
