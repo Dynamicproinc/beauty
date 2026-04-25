@@ -157,6 +157,12 @@ class Checkout extends Component
             $location = ShippingLocation::where('id', $this->shipping_location)->first();
         }
 
+        // if payment is pay by card no shipping cost but cash on delivery have 3 euro shipping cost
+        if ($this->payment_method == 'card') {
+            $this->shipping_cost = 0;
+            $this->getFinalValue();
+            return;
+        }
 
         // check location has freeshiping
         if ($location) {
