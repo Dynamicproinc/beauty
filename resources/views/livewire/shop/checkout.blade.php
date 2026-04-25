@@ -323,7 +323,7 @@
                                                 <div class="">
                                                     <input class="form-check-input pm my-3 mx-2"
                                                         wire:model="payment_method" type="radio" id="pmcard"
-                                                        checked value="card">
+                                                        checked value="card" wire:change="getShippingCost">
                                                     <label class="pm-check-label my-3" for="pmcard">
                                                         <span>{{ __('Credit Card') }}</span>
                                                         <img src="{{ asset('media/svg/visa.svg') }}" alt="">
@@ -353,7 +353,7 @@
                                                 <div class="">
                                                     <input class="form-check-input pm my-3 mx-2"
                                                         wire:model="payment_method" type="radio" id="pmcod"
-                                                        value="cod">
+                                                        value="cod" wire:change="getShippingCost">
                                                     <label class="pm-check-label my-3" for="pmcod">
                                                         {{ __('Cash/Card for delivery or pickup') }}
 
