@@ -394,8 +394,8 @@
                                 <h5 class="h5-title">Tvrtka i kontakt podaci</h5>
                                 <h5 class="h5-title">Tallow Skin Care j.d.o.o</h5>
                                 <p class="p-text">
-                                    Donja Švarča 79C</br></br>
-                                    47000 Karlovac</br></br>
+                                    Donja Švarča 79C</br>
+                                    47000 Karlovac</br>
                                     info@tallow-skincare.hr
 
                                 </p>
