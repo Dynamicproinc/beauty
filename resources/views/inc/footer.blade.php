@@ -36,6 +36,10 @@
                                      class="nav-link p-0 text-white">{{ __('Terms & Conditions') }}</a>
                              </li>
                              <li class="nav-item mb-2">
+                                 <a href="/delivery-terms"
+                                     class="nav-link p-0 text-white">{{ __('Delivery') }}</a>
+                             </li>
+                             <li class="nav-item mb-2">
                                  <a href="/#faq" class="nav-link p-0 text-white">{{ __('FAQs') }}</a>
                              </li>
                              <li class="nav-item mb-2">

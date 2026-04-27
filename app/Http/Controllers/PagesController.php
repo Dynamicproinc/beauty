@@ -41,4 +41,11 @@ class PagesController extends Controller
        
         return view('pages.our-story');
     }
+
+    public function deliveryTerms(){
+         if(session()->get('locale') == 'hr'){
+            return view('pages.delivery-hr');
+        }
+        return view('pages.delivery');
+    }
 }
