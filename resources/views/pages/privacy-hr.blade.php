@@ -34,6 +34,9 @@
                     padding: 0;
                     list-style: none;
                 }
+                br{
+                    margin-bottom: 8px !important;
+                }
             </style>
             <div class="privacy-container">
                 <div class="row justify-content-center">
@@ -51,7 +54,7 @@
                                 <p class="p-text">
                                     Slanjem upita na naš mail ostavljate podatke koji su nam potrebni kako bi mogli
                                     odgovoriti na primljeni upit. Podatke koje smo zaprimili čuvamo jednu kalendarsku godinu
-                                    te ih nakon toga brišemo.</br>
+                                    te ih nakon toga brišemo.</br></br>
                                     Ukoliko želite brisanje Vaših osobnih podataka koje ste ostavili slanjem maila i prije
                                     isteka prethodno navedenog roka, molim Vas da nam pošaljete zahtjev za brisanje osobnih
                                     podataka.
@@ -67,29 +70,29 @@
 
                                     Naša politika zaštite osobnih podataka odnosi se na našu odanost postupanju prema
                                     osobnim podacima zaposlenika, kupaca i drugih zainteresiranih strana s najvećom pažnjom
-                                    i povjerljivošću.</br>
+                                    i povjerljivošću.</br></br>
                                     Ovom deklaracijom osiguravamo da prikupljamo, pohranjujemo i obrađujemo osobne podatke
                                     pravično, transparentno i poštujući individualna prava pojedinaca.
                                     Svrha ove Deklaracije je potpuno usklađenje s Uredbom EU 2016/679 Europskog parlamenta i
                                     vijeća od 27. travnja 2016. o zaštiti pojedinaca u vezi s obradom osobnih podataka i o
                                     slobodnom kretanju takvih podataka, skraćeno GDPR, (obavezna od dana 25.5.2018.)
                                     Voditelj obrade je društvo čiju primarnu djelatnost obuhvaća informacijska uslužna
-                                    djelatnost.</br>
+                                    djelatnost.</br></br>
 
                                     Imamo službenika za zaštitu osobnih podataka – Nikola Maturanec, možete nas kontaktirati
                                     putem e-maila: info@tallow-skincare.hr ili na adresu Donja Švarča 79C, 47000
-                                    Karlovac.</br>
+                                    Karlovac.</br></br>
 
                                     Voditelj obrade prodaju vrši putem web shopa prisutnog na www.tallow-skincare.hr
                                     stranici. Djelatnost Voditelja obrade-a nije fokusirana na osobne podatke niti
                                     podrazumijeva opsežnu obradu osobnih podataka fizičkih osoba. Osobni podaci s kojima se
                                     u svom redovitom poslovanju Voditelj obrade susreće i koje obrađuje, su u podaci
-                                    prikupljeni uz privolu, a u svrhu realizacije kupoprodaje ili servisa.</br>
+                                    prikupljeni uz privolu, a u svrhu realizacije kupoprodaje ili servisa.</br></br>
 
                                     Zaštita prava i sloboda pojedinaca s obzirom na obradu osobnih podataka zahtijeva
                                     uvođenje Politike privatnosti koja ima za cilj upoznati ispitanike s načinom na koji će
                                     njihovi osobni podaci biti obrađivani u društvu Voditelj obrade, kao i koja su njihova
-                                    prava i kako se ostvaruju.</br>
+                                    prava i kako se ostvaruju.</br></br>
 
                                     Stoga ova Politika privatnosti osigurava i transparentnost u vezi s funkcijama i obradom
                                     osobnih podataka te omogućava ispitaniku da se upozna s pravima vezanim uz obradu
@@ -105,7 +108,7 @@
                                     internetske stranice koju ste posjetili. Kolačići omogućuju jednostavnije korištenje
                                     budući da spremaju Vaše postavke za internetsku stranicu (jezik ili adresa) te ih pri
                                     ponovnom pokretanju iste iznova aktiviraju. Na taj način informacije su prilagođene
-                                    Vašim potrebama i uobičajenim načinima korištenja.</br>
+                                    Vašim potrebama i uobičajenim načinima korištenja.</br></br>
 
                                     Od jednostavnih informacija o postavkama, kolačići mogu spremiti i velik broj osobnih
                                     informacija (ime, e-mail adresa) za koje Vi u potpunosti morate dati pristup. Ukoliko im
@@ -125,17 +128,17 @@
                                     preglednika u kojem radite Stalne kolačiće (Persistent cookies) – riječ je o kolačićima
                                     koji će ostati ”zabilježeni” u vašem internetskom pregledniku dok ne isteknu ili ih sami
                                     ručno ne izbrišete. Prikupljene informacije su anonimne, a ne uključuju vaše privatne
-                                    podatke.</br>
+                                    podatke.</br></br>
 
                                     Postoji nekoliko vanjskih servisa koji Vam spremaju ograničene kolačiće, a isti nije
                                     postavio Webshop. Limitirani kolačići služe za nesmetano korištenje mogućnosti koje
-                                    korisnicima osiguravaju jednostavan pristup sadržaju.</br>
+                                    korisnicima osiguravaju jednostavan pristup sadržaju.</br></br>
 
                                     Webshop omogućuje mjerenje posjećenosti putem Google Analytics – servis za mjerenje
                                     posjećenosti. Ukoliko želite onemogućiti spremanje kolačića od strane ovog servisa,
                                     zabranite ih na slijedećem linku: Google Analytics –
                                     <a
-                                        href="https://tools.google.com/dlpage/gaoptout">https://tools.google.com/dlpage/gaoptout</a>.</br>
+                                        href="https://tools.google.com/dlpage/gaoptout">https://tools.google.com/dlpage/gaoptout</a>.</br></br>
 
                                     Dodatne informacije oko isključivanja kolačića
                                     Postoji nekoliko internetskih stranica za isključivanje pohranjivanja kolačića za
@@ -167,7 +170,7 @@
                                     Koristimo usluge ovlaštenih trećih strana kako bi obradili podatke za nas (primjerice
                                     Google Analytics) koji su pažljivo odabrani te zadovoljavaju uvjete zaštite osobnih
                                     podataka prema GDPR-u. Podaci koje sakupljaju su anonimni te onemogućavaju vašu
-                                    identifikaciju.</br>
+                                    identifikaciju.</br></br>
 
                                     To su:
                                 </p>
@@ -195,10 +198,10 @@
                                 </p>
                                 <p class="p-text">
                                     U svrhu ostvarivanja vaših prava, možete nas kontaktirati na <a
-                                        href="mailto:info@tallow-skincare.hr">info@tallow-skincare.hr</a>. </br>
+                                        href="mailto:info@tallow-skincare.hr">info@tallow-skincare.hr</a>. </br></br>
                                     U opsegu u kojemu obrađujemo vaše osobne podatke na temelju Vaše privole, imate pravo u
                                     bilo kojem trenutku povući privolu. Povlačenje privole neće utjecati na zakonitost
-                                    obrade provedene na temelju vaše privole prije njezina povlačenja.</br>
+                                    obrade provedene na temelju vaše privole prije njezina povlačenja.</br></br>
 
                                     U pogledu obrade vaših osobnih podataka također imate pravo na pritužbu nadzornom tijelu
                                     lokalnog tijela za zaštitu osobnih podataka države vašeg uobičajenog prebivališta,
@@ -217,7 +220,7 @@
                                     na Internet stranici tallow-skincare.hr. Zato vas pozivamo da povremeno pregledate ovu
                                     Politiku privatnosti. Ukoliko se korisnik ne slaže s ovom Politikom privatnosti,
                                     upućujemo ga da napusti te ne pristupa i ne koristi internetsku stranicu
-                                    tallow-skincare.hr. </br>
+                                    tallow-skincare.hr. </br></br>
 
                                     Izmjena Politike privatnosti i uvjeta korištenja osobnih podataka stupa na snagu odmah
                                     nakon objave na internetskoj stranici tallow-skincare.hr Nastavak uporabe internetske
@@ -236,7 +239,7 @@
                                 <p class="p-text">
                                     Članci na ovim stranicama mogu sadržavati umetnuti sadržaj s drugih stranica kao što je
                                     Youtube ili Google Photos. Sadržaj na našim stranicama s ugrađenim sadržajem drugih
-                                    stranica se ponaša kao da posjećujete te druge web stranice.</br>
+                                    stranica se ponaša kao da posjećujete te druge web stranice.</br></br>
 
                                     Navedene stranice mogu skupljati kolačiće o Vama, uključivati i praćenje trećih strana,
                                     kao i praćenje interakcije s umetnutim sadržajem ako imate njihov račun i prijavljeni
@@ -276,7 +279,7 @@
                                 </h5>
                                 <p class="p-text">
                                     Ako ostavite komentar, komentar i metapodaci ostaju trajno spremljeni. Ovo je tako da
-                                    možemo prepoznati i odobriti buduće popratne komentare automatski.</br>
+                                    možemo prepoznati i odobriti buduće popratne komentare automatski.</br></br>
 
                                     Za one korisnike koji se registriraju na našim stranicama, također spremamo osobne
                                     podatke koje nam dajete za Vaš profil. Svi korisnici mogu pristupiti tim podacima i sami
@@ -348,7 +351,7 @@
                                     ime ukloni s lista koje se koriste za marketinške kampanje. Svi se podaci o korisnicima
                                     strogo čuvaju i dostupni su samo djelatnicima kojima su ti podaci nužni za obavljanje
                                     posla. Svi djelatnici Tallow Skin Care j.d.o.o i poslovni partneri odgovorni su za poštivanje
-                                    načela zaštite privatnosti.</br>
+                                    načela zaštite privatnosti.</br></br>
 
                                     Osobnim podacima smatraju se svi podaci kojima se utvrđuje identitet Kupca (primjerice
                                     ime i prezime, adresa e-pošte, adresa stanovanja i sl.). Tallow Skin Care j.d.o.o neće dostavljati
@@ -356,12 +359,12 @@
                                     kojima tako izričito propisuje zakon te u slučajevima kada je to potrebno za ispunjenje
                                     obveza (npr. dostava naručene robe). Od navedenog se izuzima uvid od strane ovlaštenih
                                     službi izvršne državne vlasti Republike Hrvatske, za potrebe istražnih radnji temeljem
-                                    valjanog sudskog naloga.</br>
+                                    valjanog sudskog naloga.</br></br>
 
                                     Registracijom potvrđujete točnost navedenih podataka te dajete izričitu suglasnost da
                                     Tallow Skin Care j.d.o.o može, sukladno odredbama Zakona o zaštiti osobnih podataka, obrađivati
                                     osobne podatke naznačene u obrascu za potrebe vlastitih evidencija i pružanja usluga
-                                    obavješćivanja o našim novim uslugama.</br>
+                                    obavješćivanja o našim novim uslugama.</br></br>
 
                                     U slučaju promjene bilo kojeg od osobnih podataka (npr. mjesto stanovanja, adresa
                                     dostave) koji se evidentiraju prilikom registracije, Kupac nije dužan o promjeni
@@ -369,12 +372,12 @@
                                     nedostatke u pogledu narudžbe odnosno isporuke proizvoda. Možete sami napraviti
                                     ispravak, izmjenu ili nadopunu nepotpunih, netočnih ili nevažećih podataka, a ukoliko
                                     više ne želite primati naš promidžbeni materijal dovoljno je da kliknete na link “odjavi
-                                    me za primanje newslettera“.</br>
+                                    me za primanje newslettera“.</br></br>
 
                                     Podatke koji se pristupom na internetsku stranicu automatski bilježe, a nisu osobni
                                     podaci (vrste pretraživača, broj posjeta, vrijeme provedeno na našim stranicama, i dr.)
                                     Tallow Skin Care j.d.o.o ima pravo koristiti isključivo radi ocjene posjećenosti internetske
-                                    stranice, poboljšanja sadržaja i funkcionalnosti te unapređenja kvalitete usluga.</br>
+                                    stranice, poboljšanja sadržaja i funkcionalnosti te unapređenja kvalitete usluga.</br></br>
 
                                     Ako imate bilo kakva pitanja u vezi povjerljivosti podataka, molimo vas dan nam
                                     pošaljete e-mail na adresu info@tallow-skincare.hr.
@@ -391,8 +394,8 @@
                                 <h5 class="h5-title">Tvrtka i kontakt podaci</h5>
                                 <h5 class="h5-title">Tallow Skin Care j.d.o.o</h5>
                                 <p class="p-text">
-                                    Donja Švarča 79C</br>
-                                    47000 Karlovac</br>
+                                    Donja Švarča 79C</br></br>
+                                    47000 Karlovac</br></br>
                                     info@tallow-skincare.hr
 
                                 </p>
