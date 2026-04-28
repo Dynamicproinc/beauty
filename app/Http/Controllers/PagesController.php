@@ -17,15 +17,16 @@ class PagesController extends Controller
     }
 
     public function privacy()
+    
     {
-         if(session()->get('locale') == 'hr'){
+         if(session()->get('locale') == 'hr' || env('APP_LOCALE') == 'hr'){
             return view('pages.privacy-hr');
         }
         return view('pages.privacy');
     }
     public function terms()
     {
-          if(session()->get('locale') == 'hr'){
+          if(session()->get('locale') == 'hr' || env('APP_LOCALE') == 'hr'){
             return view('pages.terms-hr');
         }
         return view('pages.terms');
@@ -43,7 +44,7 @@ class PagesController extends Controller
     }
 
     public function deliveryTerms(){
-         if(session()->get('locale') == 'hr'){
+         if(session()->get('locale') == 'hr' || env('APP_LOCALE') == 'hr'){
             return view('pages.delivery-hr');
         }
         return view('pages.delivery');
