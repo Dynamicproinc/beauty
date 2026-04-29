@@ -17,18 +17,23 @@ class PagesController extends Controller
     }
 
     public function privacy()
-    
+
     {
-         if(session()->get('locale') == 'hr'){
+        if (session()->get('locale') == 'hr') {
             return view('pages.privacy-hr');
         }
         return view('pages.privacy');
     }
     public function terms()
     {
-          if(session()->get('locale') == 'hr'){
+        if (!session()->has('locale')) {
+            session()->put('locale', 'hr'); // or 'en' depending on your default
+        }
+
+        if (session('locale') === 'hr') {
             return view('pages.terms-hr');
         }
+
         return view('pages.terms');
     }
 
@@ -37,14 +42,16 @@ class PagesController extends Controller
         return view('pages.subscribe');
     }
 
-    public function ourStory(){
+    public function ourStory()
+    {
 
-       
+
         return view('pages.our-story');
     }
 
-    public function deliveryTerms(){
-         if(session()->get('locale') == 'hr'){
+    public function deliveryTerms()
+    {
+        if (session()->get('locale') == 'hr') {
             return view('pages.delivery-hr');
         }
         return view('pages.delivery');
