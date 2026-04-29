@@ -171,7 +171,7 @@ class Checkout extends Component
 
             // calculation shipping costs if free shiing
             if ($location->free_delivery) {
-                if ($this->getCartValue() >= $location->max_value || $this->payment_method == 'card') {
+                if ($this->getCartValue() >= $location->max_value && $this->payment_method == 'card') {
                     $this->shipping_cost = 0;
                 } else {
                     $this->shipping_cost = $location->shipping_cost;
