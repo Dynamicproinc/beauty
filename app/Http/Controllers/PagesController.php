@@ -19,9 +19,14 @@ class PagesController extends Controller
     public function privacy()
 
     {
-        if (session()->get('locale') == 'hr') {
+        if (!session()->has('locale')) {
+            session()->put('locale', 'hr'); // or 'en' depending on your default
+        }
+
+        if (session('locale') === 'hr') {
             return view('pages.privacy-hr');
         }
+
         return view('pages.privacy');
     }
     public function terms()
@@ -51,9 +56,14 @@ class PagesController extends Controller
 
     public function deliveryTerms()
     {
-        if (session()->get('locale') == 'hr') {
+        if (!session()->has('locale')) {
+            session()->put('locale', 'hr'); // or 'en' depending on your default
+        }
+
+        if (session('locale') === 'hr') {
             return view('pages.delivery-hr');
         }
+
         return view('pages.delivery');
     }
 }
