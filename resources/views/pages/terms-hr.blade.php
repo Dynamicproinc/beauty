@@ -47,11 +47,13 @@
                                 <h5 class="h5-title">Opći uvjeti</h5>
                                 <p class="p-text">
                                     Ovim se uvjetima utvrđuje postupak naručivanja, plaćanja, isporuke te reklamacija
-                                    proizvoda koji su ponuđeni na ovim stranicama. Tallow Skin Care j.d.o.o Internet stranice mogu se
+                                    proizvoda koji su ponuđeni na ovim stranicama. Tallow Skin Care j.d.o.o Internet
+                                    stranice mogu se
                                     koristiti za Vašu privatnu upotrebu bezi kakvih naknada za korištenje, a prema sljedećim
                                     uvjetima i pravilima.</br></br>
 
-                                    Tallow Skin Care j.d.o.o putem Online prodaje omogućuje kupnju cjelokupnog asortimana Proizvoda
+                                    Tallow Skin Care j.d.o.o putem Online prodaje omogućuje kupnju cjelokupnog asortimana
+                                    Proizvoda
                                     koji se nalazi u ponudi i na zalihi iz koje se Proizvod dostavlja pojedinom Kupcu, a
                                     prema adresi dostave Kupca.</br></br>
 
@@ -62,8 +64,10 @@
                                     se isporučuju po Maloprodajnim cijenama važećim na dan naručivanja bez obzira na
                                     odabrani datum isporuke.</br></br>
 
-                                    U slučaju sumnje na zlouporabu sa strane Kupca, Tallow Skin Care j.d.o.o zadržava pravo neisporuke
-                                    narudžbe kao i raskida Ugovora u bilo kojem trenutku. Tallow Skin Care j.d.o.o zadržava pravo
+                                    U slučaju sumnje na zlouporabu sa strane Kupca, Tallow Skin Care j.d.o.o zadržava pravo
+                                    neisporuke
+                                    narudžbe kao i raskida Ugovora u bilo kojem trenutku. Tallow Skin Care j.d.o.o zadržava
+                                    pravo
                                     trenutno ukinuti bilo koje zaporke ili korisničke račune Kupca, odnosno Korisnika u
                                     slučaju bilo kakvog ponašanja Kupca/Korisnika koje Tallow Skin Care j.d.o.o prema svojoj
                                     diskrecijskoj ocjeni, smatra neprihvatljivim, kao i u svakom slučaju nepoštivanja ovih
@@ -93,7 +97,8 @@
                                     Registracijom korisnik potvrđuje:</br>
                                     – da u cijelosti prihvaća ove opće uvjete;</br>
                                     – potpunost, točnost, istinitost i ažurnost osobnih podataka;</br></br>
-                                    – da daje Tallow Skin Care j.d.o.o-u izričitu suglasnost da može sukladno odredbama Zakona o
+                                    – da daje Tallow Skin Care j.d.o.o-u izričitu suglasnost da može sukladno odredbama
+                                    Zakona o
                                     zaštiti osobnih podataka, obrađivati dane osobne podatke za potrebe vlastitih evidencija
                                     i pružanja drugih usluga, potrebe stvaranja baze podataka o kupcima, obavještavanja o
                                     novim proizvodima i uslugama.</br></br>
@@ -116,8 +121,8 @@
                                 <p class="p-text">
                                     Kupac naručuje proizvod ili proizvode putem elektronskog obrasca narudžbe. Kupcem se
                                     smatra svaka osoba koja elektronski naruči barem jedan proizvod, popuni tražene podatke
-                                    i pošalje narudžbu. Sve cijene izražene su u hrvatskoj nacionalnoj valutu, Euro s
-                                    PDV-om.</br></br>
+                                    i pošalje narudžbu. Sve cijene izražene su u hrvatskoj nacionalnoj valutu,
+                                    Euro</br></br>
 
 
                                     Roba se naručuje elektronskim putem, pritiskom na određeni proizvod te spremanjem istog
@@ -127,7 +132,8 @@
                                     plaćanja.</br></br>
 
                                     Nakon izrade i potvrde narudžbe, na E-mail adresu dobiti ćete E-mail potvrdu da je
-                                    narudžba zaprimljena od strane Tallow Skin Care j.d.o.o. Potvrda se generira automatski od strane
+                                    narudžba zaprimljena od strane Tallow Skin Care j.d.o.o. Potvrda se generira automatski
+                                    od strane
                                     servera te prosljeđuje Kupcu u trenutku potvrde narudžbe. U ovom trenutku smatra se da
                                     je ugovor o kupoprodaji za naručene artikle sklopljen te nadalje nije moguće mijenjati
                                     podatke ili narudžbu (dodavati artikle, mijenjati količine ili slično). U slučaju da
@@ -135,7 +141,8 @@
                                     moguće, ali budite svjesni da je moguća promjena termina isporuke, ovisno o
                                     raspoloživosti.</br></br>
 
-                                    Ako ne dobijete E-mail potvrdu da je narudžba zaprimljena od strane Tallow Skin Care j.d.o.o,
+                                    Ako ne dobijete E-mail potvrdu da je narudžba zaprimljena od strane Tallow Skin Care
+                                    j.d.o.o,
                                     molimo provjerite:</br></br>
 
                                     je li potvrda u Vašem Junk/Spam folderu, je li Vaš mailbox pun, nalaze li se Proizvodi u
@@ -147,7 +154,8 @@
                                 <h5 class="h5-title">Plaćanje</h5>
                                 <p class="p-text">
                                     Naručeni proizvodi ili usluge plaćaju se online jednom od kreditnih kartica: Mastercard,
-                                    Maestro ili Visa. Naručeni proizvodi pakiraju se na način da tokom uobičajene
+                                    Maestro, Visa, Amex ili digital wallets (Apple Pay, Google Pay, Cash App Pay). Naručeni
+                                    proizvodi pakiraju se na način da tokom uobičajene
                                     manipulacije ne budu oštećeni. Prilikom preuzimanja kupac je dužan provjeriti stanje
                                     pošiljke te u slučaju oštećenja odmah reklamirati proizvod dostavljaču (zaposleniku
                                     tvrtke koja vrši dostavu). Prodavatelj se odriče svake odgovornosti u vezi oštećenja
@@ -158,8 +166,7 @@
                                     pronalaska pošiljke ili kako bi se poslala zamjenska pošiljka.</br></br>
 
 
-                                    Ako kupac odbije primiti robu koju je naručio od prodavatelja ima pravo tražiti od kupca
-                                    nadoknadu svih troškova koji su vezani za isporuku.</br></br>
+
 
                                 </p>
                             </section>
@@ -177,21 +184,16 @@
                             <section class="mb-3">
                                 <h5 class="h5-title">Dostava</h5>
                                 <p class="p-text">
-                                    Meso se isporučuje svježe vakumirano, u termo kutijama hlađenim ledenim gelom koji
-                                    garantira održavanje hladnog lanca u dostavi hrane. a za Italiju se dostavlja sa frigo
-                                    transportom.</br></br>
+                                    Proizvodi se pakiraju po uvjetovanim standardima kvalitete te se isporučuju u adekvatnoj
+                                    ambalaži.</br></br>
 
                                     Narudžbe zaprimljene od nedjelje do srijede u 12 sati idu u isporuku isti tjedan do
                                     petka. Narudžbe zaprimljene nakon toga idu u isporuku sljedeći tjedan. Nakon slanja
                                     paket stiže na vašu adresu unutar 24 sata.</br></br>
 
-                                    Sadržaj paketa koji se dostavlja Kupcu, tj. dostavljeni Proizvodi se mogu razlikovati od
-                                    naručenih. Moguće je da prilikom isporuke Tallow Skin Care j.d.o.o određene naručene Proizvode nema
-                                    na zalihi slijedom čega ih nije u mogućnosti isporučiti Kupcu.</br></br>
-
-                                    Ako na zalihama prodavaonice iz koje se vrši dostava nema naručenog Proizvoda, Mint37
-                                    d.o.o. će o tome obavijestiti Kupca telefonski ili pisanim putem. Svi ostali naručeni
-                                    Proizvodi isporučit će se Kupcu.
+                                    Ako na zalihama prodavaonice iz koje se vrši dostava nema naručenog Proizvoda,
+                                    Tallow skin care će o tome obavijestiti Kupca telefonski ili pisanim putem. Svi ostali
+                                    naručeni Proizvodi isporučit će se Kupcu.
                                 </p>
                                 <p class="p-text">
                                     <strong>
@@ -204,7 +206,7 @@
                                     Naknada za dostavu za plaćanje pouzećem iznosi 3,00 €, bez obzira na iznos
                                     narudžbe.</br></br>
 
-                                    Dostava je besplatna za narudžbe plaćene karticom.
+                                    Dostava je besplatna za narudžbe plaćene karticom u većem iznosu od 50 eur.
 
 
                                 </p>
@@ -213,7 +215,7 @@
                                     Naknada za dostavu za plaćanje pouzećem iznosi 3,00 €, bez obzira na iznos
                                     narudžbe.</br></br>
 
-                                    Dostava je besplatna za narudžbe plaćene karticom.
+                                    Dostava je besplatna za narudžbe plaćene karticom u većem iznosu od 50 eur.
 
 
                                 </p>
@@ -224,7 +226,7 @@
                                     paket spreman dobiti ćete pozivom ili porukom.</br></br>
 
                                     Odabirom opcije Osobno preuzimanje ostvarujete 10% popusta na ukupnu kupovinu.</br></br>
-                                    Postanska Street 1b, 10410, Velika Gorica</br>
+                                    Poštanska ulica 1b, 10410, Velika Gorica</br>
                                     Donja Švarča 79c, 47000, Karlovac
 
 
@@ -291,16 +293,17 @@
                                 <h5 class="h5-title">Općenito</h5>
                                 <p class="p-text">
                                     Usluge koje Vam pruža tallow-skincare.hr Internet prodavaonica ne uključuje troškove
-                                    koje snosite koristeći računalnu opremu i usluge za pristup našim stranicama. Mint37
-                                    d.o.o. nije odgovorna za troškove telefona, Internet prometa ili bilo koje druge
-                                    troškove do kojih može doći.</br></br>
+                                    koje snosite koristeći računalnu opremu i usluge za pristup našim stranicama Tallow skin
+                                    care nije odgovorna za troškove telefona, Internet prometa ili bilo koje druge troškove
+                                    do kojih može doći.</br></br>
 
-                                    Iako Vam Tallow Skin Care j.d.o.o nastoji dati najbolju moguću ponudu usluga, Tallow Skin Care j.d.o.o ne može
-                                    garantirati da će usluge na tallow-skincare.hr odgovarati Vašim potrebama.</br></br>
+                                    Iako Vam Tallow Skin Care j.d.o.o nastoji dati najbolju moguću ponudu usluga, Tallow
+                                    Skin Care j.d.o.o ne može garantirati da će usluge na tallow-skincare.hr odgovarati
+                                    Vašim potrebama.<br></br>
 
-                                    Tallow Skin Care j.d.o.o također ne može garantirati da će usluga biti bez pogrešaka. Ukoliko dođe
-                                    do pogreške, molimo Vas da je prijavite našem Kontakt centru ili na e-mail
-                                    info@tallow-skincare.hr kako bismo je otklonili na najbrži mogući način.</br></br>
+                                    Tallow Skin Care j.d.o.o također ne može garantirati da će usluga biti bez pogrešaka.
+                                    Ukoliko dođe do pogreške, molimo Vas da je prijavite našem Kontakt centru ili na e-mail
+                                    info@tallow-skincare.hr kako bismo je otklonili na najbrži mogući način.
                                 </p>
                             </section>
                         </div>

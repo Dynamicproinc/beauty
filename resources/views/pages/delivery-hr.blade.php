@@ -45,68 +45,56 @@
                         <div class="shadow-sm p-3 rounded bg-white">
                             <section class="mb-3">
                                 <h5 class="h5-title">Dostava</h5>
-                                <p class="p-text">
-                                    Na našem webshopu možete naručiti bilo koju količinu mesa i mi ćemo Vam je dostaviti
-                                    kurirskom službom (cijela Hrvatska, Slovenija).<br></br>
-
-                                    Meso se isporučuje svježe vakumirano, u termo kutijama hlađenim ledenim gelom koji
-                                    garantira održavanje hladnog lanca u dostavi hrane. a za Italiju se dostavlja sa frigo
-                                    transportom.
-
+                                 <p class="p-text">
+                                    Na našem webshopu možete naručiti bilo koju količinu proizvoda i mi ćemo Vam ih
+                                    dostaviti kurirskom službom (cijela Hrvatska, Slovenija).
+                                </p>
+                                 <p class="p-text">
+                                    Proizvodi se pakiraju po uvjetovanim standardima kvalitete te se isporučuju u adekvatnoj
+                                    ambalaži.
+                                </p>
+                                 <p class="p-text">
                                     Narudžbe zaprimljene od nedjelje do srijede u 12 sati idu u isporuku isti tjedan do
-                                    petka. Narudžbe zaprimljene nakon toga idu u isporuku sljedeći tjedan. Nakon slanja,
-                                    paket stiže na vašu adresu unutar 24 sata.
-
+                                    petka.
+                                    Narudžbe zaprimljene nakon toga idu u isporuku sljedeći tjedan. Nakon slanja paket
+                                    stiže na vašu adresu unutar 24 sata.
+                                </p>
+                                 <p class="p-text">
+                                    Ako na zalihama prodavaonice iz koje se vrši dostava nema naručenog Proizvoda,
+                                    Tallow skin care će o tome obavijestiti Kupca telefonski ili pisanim putem. Svi ostali
+                                    naručeni Proizvodi isporučit će se Kupcu.
+                                </p>
+                                <h5 class="h5-title">
                                     Troškovi dostave
+                                </h5>
+                                <h5 class="h5-title">
                                     HRVATSKA
-
-                                    Cijena dostave u slučaju plaćanja pouzećem je 10,00 eura (bez obzira na iznos narudžbe).
-
-                                    Cijena dostave u slučaju kartičnog plaćanja za narudžbe do 100,00 eura je 10,00 eura, a
-                                    za narudžbe iznad 100 eura – dostava je BESPLATNA.
-
-                                    SLOVENIJA
-
-                                    Cijena dostave za Sloveniju u slučaju plaćanja pouzećem je 15,00 eura (bez obzira na
-                                    iznos narudžbe).
-
-                                    Cijena dostave za Sloveniju u slučaju kartičnog plaćanja za narudžbe do 100,00 eura je
-                                    15,00 eura, a za narudžbe iznad 100 eura – dostava je BESPLATNA.
-
-                                    OSOBNO PREUZIMANJE
-
-                                    Svoje narudžbe možete podići i osobno na našim lokacijama u Velikoj Gorici i Karlovcu.
+                                </h5>
+                                 <p class="p-text">Naknada za dostavu za plaćanje pouzećem iznosi 3,00 €, bez obzira na iznos narudžbe.</p>
+                                 <p class="p-text">Dostava je besplatna za narudžbe plaćene karticom u većem iznosu od 50 eur.</p>
+                                <h5 class="h5-title">SLOVENIJA</h5>
+                                 <p class="p-text">Naknada za dostavu za plaćanje pouzećem iznosi 3,00 €, bez obzira na iznos narudžbe.</p>
+                                 <p class="p-text">Dostava je besplatna za narudžbe plaćene karticom u većem iznosu od 50 eur.</p>
+                                <h5 class="h5-title">OSOBNO PREUZIMANJE</h5>
+                                 <p class="p-text">Svoje narudžbe možete podići i osobno na našim lokacijama u Velikoj Gorici i Karlovcu.
                                     Proizvodi će biti spremni u roku od 24 sata od zaprimanja narudžbe. Obavijest da je vaš
-                                    paket spreman dobiti ćete pozivom ili porukom.
-
-                                    Odabirom opcije Osobno preuzimanje ostvarujete 10% popusta na ukupnu kupovinu.
-
-                                    📍Poštanska ul. 1b, 10410, Velika Gorica
+                                    paket spreman dobiti ćete pozivom ili porukom.</p>
+                                 <p class="p-text">Odabirom opcije Osobno preuzimanje ostvarujete 10% popusta na ukupnu kupovinu.</p>
+                                 <p class="p-text">
+                                    📍Poštanska ul. 1b, 10410, Velika Gorica<br>
 
                                     📍Donja Švarča 79c, 47000, Karlovac
-
-                                    Kako izgleda tijek dostave?
-                                    Nakon rezanja svi naši komadi mesa odmaraju na temperaturama do 4°C. Idealno odležani
-                                    pakiraju se u vakuum ambalažu kako bi u potpunosti zadržali kvalitetu okusa.
-
-                                    Zaprimili smo vašu narudžbu i bacamo se na pakiranje! Ali prije toga kontaktirali smo
-                                    dostavnu službu i najavili vaš paket.
-
-                                    Komad koji ste odabrali i naručili za dostavu pakira se u prikladnu ambalažu koja će
-                                    osigurati da meso do vas stigne hladno. Vanjska kutija iznutra se oblaže savršeno
-                                    iskrojenim stiropor pločama koje imaju za zadatak zadržati odgovarajuću temperaturu. U
-                                    tako obloženu kutiju umeće se nova kutija u koju dolazi rashlađeno meso i ledeni gel
-                                    koji će unutarnju kutiju i meso u njoj održavati hladnom.
-
-                                    Dostavna služba preuzima meso.
-
-                                    Meso putuje.
-
-                                    Ding-dong. 🔔 Meso je pred vašim vratima. 24 sata od slanja. Hladno.
-
-                                    Spremni za narudžbu?
-                                    Trgovina >>
                                 </p>
+                                <h5 class="h5-title">Preuzimanje</h5>
+                                 <p class="p-text">
+                                    Naručeni Proizvodi bit će složeni na način da se uobičajenom manipulacijom u
+                                    transportu ne mogu oštetiti. Kupcu se savjetuje prije preuzimanja pregledati pošiljku, a
+                                    eventualna vidljiva oštećenja odmah prijaviti te odbiti primiti oštećenu
+                                    pošiljku.</br></br>
+                                    Nakon isporuke robe nije moguće otkazivanje kupnje i povrat novca.
+                                </p>
+
+
                             </section>
                         </div>
                     </div>

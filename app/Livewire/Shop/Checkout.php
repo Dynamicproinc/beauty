@@ -158,18 +158,20 @@ class Checkout extends Component
         }
 
         // if payment is pay by card no shipping cost but cash on delivery have 3 euro shipping cost
-        if ($this->payment_method == 'card') {
-            $this->shipping_cost = 0;
-            $this->getFinalValue();
-            return;
-        }
+        // card payment over 50 is free shipping, cash on delivery have 3 eoro cost
+        // if ($this->payment_method == 'card') {
+            
+        //     $this->shipping_cost = 0;
+        //     $this->getFinalValue();
+        //     return;
+        // }
 
         // check location has freeshiping
         if ($location) {
 
             // calculation shipping costs if free shiing
             if ($location->free_delivery) {
-                if ($this->getCartValue() >= $location->max_value) {
+                if ($this->getCartValue() >= $location->max_value || $this->payment_method == 'card') {
                     $this->shipping_cost = 0;
                 } else {
                     $this->shipping_cost = $location->shipping_cost;
