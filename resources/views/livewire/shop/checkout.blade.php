@@ -237,7 +237,7 @@
                             @if ($delivery_method == 'pickup')
 
                                 <div class="mb-3">
-                                    <h6>{{ __('Personal pickup') }}</h6>
+                                    <h6>{{ __('Personal Pickup') }}</h6>
                                     <div class="form-floating mb-3">
                                         <select
                                             class="form-select text-capitalize @error('pickup_location') is-invalid @enderror"
