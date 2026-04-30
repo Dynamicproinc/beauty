@@ -192,7 +192,7 @@ class Checkout extends Component
 
     public function saveOrder()
     {
-        dd(session()->has('gift_card_model'));
+        
         // dd($this->delivery_method);
         // check cart has items
         if (!$cart = session('cart', [])) {
@@ -215,6 +215,9 @@ class Checkout extends Component
 
             $this->gift_card = $gift_card->gift_code;
             $this->gift_card_amount = $gift_card->amount;
+        }{
+            $this->gift_card_amount = 0;
+            $this->gift_card = null;
         }
 
        
