@@ -668,7 +668,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between  mb-3">
                                         <div>
-                                            <span>{{ __('Shipping') }}</span>
+                                            <span>{{ __('Shipping') }} <a href="/delivery" target="_blank"><i class="bi bi-info-circle"></i></a></span>
 
                                         </div>
                                         <div class="text-right">
