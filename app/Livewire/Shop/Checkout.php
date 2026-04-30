@@ -88,6 +88,7 @@ class Checkout extends Component
 
     function getCartValue()
     {
+        
         $coupone_discount = 0;
         $cart = session('cart', []);
 
@@ -104,6 +105,8 @@ class Checkout extends Component
                 {
                  $this->gift_card_amount = $gc->amount;
                 }
+        }else{
+            $this->gift_card_amount = 0;
         }
 
         $gift_card = $this->gift_card_amount;
@@ -189,6 +192,7 @@ class Checkout extends Component
 
     public function saveOrder()
     {
+        session()->has('gift_card_model');
         // dd($this->delivery_method);
         // check cart has items
         if (!$cart = session('cart', [])) {
@@ -212,6 +216,8 @@ class Checkout extends Component
             $this->gift_card = $gift_card->gift_code;
             $this->gift_card_amount = $gift_card->amount;
         }
+
+       
         // 
         // condtional validation feilds
 
