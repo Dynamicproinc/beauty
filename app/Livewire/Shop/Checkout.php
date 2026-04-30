@@ -112,6 +112,9 @@ class Checkout extends Component
         $gift_card = $this->gift_card_amount;
 
         $total = ($total - $gift_card) - $coupone_discount;
+            if($total < 0){
+                $total = 0;
+            }
         return $total;
     }
 
