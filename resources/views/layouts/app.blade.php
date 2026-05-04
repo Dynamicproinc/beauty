@@ -48,7 +48,11 @@
 
 <body>
     <div id="app">
-
+        {{-- under the constructor --}}
+        <div class="fixed-top bg-danger text-white p-3 text-center">
+            Gradimo nešto sjajno! Narudžbe još nisu otvorene, ali uskoro ćemo biti spremni za vas 😊
+        </div>
+        {{--  --}}
         @include('inc.navbar_detailed')
         <main class="">
 
