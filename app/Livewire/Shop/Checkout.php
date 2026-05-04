@@ -218,7 +218,7 @@ class Checkout extends Component
 
             $this->gift_card = $gift_card->gift_code;
             $this->gift_card_amount = $gift_card->amount;
-        }{
+        }else{
             $this->gift_card_amount = 0;
             $this->gift_card = null;
         }

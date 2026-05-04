@@ -66,6 +66,7 @@ class StripeWebhookController extends Controller
                     \Log::error("Order confirmation email failed for order ID {$order->id}: " . $e->getMessage());
                 }
             }
+            // buy new gift card
 
             if ($digital_gift) {
                 $digital_gift->update([
