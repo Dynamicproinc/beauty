@@ -4,6 +4,8 @@
     --p_color: #A5AE9A;
     /* --p_color: #232e20; */
     --s_color: #58644c;
+    /* --primary-muted: #2F3A2F; */
+    --primary-muted: #F5F5F5;
 }
 /* font campton regular */
 @font-face {
@@ -405,7 +407,7 @@ p {
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    color: #fff;
+    color: var(--primary-muted);
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -461,6 +463,9 @@ p {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.text-primary-muted{
+    color: var(--primary-muted) !important;
 }
 .review-content h5 {
     font-weight: bold;
@@ -521,7 +526,7 @@ p {
 }
 footer {
     background-color: var(--p_color) !important;
-    color: #fff !important;
+    color: var(--primary-muted) !important;
 }
 .btn-white-outline {
     border: 1px solid #fff;

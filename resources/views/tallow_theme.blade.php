@@ -418,13 +418,13 @@
                                 <label for="fq1" class="faq-label">
                                     <div class="d-flex justify-content-between">
 
-                                        <h5 class="fw-bold text-white text-uppercase text-sm">
+                                        <h5 class="fw-bold faq-text text-uppercase text-sm">
                                             {{ __('faq.t.1') }}</h5>
                                         {{-- <span><i class="bi bi-plus"></i></span> --}}
                                     </div>
                                 </label>
 
-                                <p class="text-white faq-answer">
+                                <p class="faq-text faq-answer">
                                     {{ __('faq.d.1') }}
                                 </p>
                             </div>
@@ -433,13 +433,13 @@
                                 <label for="fq2" class="faq-label">
                                     <div class="d-flex justify-content-between">
 
-                                        <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">
+                                        <h5 class="fw-bold faq-text text-uppercase text-sm text-uppercase">
                                             {{ __('faq.t.2') }}</h5>
                                         {{-- <span><i class="bi bi-plus"></i></span> --}}
                                     </div>
                                 </label>
 
-                                <p class="text-white faq-answer">
+                                <p class="faq-text faq-answer">
                                     {{ __('faq.d.2') }}
                                 </p>
                             </div>
@@ -448,13 +448,13 @@
                                 <label for="fq3" class="faq-label">
                                     <div class="d-flex justify-content-between">
 
-                                        <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">
+                                        <h5 class="fw-bold faq-text text-uppercase text-sm text-uppercase">
                                             {{ __('faq.t.3') }}</h5>
                                         {{-- <span><i class="bi bi-plus"></i></span> --}}
                                     </div>
                                 </label>
 
-                                <p class="text-white faq-answer">
+                                <p class="faq-text faq-answer">
                                     {{ __('faq.d.3') }}
 
                                 </p>
@@ -464,13 +464,13 @@
                                 <label for="fq4" class="faq-label">
                                     <div class="d-flex justify-content-between">
 
-                                        <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">
+                                        <h5 class="fw-bold faq-text text-uppercase text-sm text-uppercase">
                                             {{ __('faq.t.4') }}</h5>
                                         {{-- <span><i class="bi bi-plus"></i></span> --}}
                                     </div>
                                 </label>
 
-                                <p class="text-white faq-answer">
+                                <p class="faq-text faq-answer">
                                     {{ __('faq.d.4') }}
                                 </p>
                             </div>
@@ -479,13 +479,13 @@
                                 <label for="fq5" class="faq-label">
                                     <div class="d-flex justify-content-between">
 
-                                        <h5 class="fw-bold text-white text-uppercase text-sm text-uppercase">
+                                        <h5 class="fw-bold faq-text text-uppercase text-sm text-uppercase">
                                             {{ __('faq.t.5') }}</h5>
                                         {{-- <span><i class="bi bi-plus"></i></span> --}}
                                     </div>
                                 </label>
 
-                                <p class="text-white faq-answer">
+                                <p class="faq-text faq-answer">
                                     {{ __('faq.d.5') }}
                                 </p>
                             </div>

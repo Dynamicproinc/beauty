@@ -1,12 +1,12 @@
- <footer class="pt-5 text-white">
+ <footer class="pt-5">
      <div class="container">
          <div class="row">
 
              <!-- Newsletter -->
              <div class="col-md-4 mb-4">
                  {{-- @livewire('shop.esubscription') --}}
-                 <h5 class="text-white">{{ __('Tallow Skin Care') }}</h5>
-                 <p class="text-white">
+                 <h5 class="text-primary-muted">{{ __('TALLOW SKIN CARE') }}</h5>
+                 <p class="">
                      {{-- {{ __('Tallow skincare is a premium, natural skincare line made from 100% pure beef tallow. It is rich in vitamins A, D, E, and K and is designed to nourish and protect your skin.') }} --}}
                      {{__('Our line of products based on beef tallow provides you with a simple but powerful ritual. Each product is rich in natural lipids, fatty acids and vitamins A, D, E, and K that restore the skin barrier, retain moisture and restore your skins natural softness. Introduce simplicity and authenticity into your daily care and feel the real difference.')}}
                  </p>
@@ -21,30 +21,30 @@
              <div class="col-6 col-md-3">
                  <div class="position-relative">
                      <div>
-                         <h6 class="text-white">{{ __('Quick Links') }}</h6>
+                         <h6 class="">{{ __('Quick Links') }}</h6>
                          <ul class="nav flex-column">
 
-                             <li class="nav-item mb-2">
-                                 <a href="/" class="nav-link p-0 text-white">{{ __('Home') }}</a>
+                             <li class="nav-item  mb-2">
+                                 <a href="/" class="nav-link text-primary-muted p-0 ">{{ __('Home') }}</a>
                              </li>
 
-                             <li class="nav-item mb-2">
+                             <li class="nav-item  mb-2">
                                  <a href="/privacy-statement"
-                                     class="nav-link p-0 text-white">{{ __('Privacy Policy') }}</a>
+                                     class="nav-link text-primary-muted p-0 ">{{ __('Privacy Policy') }}</a>
                              </li>
-                             <li class="nav-item mb-2">
+                             <li class="nav-item  mb-2">
                                  <a href="/terms-and-conditions"
-                                     class="nav-link p-0 text-white">{{ __('Terms & Conditions') }}</a>
+                                     class="nav-link text-primary-muted p-0 ">{{ __('Terms & Conditions') }}</a>
                              </li>
-                             <li class="nav-item mb-2">
+                             <li class="nav-item  mb-2">
                                  <a href="/delivery-terms"
-                                     class="nav-link p-0 text-white">{{ __('Delivery') }}</a>
+                                     class="nav-link text-primary-muted p-0 ">{{ __('Delivery') }}</a>
                              </li>
-                             <li class="nav-item mb-2">
-                                 <a href="/#faq" class="nav-link p-0 text-white">{{ __('FAQs') }}</a>
+                             <li class="nav-item  mb-2">
+                                 <a href="/#faq" class="nav-link text-primary-muted p-0 ">{{ __('FAQs') }}</a>
                              </li>
-                             <li class="nav-item mb-2">
-                                 <a href="/contact-us" class="nav-link p-0 text-white">{{ __('Contact') }}</a>
+                             <li class="nav-item  mb-2">
+                                 <a href="/contact-us" class="nav-link text-primary-muted p-0 ">{{ __('Contact') }}</a>
                              </li>
 
                          </ul>
@@ -59,9 +59,9 @@
                      <strong>Tallow Skin Care j.d.o.o.</strong><br>
                      Donja Švarča 79c<br>
                      47000 Karlovac, Croatia.<br>
-                     <a href="mailto:info@tallow-skincare.hr" style="color:white">info@tallow-skincare.hr</a><br>
+                     <a href="mailto:info@tallow-skincare.hr" class="text-primary-muted">info@tallow-skincare.hr</a><br>
                      {{-- <small> info@tallow-skincare.hr</small><br> --}}
-                     <a href="tel:+385996680498" style="color:white">+385 996 680 498</a>
+                     <a href="tel:+385996680498" class="text-primary-muted">+385 996 680 498</a>
 
                     
 
@@ -105,12 +105,12 @@
                      </ul>
                  </div>
                  <li class="ms-3">
-                     <a class="text-white" href="#" aria-label="Instagram">
+                     <a class="" href="#" aria-label="Instagram">
                          <i class="bi bi-instagram fs-5"></i>
                      </a>
                  </li>
                  <li class="ms-3">
-                     <a class="text-white" href="#" aria-label="Facebook">
+                     <a class="" href="#" aria-label="Facebook">
                          <i class="bi bi-facebook fs-5"></i>
                      </a>
                  </li>
