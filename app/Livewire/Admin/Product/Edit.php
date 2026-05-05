@@ -254,7 +254,8 @@ class Edit extends Component
     public function updateProduct()
     {
       
-         $this->validate([
+        try {
+             $this->validate([
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
             'discounted_price' => 'required|numeric|min:0',
@@ -295,6 +296,9 @@ class Edit extends Component
             
         }else{
             $this->error_message = 'Error updating product.';
+        }
+        } catch (\Throwable $th) {
+             $this->error_message = 'Error updating product.';
         }
        
         
