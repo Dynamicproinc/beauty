@@ -7,7 +7,8 @@
                  {{-- @livewire('shop.esubscription') --}}
                  <h5 class="text-white">{{ __('Tallow Skin Care') }}</h5>
                  <p class="text-white">
-                     {{ __('Tallow skincare is a premium, natural skincare line made from 100% pure beef tallow. It is rich in vitamins A, D, E, and K and is designed to nourish and protect your skin.') }}
+                     {{-- {{ __('Tallow skincare is a premium, natural skincare line made from 100% pure beef tallow. It is rich in vitamins A, D, E, and K and is designed to nourish and protect your skin.') }} --}}
+                     {{__('Our line of products based on beef tallow provides you with a simple but powerful ritual. Each product is rich in natural lipids, fatty acids and vitamins A, D, E, and K that restore the skin barrier, retain moisture and restore your skins natural softness. Introduce simplicity and authenticity into your daily care and feel the real difference.')}}
                  </p>
                  <a href="{{ route('shop.subscribe') }}" class="btn btn-light w-100 rounded-0">
                      {{ __('Subscribe') }}

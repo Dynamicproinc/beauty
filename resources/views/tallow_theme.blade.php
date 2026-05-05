@@ -31,8 +31,9 @@
                                 </div>
 
                                 <div class="tt-text-hero-md text-uppercase">
-                                    <p class="mb-0">{{ __('Natural, unique & effective skin care from Croatia!') }}</p>
-                                    <p>{{ __('Clean as the source. Pure as the care.') }}</p>
+                                    {{-- <p class="mb-0">{{ __('Natural, unique & effective skin care from Croatia!') }}</p>
+                                    <p>{{ __('Clean as the source. Pure as the care.') }}</p> --}}
+                                    <p>{{ __('Pure care the kind that skin has always understood') }}</p>
                                 </div>
 
                                 {{-- <p class="sec_text_p_md fw-bold">
@@ -58,11 +59,13 @@
                         <div class="tt_mid_c">
                             <div class="p-3">
                                 <h1 class="tt-text-hero-md text-uppercase">
-                                    {{ __('Simple skin care means few ingredients, full of benefits.') }}
+                                    {{-- {{ __('Simple skin care means few ingredients, full of benefits.') }} --}}
+                                    {{ __('Minimalist, nourishing care made with Black Angus tallow') }}
                                 </h1>
                                 <p class="sec_text_p_md">
-                                    {{ __('Our beef tallow hydrates, nourishes and supports your skins barrier without overloading it. That is exactly what Tallow does because it is so similar to skin naturally. Skincare with tallow is care that works reduced to the essentials.') }}
-
+                                    {{-- {{ __('Our beef tallow hydrates, nourishes and supports your skins barrier without overloading it. That is exactly what Tallow does because it is so similar to skin naturally. Skincare with tallow is care that works reduced to the essentials.') }} --}}
+                                  {{__('​Our Tallow Balm brings the idea back to a modern form. Made from carefully purified Black Angus tallow.')}}</br>
+                                  {{__('The minimalist formulation, without excess ingredients, provides deep hydration and restores the natural balance, leaving the skin smooth and healthy.')}}
                                 </p>
                                 <p>
 
@@ -84,7 +87,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="carousel-cell">
+                                <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
                                         <img src="{{ asset('media/images/tsc_bottle_on_grass.png') }}">
 
@@ -94,10 +97,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="carousel-cell">
+                                <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tsc_production.jpg') }}"
-                                            alt="tallow skin care">
+                                        <img src="{{ asset('media/images/tsc_production.jpg') }}" alt="tallow skin care">
 
                                         <div class="sm-card-text">
 
@@ -123,11 +125,11 @@
 
 
 
-                               
 
-                               
 
-                                
+
+
+
 
 
                             </div>
@@ -227,9 +229,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-6 mb-3">
-                            <div class="" style="height:100%;width:100%;background:white;border: 1px solid white;overflow:hidden">
-                                <video  autoplay muted playsinline loop style="height: 110%;width:110%;background:white;border: 1px solid white;object-fit:cover;object-position:center;">
-                                    <source src="{{asset('media/videos/tallow_bottle.mp4')}}" type="video/mp4">
+                            <div class=""
+                                style="height:100%;width:100%;background:white;border: 1px solid white;overflow:hidden">
+                                <video autoplay muted playsinline loop
+                                    style="height: 110%;width:110%;background:white;border: 1px solid white;object-fit:cover;object-position:center;">
+                                    <source src="{{ asset('media/videos/tallow_bottle.mp4') }}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -289,18 +293,18 @@
         <section class="fixed-section" style="">
             <div class="wrap-overlay"></div>
             <div class="fs-content text-center">
-                <img src="{{asset('media/images/the-m-brothers.png')}}" alt="The M Brothers Tallow">
+                <img src="{{ asset('media/images/the-m-brothers.png') }}" alt="The M Brothers Tallow">
                 <p class="tt-text-hero-md text-uppercase text-center text-white">
                     {{ __('Powered by a Premium Ingredient at the Heart of Our Tallow Skincare') }}
                 </p>
                 <div class="text-white">
-                    {{__('fixed.section.description')}}
+                    {{ __('fixed.section.description') }}
                 </div>
             </div>
 
         </section>
-       
-        
+
+
         <section class="section-type-1">
             <div class="reviews-section">
                 <div class="reviews-section-content">
@@ -528,7 +532,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="f-img-wr">
-                              
+
                             </div>
                         </div>
                     </div>
