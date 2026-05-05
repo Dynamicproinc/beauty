@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
-    --p_color: #636b2f;
+    --p_color: #53682A;
     /* --p_color: #232e20; */
     --s_color: #58644c;
 }
@@ -79,6 +79,11 @@ h5 {
     width: 100%;
     height: 400px;
     z-index: 2;
+     text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .tt-text-xs {
     font-weight: 600;
@@ -803,6 +808,17 @@ i {
     ); */
 }
 
+.blur-area {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* filter: blur(6px); */
+   
+}
 .fixed-section {
     width: 100%;
     height: 500px;

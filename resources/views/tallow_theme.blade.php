@@ -21,7 +21,25 @@
             </div>
 
             <div class="hero-text-wrapper p-3">
-                <div class="container">
+                
+                <div>
+                   
+                     <div class="tt-text-xs text-uppercase mb-2">
+                                    <span>{{ __('Less is more, even in skincare.') }}</span>
+                                </div>
+
+                                <div class="tt-text-hero-md text-uppercase">
+                                   
+                                    <p>{{ __('Pure care the kind that skin has always understood') }}</p>
+                                </div>
+
+                              
+
+                                <a href="/products" class="tt_btn"
+                                    title="{{ __('Buy now tallow skincare product') }}">{{ __('OUR PRODUCTS') }}</a>
+                </div>
+                 
+                {{-- <div class="container">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="text-white text-bracket p-3">
@@ -31,15 +49,11 @@
                                 </div>
 
                                 <div class="tt-text-hero-md text-uppercase">
-                                    {{-- <p class="mb-0">{{ __('Natural, unique & effective skin care from Croatia!') }}</p>
-                                    <p>{{ __('Clean as the source. Pure as the care.') }}</p> --}}
+                                   
                                     <p>{{ __('Pure care the kind that skin has always understood') }}</p>
                                 </div>
 
-                                {{-- <p class="sec_text_p_md fw-bold">
-                                    {{ __('Natural balance is the most important.') }}
-                                </p> --}}
-                                {{-- add the product link --}}
+                              
 
                                 <a href="/products" class="tt_btn"
                                     title="{{ __('Buy now tallow skincare product') }}">{{ __('OUR PRODUCTS') }}</a>
@@ -47,7 +61,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </section>
 
