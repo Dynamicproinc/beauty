@@ -25,10 +25,10 @@
                 <div>
                    
                      <div class="tt-text-xs text-uppercase mb-2">
-                                    <span>{{ __('Less is more, even in skincare.') }}</span>
+                                    {{-- <span>{{ __('Less is more, even in skincare.') }}</span> --}}
                                 </div>
 
-                                <div class="tt-text-hero-md text-uppercase">
+                                <div class="tt-text-hero-md text-uppercase mb-5">
                                    
                                     <p>{{ __('Pure care the kind that skin has always understood') }}</p>
                                 </div>
