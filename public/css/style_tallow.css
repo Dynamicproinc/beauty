@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 :root {
     --p_color: #53682A;
     /* --p_color: #232e20; */
@@ -39,6 +39,16 @@ p {
 }
 h5 {
     font-size: 1.5rem;
+}
+.hero-text-md{
+     font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 110%;
+  /* add shadow to text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
 }
 
 /*  */
