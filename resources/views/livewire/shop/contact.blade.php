@@ -1,6 +1,6 @@
 <div class="mb-5">
-    <div class="card rounded-0 ">
-        <div class="card-body">
+    <div class="rounded-0 ">
+        <div class="blur-overlay p-4" style="position: relative">
             <h1 class="mb-4">{{ __('Contact Us') }}</h1>
             <p class="mb-4">
                 {{ __('If you have any questions, concerns, or feedback, please feel free to reach out to us. We are here to assist you with any inquiries related to our products, orders, or anything else you may need help with.') }}
@@ -43,7 +43,7 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-                 <div class="mb-3" wire:ignore>
+                 <div class="mb-3 d-flex justify-content-center" wire:ignore>
                 <div class="g-recaptcha"
                      data-sitekey="{{ config('services.recaptcha.site_key') }}"
                      data-callback="onRecaptchaSuccess">
