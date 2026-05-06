@@ -41,10 +41,10 @@
     <link rel="manifest" href="/site.webmanifest">
     {{--  --}}
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     {{-- <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script> --}}
     @livewireStyles
 
@@ -74,10 +74,10 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>
     <script>
-    window.addEventListener("load", function() {
-        document.body.classList.add("loaded");
-    });
-</script>
+        window.addEventListener("load", function() {
+            document.body.classList.add("loaded");
+        });
+    </script>
     {{-- side navbar script --}}
     <script>
         function openSB() {
@@ -137,7 +137,11 @@
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-in-out',
+        });
     </script>
     @stack('scripts')
 </body>
