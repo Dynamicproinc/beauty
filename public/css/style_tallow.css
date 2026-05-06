@@ -19,10 +19,17 @@ html {
     font-size: 16px;
 }
 
+
+body.loaded {
+    opacity: 1;
+}
+
 body {
     font-family: Campton, Arial, sans-serif !important;
     letter-spacing: 0.0175rem;
     background-color: #f7f7f7 !important;
+    opacity: 0;
+    transition: opacity .4s ease-in;
 }
 .logo-text {
     font-family: Campton, Arial, sans-serif !important;
