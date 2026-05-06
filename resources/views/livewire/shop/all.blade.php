@@ -30,7 +30,7 @@
                         <div class="row">
                            @foreach ($products as $item)
                                 <div class="col-lg-4 mb-3">
-                               <div data-aos="fade-up" data-aos-duration="1000">
+                               <div data-aos="fade-up">
                                 <div class="th-md">
                                      <img src="{{asset('uploads/products/'.$item->media->first()->file_path)}}" alt="" class="">
                                 </div>
