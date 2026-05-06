@@ -93,10 +93,11 @@
                                         @foreach ($product->getHighlight() as $highlight)
                                             <div class="col-lg-6 mb-1">
                                                 <div class="d-flex">
-                                                   <div class="mid-icon">
+                                                   <div class="mid-ico me-2">
                                                     {{-- <i class="bi bi-check2"></i> --}}
                                                          {{-- <img src="{{ asset('media/svg/icon1.svg') }}" alt=""
                                                         class="b-icon-sm"> --}}
+                                                        <i class="bi bi-leaf"></i> 
                                                    </div>
                                                    <div> {{$highlight->highlight_text}}</div>
                                                 </div>
