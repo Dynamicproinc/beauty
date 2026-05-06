@@ -1,6 +1,7 @@
 <div>
     <div class="container">
-        <div class="bg-white p-3 border">
+        <div class="p-3 blur-overlay" style="position: relative">
+            <div class=""></div>
                 <form wire:submit="subscribe">
             <h5>{{ __('Subscribe to our newsletter') }}</h5>
 
@@ -17,7 +18,7 @@
                 <small class="text-danger">{{ $message }}</small>
             @enderror
 
-            <div class="mb-3" wire:ignore>
+            <div class="mb-3 d-flex justify-content-center" wire:ignore>
                 <div class="g-recaptcha"
                      data-sitekey="{{ config('services.recaptcha.site_key') }}"
                      data-callback="onRecaptchaSuccess">
