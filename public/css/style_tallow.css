@@ -767,7 +767,7 @@ i {
     font-weight: 500;
 }
 .sn-menu li a {
-    color: var(--s_color) !important;
+    color: #000 !important;
     text-decoration: none;
 }
 /* Wrapper */
