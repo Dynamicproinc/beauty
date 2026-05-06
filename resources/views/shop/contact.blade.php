@@ -15,7 +15,7 @@ position: relative;
 width: 100%;
 background-image: url('{{ asset('media/images/grass-blur.jpg') }}');
 background-repeat: no-repeat;
-background-attachment: fixed;
+/* background-attachment: fixed; */
 height:100%;
 }
 </style>
