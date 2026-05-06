@@ -547,7 +547,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="f-img-wr">
-
+                                    {{-- <img src="https://www.nobondbeauty.se/cdn/shop/files/Talg_staplad_transparent.png?v=1750916504&width=1920" alt=""> --}}
                             </div>
                         </div>
                     </div>
