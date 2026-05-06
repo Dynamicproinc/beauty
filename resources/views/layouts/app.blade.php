@@ -41,6 +41,10 @@
     <link rel="manifest" href="/site.webmanifest">
     {{--  --}}
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
     {{-- <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script> --}}
     @livewireStyles
 
