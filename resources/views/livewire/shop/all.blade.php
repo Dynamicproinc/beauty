@@ -29,7 +29,7 @@
                     <div>
                         <div class="row">
                            @foreach ($products as $item)
-                                <div class="col-lg-3 col-6">
+                                <div class="col-lg-3">
                                <div>
                                 <div class="th-md">
                                      <img src="{{asset('uploads/products/'.$item->media->first()->file_path)}}" alt="" class="">
