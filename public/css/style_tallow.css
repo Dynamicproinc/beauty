@@ -760,10 +760,15 @@ i {
     margin: 0;
     list-style-type: none;
     font-size: 16px;
+    color: var(--s_color) !important;
 }
 .sn-menu li {
     padding: 8px 0px;
     font-weight: 500;
+}
+.sn-menu li a {
+    color: var(--s_color) !important;
+    text-decoration: none;
 }
 /* Wrapper */
 .running-line-wrapper {
