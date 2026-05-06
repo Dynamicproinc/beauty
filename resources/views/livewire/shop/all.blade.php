@@ -29,13 +29,13 @@
                     <div>
                         <div class="row">
                            @foreach ($products as $item)
-                                <div class="col-lg-4">
+                                <div class="col-lg-3 col-6">
                                <div>
                                 <div class="th-md">
                                      <img src="{{asset('uploads/products/'.$item->media->first()->file_path)}}" alt="" class="">
                                 </div>
                                    <div class="mt-3">
-                                       <h6 class="text-center theme-color fw-bold text-uppercase">{{ $item->title }}</h6>
+                                       <h6 class="text-center theme-color fw-bold text-uppercase product-title">{{ $item->title }}</h6>
                                      <h6 class="text-center">€{{ number_format($item->discounted_price, 2, ',', '.') }}</h6>
                                      <a href="{{  route('shop.product.show', $item->slug) }}" class="tt_btn_theme w-100">
                                         {{__('Add cart')}}
