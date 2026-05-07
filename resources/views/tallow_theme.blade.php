@@ -331,8 +331,8 @@
                     </div>
                     <div class="main-carousel-3">
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content"
-                                style="background-image: url('{{ asset('media/images/card-bg-1.jpg') }}')">
+                            <div class="review-content">
+                                {{-- style="background-image: url('{{ asset('media/images/card-bg-1.jpg') }}')"> --}}
                                 <div>
                                     <h5>{{ __('NATURAL VITAMINS A, D, E & K') }}</h5>
                                     <p class="p-reviews">
@@ -343,8 +343,8 @@
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content"
-                                style="background-image: url('{{ asset('media/images/card-bg-2.jpg') }}')">
+                            <div class="review-content">
+                                {{-- style="background-image: url('{{ asset('media/images/card-bg-2.jpg') }}')"> --}}
                                 <div>
                                     <h5>{{ __('SKIN-IDENTICAL LIPIDS') }}</h5>
                                     <p class="p-reviews">
@@ -354,8 +354,8 @@
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content"
-                                style="background-image: url('{{ asset('media/images/card-bg-3.jpg') }}')">
+                            <div class="review-content">
+                                {{-- style="background-image: url('{{ asset('media/images/card-bg-3.jpg') }}')"> --}}
                                 <div>
                                     <h5>{{ __('ANTIOXIDANTS') }}</h5>
                                     <p class="p-reviews">
@@ -365,8 +365,8 @@
                             </div>
                         </div>
                         <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content"
-                                style="background-image: url('{{ asset('media/images/card-bg-4.jpg') }}')">
+                            <div class="review-content">
+                                {{-- style="background-image: url('{{ asset('media/images/card-bg-4.jpg') }}')"> --}}
                                 <div>
                                     <h5>{{ __('ESSENTIAL FATTY ACIDS') }}</h5>
                                     <p class="p-reviews">
