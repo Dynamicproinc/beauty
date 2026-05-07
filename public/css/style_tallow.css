@@ -15,6 +15,14 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "BrittanySignature";
+    src: url("/fonts/BrittanySignature.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     font-size: 16px;
 }
@@ -52,11 +60,12 @@ h5 {
 }
 .hero-text-md{
      /* font-family: "Lobster", sans-serif; */
-     font-family: "Gwendolyn", cursive;
+     /* font-family: "Gwendolyn", cursive; */
+     font-family: "BrittanySignature", cursive;
   font-weight: 100 !important;
   font-style: normal;
-  font-size: 48px;
-  line-height: 80%;
+  font-size: 36px;
+  /* line-height: 80%; */
   /* add shadow to text */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
