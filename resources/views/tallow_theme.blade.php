@@ -28,7 +28,7 @@
                                     {{-- <span>{{ __('Less is more, even in skincare.') }}</span> --}}
                                 </div>
 
-                                <div class="tt-text-hero-md mb-4">
+                                <div class="tt-text-hero-md mb-5">
                                    
                                     <p class="hero-text-md">{{ __('Pure care the kind that skin has always understood') }}</p>
                                 </div>
