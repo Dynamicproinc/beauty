@@ -319,69 +319,6 @@
 
         </section>
 
-
-        <section class="section-type-1">
-            <div class="reviews-section">
-                <div class="reviews-section-content">
-                    <div class="container mb-3 text-center">
-                        <h1 class="tt-text-hero-md text-uppercase">
-                            {{ __('WHY TALLOW?') }}
-                        </h1>
-                        <p>{{ __('SUPERFOOD FOR THE SKIN') }}</p>
-                    </div>
-                    <div class="main-carousel-3">
-                        <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content">
-                                {{-- style="background-image: url('{{ asset('media/images/card-bg-1.jpg') }}')"> --}}
-                                <div>
-                                    <h5>{{ __('NATURAL VITAMINS A, D, E & K') }}</h5>
-                                    <p class="p-reviews">
-                                        {{ __('Stimulate skin regeneration and provide protection against free radicals.') }}
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content">
-                                {{-- style="background-image: url('{{ asset('media/images/card-bg-2.jpg') }}')"> --}}
-                                <div>
-                                    <h5>{{ __('SKIN-IDENTICAL LIPIDS') }}</h5>
-                                    <p class="p-reviews">
-                                        {{ __('Offer optimal absorption while repairing and strengthening the skin’s protective barrier.') }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content">
-                                {{-- style="background-image: url('{{ asset('media/images/card-bg-3.jpg') }}')"> --}}
-                                <div>
-                                    <h5>{{ __('ANTIOXIDANTS') }}</h5>
-                                    <p class="p-reviews">
-                                        {{ __('Shield the skin from environmental stressors and prevent premature aging.') }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-cell ca-cel-re p-3">
-                            <div class="review-content">
-                                {{-- style="background-image: url('{{ asset('media/images/card-bg-4.jpg') }}')"> --}}
-                                <div>
-                                    <h5>{{ __('ESSENTIAL FATTY ACIDS') }}</h5>
-                                    <p class="p-reviews">
-                                        {{ __('Enriched with Omega-3 and Omega-6 to fortify the skin barrier and ensure deep, long-lasting hydration.') }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
-        </section>
         {{-- faq --}}
         <section class="section-padding section-primary" id="faq">
             <div class="container">
@@ -512,21 +449,82 @@
             </div>
         </section>
         {{--  --}}
+        
+
+        <section class="section-type-1">
+            <div class="reviews-section">
+                <div class="reviews-section-content">
+                    <div class="container mb-3 text-center">
+                        <h1 class="tt-text-hero-md text-uppercase">
+                            {{ __('WHY TALLOW?') }}
+                        </h1>
+                        <p>{{ __('SUPERFOOD FOR THE SKIN') }}</p>
+                    </div>
+                    <div class="main-carousel-3">
+                        <div class="carousel-cell ca-cel-re p-3">
+                            <div class="review-content">
+                                {{-- style="background-image: url('{{ asset('media/images/card-bg-1.jpg') }}')"> --}}
+                                <div>
+                                    <h5>{{ __('NATURAL VITAMINS A, D, E & K') }}</h5>
+                                    <p class="p-reviews">
+                                        {{ __('Stimulate skin regeneration and provide protection against free radicals.') }}
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-cell ca-cel-re p-3">
+                            <div class="review-content">
+                                {{-- style="background-image: url('{{ asset('media/images/card-bg-2.jpg') }}')"> --}}
+                                <div>
+                                    <h5>{{ __('SKIN-IDENTICAL LIPIDS') }}</h5>
+                                    <p class="p-reviews">
+                                        {{ __('Offer optimal absorption while repairing and strengthening the skin’s protective barrier.') }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cell ca-cel-re p-3">
+                            <div class="review-content">
+                                {{-- style="background-image: url('{{ asset('media/images/card-bg-3.jpg') }}')"> --}}
+                                <div>
+                                    <h5>{{ __('ANTIOXIDANTS') }}</h5>
+                                    <p class="p-reviews">
+                                        {{ __('Shield the skin from environmental stressors and prevent premature aging.') }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cell ca-cel-re p-3">
+                            <div class="review-content">
+                                {{-- style="background-image: url('{{ asset('media/images/card-bg-4.jpg') }}')"> --}}
+                                <div>
+                                    <h5>{{ __('ESSENTIAL FATTY ACIDS') }}</h5>
+                                    <p class="p-reviews">
+                                        {{ __('Enriched with Omega-3 and Omega-6 to fortify the skin barrier and ensure deep, long-lasting hydration.') }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
         {{-- a word from owner --}}
-        <section class="br-1-bg medium-section mb-0">
+        <section class="br-1-bg medium-section mb-0" style="background-image: url('https://brentbergherm.com/wp-content/gallery/croatia-landscape/THR_1062-17.jpg');background-size:cover;background-position:center;">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-lg-6 mb-3">
                             <div class=" wff">
                                 <div>
                                     <h1 class="tt-text-hero-md text-uppercase">
                                         {{ __('a word from our founder') }}
                                     </h1>
-                                    {{-- <p>
-                                        {{ __('At Tallow Skincare, we believe that skincare should be simple, honest, and close to nature. Our products are carefully crafted using high-quality, natural tallow to nourish and protect your skin the way it was meant to be cared for. Inspired by traditional wisdom and supported by a commitment to purity, we focus on clean ingredients without unnecessary additives. Every jar represents our dedication to quality, sustainability, and your skin’s natural balance. Thank you for trusting us to be part of your daily self-care journey. We are proud to create products that bring nature back to skincare. 🌿') }}
-
-                                    </p> --}}
+                                  
                                     <p>{{ __('After a year and a half of research, testing, and sharing experiences, we founded Tallow skin care in 2025.') }}
                                     </p>
                                     <p>{{ __('The base for the products, beef tallow, comes from the brand The M Brothers, who breed Black Angus, which is a prerequisite for us to know what we are working with and to have a reliable base for tallow cosmetics.') }}
@@ -547,9 +545,16 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="f-img-wr">
-                                    {{-- <img src="https://www.nobondbeauty.se/cdn/shop/files/Talg_staplad_transparent.png?v=1750916504&width=1920" alt=""> --}}
+                                    
                             </div>
                         </div>
+                    </div> --}}
+                    <div class="col-lg-5 text-center">
+                         <div class="tt-text-hero-md mb-5">
+                                   
+                                    <h1 class="hero-text-md text-white">{{ __('The old ways are the best ways.') }}</h1>
+                                    <p class="text-white">{{__("Chemical creams and petroleum potions are not your friends. The skin is our body's biggest organ. We become what we eat…and absorb.")}}</p>
+                                </div>
                     </div>
                 </div>
             </div>
