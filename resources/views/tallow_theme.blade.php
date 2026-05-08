@@ -552,8 +552,12 @@
                     <div class="col-lg-5 text-center">
                          <div class="tt-text-hero-md mb-5">
                                    
-                                    <h1 class="hero-text-md text-white">{{ __('The old ways are the best ways.') }}</h1>
-                                    <p class="text-white">{{__("Chemical creams and petroleum potions are not your friends. The skin is our body's biggest organ. We become what we eat…and absorb.")}}</p>
+                                    <h1 class="hero-text-md text-white mb-3">{{ __('The old ways are the best ways.') }}</h1>
+                                    <p class="text-white section-text">{{__("Chemical creams and petroleum potions are not your friends. The skin is our body's biggest organ. We become what we use and absorb.")}}</p>
+                                </div>
+                                <div>
+                                    <a href="/products" class="tt_btn"
+                                        title="{{ __('explore products') }}">{{ __('Explore Products') }}</a>
                                 </div>
                     </div>
                 </div>
