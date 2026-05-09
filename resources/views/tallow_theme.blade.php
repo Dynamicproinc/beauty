@@ -8,7 +8,7 @@
             <div class="hero-wallpaper">
                 <div class="d-none d-sm-block">
                     <video width="100%" autoplay muted playsinline loop>
-                        <source src="{{ asset('media/videos/tsc_green_theme.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('media/videos/tsc_desktop_v1.mp4') }}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
