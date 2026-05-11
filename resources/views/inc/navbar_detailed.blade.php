@@ -55,6 +55,9 @@
                                   <i class="bi bi-person"></i>
                               @endauth
                             </a>
+                            {{--  --}}
+                            
+                            {{--  --}}
                            
                             {{-- <a class="link-secondary" href="#">{{__('Cart')}}</a> --}}
                         </div>
