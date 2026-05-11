@@ -20,7 +20,7 @@ class TrackVisits
          $page = $request->path();
 
         $random_key = Str::random(10);
-        $key = 'viewed_' .$request->ip().$request->userAgent();
+        $key = 'viewed_' .hash('sha256', $request->ip()).$request->userAgent();
 
         if (!session()->has($key)) {
 
