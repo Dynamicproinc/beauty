@@ -15,7 +15,7 @@
                         <div class="text-center mt-3">
                             <h5 class="">{{__('Your cart is empty!')}}</h5>
                             <p>{{__('Add some product to get started')}}</p>
-                            <a href="{{route('welcome')}}" class="tt_btn_theme">{{__('All Products')}}</a>
+                            <a href="{{route('welcome')}}" class="btn btn-primary">{{__('All Products')}}</a>
                         </div>
                     </div>
                 </div>
