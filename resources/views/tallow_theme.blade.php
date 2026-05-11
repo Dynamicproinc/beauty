@@ -557,7 +557,7 @@
                                 </div>
                                 <div>
                                     <a href="/products" class="tt_btn"
-                                        title="{{ __('explore products') }}">{{ __('Explore more  Products') }}</a>
+                                        title="{{ __('explore products') }}">{{ __('Explore more tallow  Products') }}</a>
                                 </div>
                           
                     </div>
