@@ -105,12 +105,12 @@
                      </ul>
                  </div>
                  <li class="ms-3">
-                     <a class="" href="#" aria-label="Instagram">
+                     <a class="text-white" href="#" aria-label="Instagram">
                          <i class="bi bi-instagram fs-5"></i>
                      </a>
                  </li>
                  <li class="ms-3">
-                     <a class="" href="#" aria-label="Facebook">
+                     <a class="text-white" href="#" aria-label="Facebook">
                          <i class="bi bi-facebook fs-5"></i>
                      </a>
                  </li>
