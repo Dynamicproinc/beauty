@@ -559,7 +559,7 @@
                                     <a href="/products" class="tt_btn"
                                         title="{{ __('explore products') }}">{{ __('Explore more  Products') }}</a>
                                 </div>
-                                {{-- footer --}}
+                          
                     </div>
                 </div>
             </div>
