@@ -526,11 +526,7 @@
                                     </h1>
 
                                     <p>
-                                        Moja misija je redefinirati ljepotu kroz snagu minimalizma. Želim vratiti povierenje
-                                        u jednostavne, ali iznimno učinkovite sastojke. U moru današnjih popularnih
-                                        proizvoda s beskonačnim popisom sastojaka, Tallow skin care stoji uz one koji traže
-                                        istinu: manje, ali moćno. Svaka naša formulacija njeguje s namjerom, jer vierujem da
-                                        kvaliteta i svjesni odabir čine razliku u svakodnevnoj njezi kože.
+                                       {{__('mission.statement') }}
                                     </p>
                                     <div>
                                         <h6>
