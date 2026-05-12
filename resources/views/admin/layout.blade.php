@@ -350,7 +350,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link d-flex align-items-center @if (Route::currentRouteName() == 'admin.delivery') active @endif"
+                            <a class="nav-link nav-link d-flex align-items-center @if (Route::currentRouteName() == 'admin.shipping') active @endif"
                                 href="{{ route('admin.shipping') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">

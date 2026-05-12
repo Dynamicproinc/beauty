@@ -563,7 +563,7 @@
                                             'terms' => '<a href="/terms-and-conditions" target="_blank">Terms & Conditions</a>',
                                         ]) !!}
                                     </p>
-                                    <button class="btn btn-lg btn-warning w-100">{{ __('PLACE ORDER') }}</button>
+                                    <button class="btn btn-lg btn-dark w-100">{{ __('PLACE ORDER') }}</button>
                                 </div>
 
                         </form>
