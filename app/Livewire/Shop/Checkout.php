@@ -215,11 +215,11 @@ class Checkout extends Component
 
             if(!$gift_card){
               
-                    // $this->gift_card_amount = 0;
-                    // $this->gift_card = null;
-                    // session()->forget('gift_card_model');
-                    // return null;
-                    dd('Invalid gift card');
+                    $this->gift_card_amount = 0;
+                    $this->gift_card = null;
+                    session()->forget('gift_card_model');
+                    return null;
+                    
             }
             // dd( $gift_card->gift_code);
 
