@@ -218,7 +218,7 @@ class Checkout extends Component
                     $this->gift_card_amount = 0;
                     $this->gift_card = null;
                     session()->forget('gift_card_model');
-                    return null;
+                    // return null;
                     
             }
             // dd( $gift_card->gift_code);
@@ -391,7 +391,7 @@ class Checkout extends Component
         }
 
         //clear the cart
-    session()->forget('gift_card_model');
+          session()->forget('gift_card_model');
         session()->forget('cart');
         
 
