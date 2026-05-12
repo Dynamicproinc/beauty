@@ -391,7 +391,7 @@ class Checkout extends Component
         }
 
         //clear the cart
-          session()->forget('gift_card_model');
+        session()->forget('gift_card_model');
         session()->forget('cart');
         
 
