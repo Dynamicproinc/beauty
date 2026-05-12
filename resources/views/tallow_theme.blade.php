@@ -21,24 +21,24 @@
             </div>
 
             <div class="hero-text-wrapper p-3">
-                
+
                 <div>
-                   
-                     <div class="tt-text-xs text-uppercase mb-2">
-                                    {{-- <span>{{ __('Less is more, even in skincare.') }}</span> --}}
-                                </div>
 
-                                <div class="tt-text-hero-md mb-5">
-                                   
-                                    <p class="hero-text-md">{{ __('Pure care the kind that skin has always understood') }}</p>
-                                </div>
+                    <div class="tt-text-xs text-uppercase mb-2">
+                        {{-- <span>{{ __('Less is more, even in skincare.') }}</span> --}}
+                    </div>
 
-                              
+                    <div class="tt-text-hero-md mb-5">
 
-                                <a href="/products" class="tt_btn"
-                                    title="{{ __('Buy now tallow skincare product') }}">{{ __('OUR PRODUCTS') }}</a>
+                        <p class="hero-text-md">{{ __('Pure care the kind that skin has always understood') }}</p>
+                    </div>
+
+
+
+                    <a href="/products" class="tt_btn"
+                        title="{{ __('Buy now tallow skincare product') }}">{{ __('OUR PRODUCTS') }}</a>
                 </div>
-                 
+
                 {{-- <div class="container">
                     <div class="row">
                         <div class="col-lg-6">
@@ -78,8 +78,8 @@
                                 </h1>
                                 <p class="sec_text_p_md">
                                     {{-- {{ __('Our beef tallow hydrates, nourishes and supports your skins barrier without overloading it. That is exactly what Tallow does because it is so similar to skin naturally. Skincare with tallow is care that works reduced to the essentials.') }} --}}
-                                  {{__('​Our Tallow Balm brings the idea back to a modern form. Made from carefully purified Black Angus tallow.')}}</br>
-                                  {{__('The minimalist formulation, without excess ingredients, provides deep hydration and restores the natural balance, leaving the skin smooth and healthy.')}}
+                                    {{ __('​Our Tallow Balm brings the idea back to a modern form. Made from carefully purified Black Angus tallow.') }}</br>
+                                    {{ __('The minimalist formulation, without excess ingredients, provides deep hydration and restores the natural balance, leaving the skin smooth and healthy.') }}
                                 </p>
                                 <p>
 
@@ -449,7 +449,7 @@
             </div>
         </section>
         {{--  --}}
-        
+
 
         <section class="section-type-1">
             <div class="reviews-section">
@@ -514,26 +514,24 @@
             </div>
         </section>
         {{-- a word from owner --}}
-        <section class="br-1-bg medium-section mb-0" style="background-image: url('https://brentbergherm.com/wp-content/gallery/croatia-landscape/THR_1062-17.jpg');background-size:cover;background-position:center;">
+        <section class="br-1-bg mb-0 mission-section">
             <div class="container">
-                <div class="row justify-content-center">
-                    {{-- <div class="row">
+                <div class="">
+                    <div class="row">
                         <div class="col-lg-6 mb-3">
-                            <div class=" wff">
+                            <div class="wff">
                                 <div>
                                     <h1 class="tt-text-hero-md text-uppercase">
-                                        {{ __('a word from our founder') }}
+                                        {{ __('Mission statement') }}
                                     </h1>
-                                  
-                                    <p>{{ __('After a year and a half of research, testing, and sharing experiences, we founded Tallow skin care in 2025.') }}
+
+                                    <p>
+                                        Moja misija je redefinirati ljepotu kroz snagu minimalizma. Želim vratiti povierenje
+                                        u jednostavne, ali iznimno učinkovite sastojke. U moru današnjih popularnih
+                                        proizvoda s beskonačnim popisom sastojaka, Tallow skin care stoji uz one koji traže
+                                        istinu: manje, ali moćno. Svaka naša formulacija njeguje s namjerom, jer vierujem da
+                                        kvaliteta i svjesni odabir čine razliku u svakodnevnoj njezi kože.
                                     </p>
-                                    <p>{{ __('The base for the products, beef tallow, comes from the brand The M Brothers, who breed Black Angus, which is a prerequisite for us to know what we are working with and to have a reliable base for tallow cosmetics.') }}
-                                    </p>
-                                    <p>{{ __('To begin with, we have formulated unique, multi-purpose products that meet the skins needs for hydration and nutrition and complete them with natural active ingredients.') }}
-                                    </p>
-                                    <p>{{ __('We believe that skin health is not only determined by the product we apply to the skin, but is much more complex, and therefore we want to raise awareness of the importance of the health of our entire body.') }}
-                                    </p>
-                                    <p>{{ __('Let your skin be a mirror of whats going on inside!') }}</p>
                                     <div>
                                         <h6>
                                             Lorena Maturanec
@@ -544,50 +542,16 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="f-img-wr">
-                                    
-                            </div>
+                            {{-- <div class="f-img-wr">
+
+                            </div> --}}
                         </div>
-                    </div> --}}
-                    <div class="col-lg-5 text-center">
-                         <div class="tt-text-hero-md mb-5">
-                                   
-                                    <h1 class="hero-text-md text-white mb-3">{{ __('The old ways are the best ways.') }}</h1>
-                                    <p class="text-white section-text">{{__("Chemical creams and petroleum potions are not your friends. The skin is our body's biggest organ. We become what we use and absorb.")}}</p>
-                                </div>
-                                <div>
-                                    <a href="/products" class="tt_btn"
-                                        title="{{ __('explore products') }}">{{ __('Explore more tallow  Products') }}</a>
-                                </div>
-                          
                     </div>
+
                 </div>
             </div>
         </section>
-        {{-- <section>
-            <div class="marquee">
-                <div class="marquee-content">
-                    <div class="">
-                        <span>🌿 100% Pure Black Angus Tallow • Natural • Clean • Traditional • Premium Quality •</span>
-                    </div>
-                </div>
-            </div>
-            <style>
-               
-            </style>
-
-
-<div class="running-line-wrapper">
-  <div class="running-line">
-    <!-- The overall width of the text element should be twice the width of the screen -->
-    <span>100% Pure Black Angus Tallow🌿</span>
-    <span>Natural🌿</span>
-    <span>Clean🌿</span>
-    <span>Traditional🌿</span>
-    <span>Premium Quallity🌿</span>
-  </div>
-</div>
-        </section> --}}
+        
 
 
     </div>

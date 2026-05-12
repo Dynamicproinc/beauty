@@ -57,10 +57,10 @@
                                     <p>{{__('We believe that skin health is not only determined by the product we apply to the skin, but is much more complex, and therefore we want to raise awareness of the importance of the health of our entire body.')}}</p>
                                     <p>{{__('Let your skin be a mirror of whats going on inside!')}}</p>
                                     <div>
-                                        <h6>
+                                        {{-- <h6>
                                             Lorena Maturanec
                                             <small class="text-muted">{{__('Founder CEO')}}</small>
-                                        </h6>
+                                        </h6> --}}
                                     </div>
                                 </div>
                             </div>
