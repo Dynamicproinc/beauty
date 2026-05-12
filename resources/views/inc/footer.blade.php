@@ -58,10 +58,10 @@
                  <div>
                      <strong>Tallow Skin Care j.d.o.o.</strong><br>
                      Donja Švarča 79c<br>
-                     47000 Karlovac, Croatia.<br>
+                     47000 Karlovac, {{ __('Croatia') }}.<br>
                      <a href="mailto:info@tallow-skincare.hr" class="text-primary-muted">info@tallow-skincare.hr</a><br>
                      {{-- <small> info@tallow-skincare.hr</small><br> --}}
-                     <a href="tel:+385996680498" class="text-primary-muted">+385 996 680 498</a>
+                     <a href="tel:+385996680498" class="text-primary-muted">+385 99 668 0498</a>
 
                     
 
