@@ -201,7 +201,8 @@ class Checkout extends Component
         // dd($this->delivery_method);
         // check cart has items
         if (!$cart = session('cart', [])) {
-            return null;
+            // return null;
+            dd('cart is empty');
         }
 
         // 
