@@ -88,7 +88,7 @@ class Checkout extends Component
 
     function getCartValue()
     {
-        
+
         $coupone_discount = 0;
         $cart = session('cart', []);
 
@@ -98,23 +98,22 @@ class Checkout extends Component
         }
 
         // deduct coupone discount if applied 
-        if(session()->has('gift_card_model')){
+        if (session()->has('gift_card_model')) {
 
             $gc = DigitalGiftCard::where('gift_code', session()->get('gift_card_model'))->where('status', 'active')->where('payment_status', 'paid')->first();
-            if($gc)
-                {
-                 $this->gift_card_amount = $gc->amount;
-                }
-        }else{
+            if ($gc) {
+                $this->gift_card_amount = $gc->amount;
+            }
+        } else {
             $this->gift_card_amount = 0;
         }
 
         $gift_card = $this->gift_card_amount;
 
         $total = ($total - $gift_card) - $coupone_discount;
-            if($total < 0){
-                $total = 0;
-            }
+        if ($total < 0) {
+            $total = 0;
+        }
         return $total;
     }
 
@@ -166,7 +165,7 @@ class Checkout extends Component
         // if payment is pay by card no shipping cost but cash on delivery have 3 euro shipping cost
         // card payment over 50 is free shipping, cash on delivery have 3 eoro cost
         // if ($this->payment_method == 'card') {
-            
+
         //     $this->shipping_cost = 0;
         //     $this->getFinalValue();
         //     return;
@@ -195,42 +194,61 @@ class Checkout extends Component
 
     public function saveOrder()
     {
-        
-    
-        
+
+
+
         // dd($this->delivery_method);
         // check cart has items
         if (!$cart = session('cart', [])) {
-             return null;
+            return null;
             // dd('cart is empty');
         }
 
-        // 
+        $this->gift_card_amount = 0;
+        $this->gift_card = null;
+
         if (session()->has('gift_card_model')) {
+
             $gift_card = DigitalGiftCard::where([
                 'gift_code' => session('gift_card_model'),
                 'payment_status' => 'paid',
                 'status' => 'active'
             ])->first();
 
-            if(!$gift_card){
-              
-                    $this->gift_card_amount = 0;
-                    $this->gift_card = null;
-                    session()->forget('gift_card_model');
-                    // return null;
-                    
+            if ($gift_card) {
+                $this->gift_card = $gift_card->gift_code;
+                $this->gift_card_amount = $gift_card->amount;
+            } else {
+                session()->forget('gift_card_model');
             }
-            // dd( $gift_card->gift_code);
-
-            $this->gift_card = $gift_card->gift_code;
-            $this->gift_card_amount = $gift_card->amount;
-        }else{
-            $this->gift_card_amount = 0;
-            $this->gift_card = null;
         }
 
-       
+        // 
+        // if (session()->has('gift_card_model')) {
+        //     $gift_card = DigitalGiftCard::where([
+        //         'gift_code' => session('gift_card_model'),
+        //         'payment_status' => 'paid',
+        //         'status' => 'active'
+        //     ])->first();
+
+        //     if(!$gift_card){
+
+        //             $this->gift_card_amount = 0;
+        //             $this->gift_card = null;
+        //             session()->forget('gift_card_model');
+        //             // return null;
+
+        //     }
+        //     // dd( $gift_card->gift_code);
+
+        //     $this->gift_card = $gift_card->gift_code;
+        //     $this->gift_card_amount = $gift_card->amount;
+        // }else{
+        //     $this->gift_card_amount = 0;
+        //     $this->gift_card = null;
+        // }
+
+
         // 
         // condtional validation feilds
 
@@ -368,7 +386,7 @@ class Checkout extends Component
                 'stripe_session_id' => $session->id,
             ]);
 
-    
+
             return redirect($session->url);
             // end stripe 
 
@@ -379,7 +397,7 @@ class Checkout extends Component
 
             // must redem the gift card
             $g_c = DigitalGiftCard::where('gift_code', $sales_order->gift_code)->first();
-            if($g_c){
+            if ($g_c) {
                 $g_c->update([
                     'status' => 'redeemed'
                 ]);
@@ -393,7 +411,7 @@ class Checkout extends Component
         //clear the cart
         session()->forget('gift_card_model');
         session()->forget('cart');
-        
+
 
         return redirect()->to(route('shop.invoice', ['slug' => $sales_order->slug]));
     }
