@@ -201,8 +201,8 @@ class Checkout extends Component
         // dd($this->delivery_method);
         // check cart has items
         if (!$cart = session('cart', [])) {
-            // return null;
-            dd('cart is empty');
+             return null;
+            // dd('cart is empty');
         }
 
         // 
@@ -215,7 +215,11 @@ class Checkout extends Component
 
             if(!$gift_card){
               
-                return null;
+                    // $this->gift_card_amount = 0;
+                    // $this->gift_card = null;
+                    // session()->forget('gift_card_model');
+                    // return null;
+                    dd('Invalid gift card');
             }
             // dd( $gift_card->gift_code);
 
