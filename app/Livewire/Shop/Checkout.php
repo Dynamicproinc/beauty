@@ -196,6 +196,8 @@ class Checkout extends Component
     public function saveOrder()
     {
         
+    
+        
         // dd($this->delivery_method);
         // check cart has items
         if (!$cart = session('cart', [])) {
@@ -367,7 +369,7 @@ class Checkout extends Component
 
         }
 
-        // if payment method is not car send email to customer
+        // if payment method is not card send email to customer
         if ($this->payment_method !== 'card') {
 
             // must redem the gift card

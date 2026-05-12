@@ -594,7 +594,7 @@
                                                             <a
                                                                 href="{{ route('shop.product.show', ['id' => $product->slug]) }}">
 
-                                                                <img src="{{ asset('uploads/products/'.\App\Models\Media::where('product_id', $item['product_id'])->first()?->file_path) }}"
+                                                                <img src="{{ asset('uploads/products/' . \App\Models\Media::where('product_id', $item['product_id'])->first()?->file_path) }}"
                                                                     class="mini-image position-relative">
                                                             </a>
                                                             <span
@@ -647,7 +647,11 @@
 
                                     <div class="d-flex justify-content-between">
                                         <div>
-                                            <span>{{__('Subtotal')}} @if($gift_card_amount) <small class="fw-bolder text-success">{{__('Gift card applied')}}</small> @endif</span>
+                                            <span>{{ __('Subtotal') }} @if ($gift_card_amount)
+                                                    <small
+                                                        class="fw-bolder text-success">{{ __('Gift card applied') }}</small>
+                                                @endif
+                                            </span>
 
                                         </div>
                                         <div class="text-right">
@@ -668,7 +672,9 @@
                                     </div>
                                     <div class="d-flex justify-content-between  mb-3">
                                         <div>
-                                            <span>{{ __('Shipping') }} <a href="/delivery-terms" title="{{__('Delivery')}}" class="text-dark small" target="_blank"><i class="bi bi-info-circle-fill"></i></a></span>
+                                            <span>{{ __('Shipping') }} <a href="/delivery-terms"
+                                                    title="{{ __('Delivery') }}" class="text-dark small"
+                                                    target="_blank"><i class="bi bi-info-circle-fill"></i></a></span>
 
                                         </div>
                                         <div class="text-right">
@@ -678,7 +684,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between fw-bold">
                                         <div>
-                                            <h5>{{__('Total')}}</h5>
+                                            <h5>{{ __('Total') }}</h5>
 
                                         </div>
                                         <div class="text-right">
@@ -686,6 +692,15 @@
 
                                         </div>
                                     </div>
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
                                 </div>
                                 <div>
 
