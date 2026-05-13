@@ -77,7 +77,7 @@
                                                     style="width: 100%; height: 100%; object-fit: cover;">
                                                 <button class="btn btn-sm btn-danger"
                                                     wire:click="removeMedia('{{ $image->id }}')"
-                                                    wire:confirm="Are you sure you want to delete this media?">x</button>
+                                                    wire:confirm="{{ __('Are you sure you want to delete this media?') }}">x</button>
                                             </div>
                                         @endforeach
                                     @endif
@@ -86,7 +86,7 @@
                                         <input type="file" wire:model="product_image" class="upload-image" id="product-image">
                                     <label for="product-image" class="up-label">+</label>
                                     <div wire:loading wire:target="product_image">
-                                        Uploading...
+                                    {{ __('Uploading...') }}
                                     </div>
                                     </div>
                                     
@@ -128,7 +128,7 @@
                                             <input class="form-check-input" type="checkbox" id="chek_tax"
                                                 wire:model="tax">
                                             <label class="form-check-label" for="chek_tax">
-                                                Tax
+                                                {{ __('Taxable') }}
                                             </label>
                                         </div>
                                     </div>
@@ -167,7 +167,7 @@
                                     <div>
                                         <div class="row">
                                             <div class="col-lg-6 form-group">
-                                                <label for="">SKU (Stock Keeping Unit)</label>
+                                                <label for="">{{ __('SKU') }} (Stock Keeping Unit)</label>
                                                 <input type="text"
                                                     class="form-control  @error('sku') is-invalid @enderror"
                                                     wire:model="sku">
@@ -176,7 +176,7 @@
                                                 @enderror
                                             </div>
                                             <div class="col-lg-6 form-group">
-                                                <label for="">Barcode</label>
+                                                <label for="">{{ __('Barcode') }}</label>
                                                 <input type="text"
                                                     class="form-control  @error('barcode') is-invalid @enderror"
                                                     wire:model="barcode">
@@ -214,7 +214,7 @@
                                 </div>
                                 <div class="p-3">
                                     <div class="form-group col-6">
-                                        <label for="">Quantity</label>
+                                        <label for="">{{ __('Quantity') }}</label>
                                         <input type="number"
                                             class="form-control @error('quantity') is-invalid @enderror"
                                             wire:model="quantity">
@@ -235,7 +235,7 @@
 
                             <div class="panel bg-white rounded mb-3">
                                 <div class="p-3">
-                                    <h5 class="panel-heading mb-2" for="">{{ __('Variants') }}</h5>
+                                    {{-- <h5 class="panel-heading mb-2" for="">{{ __('Variants') }}</h5> --}}
                                     <div class="row">
                                         <div class="col-lg-5 form-group">
                                             <select wire:model="option_id" class="form-control">
@@ -346,7 +346,7 @@
                                         <option value="draft">{{ __('Draft') }}</option>
                                         <option value="active">{{ __('Active') }}</option>
                                     </select>
-                                    <small class="text-muted">Product will be visible once activated.</small>
+                                    <small class="text-muted">{{ __('Product will be visible once activated.') }}</small>
 
                                 </div>
                             </div>
@@ -389,7 +389,7 @@
                         <h5 class="card-header">{{ __('Product Tags') }}</h5>
                         <div class="card-body">
                             <div class="panel bg-white rounded p-3 mb-3">
-                                <h5 class="panel-heading mb-2" for="">{{ __('Tags') }}</h5>
+                               
                                 <div class="row">
                                     <div class="col-lg-8 form-group">
                                         <input type="text" class="form-control"
@@ -440,7 +440,7 @@
                                                 <button type="button"
                                                     wire:click="removeHighlight({{ $item->id }})"
                                                     class="btn btn-sm btn-danger"
-                                                    wire:confirm="Are you sure you want to delete this highlight?">
+                                                    wire:confirm="{{ __('Are you sure you want to delete this highlight?') }} ">
                                                     <i class="bi bi-trash"></i>
                                                 </button>
                                             </li>
@@ -598,7 +598,7 @@
                                 wire:target="addMedia" aria-hidden="true">
 
                             </span>
-                            Add
+                            {{ __('Add') }}
                         </button>
                         <button class="btn mx-2 btn-default" wire:click="closeUrlModal">Cancel</button>
                     </div>
@@ -684,10 +684,10 @@
                                 <button class="btn btn-sm btn-success">
                                     <span class="spinner-border spinner-border-sm" role="status" wire:loading
                                         wire:target="saveNutiData" aria-hidden="true"></span>
-                                    Save Changes
+                                    {{ __('Save') }}
                                 </button>
                                 <button class="btn btn-sm btn-default" wire:click="closeNutiModal"
-                                    type="button">Cancel</button>
+                                    type="button">{{ __('Cancel') }}</button>
                             </div>
                         </form>
                     </div>

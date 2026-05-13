@@ -1,7 +1,7 @@
 <div>
     <div>
         <div class="d-flex flex-row-reverse mb-3">
-            <button class="btn btn-sm btn-primary" wire:click="openModal">{{ __('Add shipping method') }}</button>
+            <button class="btn btn-sm btn-link" wire:click="openModal">{{ __('Add shipping method') }}</button>
         </div>
         <table class="table">
             <thead>
