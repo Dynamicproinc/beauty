@@ -28,7 +28,8 @@ class Add extends Component
     public $variants = [];
     public $urls = [];
     public $categories = []; 
-    public $suppliers = [];   
+    public $suppliers = []; 
+    public $error_message = '';  
     
     public function render()
     {
@@ -215,7 +216,9 @@ public function addUrl(){
         }
         
      } catch (\Throwable $th) {
-        dd($th->getMessage());
+        // dd($th->getMessage());
+        $this->error_message = $th->getMessage();
+         session()->flash('error', 'An error occurred while creating the product: ' . $th->getMessage());
      }
            
             

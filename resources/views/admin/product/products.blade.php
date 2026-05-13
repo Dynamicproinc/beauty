@@ -6,7 +6,7 @@
         
         <div class="d-flex d-flex-reverse">
             
-            <a href="{{ route('admin.products.add') }}" class="btn btn-dark btn-2">{{__('Add Product')}}</a>
+            <a href="{{ route('admin.products.add') }}" class="btn btn-dark btn-2">{{__('Add product')}}</a>
         </div>
     </div>
         <div class="panel bg-white rounded">

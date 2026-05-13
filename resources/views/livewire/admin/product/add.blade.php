@@ -328,17 +328,25 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex flex-row-reverse">
+        <div class="d-flex justify-content-between fixed-bottom mb-0 p-3 bg-dark shadow">
+          <div>
+            @if($error_message)
+                <div class="error-text fw-bold">{{ $error_message }}</div>
+            @endif
+          </div>
             <div>
+                <a href="{{ route('admin.products') }}" class="btn btn-dark">
+                   
+                   {{__('Cancel')}}
+                </a>
                 <button class="btn btn-primary" wire:click="saveProduct">
                     <span class="spinner-border spinner-border-sm" role="status" wire:loading wire:target="saveProduct" aria-hidden="true">
                     </span>
                    {{__('Save Product')}}
                 </button>
+                
             </div>
-            {{-- <div>
-                <button class="btn btn-default">Cancel</button>
-            </div> --}}
+           
 
         </div>
         <div>

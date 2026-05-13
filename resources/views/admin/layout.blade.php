@@ -218,6 +218,18 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
+
+        .btn{
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .error-text{
+            font-size: 12px;
+            color: red;
+            font-weight: 600;
+        }
     </style>
 </head>
 
