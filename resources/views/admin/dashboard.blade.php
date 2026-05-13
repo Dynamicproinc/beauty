@@ -3,6 +3,27 @@
 @section('content')
     <div>
         <p>{{ __('Welcome to the admin dashboard. Control, monitor, and manage everything from your dashboard') }}</p>
+        {{-- get current time zone --}}
+        <div class="p-3 bg-dark text-white">
+            @php
+            use Illuminate\Support\Facades\Http;
+
+$ip = request()->ip();
+
+// For localhost testing
+if ($ip == '127.0.0.1') {
+    $ip = '8.8.8.8';
+}
+
+$response = Http::get("http://ip-api.com/json/{$ip}");
+
+$data = $response->json();
+
+$timezone = $data['timezone'] ?? 'UTC';
+
+echo $timezone;
+            @endphp
+        </div>
 
         <div class="row my-4">
             <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
