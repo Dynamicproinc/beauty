@@ -1,7 +1,7 @@
 <div>
     <div>
         <div class="d-flex flex-row-reverse">
-            <button class="btn btn-primary btn-sm" wire:click="showNew">{{__('Add new')}}</button>
+            <button class="btn btn-link btn-sm" wire:click="showNew">{{__('Add new pickup location')}}</button>
         </div>
         <table class="table">
             <thead>
@@ -25,7 +25,7 @@
                                 <button class="btn btn-primary btn-sm"
                                     wire:click="selectedProduct({{ $item->id }})"><i class="bi bi-pencil"></i></button>
                                 <button class="btn btn-danger btn-sm"
-                                    wire:click="delete({{ $item->id }})" wire:confirm="{{__('Are you sure?')}}">Delete</button>
+                                    wire:click="delete({{ $item->id }})" wire:confirm="{{__('Are you sure?')}}">{{ __('Delete') }}</button>
                             </td>
                         </tr>
                     @endforeach

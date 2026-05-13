@@ -1,12 +1,12 @@
 @extends('admin.layout')
-@section('title', 'Subscribers')
+@section('title', __('Subscribers'))
 @section('content')
 
 <div>
    <table class="table">
   <thead>
     <tr>
-      <th scope="col">{{_('Date')}}</th>
+      <th scope="col">{{__('Date')}}</th>
       <th scope="col">{{__('Email')}}</th>
       <th scope="col">{{__('Status')}}</th>
       <th></th>

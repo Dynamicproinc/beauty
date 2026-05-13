@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- SEO --}}
-    <meta name="title" content="{{ __('Natural, unique & effective skin care from Croatia!') }}">
+    <meta name="title" content="{{ __('Pure care the kind that skin has always understood') }}">
     <meta name="description"
-        content="{{ __('Purified beef tallow is one of the ingredients that most closely resembles human skin.') }}">
+        content="{{ __('Natural, unique & effective skin care from Croatia!') }}">
     <meta name="keywords"
         content="{{ __('tallow balm, tallow skin care, grass fed tallow, natural moisturizer, organic tallow balm, beef tallow skincare, handmade tallow balm, sensitive skin moisturizer, deep hydration balm, natural skin cream, chemical free skincare, traditional skincare, nourishing face balm') }}">
     <meta property="og:image" content="{{ asset('ico/favicon-32x32.png') }}">

@@ -204,6 +204,54 @@
   "Logout": "Odjava",
   "mission.statement": "Moja misija je redefinirati ljepotu kroz snagu minimalizma. Želim vratiti povjerenje u jednostavne, ali iznimno učinkovite sastojke. U moru današnjih popularnih proizvoda s beskonačnim popisom sastojaka, Tallow skin care stoji uz one koji traže istinu: manje, ali moćno. Svaka naša formulacija njeguje s namjerom, jer vjerujem da kvaliteta i svjesni odabir čine razliku u svakodnevnoj njezi kože.",
   "Mission statement": "Izjava o misiji",
-  "Croatia": "Hrvatska"
+  "Croatia": "Hrvatska",
+  "Admin": "Admin",
+  "Dashboard": "Nadzorna ploča",
+  "Products": "Proizvodi",
+  "Orders": "Narudžbe",
+  "Customers": "Kupci",
+  "Reports": "Izvještaji",
+  "Notifications": "Obavijesti",
+  "Gift Cards": "Poklon kartice",
+  "Subscribers": "Pretplatnici",
+  "Sign out": "Odjava",
+  "Welcome to the admin dashboard. Control, monitor, and manage everything from your dashboard":"Dobrodošli na nadzornu ploču administratora. Kontrolirajte, nadgledajte i upravljajte svime s vaše nadzorne ploče",
+  "Users": "Korisnici",
+  "Revenue": "Prihod",
+  "Purchases": "Kupnje",
+  "Visits": "Posjete",
+  "Latest Orders": "Nedavne narudžbe",
+  "View all": "Pogledaj sve",
+  "Customer": "Kupac",
+  "Webshop Trends Statics": "Statistika trendova web trgovine",
+  "from last month": "od prošlog mjeseca",
+  "Traffic last 6 month": "Promet zadnjih 6 mjeseci",
+  "Bill to": "Račun za",
+  "Delivery/Pickup": "Dostava/Preuzimanje",
+  "Image": "Slika",
+"Title": "Naslov",
+"Shipping Code": "Poštanski broj",
+"Location": "Lokacija",
+"Free Shipping": "Besplatna dostava",
+"Max Amount": "Maksimalni iznos",
+"Cost": "Cijena",
+"Add shipping method": "Dodaj način dostave",
+"Delete": "Obriši",
+"Edit": "Uredi",
+"Save": "Spremi",
+"Shipping method": "Način dostave",
+"Add new pickup location": "Dodaj novu lokaciju preuzimanja",
+"English": "Engleski",
+"Croatian": "Hrvatski"
+
+
+
+  
+  
+  
+  
+ 
+ 
+  
   
 }

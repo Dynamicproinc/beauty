@@ -150,20 +150,20 @@
                         data: {
                             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                             datasets: [{
-                                    label: 'Users',
+                                    label: '{{__('Users')}}',
                                     data: @json($months['users']),
                                     borderWidth: 2,
                                     tension: 0.3
                                 },
                                 {
-                                    label: 'Sales',
+                                    label: '{{__('Sales')}}',
                                     data: @json($months['sales']),
                                     borderWidth: 2,
                                     tension: 0.3
                                 },
 
                                 {
-                                    label: 'Visits',
+                                    label: '{{__('Visits')}}',
                                     data:  @json($months['visits']),
                                     borderWidth: 2,
                                     tension: 0.3

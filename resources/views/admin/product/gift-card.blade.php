@@ -1,5 +1,5 @@
 @extends('admin.layout')
-@section('title', 'Gift Cards')
+@section('title', __('Gift Cards'))
 @section('content')
 <div>
    <div class="row justify-content-center">
@@ -8,14 +8,14 @@
             <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">{{__('date')}}</th>
+      <th scope="col">{{__('Date')}}</th>
       <th>{{__('Design')}}</th>
-      <th scope="col">{{__('email')}}</th>
-      <th scope="col">{{__('from')}}</th>
-      <th scope="col">{{__('code')}}</th>
-      <th scope="col" class="text-right">{{__('Amount')}}</th>
+      <th scope="col">{{__('Email')}}</th>
+      <th scope="col">{{__('From')}}</th>
+      <th scope="col">{{__('Code')}}</th>
+      <th scope="col" class="text-right">{{__('Amount')}}
       <th scope="col" class="text-right">{{__('Payment')}}</th>
-      <th scope="col" class="text-right">{{__('status')}}</th>
+      <th scope="col" class="text-right">{{__('status')}}
     </tr>
   </thead>
   <tbody>

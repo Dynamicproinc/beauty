@@ -11,6 +11,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('css/admin.css') }}"> --}}
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
     {{-- <script src="https://cdn.ckeditor.com/4.25.1-lts/standard/ckeditor.js"></script> --}}
     {{-- <script src="{{ asset('ckeditor/ckeditor.js') }}"></script> --}}
     {{-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> --}}
@@ -236,21 +237,45 @@
             <input class="form-control form-control-dark" type="text" placeholder="Search" aria-label="Search">
         </div>
         <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
-
+           
+            <div class="dropdown mx-2">
+                <button class="btn btn-secondary-outline dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-translate"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li>
+                        <a class="dropdown-item {{ app()->getLocale() == 'en' ? 'active' : '' }}"
+                                 href="/language/en">
+                                 {{ __('English') }}
+                             </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item {{ app()->getLocale() == 'hr' ? 'active' : '' }}"
+                                 href="/language/hr">
+                                 {{ __('Croatian') }}
+                             </a>
+                    </li>
+                   
+                   
+                    
+                </ul>
+            </div>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-expanded="false">
-                    Hello, {{ Auth::user()->name }}
+                    {{ __('Hello') }}, {{ Auth::user()->name }}
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Messages</a></li>
+                    <li><a class="dropdown-item disabled" href="#">{{ __('Settings') }}</a></li>
+                    <li><a class="dropdown-item disabled" href="#">{{ __('Notifications') }}</a></li>
                     <li>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit" class="dropdown-item">Sign out</button>
+                            <button type="submit" class="dropdown-item">{{ __('Sign out') }}</button>
                         </form>
                     </li>
+                    
                 </ul>
             </div>
         </div>
@@ -333,7 +358,7 @@
                                     <line x1="12" y1="20" x2="12" y2="4"></line>
                                     <line x1="6" y1="20" x2="6" y2="14"></line>
                                 </svg>
-                                <span class="ml-2">Reports</span>
+                                <span class="ml-2">{{ __('Reports') }}</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -372,6 +397,7 @@
                                 <span class="ml-2">{{ __('Pickup Locations') }}</span>
                             </a>
                         </li>
+                       
 
                     </ul>
                 </div>
@@ -379,7 +405,8 @@
             <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a
+                                href="{{ route('admin.dashboard') }}">{{ __('Dashboard') }}</a></li>
                         <li class="breadcrumb-item active" aria-current="page">@yield('title')</li>
                     </ol>
                 </nav>
@@ -401,6 +428,7 @@
                         </li>
                       </ul>
                 </footer> --}}
+              
             </main>
         </div>
     </div>
