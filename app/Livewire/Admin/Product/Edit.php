@@ -317,7 +317,7 @@ public function addHighlight(){
     $existingHighlight = Highlight::where('product_id', $this->product->id)
         ->where('highlight_text', $this->highlight_text)
         ->first();
-    if ($existingHighlight || count($this->product->getHighlight()) >= 4) {
+    if ($existingHighlight || count($this->product->getHighlight()) >= 6) {
         $this->error_message = 'Something went wrong.';
         return;
     }
