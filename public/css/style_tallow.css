@@ -320,7 +320,7 @@ h5 {
 }
 
 .fz-small{
-    font-size:12px !important;
+    font-size:18px !important;
     color:#453a32 !important
 }
 .sec_text_p_md {
@@ -936,7 +936,7 @@ i {
    
 }
 .abt-icon{
-    animation: float 3s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
 }
 .fixed-section {
     width: 100%;
@@ -968,7 +968,7 @@ i {
             }
 
             50% {
-                transform: translateY(-20px);
+                transform: translateY(-10px);
             }
 
             100% {
@@ -1012,6 +1012,10 @@ i {
     .bg-with-image{
         background-image: url('../media/images/background-tallow-mobile.png');
     }
+    .fz-small{
+    font-size:12px !important;
+    color:#453a32 !important
+}
 
     .banner {
         height: auto;
