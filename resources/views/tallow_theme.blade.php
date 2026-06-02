@@ -449,7 +449,63 @@
             </div>
         </section>
         {{--  --}}
+        {{-- full height section  --}}
+       <section class="full-height-section">
+        <div class="bg-with-image" style="">
+               <div class="set-pad">
+                 <div class="container">
+                  
+                   <div class="">
+                    <div class="flex-cont">
+                         <div class="d-flex flex-column justify-content-between" style="height: 100vh;padding-top:100px;padding-bottom:100px">
+                       
+                       <div class="row justify-content-between">
+                         <div class="col-6 text-center p-3">
+                           <div class="abt-icon">
+                            {{-- <img src="{{ asset('media/images/arrow-top-left-to-down.svg') }}" alt=""> --}}
+                             <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('Strengthens the skin barrier') }}</h1>
+                            <p class="fz-small">
+                                {{__('Packed with nutrients like vitamin A, D, E & K')}}
+                            </p>
+                           </div>
+                        </div>
+                        <div class="col-6 text-center p-3">
+                            <div class="abt-icon">
+                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('gentle & skin compatible') }}</h1>
+                            <p class="fz-small">
+                                {{__('Similar to human sebum so it is typically well tolerated even for sensitive or reactive skin')}}
+                            </p>
+                            </div>
+                        </div>
+                       </div>
+                        <div class="row justify-content-between">
+                            <div class="col-6 text-center p-3">
+                            <div class="abt-icon">
+                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('Helps lock moisture') }}</h1>
+                                <p class="fz-small">
+                                    {{__('Seals in hydration and prevents moisture loss, keeping skin soft longer')}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6 text-center p-3">
+                            <div class="abt-icon">
+                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('enhance skin texture') }}</h1>
+                                <p class="fz-small">
+                                    {{__('Improve texture and clams dryness')}}
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </div>
+                    </div>
+                   </div>
+                </div>
+               </div>
+        </div>
+       </section>
 
+        {{-- end full height section  --}}
 
         <section class="section-type-1">
             <div class="reviews-section">
