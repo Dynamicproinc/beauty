@@ -79,13 +79,7 @@ Route::get('delete-email/{ref}/{email}', function ($ref, $email) {
 
     $subs->delete();
 
-    return "
-        <div style='font-family: sans-serif; text-align: center; margin-top: 50px;'>
-            <h1>Email Deleted 🗑️</h1>
-            <p>Your email <strong>{$email}</strong> has been permanently deleted from our subscription list.</p>
-            <p>We're sorry to see you go!</p>
-        </div>
-    ";
+    return redirect()->back()->with('success', 'Email deleted successfully');
 })->name('delete-email')->middleware('auth', AdminMiddleware::class);
 // Auth UI
 Auth::routes(['verify' => true]);
