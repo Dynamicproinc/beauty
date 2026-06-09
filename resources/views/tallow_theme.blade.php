@@ -518,8 +518,8 @@
                         </h1>
                         <p>{{ __('SUPERFOOD FOR THE SKIN') }}</p>
                     </div>
-                    <div class="main-carousel-3">
-                        <div class="carousel-cell ca-cel-re p-3">
+                    <div class="main-carousel-3" >
+                        <div class="carousel-cell ca-cel-re p-3" style="height:400px">
                             <div class="review-content">
                                 {{-- style="background-image: url('{{ asset('media/images/card-bg-1.jpg') }}')"> --}}
                                 <div>
