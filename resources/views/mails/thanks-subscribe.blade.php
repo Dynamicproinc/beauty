@@ -73,7 +73,7 @@
 </div>
 
 <div class="footer-content">
-  <div>
+  <div style="border-right: 1px solid #fff; padding-right: 16px">
     <h4>{{ __('Tallow Skin Care') }}</h4>
     <small>
       {{ __('Tallow Skin Care j.d.o.o') }}<br />
