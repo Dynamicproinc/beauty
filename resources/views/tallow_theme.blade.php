@@ -75,11 +75,13 @@
                                 <h1 class="tt-text-hero-md text-uppercase">
                                     {{-- {{ __('Simple skin care means few ingredients, full of benefits.') }} --}}
                                     {{ __('Minimalist, nourishing care made with Black Angus tallow') }}
+                                    
                                 </h1>
                                 <p class="sec_text_p_md">
                                     {{-- {{ __('Our beef tallow hydrates, nourishes and supports your skins barrier without overloading it. That is exactly what Tallow does because it is so similar to skin naturally. Skincare with tallow is care that works reduced to the essentials.') }} --}}
-                                    {{ __('​Our Tallow Balm brings the idea back to a modern form. Made from carefully purified Black Angus tallow.') }}</br>
-                                    {{ __('The minimalist formulation, without excess ingredients, provides deep hydration and restores the natural balance, leaving the skin smooth and healthy.') }}
+                                    {{-- {{ __('​Our Tallow Balm brings the idea back to a modern form. Made from carefully purified Black Angus tallow.') }}</br>
+                                    {{ __('The minimalist formulation, without excess ingredients, provides deep hydration and restores the natural balance, leaving the skin smooth and healthy.') }} --}}
+                                    {{ __("Minimalist formulation, without unnecessary ingredients, rich in fatty acids and vitamins A, D, E and K, which can contribute to strengthening the skin's protective barrier and provide antioxidant protection, leaving the skin smooth and healthy.") }}
                                 </p>
                                 <p>
 
