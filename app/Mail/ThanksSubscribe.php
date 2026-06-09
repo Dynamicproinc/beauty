@@ -30,7 +30,7 @@ class ThanksSubscribe extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: __('Thanks for subscribing to our newsletter!'),
+            subject: __('trnid243'),
         );
     }
 
