@@ -465,17 +465,17 @@
                          <div class="col-6 text-center p-3">
                            <div class="abt-icon">
                             {{-- <img src="{{ asset('media/images/arrow-top-left-to-down.svg') }}" alt=""> --}}
-                             <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('Strengthens the skin barrier') }}</h1>
+                             <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid1') }}</h1>
                             <p class="fz-small">
-                                {{__('Packed with nutrients like vitamin A, D, E & K')}}
+                                {{__('trnid2')}}
                             </p>
                            </div>
                         </div>
                         <div class="col-6 text-center p-3">
                             <div class="abt-icon">
-                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('gentle & skin compatible') }}</h1>
+                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid3') }}</h1>
                             <p class="fz-small">
-                                {{__('Similar to human sebum so it is typically well tolerated even for sensitive or reactive skin')}}
+                                {{__('trnid4')}}
                             </p>
                             </div>
                         </div>
@@ -483,17 +483,17 @@
                         <div class="row justify-content-between">
                             <div class="col-6 text-center p-3">
                             <div class="abt-icon">
-                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('Helps lock moisture') }}</h1>
+                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid5') }}</h1>
                                 <p class="fz-small">
-                                    {{__('Seals in hydration and prevents moisture loss, keeping skin soft longer')}}
+                                    {{__('trnid6')}}
                                 </p>
                             </div>
                         </div>
                         <div class="col-6 text-center p-3">
                             <div class="abt-icon">
-                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('enhance skin texture') }}</h1>
+                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid7') }}</h1>
                                 <p class="fz-small">
-                                    {{__('Improve texture and clams dryness')}}
+                                    {{__('trnid8')}}
                                 </p>
                             </div>
                         </div>
