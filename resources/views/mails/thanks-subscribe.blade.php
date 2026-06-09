@@ -82,7 +82,7 @@
     </small>
   </div>
 
-  <div style="width:50%">
+  <div style="width:50%;padding-left: 16px;">
     <p>
       <small>
         {{ __('trnid245') }}
