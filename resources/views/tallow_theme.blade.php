@@ -559,7 +559,7 @@
                                 <div>
                                     <h5>{{ __('ESSENTIAL FATTY ACIDS') }}</h5>
                                     <p class="p-reviews">
-                                        {{ __('trnid247') }}
+                                        {{ __('trnid250') }}
                                     </p>
                                 </div>
                             </div>
