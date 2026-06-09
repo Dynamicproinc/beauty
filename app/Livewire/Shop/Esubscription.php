@@ -7,6 +7,7 @@ use App\Models\EmailSubscription;
 use App\Rules\Recaptcha;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\ThanksSubscribe;
 
 class Esubscription extends Component
 {
@@ -25,14 +26,17 @@ class Esubscription extends Component
             'gRecaptchaResponse' => ['required', new Recaptcha()],
         ]);
 
-        EmailSubscription::create([
+        $sub = EmailSubscription::create([
             'email' => $this->email,
             'ip_address' => request()->ip(),
             'reference'=>Str::random(16),
         ]);
        
+        $data = [
+            'reference' => $sub->reference,
+        ];
         // send thanksing email to customer
-      
+        Mail::to($this->email)->send(new ThanksSubscribe($data));
 
         // end email
 

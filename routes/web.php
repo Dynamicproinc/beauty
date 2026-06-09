@@ -62,6 +62,31 @@ Route::get('unsubscribe-email/{ref}/{email}', function ($ref, $email) {
     ";
 })->name('unsubscribe-email');
 
+// delete the email from database
+Route::get('delete-email/{ref}/{email}', function ($ref, $email) {
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        return "<h2>Invalid email address.</h2>";
+    }
+
+    $subs = EmailSubscription::where('reference', $ref)
+        ->where('email', $email)
+        ->first();
+
+    if (!$subs) {
+        return "<h2>Subscription not found or invalid link.</h2>";
+    }
+
+    $subs->delete();
+
+    return "
+        <div style='font-family: sans-serif; text-align: center; margin-top: 50px;'>
+            <h1>Email Deleted 🗑️</h1>
+            <p>Your email <strong>{$email}</strong> has been permanently deleted from our subscription list.</p>
+            <p>We're sorry to see you go!</p>
+        </div>
+    ";
+})->name('delete-email')->middleware('auth', AdminMiddleware::class);
 // Auth UI
 Auth::routes(['verify' => true]);
 

@@ -10,6 +10,7 @@
       <th scope="col">{{__('Email')}}</th>
       <th scope="col">{{__('Status')}}</th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +22,9 @@
       <td class="text-uppercase {{$item->status === 'subscribed' ? 'text-success' : 'text-danger'}}">{{ $item->status }}</td>
       <td>
         <a href="{{route('unsubscribe-email',[$item->reference, $item->email])}}" class="btn btn-outline-danger btn-sm">{{__('Unsubscribe')}}</a>
+      </td>
+      <td>
+        <a href="{{route('delete-email',[$item->reference, $item->email])}}" class="btn btn-outline-danger btn-sm">{{__('Delete')}}</a>
       </td>
       
     </tr>
