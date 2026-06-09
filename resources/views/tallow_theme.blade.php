@@ -525,7 +525,7 @@
                                 <div>
                                     <h5>{{ __('NATURAL VITAMINS A, D, E & K') }}</h5>
                                     <p class="p-reviews">
-                                        {{ __('Stimulate skin regeneration and provide protection against free radicals.') }}
+                                        {{ __('trnid247') }}
                                     </p>
                                 </div>
 
@@ -537,7 +537,7 @@
                                 <div>
                                     <h5>{{ __('SKIN-IDENTICAL LIPIDS') }}</h5>
                                     <p class="p-reviews">
-                                        {{ __('Offer optimal absorption while repairing and strengthening the skin’s protective barrier.') }}
+                                        {{ __('trnid248') }}
                                     </p>
                                 </div>
                             </div>
@@ -548,7 +548,7 @@
                                 <div>
                                     <h5>{{ __('ANTIOXIDANTS') }}</h5>
                                     <p class="p-reviews">
-                                        {{ __('Shield the skin from environmental stressors and prevent premature aging.') }}
+                                        {{ __('trnid249') }}
                                     </p>
                                 </div>
                             </div>
@@ -559,7 +559,7 @@
                                 <div>
                                     <h5>{{ __('ESSENTIAL FATTY ACIDS') }}</h5>
                                     <p class="p-reviews">
-                                        {{ __('Enriched with Omega-3 and Omega-6 to fortify the skin barrier and ensure deep, long-lasting hydration.') }}
+                                        {{ __('trnid247') }}
                                     </p>
                                 </div>
                             </div>
