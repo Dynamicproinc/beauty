@@ -9,6 +9,7 @@
         overflow-x: hidden;
         color: #3a3a3a;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f5f5;
         
       }
       p{
