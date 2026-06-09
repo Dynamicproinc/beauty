@@ -97,7 +97,7 @@
                                                     {{-- <i class="bi bi-check2"></i> --}}
                                                          {{-- <img src="{{ asset('media/svg/icon1.svg') }}" alt=""
                                                         class="b-icon-sm"> --}}
-                                                        {{-- <i class="bi bi-leaf"></i>  --}}
+                                                        <i class="bi bi-leaf"></i> 
                                                    </div>
                                                    <div style="font-size: 14px"> {{$highlight->highlight_text}}</div>
                                                 </div>
