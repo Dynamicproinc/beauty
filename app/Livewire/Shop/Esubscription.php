@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\EmailSubscription;
 use App\Rules\Recaptcha;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
 
 class Esubscription extends Component
 {
@@ -29,8 +30,11 @@ class Esubscription extends Component
             'ip_address' => request()->ip(),
             'reference'=>Str::random(16),
         ]);
-
+       
         // send thanksing email to customer
+      
+
+        // end email
 
         $this->reset();
         session()->flash('success', __('Subscription completed'));
