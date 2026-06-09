@@ -66,9 +66,9 @@
 </div>
 
 <div class="body-text-content">
-  <h3>{{ __('THANK YOU FOR SUBSCRIBING TO OUR NEWSLETTER') }}</h3>
+  <h3 style="text-transform: uppercase">{{ __('trnid243') }}</h3>
   <p>
-    {{ __('Stay tuned — we will keep you updated with the latest news, tips, and exclusive content.') }}
+    {{ __('trnid244') }}
   </p>
 </div>
 
@@ -85,8 +85,8 @@
   <div style="width:50%">
     <p>
       <small>
-        {{ __('If you are not interested in our newsletter, click') }}
-        <a href="#">{{ __('unsubscribe') }}</a>
+        {{ __('trnid245') }}
+        <a href="{{route('unsubscribe-email',[$data['reference'], $data['email']])}}">{{ __('trnid246') }}</a>
       </small>
     </p>
   </div>

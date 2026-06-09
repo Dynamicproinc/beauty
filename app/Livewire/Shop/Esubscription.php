@@ -34,6 +34,7 @@ class Esubscription extends Component
        
         $data = [
             'reference' => $sub->reference,
+            'email' => $sub->email,
         ];
         // send thanksing email to customer
         Mail::to($this->email)->send(new ThanksSubscribe($data));

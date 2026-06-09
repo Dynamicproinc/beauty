@@ -21,7 +21,7 @@
       <td>{{ $item->email }}</td>
       <td class="text-uppercase {{$item->status === 'subscribed' ? 'text-success' : 'text-danger'}}">{{ $item->status }}</td>
       <td>
-        <a href="{{route('unsubscribe-email',[$item->reference, $item->email])}}" class="btn btn-outline-danger btn-sm">{{__('Unsubscribe')}}</a>
+        <a href="{{route('unsubscribe-email',[$item->reference, $item->email])}}" class="btn btn-outline-secondary btn-sm">{{__('Unsubscribe')}}</a>
       </td>
       <td>
         <a href="{{route('delete-email',[$item->reference, $item->email])}}" class="btn btn-outline-danger btn-sm">{{__('Delete')}}</a>
