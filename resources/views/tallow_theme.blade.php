@@ -128,7 +128,7 @@
                                 <div class="carousel-cell">
 
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tsc_box_bottle.png') }}">
+                                        <img src="{{ asset('media/images/tallow_skincare_citrus_01.png') }}">
 
                                         <div class="sm-card-text">
 
