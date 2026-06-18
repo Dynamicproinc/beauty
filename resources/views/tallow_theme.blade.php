@@ -96,7 +96,7 @@
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
                                         {{-- <img src="{{ asset('media/images/tsc_002.png') }}"> --}}
-                                        <img src="{{ asset('media/images/tsc_2.png') }}">
+                                        <img src="{{ asset('media/images/tallow_skincare_citrus.png') }}">
 
                                         <div class="sm-card-text">
 
@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tsc_bottle_on_grass.png') }}">
+                                        <img src="{{ asset('media/images/tallow_skincare_pure.png') }}">
 
                                         <div class="sm-card-text">
 
@@ -116,7 +116,7 @@
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tsc_production.jpg') }}" alt="tallow skin care">
+                                        <img src="{{ asset('media/images/tallow_skincare_pure_usage.png') }}" alt="tallow skin care">
 
                                         <div class="sm-card-text">
 
