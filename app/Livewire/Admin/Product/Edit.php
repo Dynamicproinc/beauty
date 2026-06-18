@@ -289,7 +289,7 @@ class Edit extends Component
         $this->product->supplier_id = $this->supplier_id;
         $this->product->tags = $this->tags;
         $this->product->status = $this->status;
-        $this->product->slug = Str::slug($this->title);
+        // $this->product->slug = Str::slug($this->title); This line is commented out to prevent overwriting the slug on every update. If you want to update the slug, you can uncomment it.
         if($this->product->save()){
           $this->success_message = 'Product updated successfully!';
           
