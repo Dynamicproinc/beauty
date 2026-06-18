@@ -157,6 +157,14 @@
                 </div>
             </div>
         </section>
+        {{--  --}}
+        {{-- <section>
+            <div class="floating-object-section">
+                <div>
+                    <img src="{{asset('media/images/sc_jar.png')}}" alt="" class="img-flo">
+                </div>
+            </div>
+        </section> --}}
         {{-- section 3 --}}
         <section>
             <div class="banner">
