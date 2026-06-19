@@ -75,7 +75,7 @@
                                 <h1 class="tt-text-hero-md text-uppercase">
                                     {{-- {{ __('Simple skin care means few ingredients, full of benefits.') }} --}}
                                     {{ __('Minimalist, nourishing care made with Black Angus tallow') }}
-                                    
+
                                 </h1>
                                 <p class="sec_text_p_md">
                                     {{-- {{ __('Our beef tallow hydrates, nourishes and supports your skins barrier without overloading it. That is exactly what Tallow does because it is so similar to skin naturally. Skincare with tallow is care that works reduced to the essentials.') }} --}}
@@ -93,7 +93,7 @@
                         {{--  --}}
                         <div class="thumb-areas p-3">
                             <div class="main-carousel-2">
-                                 <div class="carousel-cell">
+                                <div class="carousel-cell">
 
                                     <div class=" mb-3 cr-cont">
                                         <img src="{{ asset('media/images/tallow_balm.png') }}" alt="tallow skin care">
@@ -127,7 +127,8 @@
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tallow_skincare_open_jar.png') }}" alt="tallow skin care">
+                                        <img src="{{ asset('media/images/tallow_skincare_open_jar.png') }}"
+                                            alt="tallow skin care">
 
                                         <div class="sm-card-text">
 
@@ -136,7 +137,7 @@
                                     </div>
                                 </div>
 
-                               
+
 
 
 
@@ -161,22 +162,32 @@
         {{--  --}}
         <section>
             <div class="floating-object-section">
-                <div class="" style="padding:100px;">
-                    <div class="text-center mb-0">
-                        
-                                
-                        <h1 style="color:#322915;" class="tt-lg-sc text-uppercase">{{__('sweet')}}</h1>
+                <div class="position-relative" style="padding:100px;">
+                    <div class="text-center mb-5">
+
+
+                        <h1 style="color:#322915;" class="tt-lg-sc text-uppercase">{{ __('sweet') }}</h1>
                         {{-- <h1 style="color:#1F1F1F;" class="tt-lg-sc text-uppercase">{{__('sweet')}}</h1> --}}
                         {{-- <h3 style="color: #ccc0a7" class="tt-lg-sc text-uppercase">{{__('citrus')}}</h3> --}}
-                        <h3 style="color: #dfcca3" class="tt-lg-sc text-uppercase">{{__('citrus')}}</h3>
+                        <h3 style="color: #dfcca3" class="tt-lg-sc text-uppercase">{{ __('citrus') }}</h3>
                         <p class="sc-text-p d-sm-block d-none">
-                           This citrus-scented tallow balm refreshes and nourishes the skin, <br>keeping it soft and energized all day for everyday use.
+                            This citrus-scented tallow balm refreshes and nourishes the skin, <br>
+                            keeping it soft and
+                            energized all day for everyday use.
                         </p>
                         <p class="sc-text-p d-sm-none d-block">
-                           This citrus-scented tallow balm <br> refreshes and nourishes the skin,<br>keeping it soft and energized <br> all day for everyday use.
+                            This citrus-scented tallow balm <br>
+                            refreshes and nourishes the skin,<br>
+                            keeping it soft and energized <br>
+                            all day for everyday use.
                         </p>
                     </div>
-                    <img src="{{asset('media/images/sc_jar.png')}}" alt="" class="img-flo">
+                    <div class="d-flex justify-content-center mb-5">
+                        <img src="{{ asset('media/images/sc_jar.png') }}" alt="" class="img-flo">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                          <a href="/products" class="btn-1-xl-sc rounded-0">{{ __('OUR PRODUCTS') }}</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -278,7 +289,7 @@
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
-                           
+
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="">
@@ -477,60 +488,65 @@
         </section>
         {{--  --}}
         {{-- full height section  --}}
-       <section class="full-height-section">
-        <div class="bg-with-image" style="">
-               <div class="set-pad">
-                 <div class="container">
-                  
-                   <div class="">
-                    <div class="flex-cont">
-                         <div class="d-flex flex-column justify-content-between" style="height: 100vh;padding-top:100px;padding-bottom:100px">
-                       
-                       <div class="row justify-content-between">
-                         <div class="col-6 text-center p-3">
-                           <div class="abt-icon">
-                            {{-- <img src="{{ asset('media/images/arrow-top-left-to-down.svg') }}" alt=""> --}}
-                             <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid1') }}</h1>
-                            <p class="fz-small">
-                                {{__('trnid2')}}
-                            </p>
-                           </div>
-                        </div>
-                        <div class="col-6 text-center p-3">
-                            <div class="abt-icon">
-                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid3') }}</h1>
-                            <p class="fz-small">
-                                {{__('trnid4')}}
-                            </p>
+        <section class="full-height-section">
+            <div class="bg-with-image" style="">
+                <div class="set-pad">
+                    <div class="container">
+
+                        <div class="">
+                            <div class="flex-cont">
+                                <div class="d-flex flex-column justify-content-between"
+                                    style="height: 100vh;padding-top:100px;padding-bottom:100px">
+
+                                    <div class="row justify-content-between">
+                                        <div class="col-6 text-center p-3">
+                                            <div class="abt-icon">
+                                                {{-- <img src="{{ asset('media/images/arrow-top-left-to-down.svg') }}" alt=""> --}}
+                                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid1') }}
+                                                </h1>
+                                                <p class="fz-small">
+                                                    {{ __('trnid2') }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 text-center p-3">
+                                            <div class="abt-icon">
+                                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid3') }}
+                                                </h1>
+                                                <p class="fz-small">
+                                                    {{ __('trnid4') }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between">
+                                        <div class="col-6 text-center p-3">
+                                            <div class="abt-icon">
+                                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid5') }}
+                                                </h1>
+                                                <p class="fz-small">
+                                                    {{ __('trnid6') }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 text-center p-3">
+                                            <div class="abt-icon">
+                                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid7') }}
+                                                </h1>
+                                                <p class="fz-small">
+                                                    {{ __('trnid8') }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-                       </div>
-                        <div class="row justify-content-between">
-                            <div class="col-6 text-center p-3">
-                            <div class="abt-icon">
-                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid5') }}</h1>
-                                <p class="fz-small">
-                                    {{__('trnid6')}}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-6 text-center p-3">
-                            <div class="abt-icon">
-                                <h1 class="tt-text-hero-md text-uppercase fz-small">{{ __('trnid7') }}</h1>
-                                <p class="fz-small">
-                                    {{__('trnid8')}}
-                                </p>
-                            </div>
-                        </div>
-                        </div>
-                        
                     </div>
-                    </div>
-                   </div>
                 </div>
-               </div>
-        </div>
-       </section>
+            </div>
+        </section>
 
         {{-- end full height section  --}}
 
@@ -543,7 +559,7 @@
                         </h1>
                         <p>{{ __('SUPERFOOD FOR THE SKIN') }}</p>
                     </div>
-                    <div class="main-carousel-3" >
+                    <div class="main-carousel-3">
                         <div class="carousel-cell ca-cel-re p-3" style="height:400px">
                             <div class="review-content">
                                 {{-- style="background-image: url('{{ asset('media/images/card-bg-1.jpg') }}')"> --}}
@@ -609,7 +625,7 @@
                                     </h1>
 
                                     <p>
-                                       {{__('mission.statement') }}
+                                        {{ __('mission.statement') }}
                                     </p>
                                     <div>
                                         <h6>
@@ -630,7 +646,7 @@
                 </div>
             </div>
         </section>
-        
+
 
 
     </div>

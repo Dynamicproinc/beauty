@@ -967,6 +967,28 @@ i {
     position: relative;
     
 }
+.btn-1-xl-sc{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #606654; */
+    /* background-color: var(--pri-color); */
+
+    /* background-color: #084A0D; */
+    
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: var(--br);
+    display: inline-flex !important;
+    /* align-items: center !important;
+    justify-content: center !important; */
+    color: #322915 !important;
+    border: 1px solid #322915 !important;
+    letter-spacing: 2px;
+
+}
 .sc-text-p{
     font-size: 20px;
 }
@@ -974,6 +996,7 @@ i {
    
      filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.25));
       animation: float 5s ease-in-out infinite;
+      
       
      
 }
