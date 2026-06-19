@@ -24,7 +24,7 @@
         <a href="{{route('unsubscribe-email',[$item->reference, $item->email])}}" class="btn btn-outline-secondary btn-sm">{{__('Unsubscribe')}}</a>
       </td>
       <td>
-        <a href="{{route('delete-email',[$item->reference, $item->email])}}" class="btn btn-outline-danger btn-sm">{{__('Delete')}}</a>
+        <a href="{{route('delete-email',[$item->reference, $item->email])}}" class="btn btn-outline-danger btn-sm" onclick="return confirm('{{__('Are you sure?')}}')">{{__('Delete')}}</a>
       </td>
       
     </tr>
