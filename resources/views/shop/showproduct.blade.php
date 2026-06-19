@@ -5,7 +5,7 @@
 
 @section('content')
 <div style="height:120px" class="d-none d-sm-block"></div>
-{{-- <div style="height:50px" class="d-block d-sm-none"></div> --}}
+<div style="height:10px" class="d-block d-sm-none"></div>
     <div class="mt-3">
 
         <div class="container  g-0 g-sm-3 panel-pri mb-3">
