@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="p-3">
+                    <div class="px-3">
                         <div class="main-title">
                             <div class="mb-4">
                                 <h3 class="title-2 text-muted text-uppercase d-none d-sm-block">{{ $product->getCategory()->category_name }}</h3>
