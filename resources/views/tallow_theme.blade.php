@@ -172,7 +172,7 @@
                         <h3 style="color: #dfcca3" class="tt-lg-sc text-uppercase">{{ __('citrus') }}</h3>
 
                         {{-- tranlations --}}
-                        @if (config('app.locale') === 'en')
+                        {{-- @if (config('app.locale') === 'en')
                             <p class="sc-text-p d-sm-block d-none">
                                 This citrus-scented tallow balm refreshes and nourishes the skin, <br>
                                 keeping it soft and
@@ -193,11 +193,15 @@
                             </p>
 
                             <p class="sc-text-p text-center d-block d-sm-none">
-                                Osvježava i njeguje kožu.<br>
-                                Ostavlja je mekom i glatkom tijekom dana.<br>
-                                Balzam od loja s citrusnim mirisom pruža dugotrajnu njegu i osjećaj svježine.
+                               <p class="sc-text-p d-sm-none d-block">
+    Ovaj balzam od loja s citrusnim mirisom <br>
+    osvježava i njeguje kožu,<br>
+    održavajući je mekom i punom energije <br>
+    tijekom cijelog dana za svakodnevnu upotrebu.
+</p>
+
                             </p>
-                        @endif
+                        @endif --}}
 
 
 
