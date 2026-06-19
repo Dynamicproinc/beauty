@@ -868,11 +868,11 @@ i {
     list-style-type: none;
 }
 .small-note-area{
-    background-color: #EAE6DD;
+    /* background-color: #EAE6DD; */
     
 }
 .payment-icon{
-    width: 80px;
+    width: 32px;
 }
 .small-note{
     font-size: 12px;

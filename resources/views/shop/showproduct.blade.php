@@ -120,23 +120,32 @@
                                 <p class="small-note">{{__('delivery.note')}}</p>
                             </div>
                             <div class="d-flex flex-wrap mb-4">
-                                <div class="text-center bg-white  me-2 mb-2">
-                                    <img src="{{asset('media/payment_icons/visa.png')}}" alt="" class="payment-icon">
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/visa-alt.svg')}}" alt="" class="payment-icon">
                                 </div>
-                                <div class="text-center bg-white  me-2 mb-2">
-                                    <img src="{{asset('media/payment_icons/master_card.png')}}" alt="" class="payment-icon">
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/mastercard.svg')}}" alt="" class="payment-icon">
                                 </div>
-                                <div class="text-center bg-white  me-2 mb-2">
-                                    <img src="{{asset('media/payment_icons/american_express.png')}}" alt="" class="payment-icon">
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/american-express.svg')}}" alt="" class="payment-icon">
                                 </div>
-                                <div class="text-center bg-white  me-2 mb-2">
-                                    <img src="{{asset('media/payment_icons/jcb.png')}}" alt="" class="payment-icon">
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/jcb.svg')}}" alt="" class="payment-icon">
                                 </div>
-                                <div class="text-center bg-white  me-2 mb-2">
-                                    <img src="{{asset('media/payment_icons/discover.png')}}" alt="" class="payment-icon">
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/discover.svg')}}" alt="" class="payment-icon">
                                 </div>
-                                <div class="text-center bg-white  me-2 mb-2">
-                                    <img src="{{asset('media/payment_icons/dinners_club.png')}}" alt="" class="payment-icon">
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/diners.svg')}}" alt="" class="payment-icon">
+                                </div>
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/unionpay.svg')}}" alt="" class="payment-icon">
+                                </div>
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/apple-pay.svg')}}" alt="" class="payment-icon">
+                                </div>
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/google-pay-alt.svg')}}" alt="" class="payment-icon">
                                 </div>
                             </div>
                             {{--  --}}
