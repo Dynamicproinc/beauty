@@ -4,10 +4,11 @@
 
 
 @section('content')
-<div style="height:120px"></div>
+<div style="height:120px" class="d-none d-sm-block"></div>
+{{-- <div style="height:50px" class="d-block d-sm-none"></div> --}}
     <div class="mt-3">
 
-        <div class="container panel-pri mb-3">
+        <div class="container  g-0 g-sm-3 panel-pri mb-3">
             <div>
                 <div>
                     {{-- <nav aria-label="breadcrumb">
@@ -36,7 +37,7 @@
                                     @endforeach
 
                                 </div>
-                                <div class="carousel-inner br-8">
+                                <div class="carousel-inner">
                                     @foreach ($product->media as $key => $image)
                                         <div class="carousel-item @if ($key == 0) active @endif">
                                             {{-- <img src="{{ asset('media/images/sample.png') }}" class="d-block w-100" alt="image"> --}}
@@ -58,7 +59,7 @@
                                 </button>
                             </div>
                             <div>
-                                <div class="d-flex flex-row-wrap mt-2">
+                                <div class="d-flex flex-row-wrap mt-2 p-3">
                                     @foreach ($product->media as $key => $image)
                                         <div class="img-thumb-cr">
                                             <img src="{{asset('uploads/products/'.$image->file_path) }}" class="img-fluid" alt=""
