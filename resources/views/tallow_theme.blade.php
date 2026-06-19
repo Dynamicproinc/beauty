@@ -170,23 +170,46 @@
                         {{-- <h1 style="color:#1F1F1F;" class="tt-lg-sc text-uppercase">{{__('sweet')}}</h1> --}}
                         {{-- <h3 style="color: #ccc0a7" class="tt-lg-sc text-uppercase">{{__('citrus')}}</h3> --}}
                         <h3 style="color: #dfcca3" class="tt-lg-sc text-uppercase">{{ __('citrus') }}</h3>
-                        <p class="sc-text-p d-sm-block d-none">
-                            This citrus-scented tallow balm refreshes and nourishes the skin, <br>
-                            keeping it soft and
-                            energized all day for everyday use.
-                        </p>
-                        <p class="sc-text-p d-sm-none d-block">
-                            This citrus-scented tallow balm <br>
-                            refreshes and nourishes the skin,<br>
-                            keeping it soft and energized <br>
-                            all day for everyday use.
-                        </p>
+
+                        {{-- tranlations --}}
+                        @if (config('app.locale') === 'en')
+                            <p class="sc-text-p d-sm-block d-none">
+                                This citrus-scented tallow balm refreshes and nourishes the skin, <br>
+                                keeping it soft and
+                                energized all day for everyday use.
+                            </p>
+                            <p class="sc-text-p d-sm-none d-block">
+                                This citrus-scented tallow balm <br>
+                                refreshes and nourishes the skin,<br>
+                                keeping it soft and energized <br>
+                                all day for everyday use.
+                            </p>
+                        @endif
+
+                        @if (config('app.locale') === 'hr')
+                            <p class="sc-text-p d-sm-block d-none">
+                                Ovaj balzam od loja s citrusnim mirisom osvježava i njeguje kožu, <br>
+                                održavajući je mekom i punom energije tijekom cijelog dana za svakodnevnu upotrebu.
+                            </p>
+
+                            <p class="sc-text-p d-sm-none d-block">
+                                Ovaj balzam od loja s citrusnim mirisom <br>
+                                osvježava i njeguje kožu, <br>
+                                održavajući je mekom i punom energije <br>
+                                tijekom cijelog dana za svakodnevnu upotrebu.
+                            </p>
+                        @endif
+
+
+
+                        {{-- end translations --}}
+
                     </div>
                     <div class="d-flex justify-content-center mb-5">
                         <img src="{{ asset('media/images/sc_jar_hd.png') }}" alt="" class="img-flo">
                     </div>
                     <div class="d-flex justify-content-center">
-                          <a href="/products" class="btn-1-xl-sc rounded-0">{{ __('OUR PRODUCTS') }}</a>
+                        <a href="/products" class="btn-1-xl-sc rounded-0">{{ __('OUR PRODUCTS') }}</a>
                     </div>
                 </div>
             </div>
