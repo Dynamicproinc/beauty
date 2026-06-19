@@ -183,7 +183,7 @@
                         </p>
                     </div>
                     <div class="d-flex justify-content-center mb-5">
-                        <img src="{{ asset('media/images/sc_jar.png') }}" alt="" class="img-flo">
+                        <img src="{{ asset('media/images/sc_jar_hd.png') }}" alt="" class="img-flo">
                     </div>
                     <div class="d-flex justify-content-center">
                           <a href="/products" class="btn-1-xl-sc rounded-0">{{ __('OUR PRODUCTS') }}</a>
