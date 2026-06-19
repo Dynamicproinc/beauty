@@ -967,8 +967,11 @@ i {
     position: relative;
     
 }
+.sc-text-p{
+    font-size: 20px;
+}
 .img-flo{
-
+   
      filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.25));
       animation: float 5s ease-in-out infinite;
       
@@ -1062,7 +1065,9 @@ i {
         height: 100%;
         display: block;
     }
-
+.sc-text-p{
+    font-size: 14px;
+}
     .bg-with-image{
         background-image: url('../media/images/background-tallow-mobile.png');
     }
