@@ -81,6 +81,7 @@
                             <div class="mb-4">
                                 <h3 class="title-2 text-muted text-uppercase d-none d-sm-block">{{ $product->getCategory()->category_name }}</h3>
                                 <h1 class="tt-text-hero-md text-uppercase fw-bolder">{{ $product->title }}</h1>
+                                {{-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia porro ipsa eos in reiciendis, rerum, aperiam nobis cumque quibusdam quisquam, iste consectetur. Aspernatur assumenda pariatur saepe blanditiis doloremque, eligendi eius.</p> --}}
                             </div>
                             <div class="mb-3">
                                 {{-- <ol>
@@ -116,7 +117,7 @@
                             {{-- @livewire('shop.product.addcart',['product' => $product]) --}}
                             <livewire:shop.product.addcart :product="$product" />
                             <div class="small-note-areas mb-3">
-                                <p class="small-note">{{__('Orders placed Sunday–Wednesday before 12 PM ship that Friday, later orders ship next Friday. Delivery arrives within 24 hours after dispatch.')}}</p>
+                                <p class="small-note">{{__('delivery.note')}}</p>
                             </div>
                             <div class="d-flex flex-wrap mb-4">
                                 <div class="text-center bg-white  me-2 mb-2">
