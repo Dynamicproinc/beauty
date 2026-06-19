@@ -161,7 +161,7 @@
         {{--  --}}
         <section>
             <div class="floating-object-section">
-                <div>
+                <div class="">
                     <img src="{{asset('media/images/sc_jar.png')}}" alt="" class="img-flo">
                 </div>
             </div>
