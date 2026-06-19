@@ -93,6 +93,17 @@
                         {{--  --}}
                         <div class="thumb-areas p-3">
                             <div class="main-carousel-2">
+                                 <div class="carousel-cell">
+
+                                    <div class=" mb-3 cr-cont">
+                                        <img src="{{ asset('media/images/tallow_balm.png') }}" alt="tallow skin care">
+
+                                        <div class="sm-card-text">
+
+                                            {{ __('100% Pure, Clean, and Traditionally Rendered') }}
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
                                         {{-- <img src="{{ asset('media/images/tsc_002.png') }}"> --}}
@@ -125,17 +136,7 @@
                                     </div>
                                 </div>
 
-                                <div class="carousel-cell">
-
-                                    <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tallow_skincare_citrus_01.png') }}">
-
-                                        <div class="sm-card-text">
-
-                                            {{ __('100% Pure, Clean, and Traditionally Rendered') }}
-                                        </div>
-                                    </div>
-                                </div>
+                               
 
 
 
@@ -158,13 +159,13 @@
             </div>
         </section>
         {{--  --}}
-        {{-- <section>
+        <section>
             <div class="floating-object-section">
                 <div>
                     <img src="{{asset('media/images/sc_jar.png')}}" alt="" class="img-flo">
                 </div>
             </div>
-        </section> --}}
+        </section>
         {{-- section 3 --}}
         <section>
             <div class="banner">
@@ -254,6 +255,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-6 mb-3">
+                            {{-- <img src="{{asset('media/images/tallow_balm.png')}}" alt="" class="img-fluid"> --}}
                             <div class=""
                                 style="height:100%;width:100%;background:white;border: 1px solid white;overflow:hidden">
                                 <video autoplay muted playsinline loop
@@ -262,6 +264,7 @@
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
+                           
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="">
