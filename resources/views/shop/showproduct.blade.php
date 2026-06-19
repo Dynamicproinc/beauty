@@ -119,22 +119,22 @@
                                 <p class="small-note">{{__('Orders placed Sunday–Wednesday before 12 PM ship that Friday, later orders ship next Friday. Delivery arrives within 24 hours after dispatch.')}}</p>
                             </div>
                             <div class="d-flex flex-wrap mb-4">
-                                <div class="text-center bg-white  me-2">
+                                <div class="text-center bg-white  me-2 mb-2">
                                     <img src="{{asset('media/payment_icons/visa.png')}}" alt="" class="payment-icon">
                                 </div>
-                                <div class="text-center bg-white  me-2">
+                                <div class="text-center bg-white  me-2 mb-2">
                                     <img src="{{asset('media/payment_icons/master_card.png')}}" alt="" class="payment-icon">
                                 </div>
-                                <div class="text-center bg-white  me-2">
+                                <div class="text-center bg-white  me-2 mb-2">
                                     <img src="{{asset('media/payment_icons/american_express.png')}}" alt="" class="payment-icon">
                                 </div>
-                                <div class="text-center bg-white  me-2">
+                                <div class="text-center bg-white  me-2 mb-2">
                                     <img src="{{asset('media/payment_icons/jcb.png')}}" alt="" class="payment-icon">
                                 </div>
-                                <div class="text-center bg-white  me-2">
+                                <div class="text-center bg-white  me-2 mb-2">
                                     <img src="{{asset('media/payment_icons/discover.png')}}" alt="" class="payment-icon">
                                 </div>
-                                <div class="text-center bg-white  me-2">
+                                <div class="text-center bg-white  me-2 mb-2">
                                     <img src="{{asset('media/payment_icons/dinners_club.png')}}" alt="" class="payment-icon">
                                 </div>
                             </div>
