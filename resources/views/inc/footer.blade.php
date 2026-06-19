@@ -73,9 +73,42 @@
 
          <!-- Bottom Bar -->
          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
+            <div>
+                <div>
+                 <div class="d-flex flex-wrap mb-4">
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/visa-alt.svg')}}" alt="" class="payment-icon">
+                                </div>
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/mastercard.svg')}}" alt="" class="payment-icon">
+                                </div>
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/american-express.svg')}}" alt="" class="payment-icon">
+                                </div>
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/jcb.svg')}}" alt="" class="payment-icon">
+                                </div>
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/discover.svg')}}" alt="" class="payment-icon">
+                                </div>
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/diners.svg')}}" alt="" class="payment-icon">
+                                </div>
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/unionpay.svg')}}" alt="" class="payment-icon">
+                                </div>
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/apple-pay.svg')}}" alt="" class="payment-icon">
+                                </div>
+                                <div class="text-center  me-2 mb-2">
+                                    <img src="{{asset('media/payment_icons/google-pay-alt.svg')}}" alt="" class="payment-icon">
+                                </div>
+                            </div>
+            </div>
              <small class="mb-2 mb-sm-0">
                  © {{ date('Y') }} Tallow Skin Care j.d.o.o. {{__('All rights reserved.')}}
              </small>
+            </div>
 
              <ul class="list-unstyled d-flex mb-0">
                  <div class="dropdown">
