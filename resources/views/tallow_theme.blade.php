@@ -161,14 +161,15 @@
         {{--  --}}
         <section>
             <div class="floating-object-section">
-                <div class="">
-                    <div class="text-center">
+                <div class="" style="padding-top:100px;padding-bottom:100px">
+                    <div class="text-center mb-0">
                         
                                 
                         <h1 style="color:#322915;" class="tt-lg-sc text-uppercase">{{__('sweet')}}</h1>
                         {{-- <h1 style="color:#1F1F1F;" class="tt-lg-sc text-uppercase">{{__('sweet')}}</h1> --}}
                         {{-- <h3 style="color: #ccc0a7" class="tt-lg-sc text-uppercase">{{__('citrus')}}</h3> --}}
                         <h3 style="color: #dfcca3" class="tt-lg-sc text-uppercase">{{__('citrus')}}</h3>
+                        <p style="font-size: 20px">{{__('This Tallow Balm is enriched with a natural citrus scent')}}<br>which can provide extra freshness and energy, <br>leaving the skin soft and refreshed throughout the day<br> Perfect for everyday care</p>
                     </div>
                     <img src="{{asset('media/images/sc_jar.png')}}" alt="" class="img-flo">
                 </div>
