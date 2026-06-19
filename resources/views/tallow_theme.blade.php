@@ -116,7 +116,7 @@
                                 </div>
                                 <div class="carousel-cell">
                                     <div class=" mb-3 cr-cont">
-                                        <img src="{{ asset('media/images/tallow_skincare_pure_usage.png') }}" alt="tallow skin care">
+                                        <img src="{{ asset('media/images/tallow_skincare_open_jar.png') }}" alt="tallow skin care">
 
                                         <div class="sm-card-text">
 
