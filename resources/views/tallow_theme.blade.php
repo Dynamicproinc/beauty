@@ -162,6 +162,14 @@
         <section>
             <div class="floating-object-section">
                 <div class="">
+                    <div class="text-center">
+                        
+                                
+                        <h1 style="color:#322915;" class="tt-lg-sc text-uppercase">{{__('sweet')}}</h1>
+                        {{-- <h1 style="color:#1F1F1F;" class="tt-lg-sc text-uppercase">{{__('sweet')}}</h1> --}}
+                        {{-- <h3 style="color: #ccc0a7" class="tt-lg-sc text-uppercase">{{__('citrus')}}</h3> --}}
+                        <h3 style="color: #dfcca3" class="tt-lg-sc text-uppercase">{{__('citrus')}}</h3>
+                    </div>
                     <img src="{{asset('media/images/sc_jar.png')}}" alt="" class="img-flo">
                 </div>
             </div>

@@ -22,6 +22,14 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "CamptonBold";
+    src: url("/fonts/CamptonBold") format("truetype");
+    font-weight: bolder;
+    font-style: normal;
+}
+
+
 
 html {
     font-size: 16px;
@@ -458,7 +466,7 @@ p {
     height: 50px;
     border-radius: 0 !important;
 } */
-.tt-text-xl {
+.tt-text-hero-lgt-xl {
     font-size: 4rem !important;
     font-weight: 500;
 }
@@ -948,13 +956,13 @@ i {
     justify-content: center;
     align-items: center;
    
-      background: radial-gradient(
-        circle,
-        #FFFFFF 0%,
-        #FFF8E6 40%,
-        #FFE7B0 70%,
-        #F7C56A 100%
-    );
+   background: radial-gradient(
+    circle,
+    #FFFFFF 0%,
+    #FFFEFC 50%,
+    #FFFBEF 80%,
+    #F4E2BC 100%
+);
    overflow-x: hidden;
     position: relative;
 }
@@ -987,6 +995,24 @@ i {
     height: auto;
     margin-bottom: 32px;
 }
+
+.tt-lg-sc {
+        font-weight: 600 !important;
+        font-size: 89px;
+        letter-spacing: 3px !important;
+       font-family: Campton, Arial, sans-serif !important;
+       line-height: 100%;
+        
+         
+    }
+.tt-lg-sc-sub {
+        font-weight: 600 !important;
+        font-size: 24px;
+        letter-spacing: 2px !important;
+       font-family: CamptonBold, Arial, sans-serif !important;
+        
+         
+    }
 
 /* Animation */
   @keyframes float {
@@ -1043,6 +1069,15 @@ i {
     font-size:12px !important;
     color:#453a32 !important
 }
+.tt-lg-sc {
+        font-weight: 600 !important;
+        font-size: 2em;
+        letter-spacing: 3px !important;
+       font-family: Campton, Arial, sans-serif !important;
+       line-height: 100%;
+        
+         
+    }
 
     .banner {
         height: auto;
@@ -1085,6 +1120,8 @@ i {
         font-size: 18px;
         letter-spacing: 2px !important;
     }
+    
+
     .medium-section {
         padding: 4.5rem 1rem;
     }
