@@ -192,11 +192,7 @@
                                 održavajući je mekom i punom energije tijekom cijelog dana za svakodnevnu upotrebu.
                             </p>
 
-                            <p class="sc-text-p text-center">
-                                Osvježava i njeguje kožu.<br>
-                                Ostavlja je mekom i glatkom tijekom dana.<br>
-                                Balzam od loja s citrusnim mirisom pruža dugotrajnu njegu i osjećaj svježine.
-                            </p>
+                           
                         @endif
 
 
