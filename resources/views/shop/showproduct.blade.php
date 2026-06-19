@@ -78,8 +78,8 @@
                     <div class="p-3">
                         <div class="main-title">
                             <div class="mb-4">
-                                <h3 class="title-2 text-uppercase d-none d-sm-block">{{ $product->getCategory()->category_name }}</h3>
-                                <h1 class="title-md text-capitalize fw-bolder">{{ $product->title }}</h1>
+                                <h3 class="title-2 text-muted text-uppercase d-none d-sm-block">{{ $product->getCategory()->category_name }}</h3>
+                                <h1 class="tt-text-hero-md text-uppercase fw-bolder">{{ $product->title }}</h1>
                             </div>
                             <div class="mb-3">
                                 {{-- <ol>
