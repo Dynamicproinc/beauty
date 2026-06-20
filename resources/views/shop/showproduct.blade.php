@@ -41,7 +41,8 @@
                                     @foreach ($product->media as $key => $image)
                                         <div class="carousel-item @if ($key == 0) active @endif">
                                             {{-- <img src="{{ asset('media/images/sample.png') }}" class="d-block w-100" alt="image"> --}}
-                                            <img src="{{ asset('uploads/products/'.$image->file_path) }}" class="d-block w-100" alt="image">
+                                            {{-- <img src="{{ asset('uploads/products/'.$image->file_path) }}" class="d-block w-100" alt="image"> --}}
+                                            <img src="{{ asset('uploads/products/'.$image->file_path) }}" style="object-fit: cover; width: 100%; height: 100%;" alt="image">
                                         </div>
                                     @endforeach
 
