@@ -8,7 +8,7 @@
 <div style="height:10px" class="d-block d-sm-none"></div>
     <div class="mt-3">
 
-        <div class="container px-0 px-sm-3 panel-pri mb-3">
+        <div class="container panel-pri mb-3">
             <div>
                 <div>
                     {{-- <nav aria-label="breadcrumb">
