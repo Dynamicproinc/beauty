@@ -32,7 +32,7 @@
                                 <div class="col-lg-4 mb-3">
                                <div data-aos="fade-up">
                                 <div class="th-md">
-                                     <img src="{{asset('uploads/products/'.$item->media->first()->file_path)}}" alt="" class="">
+                                     <img src="{{asset('uploads/products/'.$item->media->first()?->file_path)}}" alt="" class="">
                                 </div>
                                    <div class="mt-3">
                                        <h6 class="text-center theme-color fw-bold text-uppercase product-title">{{ $item->title }}</h6>
