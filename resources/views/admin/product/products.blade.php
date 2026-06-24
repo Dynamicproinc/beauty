@@ -10,7 +10,7 @@
         </div>
     </div>
         <div class="panel bg-white rounded">
-          @if(count($products))
+          @if(count($products) > 0)
             <table class="table table-striped">
   <thead>
     <tr>
