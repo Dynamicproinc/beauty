@@ -29,7 +29,7 @@ class Edit extends Component
     public $variants = [];
     public $meta_title, $meta_description, $meta_keywords, $slug;
     public $option_id, $o_value;
-     public $success_message = '';
+    public $success_message = '';
     public $error_message = '';
     public $pro_highlights = [];
     public $highlight_text;
@@ -50,17 +50,17 @@ class Edit extends Component
 
     public function mount($id)
     {
-        
-        
-        if($product = Product::find($id)) {
+
+
+        if ($product = Product::find($id)) {
             // assign product to the public property
             //  dd($product->cooking_instructions->instructions : null);
 
-        $this->product = $product;
+            $this->product = $product;
 
             $this->title = $product->title;
-        $this->description = $product->description;
-        $this->category_id = $product->category_id;
+            $this->description = $product->description;
+            $this->category_id = $product->category_id;
             $this->discounted_price = $product->discounted_price;
             $this->original_price = $product->original_price;
             $this->tax = $product->tax;
@@ -81,37 +81,33 @@ class Edit extends Component
             // $this->is_digital = $product->is_digital;
             // $this->digital_file = $product->digital_file;
             // $this->deleted = $product->deleted;
-        // mount other product properties as needed
-        $this->options = Option::all();
-        $this->categories = categories::all();
-        $this->suppliers = Supplier::all();
-        $this->product_information = ProductInformation::where('product_id', $this->product->id)->get();
-        // $this->pro_hightlights = $product->highlights;
-       $this->cooking_instructions = $product->cooking_instructions ? $product->cooking_instructions->instructions : null;
-        // if product has media
-        if ($product->media && $product->media->count() > 0) {
-            $this->urls = $product->media;
-           
-        } else {
-            $this->urls = [];
-        }
-        
-        $this->variants = $product->variants->map(function ($variant) {
-        return [
-            'id' => $variant->id,
-            'option_id' => $variant->option_id,
-            'value' => $variant->value,
-            'additional_price' => $variant->additional_price,       // <-- important
-            'quantity' => $variant->quantity, // <-- important
-        ];
-    })->toArray();
+            // mount other product properties as needed
+            $this->options = Option::all();
+            $this->categories = categories::all();
+            $this->suppliers = Supplier::all();
+            $this->product_information = ProductInformation::where('product_id', $this->product->id)->get();
+            // $this->pro_hightlights = $product->highlights;
+            $this->cooking_instructions = $product->cooking_instructions ? $product->cooking_instructions->instructions : null;
+            // if product has media
+            if ($product->media && $product->media->count() > 0) {
+                $this->urls = $product->media;
+            } else {
+                $this->urls = [];
+            }
 
-        }else {
+            $this->variants = $product->variants->map(function ($variant) {
+                return [
+                    'id' => $variant->id,
+                    'option_id' => $variant->option_id,
+                    'value' => $variant->value,
+                    'additional_price' => $variant->additional_price,       // <-- important
+                    'quantity' => $variant->quantity, // <-- important
+                ];
+            })->toArray();
+        } else {
             // Handle the case where the product is not found
             abort(404, 'Product not found');
         }
-
-        
     }
 
     public function addVariant()
@@ -139,7 +135,7 @@ class Edit extends Component
         //             'product_id'   => $this->product->id,
         //             'option_id'    => $this->option_id,
         //             'value'        => $this->o_value,
-                   
+
         //         ]);
         $vr = [
             'id' => null, // New variant, so ID is null
@@ -151,7 +147,7 @@ class Edit extends Component
         $this->variants[] = $vr;
     }
 
-   public function updateVariants()
+    public function updateVariants()
     {
         foreach ($this->variants as $variantData) {
             if (isset($variantData['id'])) {
@@ -165,8 +161,6 @@ class Edit extends Component
                     $variant->save();
                     $this->success_message = 'Variants updated successfully!';
                 }
-                
-                
             } else {
                 // Create new variant if it doesn't exist
                 Variant::create([
@@ -176,7 +170,7 @@ class Edit extends Component
                     'additional_price' => $variantData['additional_price'] ?? 0, // <-- important
                     'quantity' => $variantData['quantity'] ?? 0, // <-- important
                 ]);
-                  $this->success_message = 'Variants updated successfully!';
+                $this->success_message = 'Variants updated successfully!';
             }
         }
     }
@@ -190,7 +184,8 @@ class Edit extends Component
         $this->url_modal = false;
     }
 
-    public function addMedia(){
+    public function addMedia()
+    {
         $this->validate([
             'url' => 'required|url',
         ]);
@@ -200,10 +195,12 @@ class Edit extends Component
             $this->addError('url', 'This URL already exists.');
             return;
         }
+        //product media count 
 
-        $media = new Media();
+        $media = new Media;
         $media->file_path = $this->url;
         $media->product_id = $this->product->id;
+        // $media->file_type = $m_count + 1;
         $media->save();
 
         // Add the new media to the urls array to update the UI
@@ -219,7 +216,7 @@ class Edit extends Component
 
     public function removeMedia($mediaId)
     {
-        
+
         $media = Media::find($mediaId);
         if ($media) {
             $media->delete();
@@ -228,23 +225,21 @@ class Edit extends Component
             $updated_media = Media::where('product_id', $this->product->id)->get();
             $this->urls = $updated_media;
             $this->success_message = 'Media removed successfully!';
-       
         }
     }
 
 
-    
+
     public function removeVariant($variantId)
     {
         $variant = Variant::find($variantId);
         if ($variant) {
             $variant->delete();
 
-           
+
             $updated_variants = Variant::where('product_id', $this->product->id)->get();
             $this->variants = $updated_variants;
             $this->success_message = 'Variant removed successfully!';
-       
         }
         // $this->variants = array_filter($this->variants, function ($variant) use ($variantId) {
         //     return $variant['id'] !== $variantId;
@@ -253,100 +248,96 @@ class Edit extends Component
 
     public function updateProduct()
     {
-      
-        try {
-             $this->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'discounted_price' => 'required|numeric|min:0',
-            'original_price' => 'nullable|numeric|min:0',
-            'tax' => 'boolean',
-            'cost_per_item' => 'nullable|numeric|min:0',
-            'category_id' => 'required|exists:categories,id',
-            'sku' => 'nullable|string|max:100',
-            'barcode' => 'nullable|string|max:100',
-            'quantity' => 'required|integer|min:0',
-            'auto_update_quantity' => 'boolean',
-            'out_of_stock' => 'boolean',
-            'track_quantity' => 'boolean',
-            'supplier_id' => 'nullable|exists:suppliers,id',
-            'status' => 'required|in:active,inactive,draft',
-        ]);
 
-        $this->product->title = $this->title;
-        $this->product->description = $this->description;
-        $this->product->discounted_price = $this->discounted_price;
-        $this->product->original_price = $this->original_price;
-        $this->product->tax = $this->tax;
-        $this->product->cost_per_item = $this->cost_per_item;
-        $this->product->category_id = $this->category_id;
-        $this->product->sku = $this->sku;
-        $this->product->barcode = $this->barcode;
-        $this->product->quantity = $this->quantity;
-        $this->product->auto_update_quantity = $this->auto_update_quantity;
-        $this->product->out_of_stock = $this->out_of_stock;
-        $this->product->track_quantity = $this->track_quantity;
-        $this->product->supplier_id = $this->supplier_id;
-        $this->product->tags = $this->tags;
-        $this->product->status = $this->status;
-        $this->product->slug = Str::slug($this->title); 
-        if($this->product->save()){
-          $this->success_message = 'Product updated successfully!';
-          
-            
-        }else{
+        try {
+            $this->validate([
+                'title' => 'required|string|max:255',
+                'description' => 'nullable|string',
+                'discounted_price' => 'required|numeric|min:0',
+                'original_price' => 'nullable|numeric|min:0',
+                'tax' => 'boolean',
+                'cost_per_item' => 'nullable|numeric|min:0',
+                'category_id' => 'required|exists:categories,id',
+                'sku' => 'nullable|string|max:100',
+                'barcode' => 'nullable|string|max:100',
+                'quantity' => 'required|integer|min:0',
+                'auto_update_quantity' => 'boolean',
+                'out_of_stock' => 'boolean',
+                'track_quantity' => 'boolean',
+                'supplier_id' => 'nullable|exists:suppliers,id',
+                'status' => 'required|in:active,inactive,draft',
+            ]);
+
+            $this->product->title = $this->title;
+            $this->product->description = $this->description;
+            $this->product->discounted_price = $this->discounted_price;
+            $this->product->original_price = $this->original_price;
+            $this->product->tax = $this->tax;
+            $this->product->cost_per_item = $this->cost_per_item;
+            $this->product->category_id = $this->category_id;
+            $this->product->sku = $this->sku;
+            $this->product->barcode = $this->barcode;
+            $this->product->quantity = $this->quantity;
+            $this->product->auto_update_quantity = $this->auto_update_quantity;
+            $this->product->out_of_stock = $this->out_of_stock;
+            $this->product->track_quantity = $this->track_quantity;
+            $this->product->supplier_id = $this->supplier_id;
+            $this->product->tags = $this->tags;
+            $this->product->status = $this->status;
+            $this->product->slug = Str::slug($this->title);
+            if ($this->product->save()) {
+                $this->success_message = 'Product updated successfully!';
+            } else {
+                $this->error_message = 'Error updating product.';
+            }
+        } catch (\Throwable $th) {
             $this->error_message = 'Error updating product.';
         }
-        } catch (\Throwable $th) {
-             $this->error_message = 'Error updating product.';
-        }
-       
-        
-}
-
-public function addHighlight(){
-    // dd($this->product->id);
-    $this->validate([
-        'highlight_text' => 'required|string',
-    ], [
-        'highlight_text.required' => 'Please enter highlight text.',
-        'highlight_text.string' => 'The highlight text must be a string.',
-        
-    ]);
-    // Check if the highlight already exists for this product
-    $existingHighlight = Highlight::where('product_id', $this->product->id)
-        ->where('highlight_text', $this->highlight_text)
-        ->first();
-    if ($existingHighlight || count($this->product->getHighlight()) >= 10) {
-        $this->error_message = 'Something went wrong.';
-        return;
     }
-    $hl = Highlight::create([
-                'product_id'   => $this->product->id,
-                'highlight_text'    => $this->highlight_text,
-               
-            ]);
-            $this->success_message = 'Highlight added successfully!';
-            $this->highlight_text = '';
-    // $hl = [
-    //     'id' => null, // New highlight, so ID is null
-    //     'text' => $highlight_text,
-        
-    // ];
-    // $this->highlights[] = $hl;
-}
 
-public function removeHighlight($highlightId)
+    public function addHighlight()
+    {
+        // dd($this->product->id);
+        $this->validate([
+            'highlight_text' => 'required|string',
+        ], [
+            'highlight_text.required' => 'Please enter highlight text.',
+            'highlight_text.string' => 'The highlight text must be a string.',
+
+        ]);
+        // Check if the highlight already exists for this product
+        $existingHighlight = Highlight::where('product_id', $this->product->id)
+            ->where('highlight_text', $this->highlight_text)
+            ->first();
+        if ($existingHighlight || count($this->product->getHighlight()) >= 10) {
+            $this->error_message = 'Something went wrong.';
+            return;
+        }
+        $hl = Highlight::create([
+            'product_id'   => $this->product->id,
+            'highlight_text'    => $this->highlight_text,
+
+        ]);
+        $this->success_message = 'Highlight added successfully!';
+        $this->highlight_text = '';
+        // $hl = [
+        //     'id' => null, // New highlight, so ID is null
+        //     'text' => $highlight_text,
+
+        // ];
+        // $this->highlights[] = $hl;
+    }
+
+    public function removeHighlight($highlightId)
     {
         $highlight = Highlight::find($highlightId);
         if ($highlight) {
             $highlight->delete();
 
-           
+
             $updated_highlights = Highlight::where('product_id', $this->product->id)->get();
             // $this->highlights = $updated_highlights;
             $this->success_message = 'Highlight removed successfully!';
-       
         }
     }
 
@@ -394,7 +385,6 @@ public function removeHighlight($highlightId)
         );
         $this->success_message = 'Changes saved successfully!';
         $this->nut_modal = false;
-
     }
 
     public function removeNutrition()
@@ -419,20 +409,78 @@ public function removeHighlight($highlightId)
             ]
         );
         $this->success_message = 'Cooking instructions saved successfully!';
-        
-        
-        
     }
 
-    public function removeProductInfo($id){
+    public function removeProductInfo($id)
+    {
         $pi = ProductInformation::where('id', $id)->first();
-        if($pi){
+        if ($pi) {
             $pi->delete();
-             $this->success_message = 'Removed!';
-
+            $this->success_message = 'Removed!';
         }
-        
     }
+
+    //shorting
+
+    public function moveUp($id)
+    {
+
+        $image = Media::where('product_id', $this->product->id)->where('id', $id)->first();
+        //  $m_count = Media::where('product_id', $this->product->id)->count();
+
+        $previous = Media::where('product_id', $this->product->id)->where('file_type', '<', $image->file_type)
+            ->orderBy('file_type', 'desc')
+            ->first();
+        if (!$previous) {
+            return; // already at top
+        }
+        $currentPosition = $image->file_type;
+
+        $image->update([
+            'file_type' => $previous->file_type
+        ]);
+
+        $previous->update([
+            'file_type' => $currentPosition
+        ]);
+
+        if ($this->product->media && $this->product->media->count() > 0) {
+            $this->urls = $this->product->media;
+        } else {
+            $this->urls = [];
+        }
+    }
+
+
+
+    public function moveDown($id) {
+         $image = Media::where('product_id', $this->product->id)->where('id', $id)->first();
+        //  $m_count = Media::where('product_id', $this->product->id)->count();
+
+        $previous = Media::where('product_id', $this->product->id)->where('file_type', '>', $image->file_type)
+            ->orderBy('file_type', 'asc')
+            ->first();
+        if (!$previous) {
+            return; // already at top
+        }
+        $currentPosition = $image->file_type;
+
+        $image->update([
+            'file_type' => $previous->file_type
+        ]);
+
+        $previous->update([
+            'file_type' => $currentPosition
+        ]);
+
+        if ($this->product->media && $this->product->media->count() > 0) {
+            $this->urls = $this->product->media;
+        } else {
+            $this->urls = [];
+        }
+    }
+
+    // end shorting 
 
     public function updatedProductImage()
     {
@@ -443,14 +491,15 @@ public function removeHighlight($highlightId)
         $filename = time() . '_' . uniqid() . '.' . $this->product_image->extension();
 
         // Save to public/uploads
-       $path = $this->product_image->storeAs('products', $filename, 'public');
+        $path = $this->product_image->storeAs('products', $filename, 'public');
 
         // Save filename to database
-       
 
+        $m_count = Media::where('product_id', $this->product->id)->count();
         $media = new Media();
-        $media->file_path =$filename;
+        $media->file_path = $filename;
         $media->product_id = $this->product->id;
+        $media->file_type = $m_count + 1;
         $media->save();
 
         // Add the new media to the urls array to update the UI
@@ -462,5 +511,4 @@ public function removeHighlight($highlightId)
         // Reset input
         $this->reset('product_image');
     }
-
-   }
+}

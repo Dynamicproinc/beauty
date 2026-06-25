@@ -18,7 +18,7 @@ class Product extends Model
 
     public function media()
     {
-        return $this->hasMany(Media::class);
+        return $this->hasMany(Media::class)->orderBy('file_type', 'asc');
     }
 
     public function getImage(){

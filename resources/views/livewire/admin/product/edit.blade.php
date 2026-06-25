@@ -72,12 +72,18 @@
                                 <div class="d-flex flex-wrap gap-3">
                                     @if ($urls && count($urls) > 0)
                                         @foreach ($urls as $image)
-                                            <div class="image-upload-preview">
+                                            <div>
+                                                <div class="image-upload-preview">
                                                 <img src="{{ asset('uploads/products/'.$image->file_path) }}" alt="Product Image"
                                                     style="width: 100%; height: 100%; object-fit: cover;">
                                                 <button class="btn btn-sm btn-danger"
                                                     wire:click="removeMedia('{{ $image->id }}')"
                                                     wire:confirm="{{ __('Are you sure you want to delete this media?') }}">x</button>
+                                            </div>
+                                            <div class="d-flex">
+                                                <button class="btn btn-default" wire:click="moveUp({{$image->id}})"><i class="bi bi-arrow-left-short"></i></button>
+                                                <button class="btn btn-default" wire:click="moveDown({{$image->id}})"><i class="bi bi-arrow-right-short"></i></button>
+                                            </div>
                                             </div>
                                         @endforeach
                                     @endif
