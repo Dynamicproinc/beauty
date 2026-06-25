@@ -15,7 +15,7 @@
                     {{ __('Your payment has been cancelled.') }}
                 </div>
                     <div>
-                        <a href="/">{{ __('Return to Shop') }}</a>
+                        <a href="/" class="btn btn-link">{{ __('Return to Shop') }}</a>
                     </div>
                </div>
 
