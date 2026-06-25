@@ -75,7 +75,7 @@
                                             <div>
                                                 <div class="image-upload-preview">
                                                 <img src="{{ asset('uploads/products/'.$image->file_path) }}" alt="Product Image"
-                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                    style="width: 100%; height: 100%; object-fit: cover;" alt="{{$image->file_path}}">
                                                 <button class="btn btn-sm btn-danger"
                                                     wire:click="removeMedia('{{ $image->id }}')"
                                                     wire:confirm="{{ __('Are you sure you want to delete this media?') }}">x</button>

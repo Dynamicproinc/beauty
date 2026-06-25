@@ -59,6 +59,6 @@ class StripeController extends Controller
 
     public function cancel()
     {
-        return "Payment Cancelled!";
+        return view('shop.payment-cancel');
     }
 }

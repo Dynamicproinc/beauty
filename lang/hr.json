@@ -316,7 +316,10 @@
 "trnid250":"Loj je prirodno bogat trigliceridima i masnim kiselinama kao što su oleinska, palmitinska i stearinska. Ove komponente mogu podržati prirodnu ravnotežu lipida u koži što potencijalno doprinosi mekoći i zdravom izgledu kože.",
 "Are you sure?": "Jeste li sigurni?",
  "See Details": "Pogledaj detalje",
- "delivery.note":"Narudžbe izvršene od nedjelje do srijede prije 12 sati šalju se tog petka, a kasnije narudžbe šalju se sljedećeg petka. Dostava stiže unutar 24 sata nakon slanja."
+ "delivery.note":"Narudžbe izvršene od nedjelje do srijede prije 12 sati šalju se tog petka, a kasnije narudžbe šalju se sljedećeg petka. Dostava stiže unutar 24 sata nakon slanja.",
+ "Payment Cancelled": "Plaćanje otkazano",
+"Your payment has been cancelled.":"Vaše plaćanje je otkazano.",
+"Return to Shop":"Vrati se u trgovinu"
 
 
 
