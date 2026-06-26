@@ -80,7 +80,7 @@
                                                     wire:click="removeMedia('{{ $image->id }}')"
                                                     wire:confirm="{{ __('Are you sure you want to delete this media?') }}">x</button>
                                             </div>
-                                            <div class="d-flex">
+                                            <div class="d-flex justify-content-between">
                                                 <button class="btn btn-default" wire:click="moveUp({{$image->id}})"><i class="bi bi-arrow-left-short"></i></button>
                                                 <button class="btn btn-default" wire:click="moveDown({{$image->id}})"><i class="bi bi-arrow-right-short"></i></button>
                                             </div>
