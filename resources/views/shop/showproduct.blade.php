@@ -192,6 +192,7 @@
                                     @endif
                                 </div>
                                 @if (count($product->getSimilarProducts()) > 0)
+                                <span class="accord-label-title mb-3">{{__('Similar Products')}}</span>
                                     {{-- <div class=" mb-3">
                                     <span class="accord-label-title mb-3">{{__('Similar Products')}}</span>
                                     <div class="main-carousel-2">
@@ -214,10 +215,10 @@
                                     </div>
 
                                 </div> --}}
-                                <div class="">
+                                <div class="row">
 
                                     @foreach ($product->getSimilarProducts() as $similar_product)
-                                    <div class="">
+                                    <div class="col-3">
 
                                         <div class="similar-card-wrap text-center">
                                              <a href="{{  route('shop.product.show', $similar_product->slug) }}">
