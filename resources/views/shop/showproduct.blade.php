@@ -163,7 +163,7 @@
 
                                     </div>
                                 </div>
-                                <div class="product-infomation accd">
+                                <div class="product-infomation accd mb-3">
                                     @if (count($product->getProductInformation()) > 0)
                                         @foreach ($product->getProductInformation() as $item)
                                             <div class="accord-cont">
@@ -176,13 +176,14 @@
                                         @endforeach
                                     @endif
                                 </div>
+                                @if(count($product->getSimilarProducts()) > 0)
                                 <div class="similar-product mb-3">
                                     <span class="accord-label-title mb-3">{{__('Similar Products')}}</span>
                                     <div class="main-carousel-2">
-                                       @if(count($product->getSimilarProducts() > 0))
+                                       
                                         @foreach ($product->getSimilarProducts() as $similar_product)
                                             <div class="carousel-cell">
-                                                <a href="{{ route('shop.product', $similar_product->slug) }}">
+                                                <a href="{{  route('shop.product.show', $similar_product->slug) }}">
                                                     <div class="card card-pri">
                                                         <div class="card-body p-0">
                                                             <img src="{{ asset('uploads/products/'.$similar_product->media->first()?->file_path) }}" alt="" class="img-fluid">
@@ -194,11 +195,11 @@
                                                 </a>
                                             </div>
                                         @endforeach
-                                       @endif
+                                       
                                     </div>
 
                                 </div>
-
+                                @endif
 
 
 

@@ -10,18 +10,19 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $casts = [
-    'tax' => 'boolean',
-    'auto_update_quantity' => 'boolean',
-    'out_of_stock' => 'boolean',
-    'track_quantity' => 'boolean',
-];
+        'tax' => 'boolean',
+        'auto_update_quantity' => 'boolean',
+        'out_of_stock' => 'boolean',
+        'track_quantity' => 'boolean',
+    ];
 
     public function media()
     {
         return $this->hasMany(Media::class)->orderBy('file_type', 'asc');
     }
 
-    public function getImage(){
+    public function getImage()
+    {
         return Media::where('product_id', $this->id)->first();
     }
 
@@ -34,17 +35,19 @@ class Product extends Model
         return Supplier::where('id', $this->supplier_id)->first();
     }
 
-    
+
 
     public function variants()
     {
         return $this->hasMany(Variant::class);
     }
 
-    public function getVariants(){
+    public function getVariants()
+    {
         return Variant::where('product_id', $this->id)->orderBy('value', 'asc')->get();
     }
-    public function getHighlight(){
+    public function getHighlight()
+    {
         return Highlight::where('product_id', $this->id)->get();
     }
 
@@ -58,11 +61,17 @@ class Product extends Model
         return $this->hasOne(CookingInstruction::class);
     }
 
-    public function getProductInformation(){
+    public function getProductInformation()
+    {
         return ProductInformation::where('product_id', $this->id)->get();
     }
 
-    public function getSimilarProducts(){
-        return Product::where('category_id', $this->category_id)->where('id', '!=', $this->id)->get();
+    public function getSimilarProducts()
+    {
+        return Product::where('category_id', $this->category_id)
+            ->where('id', '!=', $this->id)
+            ->where('status', 'active')
+            ->take(5)
+            ->get();
     }
 }
