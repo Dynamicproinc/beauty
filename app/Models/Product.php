@@ -61,4 +61,8 @@ class Product extends Model
     public function getProductInformation(){
         return ProductInformation::where('product_id', $this->id)->get();
     }
+
+    public function getSimilarProducts(){
+        return Product::where('category_id', $this->category_id)->where('id', '!=', $this->id)->get();
+    }
 }

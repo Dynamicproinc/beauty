@@ -176,32 +176,32 @@
                                         @endforeach
                                     @endif
                                 </div>
-
-
-
-
-                                {{-- <div class="accd">
-                                    <div class="accord-cont">
-                                        <input type="checkbox" id="test1" name="t" class="accdcheck">
-                                        <label for="test1" class="accord-label">Nutrition Guide</label>
-                                        <section class="accord-show">
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi laudantium
-                                                unde voluptate temporibus sint ratione, recusandae repellat cupiditate
-                                                voluptas eius enim ea possimus, dolorem ab molestias tempora. Doloremque,
-                                                pariatur est!</p>
-                                        </section>
+                                <div class="similar-product mb-3">
+                                    <span class="accord-label-title mb-3">{{__('Similar Products')}}</span>
+                                    <div class="main-carousel-2">
+                                       @if(count($product->getSimilarProducts() > 0))
+                                        @foreach ($product->getSimilarProducts() as $similar_product)
+                                            <div class="carousel-cell">
+                                                <a href="{{ route('shop.product', $similar_product->slug) }}">
+                                                    <div class="card card-pri">
+                                                        <div class="card-body p-0">
+                                                            <img src="{{ asset('uploads/products/'.$similar_product->media->first()?->file_path) }}" alt="" class="img-fluid">
+                                                        </div>
+                                                        <div class="card-footer text-center">
+                                                            <h6 class="mb-0">{{ $similar_product->title }}</h6>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        @endforeach
+                                       @endif
                                     </div>
-                                    <div class="accord-cont">
-                                        <input type="checkbox" id="test2" name="t" class="accdcheck">
-                                        <label for="test2" class="accord-label">Nutrition Guide</label>
-                                        <section class="accord-show">
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi laudantium
-                                                unde voluptate temporibus sint ratione, recusandae repellat cupiditate
-                                                voluptas eius enim ea possimus, dolorem ab molestias tempora. Doloremque,
-                                                pariatur est!</p>
-                                        </section>
-                                    </div>
-                                </div> --}}
+
+                                </div>
+
+
+
+
 
 
 
