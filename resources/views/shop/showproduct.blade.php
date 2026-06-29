@@ -208,7 +208,7 @@
                                                     alt="">
                                             </div>
                                             <h6 class="lh-2 small mb-0" style="font-size: 12px">{{ $product->title}}</h6>
-                                            <strong class="small">€{{ number_format($product->discounted_price, 2, ',', '.') }}</strong>
+                                            <strong class="small">€{{ number_format($similar_product->discounted_price, 2, ',', '.') }}</strong>
                                              </a>
                                         </div>
                                     </div>
