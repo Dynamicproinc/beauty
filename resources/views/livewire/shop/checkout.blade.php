@@ -261,11 +261,11 @@
                                     </div>
                                     @if ($pickup_location)
                                         <div class="card p-3 mb-3">
-                                            <div>
+                                            <div class="mb-2">
                                                 <small>{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()?->description }}</small>
                                             </div>
                                             <div>
-                                                <a href="{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()?->location}}" target="_blank">{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()->location}}</a>
+                                                <a href="{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()?->location}}" target="_blank"><i class="bi bi-geo-alt-fill"></i> {{ \App\Models\PickupLocation::where('id', $pickup_location)->first()->location}}</a>
                                             </div>
                                         </div>
                                     @endif
