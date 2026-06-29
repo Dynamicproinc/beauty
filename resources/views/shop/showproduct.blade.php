@@ -214,8 +214,10 @@
                                     </div>
 
                                 </div> --}}
+                                <div class="main-carousel-2">
+
                                     @foreach ($product->getSimilarProducts() as $similar_product)
-                                        <div class="similar-card-wrap text-center">
+                                        <div class="similar-card-wrap text-center carousel-cell">
                                              <a href="{{  route('shop.product.show', $similar_product->slug) }}">
                                             <div class="similar-card mb-2">
                                                 <img src="{{ asset('uploads/products/' . $similar_product->media->first()?->file_path) }}"
@@ -226,6 +228,7 @@
                                              </a>
                                         </div>
                                     @endforeach
+                                </div>
                                 @endif
 
 
