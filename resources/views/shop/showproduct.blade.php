@@ -214,10 +214,10 @@
                                     </div>
 
                                 </div> --}}
-                                <div class="main-carousel-2">
+                                <div class="">
 
                                     @foreach ($product->getSimilarProducts() as $similar_product)
-                                    <div class="carousel-cell">
+                                    <div class="">
 
                                         <div class="similar-card-wrap text-center">
                                              <a href="{{  route('shop.product.show', $similar_product->slug) }}">
