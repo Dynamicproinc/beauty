@@ -216,10 +216,10 @@
 
                                 </div> --}}
                                <div class="v-scroll-on">
-                                 <div class="row">
+                                 <div class="d-flex">
 
                                     @foreach ($product->getSimilarProducts() as $similar_product)
-                                    <div class="col-4">
+                                    <div class="me-3">
 
                                         <div class="similar-card-wrap text-center">
                                              <a href="{{  route('shop.product.show', $similar_product->slug) }}">

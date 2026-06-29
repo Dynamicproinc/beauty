@@ -870,7 +870,7 @@ transition: transform 0.4s;
 
 }
 .similar-card{
-    /* width: 150px !important; */
+    width: 150px !important;
     height:150px !important;
     overflow: hidden;
     background-color: #fff;
