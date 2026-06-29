@@ -218,7 +218,7 @@
                                 <div class="row">
 
                                     @foreach ($product->getSimilarProducts() as $similar_product)
-                                    <div class="col-3">
+                                    <div class="col-4">
 
                                         <div class="similar-card-wrap text-center">
                                              <a href="{{  route('shop.product.show', $similar_product->slug) }}">
