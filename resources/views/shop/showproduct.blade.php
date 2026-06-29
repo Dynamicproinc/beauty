@@ -176,7 +176,7 @@
 
                                     </div>
                                 </div>
-                                <div class="product-infomation accd mb-3">
+                                <div class="product-infomation accd mb-5">
                                     @if (count($product->getProductInformation()) > 0)
                                         @foreach ($product->getProductInformation() as $item)
                                             <div class="accord-cont">
@@ -191,30 +191,10 @@
                                         @endforeach
                                     @endif
                                 </div>
-                                @if (count($product->getSimilarProducts()) > 0)
-                                <span class="accord-label-title mb-3">{{__('Similar Products')}}</span>
-                                    {{-- <div class=" mb-3">
-                                    <span class="accord-label-title mb-3">{{__('Similar Products')}}</span>
-                                    <div class="main-carousel-2">
-                                       
-                                        @foreach ($product->getSimilarProducts() as $similar_product)
-                                            <div class="carousel-cell similar-card similar-product">
-                                                <a href="{{  route('shop.product.show', $similar_product->slug) }}">
-                                                    <div class="similar-card-body">
-                                                        <div class="">
-                                                            <img src="{{ asset('uploads/products/'.$similar_product->media->first()?->file_path) }}" alt="">
-                                                        </div>
-                                                        <div class="">
-                                                           
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        @endforeach
-                                       
-                                    </div>
-
-                                </div> --}}
+                               <div>
+                                 @if (count($product->getSimilarProducts()) > 0)
+                                <h5 class="mb-3">{{__('Similar Products')}}</h5>
+                                   
                                <div class="v-scroll-on">
                                  <div class="d-flex">
 
@@ -236,6 +216,7 @@
                                 </div>
                                </div>
                                 @endif
+                               </div>
 
 
 
