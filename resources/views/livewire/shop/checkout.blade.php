@@ -260,8 +260,13 @@
                                         </small>
                                     </div>
                                     @if ($pickup_location)
-                                        <div class="alert alert-info">
-                                            <small>{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()->description }}</small>
+                                        <div class="card p-3 mb-3">
+                                            <div>
+                                                <small>{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()?->description }}</small>
+                                            </div>
+                                            <div>
+                                                <a href="{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()?->location}}" target="_blank">{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()->location}}</a>
+                                            </div>
                                         </div>
                                     @endif
                                     {{-- <div class="row">
