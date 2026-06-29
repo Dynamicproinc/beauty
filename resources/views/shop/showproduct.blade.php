@@ -215,7 +215,8 @@
                                     </div>
 
                                 </div> --}}
-                                <div class="row">
+                               <div class="v-scroll-on">
+                                 <div class="row">
 
                                     @foreach ($product->getSimilarProducts() as $similar_product)
                                     <div class="col-4">
@@ -233,6 +234,7 @@
                                     </div>
                                     @endforeach
                                 </div>
+                               </div>
                                 @endif
 
 
