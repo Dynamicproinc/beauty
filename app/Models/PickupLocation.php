@@ -10,6 +10,7 @@ class PickupLocation extends Model
     'pickup_location',
     'description',
     'cost',
-    'discount'
+    'discount',
+    'location'
 ];
 }
