@@ -41,7 +41,7 @@ info@tallow-skincare.hr<br>
 <br><br>
 
 <strong>{{ __('Payment Method') }}</strong><br>
-{{ strtoupper($order->payment_method) }}
+{{ strtoupper($order->payment_method) }}   @if($order->payment_method == 'cod') - Cash On Delivery @endif 
 
 @if ($order->stripe_session_id)
 <br><br>
