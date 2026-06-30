@@ -289,19 +289,5 @@
             // options
         });
     </script>
-    <script type="application/ld+json">
-{
-  "@context":"https://schema.org/",
-  "@type":"Product",
-  "name":"{{ $product->title }}",
-  "image":"{{  asset('uploads/products/' . $product->media->first()?->file_path) }}",
-  "description":"{{ $product->description }}",
-  "offers":{
-      "@type":"Offer",
-      "price":"{{ $product->original_price }}",
-      "priceCurrency":"EUR",
-      "availability":"https://schema.org/InStock"
-  }
-}
-</script>
+   
 @endsection
