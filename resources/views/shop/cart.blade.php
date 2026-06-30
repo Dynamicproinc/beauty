@@ -23,7 +23,7 @@
             @else
             <div>
                 <div class="h6 mb-5">
-                    <a class="btn btn-default" href="{{ route('welcome') }}">
+                    <a class="btn btn-default" href="{{route('shop.product.all')}}">
                         <i class="bi bi-arrow-left"></i> 
                         {{__('Continue Shopping')}}
                     </a>
