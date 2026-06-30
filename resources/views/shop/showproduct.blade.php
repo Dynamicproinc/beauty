@@ -207,7 +207,7 @@
                                                 <img src="{{ asset('uploads/products/' . $similar_product->media->first()?->file_path) }}"
                                                     alt="">
                                             </div>
-                                            <h6 class="lh-2 small mb-0" style="font-size: 12px">{{ $product->title}}</h6>
+                                            <h6 class="lh-2 small mb-0" style="font-size: 12px">{{ $similar_product->title}}</h6>
                                             <strong class="small">€{{ number_format($similar_product->discounted_price, 2, ',', '.') }}</strong>
                                              </a>
                                         </div>
