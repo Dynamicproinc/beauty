@@ -6,7 +6,7 @@
 @section('content')
     <div style="height:120px" class="d-none d-sm-block"></div>
     <div style="height:10px" class="d-block d-sm-none"></div>
-    <div class="mt-3">
+    <div class="mt-3 mb-5">
 
         <div class="container panel-pri mb-3">
             <div>
