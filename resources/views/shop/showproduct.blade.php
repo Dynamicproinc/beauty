@@ -65,8 +65,8 @@
                                 <div class="d-flex flex-row-wrap mt-2 p-3">
                                     @foreach ($product->media as $key => $image)
                                         <div class="img-thumb-cr">
-                                            <img src="{{ asset('uploads/products/' . $image->file_path) }}" class="img-fluid"
-                                                alt="" data-bs-target="#cindex"
+                                            <img src="{{ asset('uploads/products/' . $image->file_path) }}"
+                                                class="img-fluid" alt="" data-bs-target="#cindex"
                                                 data-bs-slide-to="{{ $key }}"
                                                 class="@if ($key == 0) active @endif" aria-current="true"
                                                 aria-label="Slide {{ $key }}">
@@ -191,32 +191,35 @@
                                         @endforeach
                                     @endif
                                 </div>
-                               <div>
-                                 @if (count($product->getSimilarProducts()) > 0)
-                                <h5 class="mb-3">{{__('Similar Products')}}</h5>
-                                   
-                               <div class="v-scroll-on">
-                                 <div class="d-flex">
+                                <div>
+                                    @if (count($product->getSimilarProducts()) > 0)
+                                        <h5 class="mb-3">{{ __('Similar Products') }}</h5>
 
-                                    @foreach ($product->getSimilarProducts() as $similar_product)
-                                    <div class="me-3">
+                                        <div class="v-scroll-on">
+                                            <div class="d-flex">
 
-                                        <div class="similar-card-wrap text-center">
-                                             <a href="{{  route('shop.product.show', $similar_product->slug) }}">
-                                            <div class="similar-card mb-2">
-                                                <img src="{{ asset('uploads/products/' . $similar_product->media->first()?->file_path) }}"
-                                                    alt="">
+                                                @foreach ($product->getSimilarProducts() as $similar_product)
+                                                    <div class="me-3">
+
+                                                        <div class="similar-card-wrap text-center">
+                                                            <a
+                                                                href="{{ route('shop.product.show', $similar_product->slug) }}">
+                                                                <div class="similar-card mb-2">
+                                                                    <img src="{{ asset('uploads/products/' . $similar_product->media->first()?->file_path) }}"
+                                                                        alt="">
+                                                                </div>
+                                                                <h6 class="lh-2 small mb-0" style="font-size: 12px">
+                                                                    {{ $similar_product->title }}</h6>
+                                                                <strong
+                                                                    class="small">€{{ number_format($similar_product->discounted_price, 2, ',', '.') }}</strong>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
                                             </div>
-                                            <h6 class="lh-2 small mb-0" style="font-size: 12px">{{ $similar_product->title}}</h6>
-                                            <strong class="small">€{{ number_format($similar_product->discounted_price, 2, ',', '.') }}</strong>
-                                             </a>
                                         </div>
-                                    </div>
-                                    @endforeach
+                                    @endif
                                 </div>
-                               </div>
-                                @endif
-                               </div>
 
 
 
@@ -286,4 +289,19 @@
             // options
         });
     </script>
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org/",
+  "@type":"Product",
+  "name":"{{ $product->title }}",
+  "image":"{{  asset('uploads/products/' . $product->media->first()?->file_path) }}",
+  "description":"{{ $product->description }}",
+  "offers":{
+      "@type":"Offer",
+      "price":"{{ $product->original_price }}",
+      "priceCurrency":"EUR",
+      "availability":"https://schema.org/InStock"
+  }
+}
+</script>
 @endsection
