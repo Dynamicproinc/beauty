@@ -233,14 +233,12 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="mid-menu text-white d-flex justify-content-center mb-3">
-        <div class="">Description</div>
-        <div class=""></i>Nutrition guide</div>
-        <div class=""></i>How to Cook</div>
-        <div class="">Packaging</div>
-    </div> --}}
+        
+
+
 
     </div>
+    
     <script>
         var elem = document.querySelector('.main-carousel');
         var flkty = new Flickity(elem, {
@@ -289,5 +287,6 @@
             // options
         });
     </script>
+ 
    
 @endsection
