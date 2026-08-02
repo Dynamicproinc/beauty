@@ -29,7 +29,7 @@ class TrackVisits
             Visit::create([
                 'page' => $page,
                 'ip_address' => hash('sha256', $request->ip()),
-                'user_agent' => $request->userAgent(),
+                'user_agent' =>'user_agent',
                 'user_id' => auth()->id()
             ]);
         }
