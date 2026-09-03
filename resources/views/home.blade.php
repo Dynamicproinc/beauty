@@ -15,8 +15,11 @@
                             <div class="me-3 @if (Route::currentRouteName() == 'account.orders') line-active @endif">
                                 <a href="{{ route('account.orders') }}">{{ __('Order history') }}</a>
                             </div>
+                            {{-- <div class="me-3 @if (Route::currentRouteName() == 'account.referral-dashboard') line-active @endif">
+                                <a href="{{ route('account.referral-dashboard') }}" >{{ __('Tallow club') }}</a>
+                            </div> --}}
                             <div class="me-3 @if (Route::currentRouteName() == 'account.referral-dashboard') line-active @endif">
-                                <a href="{{ route('account.referral-dashboard') }}">{{ __('Tallow club') }}</a>
+                                <a href="#" class="disabled" disabled>{{ __('Tallow club') }}</a>
                             </div>
 
                             {{-- logout --}}
