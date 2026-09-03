@@ -15,7 +15,7 @@ class RewardWalletService
         return RewardWallet::where('user_id', $userId)->first();
     }
 
-    public function createOrUpdateRewardWallet($user_id, $amount, $type, $description, $referral_code = null)
+    public function createOrUpdateRewardWallet($user_id, $amount, $type, $description, $referral_code)
     {
         // user_id is wallet owner , amount is the amount he give, $type is which source wallet recive point (purchase reward etc), $description is about transaction order id , user something like that
        db::transaction(function () use ($user_id, $amount, $type, $description, $referral_code) {
