@@ -103,7 +103,7 @@
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <li>
-                                                <a class="dropdown-item" href="{{ route('admin.orders.show', $order->id) }}">{{ __('View') }}</a>
+                                                <a class="dropdown-item" href="#">{{ __('View') }}</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item" href="#">{{ __('Ship Order') }}</a>
