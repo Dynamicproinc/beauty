@@ -308,6 +308,16 @@ class Checkout extends Component
         //creating the sales order\
         $final_total  = ($this->getCartValue() + $this->shipping_cost) - $this->dis_amount;
 
+        // checking for referral code in cookie and if it exists then add it to the sales order
+        $referral_code = null;
+        if (request()->hasCookie('referral_code')) {
+            $referral_code = request()->cookie('referral_code');
+            // check exists in database
+            $referral = ReferralLink::where('referral_code', $referral_code)->first();
+            if (!$referral) {
+                $referral_code = null;  
+            }
+        }
 
         $sales_order = SalesOrder::create([
             'user_id' => auth()?->id() ?? 0,
@@ -341,6 +351,7 @@ class Checkout extends Component
             'stripe_status' => 'pending',
             'final_total' =>  $final_total,
             'gift_code' => $this->gift_card ?? null,
+            'referral_code' => $referral_code ?? null,
 
         ]);
 
