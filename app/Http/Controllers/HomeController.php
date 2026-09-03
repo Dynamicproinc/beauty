@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\SalesOrder;
+use App\Models\ReferralLink;
 class HomeController extends Controller
 {
     /**
@@ -33,5 +34,10 @@ class HomeController extends Controller
        
     }
 
+    public function referralDashboard(){
+        $referral_links = ReferralLink::where('user_id', Auth::id())->first();
+        
+        return view('account.referral.home', compact('referral_links'));
+    }
 
 }

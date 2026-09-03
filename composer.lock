@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7f2046c736df65fad9b1a018c893a93",
+    "content-hash": "920fff4eed22b2d48c8c28e2d3010762",
     "packages": [
         {
             "name": "brick/math",
@@ -6676,6 +6676,206 @@
                 }
             ],
             "time": "2024-11-21T01:49:47+00:00"
+        },
+        {
+            "name": "webapix/dot-net-json-date-formatter",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webapix/dot-net-json-date-formatter.git",
+                "reference": "a146ba6a3271748c11089892ee58b548acffc3cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webapix/dot-net-json-date-formatter/zipball/a146ba6a3271748c11089892ee58b548acffc3cf",
+                "reference": "a146ba6a3271748c11089892ee58b548acffc3cf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.7.27|^6|^7|8.5.22"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Webapix\\DotNetJsonDate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zsolt Kaveczki",
+                    "email": "zsocakave@webapix.hu",
+                    "homepage": "https://webapix.hu/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Convert .net json date format to PHP DateTime object and vica versa",
+            "homepage": "https://github.com/webapix/dot-net-json-date-formatter",
+            "keywords": [
+                ".net json date converter",
+                ".net json date parser",
+                "webapix"
+            ],
+            "support": {
+                "issues": "https://github.com/webapix/dot-net-json-date-formatter/issues",
+                "source": "https://github.com/webapix/dot-net-json-date-formatter/tree/v1.1.0"
+            },
+            "funding": [
+                {
+                    "url": "http://patrons.webapix.hu",
+                    "type": "custom"
+                }
+            ],
+            "time": "2022-01-03T14:22:45+00:00"
+        },
+        {
+            "name": "webapix/laravel-mygls",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webapix/laravel-mygls.git",
+                "reference": "68b4c3cd55bb271fd898deb6b9603e507c1f5e66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webapix/laravel-mygls/zipball/68b4c3cd55bb271fd898deb6b9603e507c1f5e66",
+                "reference": "68b4c3cd55bb271fd898deb6b9603e507c1f5e66",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+                "php": "^8.1|^8.2|^8.3|^8.4|^8.5",
+                "webapix/mygls-sdk": "^3.0.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+                "phpunit/phpunit": "^10.0 || ^11.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "MyGls": "Webapix\\GLS\\Laravel\\MyGls"
+                    },
+                    "providers": [
+                        "\\Webapix\\GLS\\Laravel\\MyGlsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webapix\\GLS\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zsolt Kaveczki",
+                    "email": "zsocakave@webapix.hu",
+                    "homepage": "https://webapix.hu/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Vencel Kátai",
+                    "email": "vencel.katai@webapix.hu",
+                    "homepage": "https://webapix.hu/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel version of the MyGLS REST API integration.",
+            "homepage": "https://github.com/webapix/mygls-sdk",
+            "keywords": [
+                "MyGLS",
+                "laravel",
+                "webapix"
+            ],
+            "support": {
+                "issues": "https://github.com/webapix/laravel-mygls/issues",
+                "source": "https://github.com/webapix/laravel-mygls/tree/v3.2.0"
+            },
+            "funding": [
+                {
+                    "url": "http://patrons.webapix.hu",
+                    "type": "custom"
+                }
+            ],
+            "time": "2026-05-04T13:50:18+00:00"
+        },
+        {
+            "name": "webapix/mygls-sdk",
+            "version": "v3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webapix/mygls-sdk.git",
+                "reference": "2bf633ac24f07c62cf5114ab6dbb1c94fe1781e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webapix/mygls-sdk/zipball/2bf633ac24f07c62cf5114ab6dbb1c94fe1781e7",
+                "reference": "2bf633ac24f07c62cf5114ab6dbb1c94fe1781e7",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.5|^7.0",
+                "php": "^8.1",
+                "webapix/dot-net-json-date-formatter": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "phpunit/phpunit": "^7.5|8.5.22|9.x"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Webapix\\GLS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zsolt Kaveczki",
+                    "email": "zsocakave@webapix.hu",
+                    "homepage": "https://webapix.hu/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Vencel Kátai",
+                    "email": "vencel.katai@webapix.hu",
+                    "homepage": "https://webapix.hu/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An lightweight php SDK for the MyGLS REST API",
+            "homepage": "https://github.com/webapix/mygls-sdk",
+            "keywords": [
+                "MyGLS",
+                "webapix"
+            ],
+            "support": {
+                "issues": "https://github.com/webapix/mygls-sdk/issues",
+                "source": "https://github.com/webapix/mygls-sdk/tree/v3.0.1"
+            },
+            "funding": [
+                {
+                    "url": "http://patrons.webapix.hu",
+                    "type": "custom"
+                }
+            ],
+            "time": "2026-03-02T14:32:27+00:00"
         },
         {
             "name": "webmozart/assert",

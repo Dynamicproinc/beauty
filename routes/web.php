@@ -87,6 +87,9 @@ Auth::routes(['verify' => true]);
 // guest accessible pages 
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 Route::get('account-orders', [App\Http\Controllers\HomeController::class, 'orders'])->name('account.orders')->middleware('verified');
+Route::get('tallow-club', [App\Http\Controllers\HomeController::class, 'referralDashboard'])->name('account.referral-dashboard')->middleware('verified');
+Route::get('ref/{code}', [App\Http\Controllers\ReferralsController::class, 'redirect'])->name('referral.redirect');
+
 Route::get('product/{id}', [App\Http\Controllers\ShopController::class, 'showProduct'])->name('shop.product.show');
 Route::get('products', [App\Http\Controllers\ShopController::class, 'allProducts'])->name('shop.product.all');
 Route::get('cart', [App\Http\Controllers\ShopController::class, 'cart'])->name('shop.cart');

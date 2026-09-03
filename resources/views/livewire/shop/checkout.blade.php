@@ -265,7 +265,8 @@
                                                 <small>{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()?->description }}</small>
                                             </div>
                                             <div>
-                                                <a href="{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()?->location}}" target="_blank">{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()->location}}</a>
+                                                <a href="{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()?->location }}"
+                                                    target="_blank">{{ \App\Models\PickupLocation::where('id', $pickup_location)->first()->location }}</a>
                                             </div>
                                         </div>
                                     @endif
@@ -697,6 +698,36 @@
 
                                         </div>
                                     </div>
+
+                                    {{-- <div class="p-3 border">
+                                        <script src="https://map.gls-croatia.com/widget/gls-dpm.js"></script>
+
+                                        <div style="height: 500px;">
+                                            <gls-dpm id="gls-map" country="hr" language="hr" filter-type="parcel-locker">
+                                            </gls-dpm>
+                                        </div>
+                                        <div>
+                                            @script
+                                                <script>
+                                                    const map = document.getElementById('gls-map');
+
+                                                    if (map) {
+                                                        map.addEventListener('change', (event) => {
+
+                                                            console.log('Selected GLS location:', event.detail);
+
+                                                            $wire.set(
+                                                                'glsLocationId',
+                                                                event.detail.id
+                                                            );
+                                                        });
+                                                    }
+                                                </script>
+                                            @endscript
+                                        </div>
+
+                                    </div> --}}
+                                    
                                     {{-- @if ($errors->any())
                                         <div class="alert alert-danger">
                                             <ul>

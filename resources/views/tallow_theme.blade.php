@@ -664,6 +664,8 @@
                         </div>
                         <div class="col-lg-6">
                             {{-- <div class="f-img-wr">
+                                <img src="{{ asset('media/images/founder.jpeg') }}" alt="tallow-skin-care"
+                                    class="f-img">
 
                             </div> --}}
                         </div>
