@@ -19,9 +19,9 @@
                         <div>
                             <small class="small fw-light xs-text">{{ __('You have earned:') }}</small>
                             <div class="">
-                                <h6 class="fw-normal">25 Tallow Club Points</h6>
+                                <h6 class="fw-normal">0 Tallow Club Points</h6>
                                 <small class="small fw-light xs-text text-muted">{{ __('Your point expire on') }}
-                                    9.10.2026</small>
+                                   </small>
                             </div>
                         </div>
 
@@ -34,7 +34,7 @@
                             <h6 class="fw-bold">{{ __('Point reward activities') }}</h6>
                         </div>
                         <div>
-                            <ul class="list-group list-group-flush activity-list">
+                            {{-- <ul class="list-group list-group-flush activity-list">
                                 <li class="list-group-item d-flex justify-content-between">
                                  <div>
                                   <div class="mb-0">
@@ -72,7 +72,8 @@
                                   <small class="">+25</small>
                                 </li>
                                
-                            </ul>
+                            </ul> --}}
+                            <span class="small text-muted px-3 text-center">{{ __('No activities yet.') }}</span>
                         </div>
 
                     </div>
