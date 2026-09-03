@@ -97,13 +97,14 @@
                                 <td>
                                     {{-- bootstrap dropdown --}}
                                     <div class="dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button"
+                                        <button class="btn btn-outline-dark dropdown-toggle" type="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             
                                         </button>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="{{ route('shop.invoice', $order->slug) }}">{{ __('View') }}</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('shop.invoice', $order->slug) }}" target="_blank">{{ __('View') }}</a></li>
                                             <li><a class="dropdown-item" href="#">{{ __('Ship order') }}</a></li>
+                                            <li><a class="dropdown-item" href="#">{{ __('Cancel order') }}</a></li>
                                             
                                         </ul>
                                     </div>
