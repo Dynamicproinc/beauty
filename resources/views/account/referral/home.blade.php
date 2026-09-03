@@ -97,10 +97,10 @@
                             <h6 class="fw-bold">{{ __('Analytics') }}</h6>
                             <div>
                               <div class="row">
-                                <div class="col-3 text-center"><span class="xs-text text-muted">Clicks</span><h6>{{ $referral_links->getClicks() }}</h6></div>
-                                <div class="col-3 text-center"><span class="xs-text text-muted">Registrations</span><h6>{{ $referral_links->getRegistrations() }}</h6></div>
-                                <div class="col-3 text-center"><span class="xs-text text-muted">Purchases</span><h6>{{ $referral_links->getPurchases() }}</h6></div>
-                                <div class="col-3 text-center"><span class="xs-text text-muted">Conversions</span><h6>{{ $referral_links->getConversions() }}</h6></div>
+                                <div class="col-3 text-center"><span class="xs-text text-muted">Clicks</span><h6>{{ $referral_links?->getClicks()? $referral_links->getClicks() : 0 }}</h6></div>
+                                <div class="col-3 text-center"><span class="xs-text text-muted">Registrations</span><h6>{{ $referral_links?->getRegistrations()? $referral_links->getRegistrations() : 0 }}</h6></div>
+                                <div class="col-3 text-center"><span class="xs-text text-muted">Purchases</span><h6>{{ $referral_links?->getPurchases()? $referral_links->getPurchases() : 0 }}</h6></div>
+                                <div class="col-3 text-center"><span class="xs-text text-muted">Conversions</span><h6>{{ $referral_links?->getConversions()? $referral_links->getConversions() : 0 }}</h6></div>
                               </div>
                             </div>
                            
