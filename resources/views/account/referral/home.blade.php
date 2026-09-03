@@ -31,7 +31,7 @@
                     <div class="py-3">
 
                         <div class="px-3">
-                            <h6 class="fw-bold">{{ __('Point reward activities') }}</h6>
+                            <h6 class="fw-bold">{{ __('Reward points activities') }}</h6>
                         </div>
                         <div>
                           @if($reward_wallet_transactions->count() > 0)

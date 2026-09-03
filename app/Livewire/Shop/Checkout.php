@@ -421,7 +421,10 @@ class Checkout extends Component
                     if ($referral) {
                         // add reward points to the user who refered the customer
                         $reward_wallet_service = new RewardWalletService();
-                        $reward_wallet_service->createOrUpdateRewardWallet($referral->user_id, $point_value, 'referral', 'Referral reward for order id: ' . $sales_order->id, $referral_code);
+                        if($referral->user_id){
+                            $reward_wallet_service->createOrUpdateRewardWallet($referral->user_id, $point_value, 'referral', 'Referral reward for order id: ' . $sales_order->id, $referral_code);
+                        }
+                        // $reward_wallet_service->createOrUpdateRewardWallet($referral->user_id, $point_value, 'referral', 'Referral reward for order id: ' . $sales_order->id, $referral_code);
 
                         // remove the referral cookie after adding reward points
                         cookie()->queue(cookie()->forget('referral_code'));

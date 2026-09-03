@@ -42,7 +42,10 @@ class RewardWalletService
             }
             // send email
             $user = User::find($user_id);
-            $this->sendEmailNotification($user, $amount, $type);
+            if($user){
+                $this->sendEmailNotification($user, $amount, $type);
+            }
+            // $this->sendEmailNotification($user, $amount, $type);
             $this->addReferralTracker($referral_code, 'purchase');
 
 
