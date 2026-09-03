@@ -19,7 +19,7 @@
                         <div>
                             <small class="small fw-light xs-text">{{ __('You have earned:') }}</small>
                             <div class="">
-                                <h6 class="fw-normal">0 Tallow Club Points</h6>
+                                <h6 class="fw-normal">{{ number_format($reward_wallet->balance ?? 0) }} Tallow Club Points</h6>
                                 <small class="small fw-light xs-text text-muted">{{ __('Your point expire on') }}
                                    </small>
                             </div>
@@ -34,46 +34,27 @@
                             <h6 class="fw-bold">{{ __('Point reward activities') }}</h6>
                         </div>
                         <div>
-                            {{-- <ul class="list-group list-group-flush activity-list">
-                                <li class="list-group-item d-flex justify-content-between">
-                                 <div>
-                                  <div class="mb-0">
-                                     <small>Earned for referring a friend</small>
-                                  </div>
-                                   <div class="mt-0"><small class="text-muted xs-text">12.10.2026 14:30</small></div>
-                                 </div>
-                                  <small class="">+25</small>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                 <div>
-                                  <div class="mb-0">
-                                     <small>Earned for referring a friend</small>
-                                  </div>
-                                   <div class="mt-0"><small class="text-muted xs-text">12.10.2026 14:30</small></div>
-                                 </div>
-                                  <small class="">+25</small>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                 <div>
-                                  <div class="mb-0">
-                                     <small>Redeemed for discount</small>
-                                  </div>
-                                   <div class="mt-0"><small class="text-muted xs-text">12.10.2026 14:30</small></div>
-                                 </div>
-                                  <small class="text-danger">-50</small>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                 <div>
-                                  <div class="mb-0">
-                                     <small>Earned for referring a friend</small>
-                                  </div>
-                                   <div class="mt-0"><small class="text-muted xs-text">12.10.2026 14:30</small></div>
-                                 </div>
-                                  <small class="">+25</small>
-                                </li>
+                          @if($reward_wallet_transactions->count() > 0)
+                          <ul class="list-group list-group-flush activity-list">
+                            @foreach ($reward_wallet_transactions as $transaction)
+                              
+                            <li class="list-group-item d-flex justify-content-between">
+                             <div>
+                              <div class="mb-0">
+                                 <small>{{ $transaction->description }}</small>
+                              </div>
+                               <div class="mt-0"><small class="text-muted xs-text">{{ $transaction->created_at->format('d.m.Y H:i') }}</small></div>
+                             </div>
+                              <small class="">{{ number_format($transaction->amount) }}</small>
+                            </li>
+                            @endforeach
                                
-                            </ul> --}}
-                            <span class="small text-muted px-3 text-center">{{ __('No activities yet.') }}</span>
+                            </ul>
+                          @else
+                           <span class="small text-muted px-3 text-center">{{ __('No activities yet.') }}</span>
+                          @endif
+                            
+                           
                         </div>
 
                     </div>
