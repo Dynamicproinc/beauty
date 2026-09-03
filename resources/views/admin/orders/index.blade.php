@@ -82,13 +82,13 @@
                                         class="text-uppercase font-weight-bold text-{{ $order->payment_status === 'success' ? 'success' : 'danger' }}">{{ $order->payment_status }}</small>
                                 </td>
                                 <td class="text-uppercase">
-                                    @if('status' === 'pending')
+                                    @if($order->status === 'pending')
                                         <span class="badge bg-warning text-dark">{{ $order->status }}</span>
-                                    @elseif('status' === 'processing')
+                                    @elseif($order->status === 'processing')
                                         <span class="badge bg-info text-dark">{{ $order->status }}</span>
-                                    @elseif('status' === 'completed')
+                                    @elseif($order->status === 'completed')
                                         <span class="badge bg-success text-dark">{{ $order->status }}</span>
-                                    @elseif('status' === 'cancelled')
+                                    @elseif($order->status === 'cancelled')
                                         <span class="badge bg-danger text-dark">{{ $order->status }}</span>
                                     @else
                                         <span class="badge bg-secondary text-dark">{{ $order->status }}</span>
