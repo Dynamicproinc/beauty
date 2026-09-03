@@ -82,7 +82,7 @@
                                         class="text-uppercase font-weight-bold text-{{ $order->payment_status === 'success' ? 'success' : 'danger' }}">{{ $order->payment_status }}</small>
                                 </td>
                                 <td class="text-uppercase">
-                                    @if($order->status === 'pending')
+                                    @if ($order->status === 'pending')
                                         <span class="badge bg-warning text-dark">{{ $order->status }}</span>
                                     @elseif($order->status === 'processing')
                                         <span class="badge bg-info text-dark">{{ $order->status }}</span>
@@ -92,23 +92,19 @@
                                         <span class="badge bg-danger text-dark">{{ $order->status }}</span>
                                     @else
                                         <span class="badge bg-secondary text-dark">{{ $order->status }}</span>
-                                    @endif 
+                                    @endif
                                 </td>
                                 <td>
                                     {{-- bootstrap dropdown --}}
                                     <div class="dropdown">
-                                        <button class="btn btn-sm btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Dropdown button
                                         </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <li>
-                                                <a class="dropdown-item" href="#">{{ __('View') }}</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">{{ __('Ship Order') }}</a>
-                                            </li>
-
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
                                         </ul>
                                     </div>
                                 </td>
