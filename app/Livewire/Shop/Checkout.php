@@ -407,9 +407,9 @@ class Checkout extends Component
                 ]);
             }
             // send order confirmation email to customer
-            // Mail::to($sales_order->email)
-            //     ->bcc('info@tallow-skincare.hr')
-            //     ->send(new OrderConfirmation($sales_order));
+            Mail::to($sales_order->email)
+                ->bcc('info@tallow-skincare.hr')
+                ->send(new OrderConfirmation($sales_order));
 
                 // if cookie has referral code then add reward points to the user who refered the customer
                 if (request()->hasCookie('referral_code')) {
