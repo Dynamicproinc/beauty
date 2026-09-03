@@ -24,6 +24,7 @@
                         <th scope="col" class="text-right">{{ __('Payment Method') }}</th>
                         <th scope="col" class="text-right">{{ __('Payment Status') }}</th>
                         <th scope="col" class="text-right">{{ __('Order Status') }}</th>
+                        <th scope="col" class="text-right">{{ __('Actions') }}</th>
 
 
                     </tr>
@@ -72,7 +73,7 @@
                                         {{ $pl?->pickup_location }}<br>
                                         {{ $order?->pickup_date?->format('d.m.Y. H:i') }}
                                     @else
-                                       n/a
+                                        n/a
                                     @endif
                                 </td>
                                 <td class="text-nowrap text-right">{{ $order->final_amount }}</td>
@@ -80,7 +81,37 @@
                                 <td class="text-right "><small
                                         class="text-uppercase font-weight-bold text-{{ $order->payment_status === 'success' ? 'success' : 'danger' }}">{{ $order->payment_status }}</small>
                                 </td>
-                                <td>{{ $order->status }}</td>
+                                <td class="text-uppercase">
+                                    @if('status' === 'pending')
+                                        <span class="badge bg-warning text-dark">{{ $order->status }}</span>
+                                    @elseif('status' === 'processing')
+                                        <span class="badge bg-info text-dark">{{ $order->status }}</span>
+                                    @elseif('status' === 'completed')
+                                        <span class="badge bg-success text-dark">{{ $order->status }}</span>
+                                    @elseif('status' === 'cancelled')
+                                        <span class="badge bg-danger text-dark">{{ $order->status }}</span>
+                                    @else
+                                        <span class="badge bg-secondary text-dark">{{ $order->status }}</span>
+                                    @endif 
+                                </td>
+                                <td>
+                                    {{-- bootstrap dropdown --}}
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-secondary dropdown-toggle" type="button"
+                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <li>
+                                                <a class="dropdown-item" href="{{ route('admin.orders.show', $order->id) }}">{{ __('View') }}</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">{{ __('Ship Order') }}</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                         @endforeach
                     @else
