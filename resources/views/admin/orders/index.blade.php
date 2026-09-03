@@ -22,7 +22,9 @@
                         {{-- Payments  --}}
                         <th scope="col" class="text-right">{{ __('Total') }}</th>
                         <th scope="col" class="text-right">{{ __('Payment Method') }}</th>
-                        <th scope="col" class="text-right">{{ __('Status') }}</th>
+                        <th scope="col" class="text-right">{{ __('Payment Status') }}</th>
+                        <th scope="col" class="text-right">{{ __('Order Status') }}</th>
+
 
                     </tr>
                 </thead>
@@ -78,6 +80,7 @@
                                 <td class="text-right "><small
                                         class="text-uppercase font-weight-bold text-{{ $order->payment_status === 'success' ? 'success' : 'danger' }}">{{ $order->payment_status }}</small>
                                 </td>
+                                <td>{{ $order->status }}</td>
                             </tr>
                         @endforeach
                     @else

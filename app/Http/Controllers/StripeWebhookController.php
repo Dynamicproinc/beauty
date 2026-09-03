@@ -47,6 +47,15 @@ class StripeWebhookController extends Controller
                         'stripe_currency' => $session->currency,
                         'payment_status' => 'success',
                     ]);
+                    // update if order has referral code then add reward points to the user who refered the customer
+                    // if ($order->referral_code) {
+                    //     $referral = \App\Models\ReferralLink::where('referral_code', $order->referral_code)->first();
+                    //     if ($referral) {
+                    //        //use rewardwallet service
+                    //         $rewardWalletService = new \App\Services\RewardWalletService();
+                    //         $rewardWalletService->addPoints($referral->user_id, 10);
+                    //     }
+                    // }
 
                     // Redeem gift card if payment is successful
                     if (in_array($order->stripe_status, ['paid', 'succeeded']) && $order->gift_code) {
