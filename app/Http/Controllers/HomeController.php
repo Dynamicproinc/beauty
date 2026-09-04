@@ -42,7 +42,7 @@ class HomeController extends Controller
         $reward_wallet_transactions = \App\Models\RewardWalletTransaction::where('user_id', Auth::id())->orderBy('created_at', 'desc')->paginate(5);
 
         // if rewad points expire then make balance 0
-        if ($reward_wallet->expiry_date && $reward_wallet->expiry_date->isPast()) {
+        if ($reward_wallet && $reward_wallet->expiry_date->isPast()) {
             $reward_wallet->update(['balance' => 0]);
         }
 
