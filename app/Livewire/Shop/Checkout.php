@@ -423,24 +423,7 @@ class Checkout extends Component
                 ->send(new OrderConfirmation($sales_order));
 
                 // if cookie has referral code then add reward points to the user who refered the customer
-                // if (request()->hasCookie('referral_code')) {
-                //     // point value for now 5
-
-                //     $point_value = 5;
-                //     $referral_code = request()->cookie('referral_code');
-                //     $referral = ReferralLink::where('referral_code', $referral_code)->first();
-                //     if ($referral) {
-                //         // add reward points to the user who refered the customer
-                //         $reward_wallet_service = new RewardWalletService();
-                //         if($referral->user_id){
-                //             $reward_wallet_service->createOrUpdateRewardWallet($referral->user_id, $point_value, 'referral', 'Referral reward for order id: ' . $sales_order->id, $referral_code);
-                //         }
-                //         // $reward_wallet_service->createOrUpdateRewardWallet($referral->user_id, $point_value, 'referral', 'Referral reward for order id: ' . $sales_order->id, $referral_code);
-
-                //         // remove the referral cookie after adding reward points
-                //         cookie()->queue(cookie()->forget('referral_code'));
-                //     }
-                // }
+                
                
         }
 

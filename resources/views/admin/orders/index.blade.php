@@ -105,15 +105,22 @@
                                             <li><a class="dropdown-item" href="{{ route('shop.invoice', $order->slug) }}"
                                                     target="_blank">{{ __('View') }}</a></li>
                                             <li>
-                                                <form action="{{ route('admin.orders.ship', $order->id) }}" method="POST"
-                                                    onsubmit="return confirm('Are you sure you want to mark this order as shipped?');">
-                                                    @csrf
-                                                    @method('PATCH')
+                                                @if ($order->status === 'completed')
+                                                    <a class="dropdown-item disabled"
+                                                        href="#"
+                                                        target="_blank" disabled>{{ __('Ship order') }}</a>
+                                                @else
+                                                    <form action="{{ route('admin.orders.ship', $order->id) }}"
+                                                        method="POST"
+                                                        onsubmit="return confirm('Are you sure you want to mark this order as shipped?');">
+                                                        @csrf
+                                                        @method('PATCH')
 
-                                                    <button type="submit" class="dropdown-item">
-                                                        {{ __('Ship order') }}
-                                                    </button>
-                                                </form>
+                                                        <button type="submit" class="dropdown-item">
+                                                            {{ __('Ship order') }}
+                                                        </button>
+                                                    </form>
+                                                @endif
                                             </li>
                                             <li><a class="dropdown-item" href="#">{{ __('Cancel order') }}</a></li>
 
