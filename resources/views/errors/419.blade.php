@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="d-flex flex-column align-items-center justify-content-center vh-100  text-center">
-    <h1 class="display-1 fw-bold text-secondary">419</h1>
+    <h1 class="display-1 fw-bold text-dark">419</h1>
     <h2 class="h4 mt-3">{{__('Page Expired')}}</h2>
     <p class="text-muted mb-4">{{__('Your session has expired. Please refresh the page and try again.')}}</p>
     <a href="{{ url()->previous() }}" class="btn btn-outline-secondary btn-lg me-2">
