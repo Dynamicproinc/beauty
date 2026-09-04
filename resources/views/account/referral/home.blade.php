@@ -19,10 +19,14 @@
                         <div>
                             <small class="small fw-light xs-text">{{ __('You have earned:') }}</small>
                             <div class="">
+                                @if($reward_wallet)
                                 <h6 class="fw-normal">
                                     {{ $reward_wallet->expiry_date <= now() ? 0 : number_format($reward_wallet->balance ?? 0) }}
                                     Tallow Club Points
                                 </h6>
+                                @else
+                                 <h6 class="fw-normal">0 Tallow Club Points</h6>
+                                @endif
                                 <small class="small fw-light xs-text text-muted">{{ __('Your point expire on') }}
                                     {{ $reward_wallet?->expiry_date?->format('d.m.Y') ?? __('N/A') }}
                                 </small>
