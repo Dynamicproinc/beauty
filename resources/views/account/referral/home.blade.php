@@ -34,8 +34,9 @@
                 <div class="border rounded bg-white mb-3">
                     <div class="py-3">
 
-                        <div class="px-3">
+                        <div class="px-3 d-flex justify-content-between">
                             <h6 class="fw-bold">{{ __('Reward points activities') }}</h6>
+                            <a href="#" class="btn btn-sm btn-link">{{__('See all')}}</a>
                         </div>
                         <div>
                             @if ($reward_wallet_transactions->count() > 0)

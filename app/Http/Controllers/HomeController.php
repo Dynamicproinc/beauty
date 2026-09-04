@@ -37,7 +37,7 @@ class HomeController extends Controller
     public function referralDashboard(){
         $referral_links = ReferralLink::where('user_id', Auth::id())->first();
         $reward_wallet = \App\Models\RewardWallet::where('user_id', Auth::id())->first();
-        $reward_wallet_transactions = \App\Models\RewardWalletTransaction::where('user_id', Auth::id())->orderBy('created_at', 'desc')->paginate(10);
+        $reward_wallet_transactions = \App\Models\RewardWalletTransaction::where('user_id', Auth::id())->orderBy('created_at', 'desc')->paginate(5);
 
         return view('account.referral.home', compact('referral_links', 'reward_wallet', 'reward_wallet_transactions'));
     }
