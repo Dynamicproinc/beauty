@@ -24,7 +24,7 @@
                                     Tallow Club Points
                                 </h6>
                                 <small class="small fw-light xs-text text-muted">{{ __('Your point expire on') }}
-                                    {{ $reward_wallet?->expiry_date->format('d.m.Y') ?? __('N/A') }}
+                                    {{ $reward_wallet?->expiry_date?->format('d.m.Y') ?? __('N/A') }}
                                 </small>
                             </div>
                         </div>
