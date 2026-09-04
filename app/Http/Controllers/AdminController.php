@@ -14,6 +14,8 @@ use App\Models\Visit;
 use Illuminate\Support\Facades\DB;
 use App\Models\ReferralLink;
 use App\Service\RewardWalletService;
+use App\Mail\RewardPointsReceived;
+use Illuminate\Support\Facades\Mail;
 
 
 class AdminController extends Controller
@@ -302,7 +304,7 @@ class AdminController extends Controller
 
     public function shipOrder($order_id)
     {
-        
+
         $order = SalesOrder::findOrFail($order_id);
 
         if ($order->payment_status !== 'success' || $order->status === 'completed') {
@@ -313,25 +315,25 @@ class AdminController extends Controller
         $order->save();
         // refferal code reward points
         if ($order->referral_code) {
-                    // point value for now 5
+            // point value for now 5
 
-                    $point_value = 5;
-                    $referral_code = $order->referral_code;
-                    $referral = ReferralLink::where('referral_code', $referral_code)->first();
-                    if ($referral) {
-                        // add reward points to the user who refered the customer
-                        $reward_wallet_service = new RewardWalletService();
-                        if($referral->user_id){
-                            $reward_wallet_service->createOrUpdateRewardWallet($referral->user_id, $point_value, 'referral', 'Referral reward for order id: ' . $order->id, $referral_code);
-                        }
-                        // $reward_wallet_service->createOrUpdateRewardWallet($referral->user_id, $point_value, 'referral', 'Referral reward for order id: ' . $sales_order->id, $referral_code);
-
-                        // remove the referral cookie after adding reward points
-                        cookie()->queue(cookie()->forget('referral_code'));
-                    }
+            $point_value = 5;
+            $referral_code = $order->referral_code;
+            $referral = ReferralLink::where('referral_code', $referral_code)->first();
+            if ($referral) {
+                // add reward points to the user who refered the customer
+                $reward_wallet_service = new RewardWalletService();
+                if ($referral->user_id) {
+                    $reward_wallet_service->createOrUpdateRewardWallet($referral->user_id, $point_value, 'referral', 'Referral reward for order id: ' . $order->id, $referral_code);
                 }
+                // $reward_wallet_service->createOrUpdateRewardWallet($referral->user_id, $point_value, 'referral', 'Referral reward for order id: ' . $sales_order->id, $referral_code);
+
+                // send email
+              
+            }
+        }
         // GLS Shipping API integration can be added here to update the shipment status in GLS system if needed.
 
-         return redirect()->back()->with('success', 'Order marked as shipped.');
+        return redirect()->back()->with('success', 'Order marked as shipped.');
     }
 }

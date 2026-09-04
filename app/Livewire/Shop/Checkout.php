@@ -426,7 +426,11 @@ class Checkout extends Component
                 
                
         }
-
+        // if referral cookie exits remove it after order is placed
+        if (request()->hasCookie('referral_code')) {
+            cookie()->queue(cookie()->forget('referral_code'));
+        }
+      
         //clear the cart
         session()->forget('gift_card_model');
         session()->forget('cart');

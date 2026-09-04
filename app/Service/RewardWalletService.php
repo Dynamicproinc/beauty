@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Models\User;
 use App\Models\ReferralTracker;
+use App\Mail\RewardPointsReceived;
+
 
 class RewardWalletService
 {
@@ -72,11 +74,17 @@ class RewardWalletService
         // For example, you can use Laravel's Mail facade to send an email
         // send raw email that informing user that he received reward points and how much and what type of reward points
 
-        $message = "Congratulations! You have received $amount reward points. Check your reward wallet for more details.";
-        Mail::raw($message, function ($mail) use ($user) {
-            $mail->to($user->email)
-                 ->subject('Reward Points Notification');
-        });
+        // $message = "Congratulations! You have received $amount reward points. Check your reward wallet for more details.";
+        // Mail::raw($message, function ($mail) use ($user) {
+        //     $mail->to($user->email)
+        //          ->subject('Reward Points Notification');
+        // });
+          Mail::to($user->email)
+                    ->send(new RewardPointsReceived(
+                        points: $amount,
+                        order_number: 'N/A', // You can replace this with the actual order number if available
+                        customer_name: $user->name,
+                    ));
 
     }
 

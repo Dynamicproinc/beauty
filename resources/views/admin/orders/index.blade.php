@@ -35,6 +35,9 @@
                             <tr>
                                 <td scope="row" class="text-nowrap"><a href="{{ route('shop.invoice', $order->slug) }}"
                                         target="_blank"><strong>{{ $order->order_number }}</strong></a>
+                                        @if($order->referral_code)
+                                            <span class="badge bg-info">{{ $order->referral_code }}</span>
+                                        @endif
                                 </td>
                                 <td class="text-nowrap">
                                     {{ $order->created_at->timezone('Europe/Zagreb')->format('d.m.Y. H:i') }}</td>
