@@ -13,4 +13,8 @@ class RewardWallet extends Model
         'status',
         'expiry_date',
     ];
+
+    protected $casts = [
+    'expiry_date' => 'date',
+];
 }

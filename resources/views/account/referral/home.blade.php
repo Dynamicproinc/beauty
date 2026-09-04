@@ -19,9 +19,13 @@
                         <div>
                             <small class="small fw-light xs-text">{{ __('You have earned:') }}</small>
                             <div class="">
-                                <h6 class="fw-normal">{{ number_format($reward_wallet->balance ?? 0) }} Tallow Club Points</h6>
+                                <h6 class="fw-normal">
+                                    {{ $reward_wallet->expiry_date <= now() ? 0 : number_format($reward_wallet->balance ?? 0) }}
+                                    Tallow Club Points
+                                </h6>
                                 <small class="small fw-light xs-text text-muted">{{ __('Your point expire on') }}
-                                   </small>
+                                    {{ $reward_wallet?->expiry_date->format('d.m.Y') ?? __('N/A') }}
+                                </small>
                             </div>
                         </div>
 
@@ -34,27 +38,28 @@
                             <h6 class="fw-bold">{{ __('Reward points activities') }}</h6>
                         </div>
                         <div>
-                          @if($reward_wallet_transactions->count() > 0)
-                          <ul class="list-group list-group-flush activity-list">
-                            @foreach ($reward_wallet_transactions as $transaction)
-                              
-                            <li class="list-group-item d-flex justify-content-between">
-                             <div>
-                              <div class="mb-0">
-                                 <small>{{ $transaction->description }}</small>
-                              </div>
-                               <div class="mt-0"><small class="text-muted xs-text">{{ $transaction->created_at->format('d.m.Y H:i') }}</small></div>
-                             </div>
-                              <small class="">{{ number_format($transaction->amount) }}</small>
-                            </li>
-                            @endforeach
-                               
-                            </ul>
-                          @else
-                           <span class="small text-muted px-3 text-center">{{ __('No activities yet.') }}</span>
-                          @endif
-                            
-                           
+                            @if ($reward_wallet_transactions->count() > 0)
+                                <ul class="list-group list-group-flush activity-list">
+                                    @foreach ($reward_wallet_transactions as $transaction)
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <div>
+                                                <div class="mb-0">
+                                                    <small>{{ $transaction->description }}</small>
+                                                </div>
+                                                <div class="mt-0"><small
+                                                        class="text-muted xs-text">{{ $transaction->created_at->format('d.m.Y H:i') }}</small>
+                                                </div>
+                                            </div>
+                                            <small class="">{{ number_format($transaction->amount) }}</small>
+                                        </li>
+                                    @endforeach
+
+                                </ul>
+                            @else
+                                <span class="small text-muted px-3 text-center">{{ __('No activities yet.') }}</span>
+                            @endif
+
+
                         </div>
 
                     </div>
@@ -78,16 +83,27 @@
                         <div class="mb-3">
                             <h6 class="fw-bold">{{ __('Analytics') }}</h6>
                             <div>
-                              <div class="row">
-                                <div class="col-3 text-center"><span class="xs-text text-muted">Clicks</span><h6>{{ $referral_links?->getClicks()? $referral_links->getClicks() : 0 }}</h6></div>
-                                <div class="col-3 text-center"><span class="xs-text text-muted">Registrations</span><h6>{{ $referral_links?->getRegistrations()? $referral_links->getRegistrations() : 0 }}</h6></div>
-                                <div class="col-3 text-center"><span class="xs-text text-muted">Purchases</span><h6>{{ $referral_links?->getPurchases()? $referral_links->getPurchases() : 0 }}</h6></div>
-                                <div class="col-3 text-center"><span class="xs-text text-muted">Conversions</span><h6>{{ $referral_links?->getConversions()? $referral_links->getConversions() : 0 }}</h6></div>
-                              </div>
+                                <div class="row">
+                                    <div class="col-3 text-center"><span class="xs-text text-muted">Clicks</span>
+                                        <h6>{{ $referral_links?->getClicks() ? $referral_links->getClicks() : 0 }}</h6>
+                                    </div>
+                                    <div class="col-3 text-center"><span class="xs-text text-muted">Registrations</span>
+                                        <h6>{{ $referral_links?->getRegistrations() ? $referral_links->getRegistrations() : 0 }}
+                                        </h6>
+                                    </div>
+                                    <div class="col-3 text-center"><span class="xs-text text-muted">Purchases</span>
+                                        <h6>{{ $referral_links?->getPurchases() ? $referral_links->getPurchases() : 0 }}
+                                        </h6>
+                                    </div>
+                                    <div class="col-3 text-center"><span class="xs-text text-muted">Conversions</span>
+                                        <h6>{{ $referral_links?->getConversions() ? $referral_links->getConversions() : 0 }}
+                                        </h6>
+                                    </div>
+                                </div>
                             </div>
-                           
+
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
