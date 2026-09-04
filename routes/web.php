@@ -127,6 +127,11 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
     Route::get('/pickup-methods', [App\Http\Controllers\AdminController::class, 'pickupMethods'])->name('admin.pickup');
     Route::get('/gift-cards', [App\Http\Controllers\AdminController::class, 'giftCards'])->name('admin.gift-card');
     Route::get('/subscribers', [App\Http\Controllers\AdminController::class, 'subscribers'])->name('admin.subscribers');
+    // Route::get('ship-order/{id}', [App\Http\Controllers\AdminController::class, 'shipOrder'])->name('admin.orders.ship');
+    Route::patch(
+        'orders/{order}/ship',
+        [App\Http\Controllers\AdminController::class, 'shipOrder']
+    )->name('admin.orders.ship');
 });
 
 

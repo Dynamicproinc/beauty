@@ -297,4 +297,19 @@ class AdminController extends Controller
     {
         return view('admin.shipping.pickup');
     }
+
+    public function shipOrder($order_id)
+    {
+        
+        $order = SalesOrder::findOrFail($order_id);
+
+        if ($order->payment_status !== 'success') {
+            return redirect()->back()->with('error', 'Cannot ship an order that has not been paid.');
+        }
+
+        $order->status = 'completed'; // Mark the order as shipped
+        $order->save();
+
+         return redirect()->back()->with('success', 'Order marked as shipped.');
+    }
 }

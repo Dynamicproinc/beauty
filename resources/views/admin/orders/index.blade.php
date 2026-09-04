@@ -99,13 +99,24 @@
                                     <div class="dropdown">
                                         <button class="btn btn-outline-dark dropdown-toggle" type="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                            
+
                                         </button>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="{{ route('shop.invoice', $order->slug) }}" target="_blank">{{ __('View') }}</a></li>
-                                            <li><a class="dropdown-item" href="#">{{ __('Ship order') }}</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('shop.invoice', $order->slug) }}"
+                                                    target="_blank">{{ __('View') }}</a></li>
+                                            <li>
+                                                <form action="{{ route('admin.orders.ship', $order->id) }}" method="POST"
+                                                    onsubmit="return confirm('Are you sure you want to mark this order as shipped?');">
+                                                    @csrf
+                                                    @method('PATCH')
+
+                                                    <button type="submit" class="dropdown-item">
+                                                        {{ __('Ship order') }}
+                                                    </button>
+                                                </form>
+                                            </li>
                                             <li><a class="dropdown-item" href="#">{{ __('Cancel order') }}</a></li>
-                                            
+
                                         </ul>
                                     </div>
                                 </td>
