@@ -19,13 +19,13 @@
                         <div>
                             <small class="small fw-light xs-text">{{ __('You have earned:') }}</small>
                             <div class="">
-                                @if($reward_wallet)
-                                <h6 class="fw-normal">
-                                    {{ $reward_wallet->expiry_date <= now() ? 0 : number_format($reward_wallet->balance ?? 0) }}
-                                    Tallow Club Points
-                                </h6>
+                                @if ($reward_wallet)
+                                    <h6 class="fw-normal">
+                                        {{ $reward_wallet->expiry_date <= now() ? 0 : number_format($reward_wallet->balance ?? 0) }}
+                                        Tallow Club Points
+                                    </h6>
                                 @else
-                                 <h6 class="fw-normal">0 Tallow Club Points</h6>
+                                    <h6 class="fw-normal">0 Tallow Club Points</h6>
                                 @endif
                                 <small class="small fw-light xs-text text-muted">{{ __('Your point expire on') }}
                                     {{ $reward_wallet?->expiry_date?->format('d.m.Y') ?? __('N/A') }}
@@ -40,7 +40,7 @@
 
                         <div class="px-3 d-flex justify-content-between">
                             <h6 class="fw-bold">{{ __('Reward points activities') }}</h6>
-                            <a href="#" class="btn btn-sm btn-link">{{__('See all')}}</a>
+                            <a href="#" class="btn btn-sm btn-link">{{ __('See all') }}</a>
                         </div>
                         <div>
                             @if ($reward_wallet_transactions->count() > 0)
@@ -101,7 +101,15 @@
                                         </h6>
                                     </div>
                                     <div class="col-3 text-center"><span class="xs-text text-muted">Conversions</span>
-                                        <h6>{{ $referral_links?->getConversions() ? $referral_links->getConversions() : 0 }}
+                                        @php
+                                            $total_clicks = $referral_links?->getClicks() ?? 0;
+                                            $total_purchase = $referral_links?->getPurchases() ?? 0;
+
+                                            $conversion_rate =
+                                                $total_clicks > 0 ? ($total_purchase / $total_clicks) * 100 : 0;
+                                        @endphp
+
+                                        <h6>{{ number_format($conversion_rate) }}%</h6>
                                         </h6>
                                     </div>
                                 </div>

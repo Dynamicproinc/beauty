@@ -30,7 +30,9 @@ class ReferralLink extends Model
         return ReferralTracker::where('referral_code', $this->referral_code)->where('type', 'purchase')->count();
     }
 
-    public function getConversions(){
-        return ReferralTracker::where('referral_code', $this->referral_code)->where('type', 'conversion')->count();
-    }
+    // public function getConversions(){
+
+        
+    //     return ReferralTracker::where('referral_code', $this->referral_code)->where('type', 'conversion')->count();
+    // }
 }
