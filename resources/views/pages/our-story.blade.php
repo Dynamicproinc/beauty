@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="f-img-wr">
-                        {{-- <img src="{{ asset('media/images/founder_lorena_maturanec.png') }}" alt="tallow-skin-care" class="f-img"> --}}
+                        <img src="{{ asset('media/images/founder.jpeg') }}" alt="tallow-skin-care" class="f-img">
 
                     </div>
                 </div>
