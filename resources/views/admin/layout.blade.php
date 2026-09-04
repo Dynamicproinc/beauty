@@ -440,7 +440,10 @@
                         </li>
                       </ul>
                 </footer> --}}
-              
+                {{-- following div shoud dissapear after 3 second --}}
+               <div>
+                @if(session('success') || session('error')) <div class="fixed-bottom p-3 text-white {{ session('success') ? 'bg-success' : 'bg-danger' }}" id="message-bar" > {{ session('success') ?? session('error') }} </div> <script> setTimeout(function () { const messageBar = document.getElementById('message-bar'); if (messageBar) { messageBar.remove(); } }, 3000); </script> @endif
+               </div>
             </main>
         </div>
     </div>
