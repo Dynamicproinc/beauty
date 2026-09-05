@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- SEO --}}
     <meta name="title" content="{{ __('Pure care the kind that skin has always understood') }}">
-    <meta name="description"
-        content="{{ __('Natural, unique & effective skin care from Croatia!') }}">
+    <meta name="description" content="{{ __('Natural, unique & effective skin care from Croatia!') }}">
     <meta name="keywords"
         content="{{ __('tallow balm, tallow skin care, grass fed tallow, natural moisturizer, organic tallow balm, beef tallow skincare, handmade tallow balm, sensitive skin moisturizer, deep hydration balm, natural skin cream, chemical free skincare, traditional skincare, nourishing face balm') }}">
     <meta property="og:image" content="{{ asset('ico/favicon-32x32.png') }}">
@@ -43,14 +42,17 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BB6FT8DRCQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB6FT8DRCQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-BB6FT8DRCQ');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BB6FT8DRCQ');
+    </script>
     <script>
         AOS.init();
     </script>
@@ -61,7 +63,7 @@
 
 <body>
     <div id="app">
-       
+
 
 
         {{-- under the constructor --}}
@@ -77,8 +79,13 @@
         </main>
         @include('inc.footer')
         @include('inc.cookie')
-        {{--  --}}
 
+        {{-- whatssapp contact --}}
+        <div class="position-fixed bottom-0 end-0" style="z-index: 99999 !important">
+            <a href="https://wa.me/+385996680498" target="_blank">
+                <img src="{{asset('media/images/whatsapp-icon.webp')}}" alt="" style="width:64px">
+            </a>
+        </div>
         {{--  --}}
     </div>
     @livewireScripts
