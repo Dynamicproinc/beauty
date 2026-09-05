@@ -42,6 +42,15 @@
     {{--  --}}
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BB6FT8DRCQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BB6FT8DRCQ');
+</script>
     <script>
         AOS.init();
     </script>
