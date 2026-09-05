@@ -37,7 +37,7 @@ class RewardWalletService
                 
             }else{
             // if current balance is passed the expirey date make balance 0
-            if($reward_wallet->expiry_date <= now()){
+            if($reward_wallet->expiry_date->isPast()){
                 $reward_wallet->balance =  $amount;
             }else{
                 $reward_wallet->balance = $reward_wallet->balance + $amount;
