@@ -40,6 +40,7 @@ class Edit extends Component
     public $info_title;
     public $info_content;
     public $product_info_modal = false;
+    public $last_price_update;
 
     public $product_image;
 
@@ -74,6 +75,7 @@ class Edit extends Component
             $this->supplier_id = $product->supplier_id;
             $this->tags = $product->tags;
             $this->status = $product->status;
+            $this->last_price_update = $product->last_price_update;
             // $this->meta_title = $product->meta_title;
             // $this->meta_description = $product->meta_description;
             // $this->meta_keywords = $product->meta_keywords;
@@ -266,6 +268,7 @@ class Edit extends Component
                 'track_quantity' => 'boolean',
                 'supplier_id' => 'nullable|exists:suppliers,id',
                 'status' => 'required|in:active,inactive,draft',
+                'last_price_update' => 'nullable'
             ]);
 
             $this->product->title = $this->title;
@@ -285,6 +288,7 @@ class Edit extends Component
             $this->product->tags = $this->tags;
             $this->product->status = $this->status;
             $this->product->slug = Str::slug($this->title);
+            $this->product->last_price_update = $this->last_price_update;
             if ($this->product->save()) {
                 $this->success_message = 'Product updated successfully!';
             } else {

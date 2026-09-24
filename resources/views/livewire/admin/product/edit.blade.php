@@ -154,6 +154,18 @@
                                         <small class="text-muted">{{ __('Not visible to customer') }}</small>
                                     </div>
                                 </div>
+                                <div class="p-3">
+                                    <div class="form-group">
+                                        <label for="">{{ __('Last price update') }}</label>
+                                        <input type="text"
+                                            class="form-control @error('last_price_update') is-invalid @enderror"
+                                            placeholder="€ 0.00" wire:model="last_price_update">
+                                        @error('last_price_update')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                        {{-- <small class="text-muted">{{ __('Not visible to customer') }}</small> --}}
+                                    </div>
+                                </div>
 
                             </div>
                             {{--  --}}
