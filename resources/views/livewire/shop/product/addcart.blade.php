@@ -1,7 +1,8 @@
 <div>
     <div>
         <div>
-            <div style="height: 32px;">
+            <div style="height: 32px">
+               
                 <div wire:target="updateVariant" wire:loading.remove>
                     <h1 class="font-weight-lighter price-hl">
                     @if ($selected_variant_data)
