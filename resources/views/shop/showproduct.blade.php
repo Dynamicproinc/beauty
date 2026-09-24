@@ -122,7 +122,7 @@
                             {{-- @livewire('shop.product.addcart',['product' => $product]) --}}
                             <livewire:shop.product.addcart :product="$product" />
                             <div style="font-size: 12px !important" class="mb-3">
-                                <small class="small text-muted" style="font-size: 12px !important"><i class="bi bi-clock-history" style="font-size: 12px !important"></i> {{ $product->last_price_update ?? $product->last_price_update  }}</small>
+                                <small class="small text-muted" style="font-size: 12px !important"> @if($product->last_price_update)<i class="bi bi-clock-history" style="font-size: 12px !important"></i> @endif {{ $product->last_price_update ?? $product->last_price_update  }}</small>
                             </div>
                             <div class="small-note-areas mb-3">
                                 <p class="small-note">{{ __('delivery.note') }}</p>
