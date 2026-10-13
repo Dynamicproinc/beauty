@@ -50,5 +50,12 @@ return [
     'site_key' => env('RECAPTCHA_SITE_KEY'),
     'secret_key' => env('RECAPTCHA_SECRET_KEY'),
 ],
+'gls' => [
+    'url' => env('GLS_API_URL'),
+    'username' => env('GLS_USERNAME'),
+    'password' => env('GLS_PASSWORD'),
+    'client_number' => env('GLS_CLIENT_NUMBER'),
+    'token' => env('GLS_API_TOKEN'),
+],
 
 ];

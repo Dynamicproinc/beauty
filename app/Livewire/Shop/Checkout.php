@@ -29,7 +29,7 @@ class Checkout extends Component
     public $freeshipping = false;
     public $email;
     public $shipping_location, $shipping_locations, $shipping_cost, $shipping_location_other;
-    public $delivery_method = 'home_delivery';
+    public $delivery_method = 'gls_paketomat';
     public $pickup_locations, $pickup_location;
     public $dis_presentage = 0;
     public $dis_amount =  0;
@@ -37,7 +37,7 @@ class Checkout extends Component
     public $payment_method = "card";
     public $phone_number, $first_name, $last_name, $address, $city, $postal_code, $first_name_other, $last_name_other, $address_other, $postal_code_other, $city_other, $phone_other, $phone_number_other, $pickup_datetime, $message;
     public $gift_card, $gift_card_amount;
-
+    public $gls_location_id, $gls_paketomat_details, $gls_paketomat_name, $gls_paketomat_address, $gls_paketomat_city, $gls_paketomat_postal_code;
 
 
     public function render()
@@ -75,11 +75,22 @@ class Checkout extends Component
             $this->shipping_cost = 0;
             $this->shipping_location = '';
         }
+        if ($this->delivery_method == 'gls_paketomat') {
+            $this->dis_amount = 0;
+            $this->dis_presentage = 0;
+            $this->pickup_location = '';
+            $this->shipping_cost = 0;
+            $this->shipping_location = '';
+            // $this->payment_method = 'card';
+        }
+
+
         if ($this->delivery_method == 'home_delivery') {
             $this->dis_amount = 0;
             $this->dis_presentage = 0;
             $this->pickup_location = '';
         }
+        
         $this->getFinalValue();
     }
 
@@ -265,7 +276,7 @@ class Checkout extends Component
             'phone_number' => 'required|string|min:2|max:50',
             'first_name' => 'required|string|min:2|max:50',
             'last_name' => 'required|string|min:2|max:50',
-            'delivery_method' => 'required|in:home_delivery,pickup',
+            'delivery_method' => 'required|in:home_delivery,pickup,gls_paketomat',
             'payment_method' => 'required|in:cod,card',
             'billing' => 'required|in:default,other',
         ]);
@@ -300,6 +311,21 @@ class Checkout extends Component
                 'phone_number_other' => 'nullable|string|min:2|max:50',
             ]);
         }
+
+         if ($this->delivery_method === 'gls_paketomat') {
+            $this->validate([
+                'gls_location_id' => 'required',
+                'gls_paketomat_details' => 'required',
+
+                'gls_paketomat_name' => 'required',
+                'gls_paketomat_address' => 'required',
+                'gls_paketomat_city' => 'required',
+                'gls_paketomat_postal_code' => 'required',
+            ]);
+        }
+
+       
+
         // create a unique slug for the order
         $slug = Str::random(25);
 
@@ -315,7 +341,7 @@ class Checkout extends Component
             // check exists in database
             $referral = ReferralLink::where('referral_code', $referral_code)->first();
             if (!$referral) {
-                $referral_code = null;  
+                $referral_code = null;
             }
         }
 
@@ -328,7 +354,7 @@ class Checkout extends Component
             'last_name' => $this->last_name,
             'status' => 'pending',
             'total_amount' => $this->getCartValue(),
-            'shipping_cost' => $this->shipping_cost,
+            'shipping_cost' => $this->shipping_cost ?? 0,
             'discount_amount' => $this->dis_amount,
             'delivery_method' => $this->delivery_method,
             'payment_method' => $this->payment_method,
@@ -352,6 +378,15 @@ class Checkout extends Component
             'final_total' =>  $final_total,
             'gift_code' => $this->gift_card ?? null,
             'referral_code' => $referral_code ?? null,
+            'gls_location_id' => $this->gls_location_id ?? null,
+            'gls_paketomat_details' => $this->gls_paketomat_details ?? null,
+            'gls_status' => 'not_created',
+            'gls_parcel_number' => 'not_created',
+            'gls_shipment_id' => 'not_created',
+            'gls_paketomat_name' => $this->gls_paketomat_name ?? null,
+            'gls_paketomat_address' => $this->gls_paketomat_address ?? null,
+            'gls_paketomat_city' => $this->gls_paketomat_city ?? null,
+            'gls_paketomat_postal_code' => $this->gls_paketomat_postal_code ?? null,
 
         ]);
 
@@ -422,15 +457,15 @@ class Checkout extends Component
                 ->bcc('info@tallow-skincare.hr')
                 ->send(new OrderConfirmation($sales_order));
 
-                // if cookie has referral code then add reward points to the user who refered the customer
-                
-               
+            // if cookie has referral code then add reward points to the user who refered the customer
+
+
         }
         // if referral cookie exits remove it after order is placed
         if (request()->hasCookie('referral_code')) {
             cookie()->queue(cookie()->forget('referral_code'));
         }
-      
+
         //clear the cart
         session()->forget('gift_card_model');
         session()->forget('cart');

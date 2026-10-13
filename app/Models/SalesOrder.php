@@ -44,7 +44,16 @@ class SalesOrder extends Model
        'payment_id',
        'final_total',
        'gift_code',
-       'referral_code'
+       'referral_code',
+       'gls_location_id',
+       'gls_paketomat_details',
+       'gls_status',
+       'gls_parcel_number',
+       'gls_shipment_id',
+       'gls_paketomat_name',
+       'gls_paketomat_address',
+       'gls_paketomat_city',
+       'gls_paketomat_postal_code'
     ];
 
     protected $casts = [

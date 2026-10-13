@@ -111,6 +111,14 @@ $pl = \App\Models\PickupLocation::where('id', $order->pickup_location)->first();
 {{ $order?->pickup_date->format('d.m.Y. H:i') }}
 @endif
 
+@if ($order->delivery_method === 'gls_paketomat')
+<strong>{{ __('GLS Paketomat:') }}</strong><br>
+
+{{ $order?->gls_location_id }}<br>
+{{ $order?->gls_paketomat_name }}<br>
+{{ $order?->gls_paketomat_address }} {{ $order?->gls_paketomat_city }} {{ $order?->gls_paketomat_postal_code }}<br>
+@endif
+
 </td>
 
 </tr>

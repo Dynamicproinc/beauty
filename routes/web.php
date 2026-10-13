@@ -10,6 +10,8 @@ use App\Models\EmailSubscription;
 use App\Http\Middleware\SetLanguage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
+use App\Models\StockSnapshot;
+use App\Models\StockSnapshotItems;
 
 
 //Home page
@@ -128,6 +130,7 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->group(func
     Route::get('/gift-cards', [App\Http\Controllers\AdminController::class, 'giftCards'])->name('admin.gift-card');
     Route::get('/subscribers', [App\Http\Controllers\AdminController::class, 'subscribers'])->name('admin.subscribers');
     // Route::get('ship-order/{id}', [App\Http\Controllers\AdminController::class, 'shipOrder'])->name('admin.orders.ship');
+    // Route::get('/daily-stock-snapshot', [App\Http\Controllers\PagesController::class, 'saveSnapshotDaily'])->name('stock.snapshot.daily');
     Route::patch(
         'orders/{order}/ship',
         [App\Http\Controllers\AdminController::class, 'shipOrder']
@@ -166,11 +169,18 @@ Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 
-// Artisan  commands for the migrations
-// Route::get('/abc123', function () {
-//     Artisan::call('migrate', ['--force' => true]);
 
-//     return response()->json([
-//         'status' => 'Migration completed'
-//     ]);
-// });
+// export stock snapshot to csv
+Route::get('/export-csv/{snapshotId}', [App\Http\Controllers\PagesController::class, 'exportSnapshots'])->name('stock.snapshot.export');
+
+Route::get('/price-lists', [App\Http\Controllers\PagesController::class, 'stockSnapshot'])->name('stock.snapshot');
+
+
+// Artisan  commands for the migrations
+Route::get('/abc123', function () {
+    Artisan::call('migrate', ['--force' => true]);
+
+    return response()->json([
+        'status' => 'Migration completed'
+    ]);
+});

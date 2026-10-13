@@ -50,17 +50,27 @@
                             <div>
                                 <div class="d-flex mb-3">
                                     <div class="w-100">
+                                        <input type="radio" id="gls" value="gls_paketomat" class="d-type-radio"
+                                            wire:model.live="delivery_method" wire:click = "refreshDeliveryMethod">
+                                        <label for="gls" class="btn-radio">
+                                            {{-- {{ __('GLS Paketomat') }} --}}
+                                            <img src="{{ asset('media/images/gls.webp') }}" class="gls-logo">
+                                        </label>
+                                    </div>
+                                    <div class="w-100 mx-2">
                                         <input type="radio" id="hd" value="home_delivery" class="d-type-radio"
                                             wire:model.live="delivery_method" wire:click = "refreshDeliveryMethod">
-                                        <label for="hd" class="btn-radio">
-                                            <i class="bi bi-truck mx-2"></i> {{ __('Home Delivery') }}
+                                        <label for="hd" class="btn-radio text-center">
+                                            {{-- <i class="bi bi-truck mx-2"></i>  --}}
+                                            {{ __('Home Delivery') }}
                                         </label>
                                     </div>
                                     <div class="mx-2 w-100">
                                         <input type="radio" id="pick" value="pickup" class="d-type-radio"
                                             wire:model.live="delivery_method" wire:click = "refreshDeliveryMethod">
-                                        <label for="pick" class="btn-radio">
-                                            <i class="bi bi-box-seam mx-2"></i> {{ __('Personal Pickup') }}
+                                        <label for="pick" class="btn-radio text-center">
+                                            {{-- <i class="bi bi-box-seam mx-2"></i>  --}}
+                                            {{ __('Personal Pickup') }}
                                         </label>
                                     </div>
                                 </div>
@@ -71,7 +81,8 @@
                                     <div class="form-floating mb-3">
                                         <input type="text"
                                             class="form-control @error('first_name') is-invalid @enderror"
-                                            id="firstname" placeholder="{{ __('First Name') }}" wire:model="first_name">
+                                            id="firstname" placeholder="{{ __('First Name') }}"
+                                            wire:model="first_name">
                                         <label for="firstname">{{ __('First Name') }} <small
                                                 class="text-danger">*</small></label>
                                         <small class="text-danger">
@@ -126,6 +137,7 @@
                                     </label>
                                 </div> --}}
                             {{-- start billing --}}
+
 
                             @if ($delivery_method == 'home_delivery')
                                 <div>
@@ -315,6 +327,96 @@
 
                             @endif
                             {{--  --}}
+                            {{-- @if ($delivery_method == 'gls_paketomat') --}}
+                            <div style="{{ $delivery_method === 'gls_paketomat' ? 'display:block' : 'display:none' }}"
+                                class="mb-3">
+                                <h6>{{ __('Choose GLS Paketomat location') }}</h6>
+                                <div class="p-3 bg-white border rounded">
+
+
+                                    <div style="height: 600px;" wire:ignore>
+                                        <gls-dpm id="gls-map" country="hr" language="HR">
+                                        </gls-dpm>
+                                    </div>
+
+
+                                    <div class="card shadow-sm border rounded-3">
+                                        <div class="card-body">
+                                            <h6 class="fw-bold mb-3">
+                                                <i class="bi bi-geo-alt text-success me-2"></i>
+                                                {{ __('Odabrani paketomat') }} 
+                                            </h6>
+
+                                            <p class="mb-2">
+                                                <small class="text-muted">Paketomat ID:</small>
+
+                                                <span id="selected-point" class="fw-semibold">
+                                                    {{ $gls_location_id ?? '—' }}
+                                                </span>
+                                            </p>
+
+                                            <p class="text-muted mb-0 small">
+                                                {{ $gls_paketomat_name }}<br />
+                                                {{ $gls_paketomat_details }}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    @error('gls_location_id')
+                                        <p class="alert alert-danger">{{ __('Please select the location') }}</p>
+                                    @enderror
+                                </div>
+                            </div>
+
+
+
+
+
+                            {{-- @endif --}}
+                            {{--  --}}
+                            @assets
+                                <script type="module" src="https://map.gls-croatia.com/widget/gls-dpm.js"></script>
+                            @endassets
+
+                            @script
+                                <script>
+                                    setTimeout(() => {
+                                        const glsMap = document.querySelector('#gls-map');
+
+                                        if (!glsMap) {
+                                            console.error('GLS element does not exist');
+                                            return;
+                                        }
+
+                                        glsMap.addEventListener('change', (event) => {
+                                            console.log('GLS DATA:', event.detail);
+
+                                            const locationId = event.detail?.id;
+
+
+                                            if (locationId) {
+                                                $wire.set('gls_location_id', locationId);
+                                                const location = event.detail;
+
+                                                console.log('GLS location ID:', location.contact.address);
+                                                const address =
+                                                    `${location.contact?.address} ${location.contact?.city} ${location.contact?.postalCode}`;
+
+                                                $wire.set('gls_paketomat_details', address);
+                                                $wire.set('gls_paketomat_name', location.name);
+                                                $wire.set('gls_paketomat_address', location.contact?.address);
+                                                $wire.set('gls_paketomat_city', location.contact?.city);
+                                                $wire.set('gls_paketomat_postal_code', location.contact?.postalCode);
+
+                                            }
+                                        });
+
+                                        console.log('GLS change listener attached');
+                                    }, 2000);
+                                </script>
+                            @endscript
+                            {{--  --}}
+
 
 
                             <div class="mb-3">
@@ -360,6 +462,8 @@
                                                     <input class="form-check-input pm my-3 mx-2"
                                                         wire:model="payment_method" type="radio" id="pmcod"
                                                         value="cod" wire:change="getShippingCost">
+
+
                                                     <label class="pm-check-label my-3" for="pmcod">
                                                         {{ __('Cash/Card for delivery or pickup') }}
 
@@ -569,7 +673,8 @@
                                             'terms' => '<a href="/terms-and-conditions" target="_blank">Terms & Conditions</a>',
                                         ]) !!}
                                     </p>
-                                    <button class="btn btn-lg btn-dark w-100">{{ __('PLACE ORDER') }}</button>
+                                    <button class="btn btn-lg btn-dark w-100">{{ __('PLACE ORDER') }}
+                                        ({{ number_format($final_total, 2, ',', '.') }} €)</button>
                                 </div>
 
                         </form>
@@ -727,7 +832,7 @@
                                         </div>
 
                                     </div> --}}
-                                    
+
                                     {{-- @if ($errors->any())
                                         <div class="alert alert-danger">
                                             <ul>

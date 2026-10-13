@@ -46,6 +46,9 @@
                              <li class="nav-item  mb-2">
                                  <a href="/contact-us" class="nav-link text-primary-muted p-0 ">{{ __('Contact') }}</a>
                              </li>
+                             <li class="nav-item  mb-2">
+                                 <a href="{{ route('stock.snapshot') }}" class="nav-link text-primary-muted p-0 ">{{ __('Cjenik') }}</a>
+                             </li>
 
                          </ul>
                      </div>

@@ -11,7 +11,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('css/admin.css') }}"> --}}
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    
+
     {{-- <script src="https://cdn.ckeditor.com/4.25.1-lts/standard/ckeditor.js"></script> --}}
     {{-- <script src="{{ asset('ckeditor/ckeditor.js') }}"></script> --}}
     {{-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> --}}
@@ -219,13 +219,14 @@
             letter-spacing: 2px;
         }
 
-        .btn{
+        .btn {
             font-size: 12px;
             font-weight: 500;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
-        .error-text{
+
+        .error-text {
             font-size: 12px;
             color: red;
             font-weight: 600;
@@ -249,7 +250,7 @@
             <input class="form-control form-control-dark" type="text" placeholder="Search" aria-label="Search">
         </div> --}}
         <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
-           
+
             <div class="dropdown mx-2">
                 <button class="btn btn-secondary-outline dropdown-toggle" type="button" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-expanded="false">
@@ -257,20 +258,18 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li>
-                        <a class="dropdown-item {{ app()->getLocale() == 'en' ? 'active' : '' }}"
-                                 href="/language/en">
-                                 {{ __('English') }}
-                             </a>
+                        <a class="dropdown-item {{ app()->getLocale() == 'en' ? 'active' : '' }}" href="/language/en">
+                            {{ __('English') }}
+                        </a>
                     </li>
                     <li>
-                        <a class="dropdown-item {{ app()->getLocale() == 'hr' ? 'active' : '' }}"
-                                 href="/language/hr">
-                                 {{ __('Croatian') }}
-                             </a>
+                        <a class="dropdown-item {{ app()->getLocale() == 'hr' ? 'active' : '' }}" href="/language/hr">
+                            {{ __('Croatian') }}
+                        </a>
                     </li>
-                   
-                   
-                    
+
+
+
                 </ul>
             </div>
             <div class="dropdown">
@@ -287,7 +286,7 @@
                             <button type="submit" class="dropdown-item">{{ __('Sign out') }}</button>
                         </form>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -409,7 +408,15 @@
                                 <span class="ml-2">{{ __('Pickup Location') }}</span>
                             </a>
                         </li>
-                       
+
+                        {{-- <li class="nav-item">
+                            <div class="nav-link">
+                                <a class=" btn-primary btn"
+                                    href="{{ route('stock.snapshot.daily') }}">{{ __('Daily Stock Snapshot') }}</a>
+                            </div>
+                           
+
+                        </li> --}}
 
                     </ul>
                 </div>
@@ -441,15 +448,24 @@
                       </ul>
                 </footer> --}}
                 {{-- following div shoud dissapear after 3 second --}}
-               <div>
-                @if(session('success') || session('error')) <div class="fixed-bottom p-3 text-white {{ session('success') ? 'bg-success' : 'bg-danger' }}" id="message-bar" > {{ session('success') ?? session('error') }} </div> <script> setTimeout(function () { const messageBar = document.getElementById('message-bar'); if (messageBar) { messageBar.remove(); } }, 3000); </script> @endif
-               </div>
+                <div>
+                    @if (session('success') || session('error'))
+                        <div class="fixed-bottom p-3 text-white {{ session('success') ? 'bg-success' : 'bg-danger' }}"
+                            id="message-bar"> {{ session('success') ?? session('error') }} </div>
+                        <script>
+                            setTimeout(function() {
+                                const messageBar = document.getElementById('message-bar');
+                                if (messageBar) {
+                                    messageBar.remove();
+                                }
+                            }, 3000);
+                        </script>
+                    @endif
+                </div>
             </main>
         </div>
     </div>
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
