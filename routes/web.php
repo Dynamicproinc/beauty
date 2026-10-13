@@ -177,10 +177,10 @@ Route::get('/price-lists', [App\Http\Controllers\PagesController::class, 'stockS
 
 
 // Artisan  commands for the migrations
-Route::get('/abc123', function () {
-    Artisan::call('migrate', ['--force' => true]);
+// Route::get('/abc123', function () {
+//     Artisan::call('migrate', ['--force' => true]);
 
-    return response()->json([
-        'status' => 'Migration completed'
-    ]);
-});
+//     return response()->json([
+//         'status' => 'Migration completed'
+//     ]);
+// });
