@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\StockSnapshot;
 use App\Models\StockSnapshotItems;
+use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
@@ -129,6 +130,11 @@ class PagesController extends Controller
                     'availability' => 'Dostupno',
                 ]);
             }
+                // send raw mail to admin that the snapshot has been created
+                Mail::raw('Daily stock snapshot has been created successfully.', function ($message) {
+                    $message->to('samdynmic@gmail.com')
+                        ->subject('Daily Stock Snapshot Created');
+                });
 
             return redirect()->back()->with('success', 'Daily stock snapshot created successfully.');
         } catch (\Exception $e) {
