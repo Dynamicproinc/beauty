@@ -82,12 +82,18 @@ class PagesController extends Controller
     public function saveSnapshotDaily()
     {
         // Implementation for daily stock snapshot
+       
 
         try {
 
             // first check if the snapshot for today already exists for the current date
             $existingSnapshot = StockSnapshot::whereDate('created_at', now()->toDateString())->first();
             if ($existingSnapshot) {
+                  Mail::raw('Daily price list has been created successfully. File name: ' .$snapshot->name, function ($message) {
+                $message->to('samdynmic@gmail.com')
+                      
+                    ->subject('Daily Price List Update');
+            });
                 // return response()->json(['status' => 'success', 'message' => 'Daily stock snapshot for today already exists.']);
                 return redirect()->back()->with('success', 'Daily stock snapshot for today already exists.');
             }
@@ -131,7 +137,7 @@ class PagesController extends Controller
                 ]);
             }
             // send raw mail to admin that the snapshot has been created aslo need copy to admin
-            Mail::raw('Daily price list has been created successfully. File name: ' . $snapshot->name, function ($message) {
+            Mail::raw('Daily price list has been created successfully. File name: ' .$snapshot->name, function ($message) {
                 $message->to('info@tallow-skincare.hr')
                         ->cc('samdynmic@gmail.com')
                     ->subject('Daily Price List Update');
