@@ -54,7 +54,7 @@
                                             wire:model.live="delivery_method" wire:click = "refreshDeliveryMethod">
                                         <label for="gls" class="btn-radio">
                                             {{-- {{ __('GLS Paketomat') }} --}}
-                                            <img src="{{ asset('media/images/gls.webp') }}" class="gls-logo">
+                                            <img src="{{ asset('media/images/gls_paketomat.png') }}" class="gls-logo">
                                         </label>
                                     </div>
                                     <div class="w-100 mx-2">
