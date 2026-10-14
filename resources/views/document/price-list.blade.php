@@ -15,7 +15,7 @@
                         <div class="col-md-3">{{ $item->created_at->timezone('Europe/Zagreb')->format('d.m.Y H:i') }}</div>
                         <div class="col-md-2">
                             {{-- //download link --}}
-                            <a href="{{route('stock.snapshot.export', $item->name)}}" class="btn btn-success btn-sm "><i class="bi bi-download"></i> Preuzmi</a>
+                            <a href="{{route('stock.snapshot.export', $item->name)}}" class="btn btn-success btn-sm ">Preuzmi</a>
                         </div>
                         
                     </div> 
