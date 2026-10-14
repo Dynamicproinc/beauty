@@ -7,7 +7,7 @@
                 <div class="col-md-10">
                     <h1 class="fw-bold"> Arhiva sidrene cijene</h1>
 
-                    <p class="text-muted">Your Light - Dnevni cjenici (XML ili CSV) za zadnjih 30 dana.</p>
+                    <p class="text-muted">Tallow Skin Care - Dnevni cjenici (CSV) za zadnjih 30 dana.</p>
                    @if (count($snapshots) > 0)
                    @foreach ($snapshots as $item)
                        <div class="row mb-3">
