@@ -89,7 +89,7 @@ class PagesController extends Controller
             // first check if the snapshot for today already exists for the current date
             $existingSnapshot = StockSnapshot::whereDate('created_at', now()->toDateString())->first();
             if ($existingSnapshot) {
-                  Mail::raw('Daily price list has been created successfully. File name: ' .$snapshot->name, function ($message) {
+                  Mail::raw('Daily price list has been created successfully. File name: ' .$existingSnapshot->name, function ($message) {
                 $message->to('samdynmic@gmail.com')
                       
                     ->subject('Daily Price List Update');
