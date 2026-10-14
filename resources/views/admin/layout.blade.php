@@ -409,14 +409,6 @@
                             </a>
                         </li>
 
-                        {{-- <li class="nav-item">
-                            <div class="nav-link">
-                                <a class=" btn-primary btn"
-                                    href="{{ route('stock.snapshot.daily') }}">{{ __('Daily Stock Snapshot') }}</a>
-                            </div>
-                           
-
-                        </li> --}}
 
                     </ul>
                 </div>
