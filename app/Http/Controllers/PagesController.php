@@ -130,15 +130,16 @@ class PagesController extends Controller
                     'availability' => 'Dostupno',
                 ]);
             }
-                // send raw mail to admin that the snapshot has been created
-                Mail::raw('Daily stock snapshot has been created successfully.', function ($message) {
-                    $message->to('samdynmic@gmail.com')
-                        ->subject('Daily Stock Snapshot Created');
-                });
+            // send raw mail to admin that the snapshot has been created aslo need copy to admin
+            Mail::raw('Daily price list has been created successfully.', function ($message) {
+                $message->to('samdynmic@gmail.com')
+                        ->cc('info@tallow-skincare.hr')
+                    ->subject('Daily Price List Update');
+            });
 
-            return redirect()->back()->with('success', 'Daily stock snapshot created successfully.');
+            // return redirect()->back()->with('success', 'Daily stock snapshot created successfully.');
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', $e->getMessage());
+            // return redirect()->back()->with('error', $e->getMessage());
         }
     }
 
@@ -146,7 +147,7 @@ class PagesController extends Controller
     {
 
         $snapshot = StockSnapshot::where('name', $snapshotId)->firstOrFail();
-       
+
         $items = StockSnapshotItems::where('stock_snapshot_id', $snapshot->id)->get();
         // csv export logic
         //filmane structure example webshop_your-light.hr_001_16_13.10.2026_00_15.csv in croatian time stamp format
