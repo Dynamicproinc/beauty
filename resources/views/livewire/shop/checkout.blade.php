@@ -669,8 +669,8 @@
                                 <div class="form-group mt-3">
                                     <p style="font-size:14px; color:#666;">
                                         {!! __('place_order_terms', [
-                                            'privacy' => '<a href="/privacy-statement" target="_blank">Privacy Policy</a>',
-                                            'terms' => '<a href="/terms-and-conditions" target="_blank">Terms & Conditions</a>',
+                                            'privacy' => '<a href="/privacy-statement" target="_blank">Politika privatnosti</a>',
+                                            'terms' => '<a href="/terms-and-conditions" target="_blank">Opći uvjeti</a>',
                                         ]) !!}
                                     </p>
                                     <button class="btn btn-lg btn-dark w-100">{{ __('PLACE ORDER') }}
