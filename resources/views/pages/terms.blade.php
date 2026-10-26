@@ -132,13 +132,13 @@
 
                                 <h5 class="h5-title text-uppercase">CROATIA</h5>
                                 <p class="p-text">
-                                    Cash-on-delivery fee: €3.00.</br></br>
+                                    Cash-on-delivery fee: €5.00.</br></br>
                                     Free shipping for card payments over €50.
                                 </p>
 
                                 <h5 class="h5-title text-uppercase">SLOVENIA</h5>
                                 <p class="p-text">
-                                    Cash-on-delivery fee: €3.00.</br></br>
+                                    Cash-on-delivery fee: €5.00.</br></br>
                                     Free shipping for card payments over €50.
                                 </p>
 

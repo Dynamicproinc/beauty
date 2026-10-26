@@ -203,7 +203,7 @@
 
                                 <h5 class="h5-title text-uppercase">HRVATSKA</h5>
                                 <p class="p-text">
-                                    Naknada za dostavu za plaćanje pouzećem iznosi 3,00 €, bez obzira na iznos
+                                    Naknada za dostavu za plaćanje pouzećem iznosi 5,00 €, bez obzira na iznos
                                     narudžbe.</br></br>
 
                                     Dostava je besplatna za narudžbe plaćene karticom u većem iznosu od 50 eur.
@@ -212,7 +212,7 @@
                                 </p>
                                 <h5 class="h5-title text-uppercase">SLOVENIJA</h5>
                                 <p class="p-text">
-                                    Naknada za dostavu za plaćanje pouzećem iznosi 3,00 €, bez obzira na iznos
+                                    Naknada za dostavu za plaćanje pouzećem iznosi 5,00 €, bez obzira na iznos
                                     narudžbe.</br></br>
 
                                     Dostava je besplatna za narudžbe plaćene karticom u većem iznosu od 50 eur.
