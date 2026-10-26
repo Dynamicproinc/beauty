@@ -70,11 +70,11 @@
                                 <h5 class="h5-title">Delivery Costs</h5>
                                 
                                 <h5 class="h5-title">CROATIA</h5>
-                                <p class="p-text">Cash on delivery fee is €3.00, regardless of the order amount.</p>
+                                <p class="p-text">Cash on delivery fee is €5.00, regardless of the order amount.</p>
                                 <p class="p-text">Delivery is free for orders paid by card over €50.</p>
 
                                 <h5 class="h5-title">SLOVENIA</h5>
-                                <p class="p-text">Cash on delivery fee is €3.00, regardless of the order amount.</p>
+                                <p class="p-text">Cash on delivery fee is €5.00, regardless of the order amount.</p>
                                 <p class="p-text">Delivery is free for orders paid by card over €50.</p>
 
                                 <h5 class="h5-title">PERSONAL PICKUP</h5>

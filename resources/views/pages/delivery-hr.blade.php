@@ -70,10 +70,10 @@
                                 <h5 class="h5-title">
                                     HRVATSKA
                                 </h5>
-                                 <p class="p-text">Naknada za dostavu za plaćanje pouzećem iznosi 3,00 €, bez obzira na iznos narudžbe.</p>
+                                 <p class="p-text">Naknada za dostavu za plaćanje pouzećem iznosi 5,00 €, bez obzira na iznos narudžbe.</p>
                                  <p class="p-text">Dostava je besplatna za narudžbe plaćene karticom u većem iznosu od 50 eur.</p>
                                 <h5 class="h5-title">SLOVENIJA</h5>
-                                 <p class="p-text">Naknada za dostavu za plaćanje pouzećem iznosi 3,00 €, bez obzira na iznos narudžbe.</p>
+                                 <p class="p-text">Naknada za dostavu za plaćanje pouzećem iznosi 5,00 €, bez obzira na iznos narudžbe.</p>
                                  <p class="p-text">Dostava je besplatna za narudžbe plaćene karticom u većem iznosu od 50 eur.</p>
                                 <h5 class="h5-title">OSOBNO PREUZIMANJE</h5>
                                  <p class="p-text">Svoje narudžbe možete podići i osobno na našim lokacijama u Velikoj Gorici i Karlovcu.
