@@ -75,7 +75,7 @@ class PagesController extends Controller
     public function stockSnapshot()
     {
         $this->saveSnapshotDaily();
-        $snapshots = StockSnapshot::orderBy('created_at', 'desc')->get();
+        $snapshots = StockSnapshot::orderBy('created_at', 'desc')->paginate(5);
         return view('document.price-list', compact('snapshots'));
     }
 
