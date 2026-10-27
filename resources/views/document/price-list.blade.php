@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div>
+    <div class="py-5">
         <div class="safty-height" style="height: 100px;"></div>
         <div class="container">
             <div class="row justify-content-center">
