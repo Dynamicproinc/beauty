@@ -19,6 +19,8 @@
                         </div>
                         
                     </div> 
+
+                    <div>{{ $snapshots->links() }}</div>
                    @endforeach
                    @else
                    <p>Not available</p>
