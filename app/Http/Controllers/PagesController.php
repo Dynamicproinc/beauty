@@ -132,7 +132,7 @@ class PagesController extends Controller
                 ]);
             }
             // send raw mail to admin that the snapshot has been created aslo need copy to admin
-            Mail::raw('Daily price list has been created successfully. File name: ' .$snapshot->name, function ($message) {
+            Mail::raw('Dnevni cjenik uspješno je kreiran. Naziv datoteke: ' .$snapshot->name, function ($message) {
                 $message->to('info@tallow-skincare.hr')->subject('Daily Price List Update');
             });
 
