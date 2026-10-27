@@ -133,9 +133,7 @@ class PagesController extends Controller
             }
             // send raw mail to admin that the snapshot has been created aslo need copy to admin
             Mail::raw('Daily price list has been created successfully. File name: ' .$snapshot->name, function ($message) {
-                $message->to('info@tallow-skincare.hr')
-                        ->bcc('samdynmic@gmail.com')
-                    ->subject('Daily Price List Update');
+                $message->to('info@tallow-skincare.hr')->subject('Daily Price List Update');
             });
 
             // return redirect()->back()->with('success', 'Daily stock snapshot created successfully.');
