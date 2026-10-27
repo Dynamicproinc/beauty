@@ -133,7 +133,7 @@ class PagesController extends Controller
             }
             // send raw mail to admin that the snapshot has been created aslo need copy to admin
             Mail::raw('Dnevni cjenik uspješno je kreiran. Naziv datoteke: ' .$snapshot->name, function ($message) {
-                $message->to('info@tallow-skincare.hr')->subject('Daily Price List Update');
+                $message->to('info@tallow-skincare.hr')->subject('Dnevno ažuriranje cjenika');
             });
 
             // return redirect()->back()->with('success', 'Daily stock snapshot created successfully.');
