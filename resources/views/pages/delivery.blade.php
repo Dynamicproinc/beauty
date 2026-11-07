@@ -68,6 +68,10 @@
                                 </p>
 
                                 <h5 class="h5-title">Delivery Costs</h5>
+
+                                <h5 class="h5-title">GLS PAKETOMAT/ PARCEL LOCKER</h5>
+                                
+                                <p class="p-text">Choose GLS Parcel Locker delivery for a convenient and flexible way to receive your order. Your parcel will be delivered to your selected GLS Parcel Locker, with no additional delivery costs or hidden fees.</p>
                                 
                                 <h5 class="h5-title">CROATIA</h5>
                                 <p class="p-text">Cash on delivery fee is €5.00, regardless of the order amount.</p>
