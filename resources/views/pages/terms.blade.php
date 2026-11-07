@@ -129,6 +129,13 @@
                                 </p>
 
                                 <p class="p-text"><strong>Shipping Costs</strong></p>
+                                 <h5 class="h5-title">GLS PAKETOMAT/ PARCEL LOCKER</h5>
+                                
+                                <p class="p-text">
+                                    Customers may select GLS Parcel Locker delivery as an alternative shipping method during the checkout process. Orders will be dispatched to the GLS Parcel Locker selected by the customer and made available for collection in accordance with GLS delivery and collection procedures.
+                                    <br><br>
+                                    Delivery to a GLS Parcel Locker is provided at no additional charge. No supplementary fees apply for selecting this delivery method.
+                                </p>
 
                                 <h5 class="h5-title text-uppercase">CROATIA</h5>
                                 <p class="p-text">

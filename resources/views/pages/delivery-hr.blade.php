@@ -68,6 +68,14 @@
                                     Troškovi dostave
                                 </h5>
                                 <h5 class="h5-title">
+                                    GLS PAKETOMAT/ PARCEL LOCKER
+                                </h5>
+                                <p>
+                                    Kupci mogu odabrati dostavu putem GLS Paketomata kao alternativni način dostave prilikom završetka narudžbe. Pošiljka će biti dostavljena na GLS Paketomat koji je kupac odabrao, gdje će biti dostupna za preuzimanje u skladu s uvjetima i pravilima dostave i preuzimanja GLS-a.
+                                    <br></br>
+                                    Dostava putem GLS Paketomata dostupna je bez dodatne naknade. Odabirom ovog načina dostave ne naplaćuju se nikakvi dodatni troškovi.
+                                </p>
+                                <h5 class="h5-title">
                                     HRVATSKA
                                 </h5>
                                  <p class="p-text">Naknada za dostavu za plaćanje pouzećem iznosi 5,00 €, bez obzira na iznos narudžbe.</p>
