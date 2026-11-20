@@ -8,7 +8,15 @@
                     <h1 class="fw-bold">Arhiva sidrene cijene</h1>
 
                     <p class="text-muted">Tallow Skin Care - Dnevni cjenici (CSV) za zadnjih 30 dana.</p>
-                   @if (count($snapshots) > 0)
+                    {{-- special link for latest snapshot --}}
+                    <div class="mb-3 mt-3">
+                        <a href="{{ route('roba.csv') }}" class="btn btn-primary">Preuzmi najnoviji cjenik (CSV)</a>
+                    </div>
+
+                    {{--  --}}
+
+
+                    @if (count($snapshots) > 0)
                    @foreach ($snapshots as $item)
                        <div class="row mb-3 @if( $item->created_at->timezone('Europe/Zagreb')->format('d.m.Y') == now()->timezone('Europe/Zagreb')->format('d.m.Y')) bg-light border p-3 shadow-sm @endif">
                         <div class="col-md-7"><a href="{{route('stock.snapshot.export', $item->name)}}" class="text-primary small"> <i class="bi bi-filetype-csv"></i> {{ $item->name }}</a></div>
