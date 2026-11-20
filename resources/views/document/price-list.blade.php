@@ -10,9 +10,9 @@
                     <p class="text-muted">Tallow Skin Care - Dnevni cjenici (CSV) za zadnjih 30 dana.</p>
                    @if (count($snapshots) > 0)
                    @foreach ($snapshots as $item)
-                       <div class="row mb-3">
+                       <div class="row mb-3 @if( $item->created_at->timezone('Europe/Zagreb')->format('d.m.Y') == now()->timezone('Europe/Zagreb')->format('d.m.Y')) bg-light border @endif">
                         <div class="col-md-7"><a href="{{route('stock.snapshot.export', $item->name)}}" class="text-primary small"> <i class="bi bi-filetype-csv"></i> {{ $item->name }}</a></div>
-                        <div class="col-md-3">{{ $item->created_at->timezone('Europe/Zagreb')->format('d.m.Y H:i') }}</div>
+                        <div class="col-md-3 small">{{ $item->created_at->timezone('Europe/Zagreb')->format('d.m.Y H:i') }}</div>
                         <div class="col-md-2">
                             {{-- //download link --}}
                             <a href="{{route('stock.snapshot.export', $item->name)}}" class="btn btn-success btn-sm ">Preuzmi</a>
