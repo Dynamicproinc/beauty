@@ -174,7 +174,7 @@ Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallba
 Route::get('/export-csv/{snapshotId}', [App\Http\Controllers\PagesController::class, 'exportSnapshots'])->name('stock.snapshot.export');
 
 Route::get('/price-lists', [App\Http\Controllers\PagesController::class, 'stockSnapshot'])->name('stock.snapshot');
-
+Route::get('/cjenik/roba.csv', [App\Http\Controllers\PagesController::class, 'getlatestSnapshot'])->name('roba.csv');
 
 // Artisan  commands for the migrations
 // Route::get('/abc123', function () {

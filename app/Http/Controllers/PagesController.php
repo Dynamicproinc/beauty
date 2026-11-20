@@ -247,4 +247,9 @@ fclose($handle);
         // need to return the file as a download response
         return response()->download($filename)->deleteFileAfterSend(true);
     }
+
+    public function getlatestSnapshot(){
+        $snapshot = StockSnapshot::latest()->firstOrFail();
+        return response()->json($snapshot);
+    }
 }
