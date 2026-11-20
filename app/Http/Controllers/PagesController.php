@@ -88,10 +88,10 @@ class PagesController extends Controller
 
             // first check if the snapshot for today already exists for the current date
             $existingSnapshot = StockSnapshot::whereDate('created_at', now()->toDateString())->first();
-            // if ($existingSnapshot) {
-            //     // return response()->json(['status' => 'success', 'message' => 'Daily stock snapshot for today already exists.']);
-            //     return null;
-            // }
+            if ($existingSnapshot) {
+                // return response()->json(['status' => 'success', 'message' => 'Daily stock snapshot for today already exists.']);
+                return null;
+            }
 
 
             $snapshot = StockSnapshot::create([
