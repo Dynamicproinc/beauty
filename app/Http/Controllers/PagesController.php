@@ -250,6 +250,6 @@ fclose($handle);
 
     public function getlatestSnapshot(){
         $snapshot = StockSnapshot::latest()->firstOrFail();
-        return response()->json($snapshot);
+       $this->exportSnapshots($snapshot->name);
     }
 }
