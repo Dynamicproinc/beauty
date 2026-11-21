@@ -226,9 +226,7 @@ foreach ($items as $item) {
         $item->retail_price,
 
         // Indicate whether a special form of sale applies.
-        $item->special_form_name
-            ? 'DA: ' . $item->special_form_name
-            : 'NE',
+        $item->null,
 
         $item->unit_price,
         $item->barcode,
